@@ -1,6 +1,7 @@
 API DOCUMENTATION= https://rapidapi.com/apidojo/api/hotels4/
+
 EXAMPLE =
-<!--
+
 const axios = require('axios');
 
 const options = {
@@ -17,4 +18,4 @@ try {
 	console.log(response.data);
 } catch (error) {
 	console.error(error);
-} -->
+} 
