@@ -1,8 +1,20 @@
-# React + Vite
+API DOCUMENTATION= https://rapidapi.com/apidojo/api/hotels4/
+EXAMPLE =
+<!--
+const axios = require('axios');
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+const options = {
+  method: 'GET',
+  url: 'https://hotels4.p.rapidapi.com/v2/get-meta-data',
+  headers: {
+    'X-RapidAPI-Key': '51ba63a738mshc342e294c358014p14553bjsn60bec33c628c',
+    'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
+  }
+};
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+} -->
