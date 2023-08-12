@@ -1,0 +1,20 @@
+.wrapper{
+    background-color: rgba(240, 248, 255, 0.837);
+    padding: 2%;
+}
+
+.inp_search{
+    height: 100%;
+    border: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-right: none;
+}
+.btn_search{
+    height: 100%;
+    background-color: #eef1305c;
+    border: 0px solid black;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
