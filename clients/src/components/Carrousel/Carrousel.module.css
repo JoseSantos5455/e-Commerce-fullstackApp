@@ -1,0 +1,12 @@
+.car_custom{
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.car_custom img{
+
+    object-fit: cover;
+    max-height: 320px;
+}

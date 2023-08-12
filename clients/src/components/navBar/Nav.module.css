@@ -1,6 +1,9 @@
 .wrapper{
-    background-color: rgba(240, 248, 255, 0.837);
-    padding: 2%;
+    background-color: rgba(240, 248, 255, 0.746);
+    width: 101%;
+    padding: 1%;
+    position: fixed;
+    z-index: 3;
 }
 
 .inp_search{
@@ -12,7 +15,7 @@
 }
 .btn_search{
     height: 100%;
-    background-color: #eef1305c;
+    background-color: #eeb928f4;
     border: 0px solid black;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;

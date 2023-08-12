@@ -6,7 +6,7 @@ import { BsSearch } from 'react-icons/bs';
 
 
 export default function Nav() {
-  return (<>
+  return (
   
     <Row className={ `${Styles.wrapper}`}>
         <Col className="logo col-2">
@@ -20,7 +20,7 @@ export default function Nav() {
         </Col>
         <Col className="section col-4">
             <Col className="location">
-                <Button className={`${Styles.btn_log} btn-flat btn-xxl`}>Login</Button>
+                <Button variant='secondary'>Login</Button>
             </Col>
             <Col className="login"></Col>
 
@@ -28,6 +28,6 @@ export default function Nav() {
 
     </Row>
 
-  </>
+  
   )
 }
