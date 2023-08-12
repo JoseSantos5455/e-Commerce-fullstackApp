@@ -1,5 +1,5 @@
 .wrapper{
-    background-color: rgba(240, 248, 255, 0.746);
+    background-color: rgba(241, 201, 25, 0.746);
     width: 101%;
     padding: 1%;
     position: fixed;
@@ -7,6 +7,7 @@
 }
 
 .inp_search{
+    width: 90%;
     height: 100%;
     border: none;
     border-top-left-radius: 1rem;
@@ -14,10 +15,22 @@
     border-right: none;
 }
 .btn_search{
+    border: none;
     height: 100%;
-    background-color: #eeb928f4;
-    border: 0px solid black;
+    background-color: #eeeade;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
 
+.btn_profile_custom{
+    margin: -2%;
+    padding: 0%;
+    border: none;
+    background-color: transparent;
+}
+.btn_cart_custom{
+    padding: 0%;
+    margin: -2%;
+    border: none;
+    background-color: transparent;
+}
