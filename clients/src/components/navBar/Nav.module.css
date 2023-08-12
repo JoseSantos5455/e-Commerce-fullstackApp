@@ -1,11 +1,25 @@
 .wrapper{
-    background-color: rgba(241, 201, 25, 0.746);
+    background-color: rgb(241, 201, 25);
     width: 101%;
     padding: 1%;
     position: fixed;
+    align-items: center;
     z-index: 3;
+    height: 15%;
 }
 
+
+
+
+.div_logo {
+    height: 100%;
+}
+
+.div_logo img{
+    transform: scale(1.4);
+    height: 100%;
+    padding-left: 10%;
+}
 .inp_search{
     width: 90%;
     height: 100%;
@@ -13,9 +27,14 @@
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     border-right: none;
+    box-shadow: 0 0 2px 0;
+}
+.inp_search:focus{
+    outline: none;
 }
 .btn_search{
     border: none;
+    box-shadow: 0 0 1px 0;
     height: 100%;
     background-color: #eeeade;
     border-top-right-radius: 1rem;

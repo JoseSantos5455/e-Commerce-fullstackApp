@@ -5,17 +5,19 @@ import { Button, Row, Col} from 'react-bootstrap';
 import { BsSearch, BsPersonCircle, BsCart2} from 'react-icons/bs';
 import { PiMapPinDuotone } from "react-icons/pi";
 
+let imgLogo = 'https://iili.io/HDl2SoJ.png'
 
 export default function Nav() {
   return (
-  
-    <Row className={ `${Styles.wrapper}`}>
-        <Col className="logo col-2">
-            <p>Logo</p>
+      <Row className={ `${Styles.wrapper}`}>
+        
+        <Col className={`${Styles.div_logo} col-2`}>
+            <img src={imgLogo} alt=""/>
         </Col>
         <Col className='col-1 d-flex flex-column align-items-center'>
             <PiMapPinDuotone/>
             <p>Ship to</p>
+            
         </Col>
         <Col className={`${Styles.col_search} col-5`}>
             <input className={Styles.inp_search} type="text" />
@@ -24,8 +26,7 @@ export default function Nav() {
             </button>
            
         </Col>
-        <Col className="section  col-4" >
-            <Row>
+        <Col className="section  col-4 d-flex align-items-center justify-content-end" >
 
                 <button className={` col-6 ${Styles.btn_profile_custom}`}>
                     <BsPersonCircle/>
@@ -36,7 +37,6 @@ export default function Nav() {
                     <p>cart</p>
                 </button>
 
-            </Row>
         </Col>
 
     </Row>
