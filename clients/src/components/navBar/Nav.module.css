@@ -9,8 +9,6 @@
 }
 
 
-
-
 .div_logo {
     height: 80%;
 }
@@ -49,4 +47,7 @@
     padding: 0%;
     border: none;
     background-color: transparent;
+}
+.section_btn{
+    margin-bottom: 1%;
 }

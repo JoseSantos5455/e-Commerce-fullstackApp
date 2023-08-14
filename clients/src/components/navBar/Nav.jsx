@@ -26,7 +26,7 @@ export default function Nav() {
             </button>
            
         </Col>
-        <Col className="section  col-4 d-flex align-items-center justify-content-end" >
+        <Col className={`${Styles.section_btn}  col-4 d-flex align-items-center justify-content-end`} >
 
                 <button className={` col-6 ${Styles.btn_profile_custom}`}>
                     <BsPersonCircle/>
