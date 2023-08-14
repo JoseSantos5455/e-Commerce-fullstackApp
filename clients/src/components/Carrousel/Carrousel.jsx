@@ -3,7 +3,7 @@ import Styles from './Carrousel.module.css'
 import Carousel from 'react-bootstrap/Carousel';
 import { Row } from 'react-bootstrap'
 let img_car1 = 'https://i0.wp.com/get.witei.com/wp-content/uploads/2022/04/cartera-de-productos-ejemplos.jpg?fit=1200%2C675&ssl=1'
-let img_car2 = 'https://blog.hubspot.es/hs-fs/hubfs/media/lineaproducto.jpeg?width=610&height=406&name=lineaproducto.jpeg'
+let img_car2 = 'https://www.enfasys.net/wp-content/uploads/2019/05/ecommerce.jpg'
 let img_car3 = 'https://techjournal.org/wp-content/uploads/2021/12/Some-Awesome-new-electronic-gadgets-2021-1.jpg'
 
 
