@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "server",
   "version": "1.0.0",
   "description": "",
@@ -18,5 +19,15 @@
     "nodemon": "^3.0.1",
     "pg": "^8.11.2",
     "pg-hstore": "^2.3.4"
+=======
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "start": "nodemon ./index.js"
+>>>>>>> 88900f9c822e26c626bf0287b638e6145a6efb87
   }
 }

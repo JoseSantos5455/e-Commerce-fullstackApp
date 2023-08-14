@@ -1,0 +1,53 @@
+.wrapper{
+    background-color: rgba(255,197,2,255);
+    width: 101%;
+    padding: 1%;
+    position: fixed;
+    align-items: center;
+    z-index: 3;
+    height: 15%;
+}
+
+
+.div_logo {
+    height: 80%;
+}
+
+.div_logo img{
+    transform: scale(1.4);
+    height: 100%;
+    padding-left: 10%;
+}
+.inp_search{
+    width: 90%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0;
+}
+.inp_search:focus{
+    outline: none;
+}
+.btn_search{
+    border: none;
+    background-color: transparent;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-left: -6%;
+}
+
+.btn_profile_custom{
+    transform: scale(2);
+    padding: 0%;
+    border: none;
+    background-color: transparent;
+}
+.btn_cart_custom{
+    transform: scale(2);
+    padding: 0%;
+    border: none;
+    background-color: transparent;
+}
+.section_btn{
+    margin-bottom: 1%;
+}
