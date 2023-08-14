@@ -16,7 +16,7 @@ export default function Nav() {
         </Col>
         <Col className='col-1 d-flex flex-column align-items-center'>
             <PiMapPinDuotone/>
-            <p>Ship to</p>
+            <p>Argentina, Córdoba</p>
             
         </Col>
         <Col className={`${Styles.col_search} col-5`}>
@@ -30,11 +30,9 @@ export default function Nav() {
 
                 <button className={` col-6 ${Styles.btn_profile_custom}`}>
                     <BsPersonCircle/>
-                    <p>login</p>
                 </button>
                 <button  className={`col-6 ${Styles.btn_cart_custom}`}>
                     <BsCart2/>
-                    <p>cart</p>
                 </button>
 
         </Col>
