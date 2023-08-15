@@ -1,4 +1,22 @@
-.wrapper{
+/* @media screen and (max-width: 575px) {
+    .wrapper{
+        background-color: rgba(255,197,2,255);
+        width: 102%;
+        padding: 1%;
+        position: fixed;
+        align-items: center;
+        z-index: 3;
+        height: 15%;
+    }
+    .div_logo {
+        height: 100%;
+        transform: scale(.2);
+    }
+    
+    
+} */
+@media screen and (min-width: 100px) {
+    .wrapper{
     background-color: rgba(255,197,2,255);
     width: 101%;
     padding: 1%;
@@ -50,4 +68,4 @@
 }
 .section_btn{
     margin-bottom: 1%;
-}
+}}
