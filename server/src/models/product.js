@@ -50,12 +50,30 @@ module.exports = (sequelize)=>{
                 }, 
                 max:{
                     args:5,
-                    msg:'Rating must be a number greater or equal to zero'
+                    msg:'Rating must be a number less or equal to five',
                 },
             },
         },
-        characteristics:{//listado de características de un producto ej. de un TV [2 puetos hdmi, sonido suround, etc]
-            type:DataTypes.ARRAY,
+        image:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate: {
+                isUrl: true,
+                isImageFormat(value) {
+                  if (!/\.(png|jpg|jpeg)$/.test(value)) {
+                    throw new Error('La URL debe ser una imagen PNG o JPG.');
+                  }
+                }
+            }
+        },
+        shipping:{
+            type:DataTypes.INTEGER,
+            max:30,
+            min:3,
+        },
+        isActive:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:true,
         },
     },{timestamps:false});
 };
