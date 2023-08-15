@@ -35,10 +35,20 @@ module.exports = (sequelize)=>{
                 },
             },
         },
+        image:{
+
+        },
+        shipping:{
+
+        },
+        color:{},
         stock:{
-            type:DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             defaultValue:0,
             min:0,  
+        },
+        category:{
+
         },
         valoration:{
             type:DataTypes.INTEGER,
@@ -54,7 +64,7 @@ module.exports = (sequelize)=>{
                 },
             },
         },
-        characteristics:{//listado de características de un producto ej. de un TV [2 puetos hdmi, sonido suround, etc]
+        extras:{//listado de características de un producto ej. de un TV [2 puetos hdmi, sonido suround, etc]
             type:DataTypes.ARRAY,
         },
     },{timestamps:false});

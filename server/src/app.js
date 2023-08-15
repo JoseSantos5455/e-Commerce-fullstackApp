@@ -1,7 +1,7 @@
 const express = require("express")
 const server = express()
 const morgan = require("morgan")
-const router = require("./src/routes/index")
+const router = require("./routes/index")
 
 
 server.use(express.json())
