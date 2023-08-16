@@ -1,4 +1,6 @@
-[
+
+{
+     "products":[
     {
      "name": "Electronic Cotton Cheese",
      "price": "894.00",
@@ -1299,4 +1301,4 @@
      "stock": 23470,
      "id": "100"
     }
-   ]
+   ]}
