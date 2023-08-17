@@ -35,27 +35,24 @@ module.exports = (sequelize)=>{
                 },
             },
         },
-        stock:{
+        /*stock:{
             type:DataTypes.INTEGER,
             defaultValue:0,
             min:0,  
-        },
-        valoration:{
-            type:DataTypes.INTEGER,
-            allowNull:false,
-            validate:{
-                min:{
-                    args:0,
-                    msg:'Rating must be a number greater or equal to zero',
-                }, 
-                max:{
-                    args:5,
-                    msg:'Rating must be a number less or equal to five',
-                },
+        },*/
+        valoration: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+              min: 0,
+              max: 5,
+              isInt: {
+                msg: 'Rating must be an integer value between 0 and 5',
+              },
             },
-        },
+          },
         image:{
-            type:DataTypes.STRING,
+            type:DataTypes.STRING,//array de imagenes
             allowNull:false,
             validate: {
                 isUrl: true,
@@ -66,14 +63,18 @@ module.exports = (sequelize)=>{
                 }
             }
         },
-        shipping:{
+        /*shipping:{
             type:DataTypes.INTEGER,
             max:30,
             min:3,
-        },
+        },*/
         isActive:{
             type:DataTypes.BOOLEAN,
             defaultValue:true,
+        },
+        categoryId:{
+            type:DataTypes.UUID,
+            allowNull:false,
         },
     },{timestamps:false});
 };

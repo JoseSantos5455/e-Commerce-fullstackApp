@@ -3,6 +3,6 @@ const {getAllProducts} = require("../controllers/allProducts")
 
 const Products = Router()
 
-Products.get("/", getAllProducts)
+Products.get("/", getAllProducts);
 
 module.exports = Products
