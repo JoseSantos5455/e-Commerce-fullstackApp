@@ -6,5 +6,6 @@ const Products = Router()
 
 Products.get("/", getAllProducts)
 Products.get("/:id", getProductsHandler)
+console.log('hola mundo');
 
 module.exports = Products
