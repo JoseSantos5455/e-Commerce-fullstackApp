@@ -5,14 +5,14 @@ module.exports = (sequelize) => {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
-      defaultValue: DataTypes.UUV4,
+      defaultValue: DataTypes.UUIDV4,
     },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
         validate:{
-            isNull: {msg:`Name couldn't be null`}
+            isNull: {msg:`Category name couldn't be null`}
         }
     },
   },{timestamps:false});
