@@ -1,71 +1,139 @@
-/* @media screen and (max-width: 575px) {
-    .wrapper{
-        background-color: rgba(255,197,2,255);
-        width: 102%;
-        padding: 1%;
-        position: fixed;
-        align-items: center;
-        z-index: 3;
-        height: 15%;
-    }
-    .div_logo {
-        height: 100%;
-        transform: scale(.2);
-    }
-    
-    
-} */
-@media screen and (min-width: 100px) {
-    .wrapper{
-    background-color: rgba(255,197,2,255);
-    width: 101%;
-    padding: 1%;
-    position: fixed;
-    align-items: center;
-    z-index: 3;
-    height: 15%;
+.wrapper {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-.div_logo {
-    height: 80%;
+.logo {
+  width: 80%;
+  height: auto;
 }
 
-.div_logo img{
-    transform: scale(1.4);
-    height: 100%;
-    padding-left: 10%;
-}
-.inp_search{
-    width: 90%;
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 2px 0;
-}
-.inp_search:focus{
-    outline: none;
-}
-.btn_search{
-    border: none;
-    background-color: transparent;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    margin-left: -6%;
+.col_5 {
+  display: flex;
+  align-items: center;
 }
 
-.btn_profile_custom{
-    transform: scale(2);
-    padding: 0%;
-    border: none;
-    background-color: transparent;
+.col_1 {
+  width: 10%;
+  text-align: center;
 }
-.btn_cart_custom{
-    transform: scale(2);
-    padding: 0%;
-    border: none;
-    background-color: transparent;
+
+.col_3,
+.col_4 {
+  width: 30%;
+  text-align: center;
 }
-.section_btn{
-    margin-bottom: 1%;
-}}
+
+.background {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  height: 50%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownToggle {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 7px;
+  background-color: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownHeader {
+  font-weight: bold;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 5px 0;
+  color: black;
+  text-decoration: none;
+}
+
+.searchInput {
+  border: none;
+  background-color: rgba(217, 217, 217, 0.69);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.searchButton {
+  background-color: black;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.actionButton,
+.actionButton2 {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  margin-right: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.create {
+  color: black;
+}
+
+.actionButton:hover {
+  color: rgb(34, 120, 233);
+}
+
+.actionButton2:hover {
+  color: #ffc502;
+}
+

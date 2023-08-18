@@ -35,6 +35,30 @@ module.exports = (sequelize)=>{
                 },
             },
         },
+<<<<<<< HEAD
+        /*stock:{
+            type:DataTypes.INTEGER,
+            defaultValue:0,
+            min:0,  
+        },*/
+        valoration: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+              min: 0,
+              max: 5,
+              isInt: {
+                msg: 'Rating must be an integer value between 0 and 5',
+              },
+=======
+        image:{
+
+        },
+        shipping:{
+
+        },
+        color:{},
+        stock:{
         valoration: {
             type: DataTypes.INTEGER,
             allowNull: false,
