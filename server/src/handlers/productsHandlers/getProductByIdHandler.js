@@ -2,9 +2,8 @@ const getProductByIdController = require("../../controllers/productsControllers/
 
 export default getProductByIdHandler = async (req, res) => {
     const { id } = req.params;
-    const source = isNaN(id) ? "bdd" : "api";
     try {
-      const product = await getProductByIdController(id, source);
+      const product = await getProductByIdController(id);
       res.status(200).json(product);
     } catch (error) {
       res.status(400).json({ error: error.message });
