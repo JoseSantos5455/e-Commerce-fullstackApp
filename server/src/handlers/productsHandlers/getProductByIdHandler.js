@@ -1,6 +1,6 @@
 const getProductByIdController = require("../../controllers/productsControllers/getProductsByIdController");
 
-export default getProductByIdHandler = async (req, res) => {
+const getProductByIdHandler = async (req, res) => {
     const { id } = req.params;
     try {
       const product = await getProductByIdController(id);
@@ -10,3 +10,4 @@ export default getProductByIdHandler = async (req, res) => {
     }
   };
 
+  module.exports = getProductByIdHandler

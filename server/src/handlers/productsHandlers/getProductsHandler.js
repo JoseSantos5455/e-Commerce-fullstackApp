@@ -3,7 +3,7 @@ const getAllProductsController = require ('../../controllers/productsControllers
 const getProductByNameController = require ('../../controllers/productsControllers/getProductByNameController')
 
 
-export default  getProductsHandler = async(req,res)=>{
+const getProductsHandler = async(req,res)=>{
     const { name }= req.query;
     
     try {
@@ -21,3 +21,4 @@ export default  getProductsHandler = async(req,res)=>{
     }
 }
 
+module.exports =  getProductsHandler

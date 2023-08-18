@@ -2,7 +2,7 @@ const {Product, Category} = require('../../db')
 
 
 
-export default  getProductByIdController = async (id) => {
+const getProductByIdController = async (id) => {
   const product  = await Product.findByPk( id, {
     include: {
       model: Category,
@@ -12,3 +12,4 @@ export default  getProductByIdController = async (id) => {
     return product;
   };
 
+  module.exports = getProductByIdController
