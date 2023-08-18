@@ -5,6 +5,7 @@ const { getProductByNameHandler } = require("../handlers/productsHandlers/getPro
 
 const Products = Router()
 
+
 Products.get("/", getAllProducts)
 Products.get("/:id", getProductsHandler)
 Products.get('/name', getProductByNameHandler)
