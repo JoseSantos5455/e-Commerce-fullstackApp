@@ -1,11 +1,13 @@
 const {Router} = require("express")
-const  {getProductsHandler}  = require("../handlers/productsHandlers/getProductsHandler")
+const  getProductsHandler  = require("../handlers/productsHandlers/getProductsHandler")
+const  getProductByIdHandler  = require("../handlers/productsHandlers/getProductByIdHandler")
 
 
-const Products = Router()
+const productsRouter = Router()
 
 
-Products.get("/products", getProductsHandler  )
+productsRouter.get("/", getProductsHandler  )
+productsRouter.get("/:id", getProductByIdHandler  )
 
 
-module.exports = Products
+module.exports = productsRouter
