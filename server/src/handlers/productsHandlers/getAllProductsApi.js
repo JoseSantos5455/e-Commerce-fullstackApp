@@ -29,6 +29,5 @@ const getAllProductsApi = async (req, res) =>{
     }
 }
 
-module.exports = {
+module.exports = 
     getAllProductsApi
-}
