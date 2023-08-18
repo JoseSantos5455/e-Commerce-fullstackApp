@@ -1,11 +1,9 @@
-import React from 'react'
-import Start from './components/start'
-
+import Start from './pages/Home/Start'
 
 export default function App() {
   return (
     <div>
-        <Start/>
+      <Start />
     </div>
   )
 }
