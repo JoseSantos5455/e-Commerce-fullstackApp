@@ -35,11 +35,6 @@ module.exports = (sequelize)=>{
                 },
             },
         },
-        /*stock:{
-            type:DataTypes.INTEGER,
-            defaultValue:0,
-            min:0,  
-        },*/
         valoration: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -63,11 +58,6 @@ module.exports = (sequelize)=>{
                 }
             }
         },
-        /*shipping:{
-            type:DataTypes.INTEGER,
-            max:30,
-            min:3,
-        },*/
         isActive:{
             type:DataTypes.BOOLEAN,
             defaultValue:true,
