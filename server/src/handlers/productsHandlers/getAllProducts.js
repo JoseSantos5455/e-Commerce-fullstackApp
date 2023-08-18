@@ -1,19 +1,18 @@
-let url = 'http://localhost:5000/products'
+const url = 'http://localhost:5000/products'
 const { Product } = require('../db')
 const axios = require('axios')
-const getAllProducts = async (req, res) =>{
+const getAllProductsApi = async (req, res) =>{
     
     try {
-        const response = await axios.get(URL)
+        const response = await axios.get(url)
         const data = response.data;
 
-        const product= data.map((product)=> (
+        const product = data.map((product)=> (
             {
                          name: product.name,
                          price: product.price,
                          description: product.description,
                          image: product.image,
-                         shipping: product.shipping,
                          category: product.category,
                          valoration: product.valoration,
                          stock:product.stock
@@ -31,5 +30,5 @@ const getAllProducts = async (req, res) =>{
 }
 
 module.exports = {
-    getAllProducts
+    getAllProductsApi
 }

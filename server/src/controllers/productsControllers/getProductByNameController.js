@@ -1,9 +1,11 @@
-const Products = require("../../db")
+const {Product} = require("../../db")
 
-const getProductByNameController = async (name)=>{
-    const baseDatos = await Products.findAll({where:{name:name}});
+export default  getProductByNameController = async (name)=>{
+    const productsByName = await Product.findAll(
+        {where:
+            {name:name}}
+        );
 
-    return [...baseDatos]
+    return productsByName
 }
 
-module.export={ getProductByNameController}
