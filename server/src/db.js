@@ -11,10 +11,20 @@ const sequelize = new Sequelize(
  );
 
 categoryModel(sequelize);
-//agregar producto,reseña,pedido y user, perfil
+productModel(sequelize);
+reviewModel(sequelize);
+userModel(sequelize);
 
-const {Category} = sequelize.models;
+const {Category,Product,Review,User} = sequelize.models;
+
+Product.belongsToMany(User,{through:'product_user'});
+User.belongsToMany(Product,{through:'product_user'});
+User.hasMany(Review);
+Review.belongsTo(User);
+Product.belongsTo(Category,{foreignKey:'categoryId'});
+Category.hasMany(Product,{foreignKey:'categoryId'});
+Product.hasMany(Review);
+Review.belongsTo(Product);
 
 module.exports = {...sequelize.models,
                     conn:sequelize}
-
