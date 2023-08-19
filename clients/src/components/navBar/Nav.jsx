@@ -1,6 +1,8 @@
 import React from 'react'
 import Styles from './Nav.module.css'
 
+import SearchBar from '../SearchBar/SearchBar'
+
 import { Button, Row, Col} from 'react-bootstrap';
 import { BsSearch, BsPersonCircle, BsCart2} from 'react-icons/bs';
 import { PiMapPinDuotone } from "react-icons/pi";
@@ -19,6 +21,10 @@ export default function Nav() {
             <p>Argentina, Córdoba</p>
             
         </Col>
+
+
+        <SearchBar />
+
         <Col className={`${Styles.col_search} col-7 col-sm-5`}>
             <input className={Styles.inp_search} type="text" />
             <button className={Styles.btn_search}>

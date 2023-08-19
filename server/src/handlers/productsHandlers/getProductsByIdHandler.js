@@ -2,6 +2,7 @@ const { getProductById } = require("../../controllers/productsControllers/getPro
 
 const getProductsHandler = async (req, res) => {
     const { id } = req.params;
+
     const source = isNaN(id) ? "bdd" : "api";
     try {
       const product = await getProductById(id, source);
