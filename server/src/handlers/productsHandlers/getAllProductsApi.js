@@ -10,17 +10,16 @@ const getAllProductsApi = async (req, res) =>{
         const product = data.map((product)=> (
             {
                          name: product.name,
-                         price: product.price,
                          description: product.description,
-                         image: product.image,
-                         category: product.category,
+                         price: Number(product.price),
+                         stock:product.stock,
                          valoration: product.valoration,
-                         stock:product.stock
+                         image: product.image,
                        }
      
         )
         );
-
+// console.log(data)
         let products = await Product.bulkCreate(product)
         res.status(200).json(products)
 

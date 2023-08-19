@@ -28,6 +28,7 @@ module.exports = (sequelize)=>{
         },
         price:{///considerar un key para el tipo de moneda????
             type:DataTypes.DECIMAL(10,2),
+
             allowNull:false,
             validate:{
                 notEmpty:{
@@ -69,7 +70,7 @@ module.exports = (sequelize)=>{
         },
         categoryId:{
             type:DataTypes.UUID,
-            allowNull:false,
+            allowNull:true,
         },
     },{timestamps:false});
 };

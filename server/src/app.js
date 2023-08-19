@@ -18,6 +18,6 @@ server.use((req, res, next) => {
   
   // getAllProductsApi()
 
-  server.use('/', router)
+  server.use('/', getAllProductsApi)
   
   module.exports = server;
