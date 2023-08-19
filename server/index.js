@@ -1,4 +1,4 @@
-const server = require("./app");
+const server = require("./src/app");
 const {conn} = require('./src/db');
 require('dotenv').config();
 

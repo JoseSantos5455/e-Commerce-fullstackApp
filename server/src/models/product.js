@@ -28,6 +28,7 @@ module.exports = (sequelize)=>{
         },
         price:{///considerar un key para el tipo de moneda????
             type:DataTypes.DECIMAL(10,2),
+
             allowNull:false,
             validate:{
                 notEmpty:{
@@ -35,12 +36,11 @@ module.exports = (sequelize)=>{
                 },
             },
         },
-<<<<<<< HEAD
-        /*stock:{
-            type:DataTypes.INTEGER,
+        stock:{
+            type: DataTypes.INTEGER,
             defaultValue:0,
-            min:0,  
-        },*/
+            min:0,
+        },    
         valoration: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -50,35 +50,6 @@ module.exports = (sequelize)=>{
               isInt: {
                 msg: 'Rating must be an integer value between 0 and 5',
               },
-=======
-        image:{
-
-        },
-        shipping:{
-
-        },
-        color:{},
-        stock:{
-            type: DataTypes.INTEGER,
-            defaultValue:0,
-            min:0,  
-        },
-        category:{
-
-        },
-        valoration:{
-            type:DataTypes.INTEGER,
-            allowNull:false,
-            validate:{
-                min:{
-                    args:0,
-                    msg:'Rating must be a number greater or equal to zero',
-                }, 
-                max:{
-                    args:5,
-                    msg:'Rating must be a number greater or equal to zero'
-                },
->>>>>>> bfc6893f3fb8a649d4b56f25afabbbb2c9f280f7
             },
           },
         image:{
@@ -93,23 +64,13 @@ module.exports = (sequelize)=>{
                 }
             }
         },
-<<<<<<< HEAD
-        /*shipping:{
-            type:DataTypes.INTEGER,
-            max:30,
-            min:3,
-        },*/
         isActive:{
             type:DataTypes.BOOLEAN,
             defaultValue:true,
         },
         categoryId:{
             type:DataTypes.UUID,
-            allowNull:false,
-=======
-        extras:{//listado de características de un producto ej. de un TV [2 puetos hdmi, sonido suround, etc]
-            type:DataTypes.ARRAY,
->>>>>>> bfc6893f3fb8a649d4b56f25afabbbb2c9f280f7
+            allowNull:true,
         },
     },{timestamps:false});
 };

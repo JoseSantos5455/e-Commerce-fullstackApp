@@ -29,4 +29,3 @@ Review.belongsTo(Product);
 
 module.exports = {...sequelize.models,
                     conn:sequelize}
-

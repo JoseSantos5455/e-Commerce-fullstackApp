@@ -2,6 +2,7 @@ const express = require("express")
 const server = express()
 const morgan = require("morgan")
 const router = require("./routes/index")
+const   getAllProductsApi = require('./handlers/productsHandlers/getAllProductsApi')
 
 
 server.use(express.json())
@@ -14,7 +15,9 @@ server.use((req, res, next) => {
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
   });
+  
+  // getAllProductsApi()
 
-  server.use('/', router)
+  server.use('/', getAllProductsApi)
   
   module.exports = server;

@@ -6,14 +6,11 @@
      "price": "894.00",
      "description": "The Football Is Good For Training And Recreational Purposes",
      "image": "https://loremflickr.com/640/480/technics",
-     "shipping": "2023-08-17T18:04:00.900Z",
-     "category": "Oriental",
-     "extras": "Metal",
-     "color": "#afd971",
+     "category": "Perifericos",
      "valoration": 85,
-     "stock": 55862,
-     "id": "1"
+     "stock": 55862
     },
+
     {
      "name": "Luxurious Wooden Pizza",
      "price": "162.00",
