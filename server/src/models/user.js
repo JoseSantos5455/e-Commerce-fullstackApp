@@ -61,6 +61,10 @@ module.exports = (sequelize)=>{
             type:DataTypes.ENUM('Administrator','User'),
             allowNull:false,
             defaultValue:'User',
-        },      
+        },  
+        address:{
+            type:DataTypes.STRING,
+            allowNull:false,
+        },    
     },{timestamps:false});
 };

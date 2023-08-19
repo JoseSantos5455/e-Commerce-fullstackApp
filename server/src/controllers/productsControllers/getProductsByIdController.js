@@ -1,20 +1,15 @@
-const {Category}=require('../../db')
+const {Product, Category} = require('../../db')
 
-const getProductById = async (id, source) => {
-    const product =
-      source === "api"
-        ? (
-            await axios.get(
-              `https://fakestoreapi.com/products/${id} `
-            )
-          ).data
-        : await Product.findByPk(id, {
-            include: {
-              model: Category,
-              attributes: ["name"],
-            },
-          });
+
+
+const getProductByIdController = async (id) => {
+  const product  = await Product.findByPk( id, {
+    include: {
+      model: Category,
+      attributes: ["name"], 
+    },
+  });
     return product;
   };
 
-  module.exports ={ getProductById}
+  module.exports = getProductByIdController
