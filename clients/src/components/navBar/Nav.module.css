@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  height: 10vh;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -59,6 +59,7 @@
   position: absolute;
   top: 100%;
   left: 0;
+  width: 8rem;
   border-radius: 7px;
   background-color: white;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
@@ -86,7 +87,11 @@
   color: black;
   text-decoration: none;
 }
-
+.container_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .searchInput {
   border: none;
   background-color: rgba(217, 217, 217, 0.69);
