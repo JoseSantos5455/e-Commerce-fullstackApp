@@ -1,0 +1,53 @@
+.wrapper{
+    width: 18%;
+    margin: 2%;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0;
+}
+.stock{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.stock p{
+    background-color: gray;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.img_product{
+    width: 100%;
+}
+.description_card{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border: 1px solid red;
+}
+.description_card .price{
+    width: 90%;
+    border: 1px solid red;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
+}
+.description_card .add{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.description_card .add input{
+width: 10%;
+}
+.description_card .add button{
+width: 90%;
+background-color: black;
+color: aliceblue;
+border: none;
+border-radius: 1rem;
+}
