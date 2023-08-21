@@ -28,6 +28,7 @@ module.exports = (sequelize)=>{
         },
         price:{///considerar un key para el tipo de moneda????
             type:DataTypes.DECIMAL(10,2),
+
             allowNull:false,
             validate:{
                 notEmpty:{
@@ -45,8 +46,8 @@ module.exports = (sequelize)=>{
         stock:{
             type: DataTypes.INTEGER,
             defaultValue:0,
-            min:0,  
-        },*/
+            min:0,
+        },    
         valoration: {
             type: DataTypes.INTEGER,
             allowNull: false,
