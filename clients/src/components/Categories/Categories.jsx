@@ -16,6 +16,10 @@ export default function Categories() {
         <li>Monitor</li>
         <li>Sound</li>
         <li>Others</li>
+        <li>Others</li>
+        <li>Others</li>
+        <li>Others</li>
+        <li>Others</li>
       </ul>
     </div>
   )

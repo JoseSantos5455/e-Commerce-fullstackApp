@@ -1,0 +1,8 @@
+.h2{
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.5rem;
+    color: rgba(128, 128, 128, 0.746);
+    border-bottom: 1px solid gray;
+    width: 80%;
+    display: flex;
+}

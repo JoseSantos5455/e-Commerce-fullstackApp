@@ -1,13 +1,24 @@
 import React from 'react'
 import Card from './Card'
-
+import Styles from './ListCard.module.css'
 export default function ListCard() {
 
-    let products = useSelector(state => state.products);
+    // let products = useSelector(state => state.products);
 
     return (
     <div >
-      {  
+        <h2 className={Styles.h2}> Destacados </h2>
+        <div className="d-flex justify-content-start">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        </div>
+        <div className="d-flex justify-content-start">
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        </div>
+      {/* {  
          products && products.length > 0 ?(
         products.map((pdt, idx)=>(
             <Card
@@ -21,7 +32,7 @@ export default function ListCard() {
 
       ))
       ) :( <p> No products </p> )
-    }
+    } */}
     </div>
   )
 }

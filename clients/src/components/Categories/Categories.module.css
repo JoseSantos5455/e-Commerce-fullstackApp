@@ -1,13 +1,15 @@
-.wapper{
-}
+
 .h2{
   font-family: 'Heebo', sans-serif;
   color: rgba(128, 128, 128, 0.722);
+  font-size: 1.4rem;
 }
 .ul{
   list-style: none;
   font-family: 'Heebo', sans-serif;
-  margin-left: -2%;
+  font-size: .9rem;
+  color: black;
+  padding: 0%;
 }
 .ul li:hover{
   color: #ffc502;

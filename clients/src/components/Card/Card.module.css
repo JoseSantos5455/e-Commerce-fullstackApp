@@ -39,6 +39,10 @@
     align-items: center;
     font-family: 'Heebo', sans-serif;
 }
+.price_number{
+    color: gray;
+
+}
 .description_card .add{
     display: flex;
     flex-flow: column wrap;
