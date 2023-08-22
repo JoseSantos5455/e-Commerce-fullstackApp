@@ -1,5 +1,5 @@
 const getAllProductsController = require ('../../controllers/productsControllers/getAllProductsController');
-const getProductsByNameController = require ('../../controllers/productsControllers/getProducstByNameController');
+const getProductsByNameController = require ('../../controllers/productsControllers/getProductsByNameController');
 
 const setPaginationData = (page,size) =>{
     const data = {page:0,
