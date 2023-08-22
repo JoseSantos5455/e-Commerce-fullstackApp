@@ -36,13 +36,8 @@ module.exports = (sequelize)=>{
                 },
             },
         },
-        image:{
+       
 
-        },
-        shipping:{
-
-        },
-        color:{},
         stock:{
             type: DataTypes.INTEGER,
             defaultValue:0,
@@ -95,7 +90,7 @@ module.exports = (sequelize)=>{
             },
         },
         extras:{//listado de características de un producto ej. de un TV [2 puetos hdmi, sonido suround, etc]
-            type:DataTypes.ARRAY,
+            type:DataTypes.STRING,
         },
     },{timestamps:false});
 };
