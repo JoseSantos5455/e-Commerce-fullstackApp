@@ -1,7 +1,7 @@
-const { Product, Category } = require("../../db")
+const { Product } = require("../../db")
 
 const createProductController = async(name,description,price,stock,valoration,image,categoryId)=>{
- const newProductData ={
+   const newProductData ={
     name,
     description,
     price,
@@ -14,4 +14,4 @@ const createProductController = async(name,description,price,stock,valoration,im
  return newProduct;
 }
 
-module.exports={createProductController}
+module.exports= createProductController;
