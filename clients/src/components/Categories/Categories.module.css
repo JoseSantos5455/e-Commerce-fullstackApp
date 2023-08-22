@@ -1,17 +1,15 @@
-.container_custom {
-  margin-top: 4%;
+.wapper{
 }
-
-.container_custom img {
-  width: 90%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: 0 0 12px 0;
-  transition: transform 0.3s, box-shadow 0.3s, cursor 0.3s; /* Agrega transiciones */
-  cursor: pointer; /* Cambia el cursor a un puntero */
+.h2{
+  font-family: 'Heebo', sans-serif;
+  color: rgba(128, 128, 128, 0.722);
 }
+.ul{
+  list-style: none;
+  font-family: 'Heebo', sans-serif;
+  margin-left: -2%;
+}
+.ul li:hover{
+  color: #ffc502;
 
-.container_custom img:hover {
-  transform: scale(1.1); /* Agranda la imagen al pasar el mouse */
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); /* Cambia la sombra al pasar el mouse */
 }
