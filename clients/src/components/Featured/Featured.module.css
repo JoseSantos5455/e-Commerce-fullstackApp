@@ -1,6 +1,6 @@
 .featured_container {
-  height: 90vh;
-  width: 90vh;
+  width: 100%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
