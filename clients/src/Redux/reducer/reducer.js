@@ -1,11 +1,15 @@
+import { POST_PRODUCTS } from "../actions/actions";
+
 const initialState = {
     
   };
   
   const rootReducer = (state = initialState, action) => {
     switch (action.type) {
-      case "SOME_ACTION":
-        return state;
+      case POST_PRODUCTS:
+        return {
+          ...state
+        }
   
       default:
         return state;

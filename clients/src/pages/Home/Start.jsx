@@ -4,6 +4,7 @@ import Featured from '../../components/Featured/Featured'
 import Carrousel from './../../components/Carrousel/Carrousel'
 import Footer from '../../components/Footer/Footer'
 
+
 export default function Start() {
   return (
     <div className={Styles.container}>
