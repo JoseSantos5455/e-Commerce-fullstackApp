@@ -10,5 +10,5 @@ export default function App() {
           <Route exact path="/form" Component={Form}/>
       </Routes>
     </div>
-  );
+  )
 }
