@@ -4,7 +4,7 @@ import axios from "axios"
 
 export const getProducts = ()=>{
     return async (dispatch) =>{
-        let endpoint =`http://localhost:3001/`
+        let endpoint =`http://localhost:3001/products/${page}${size}`
         try {
             const response = await axios(endpoint)
             let data = response.data
