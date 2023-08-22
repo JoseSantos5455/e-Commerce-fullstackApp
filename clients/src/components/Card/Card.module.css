@@ -8,11 +8,13 @@
     justify-content: space-evenly;
 }
 .stock p{
-    background-color: gray;
+    font-family: 'Heebo', sans-serif;
+    font-size: .7rem;
+    background-color: rgba(128, 128, 128, 0.407);
     padding-left: 20%;
     padding-right: 20%;
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: .4rem;
+    border-bottom-left-radius: .4rem;
 }
 .div_image{
     box-shadow: 0 0 10px 0;
@@ -23,6 +25,7 @@
     width: 100%;
 }
 .description_card{
+    margin-top: 3%;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;

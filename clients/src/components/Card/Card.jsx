@@ -9,7 +9,7 @@ export default function Card() {
     <div className={Styles.wrapper}>
         <div className={Styles.div_image}>
             <div className={Styles.stock}>
-                <p>Stock</p>
+                <p>Abailable</p>
                 <AiOutlineHeart/>
             </div>
             <img className={Styles.img_product} src="https://static.skyassets.com/contentstack/assets/blt143e20b03d72047e/bltbae4788745bf0010/6319d665937b9657b5f2b7ee/Carousel_iPhone14ProMax_Purple_Placement02-PreOrder.png" alt="" />
