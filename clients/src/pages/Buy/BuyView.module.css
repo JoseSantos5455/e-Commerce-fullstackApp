@@ -1,10 +1,14 @@
+.wrapper{
+    display: flex;
+}
 .categories{
-    width: 20%;
+    width: 10%;
     margin-top: 10%;
     padding-left: 2%;
 }
 .listCard{
-    width: 70%;
+    display: flex;
+    width: 80%;
     margin-right: 0%;
     margin-left: 10%;
 }

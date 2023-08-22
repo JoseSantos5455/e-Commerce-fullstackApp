@@ -6,14 +6,14 @@ export default function ListCard() {
     // let products = useSelector(state => state.products);
 
     return (
-    <div >
+    <div className={Styles.wrapper} >
         <h2 className={Styles.h2}> Destacados </h2>
-        <div className="d-flex justify-content-start">
+        <div className={Styles.list}>
         <Card></Card>
         <Card></Card>
         <Card></Card>
         </div>
-        <div className="d-flex justify-content-start">
+        <div className={Styles.list}>
         <Card></Card>
         <Card></Card>
         <Card></Card>

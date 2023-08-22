@@ -7,7 +7,7 @@ import ListCard from '../../components/Card/ListCard'
 
 export default function BuyView() {
   return (
-    <div className='d-flex'>
+    <div className={Styles.wrapper}>
       <div className={Styles.categories}>
         <Categories />
       </div>

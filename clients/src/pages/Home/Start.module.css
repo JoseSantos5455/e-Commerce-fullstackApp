@@ -17,8 +17,16 @@
 }
 
 .content {
-  margin-top: 70px;
+  margin-top: 10vh;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  height: 90vh;
+}
+
+.featured {
+  height: 100%;
+  width: 100%;
+}
+.carrousel {
+  height: 100%;
+  width: 100%;
 }

@@ -1,7 +1,9 @@
-import Styles from './Start.module.css';
-import NavBar from '../../components/navBar/Nav';
-import Featured from '../../components/Featured/Featured';
-import Carrousel from './../../components/Carrousel/Carrousel';
+import Styles from './Start.module.css'
+import NavBar from '../../components/navBar/Nav'
+import Featured from '../../components/Featured/Featured'
+import Carrousel from './../../components/Carrousel/Carrousel'
+import Footer from '../../components/Footer/Footer'
+
 
 export default function Start() {
   return (
@@ -17,6 +19,7 @@ export default function Start() {
           <Carrousel />
         </div>
       </div>
+      <Footer />
     </div>
-  );
+  )
 }
