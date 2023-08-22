@@ -26,7 +26,7 @@ module.exports = (sequelize)=>{
                 },
             },
         },
-        price:{///considerar un key para el tipo de moneda????
+        price:{
             type:DataTypes.DECIMAL(10,2),
 
             allowNull:false,
@@ -69,7 +69,7 @@ module.exports = (sequelize)=>{
             defaultValue:true,
         },
         categoryId:{
-            type:DataTypes.UUID,
+            type:DataTypes.INTEGER,
             allowNull:true,
         },
     },{timestamps:false});
