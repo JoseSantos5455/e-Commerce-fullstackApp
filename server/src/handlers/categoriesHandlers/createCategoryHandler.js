@@ -9,4 +9,4 @@ const addCategoriesHandler = async(req,res)=>{
     }
 };
 
-module.exports = {addCategoriesHandler};
+module.exports = addCategoriesHandler;

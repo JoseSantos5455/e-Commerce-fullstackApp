@@ -36,8 +36,6 @@ module.exports = (sequelize)=>{
                 },
             },
         },
-       
-
         stock:{
             type: DataTypes.INTEGER,
             defaultValue:0,
@@ -66,31 +64,13 @@ module.exports = (sequelize)=>{
                 }
             }
         },
-        /*shipping:{
-            type:DataTypes.INTEGER,
-            max:30,
-            min:3,
-        },*/
         isActive:{
             type:DataTypes.BOOLEAN,
             defaultValue:true,
         },
         categoryId:{
-            type:DataTypes.UUID,
-            allowNull:false,
-            validate:{
-                min:{
-                    args:0,
-                    msg:'Rating must be a number greater or equal to zero',
-                }, 
-                max:{
-                    args:5,
-                    msg:'Rating must be a number greater or equal to zero'
-                },
-            },
-        },
-        extras:{//listado de características de un producto ej. de un TV [2 puetos hdmi, sonido suround, etc]
-            type:DataTypes.STRING,
+            type:DataTypes.INTEGER,
+            allowNull:true,
         },
     },{timestamps:false});
 };
