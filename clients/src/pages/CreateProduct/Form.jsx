@@ -1,7 +1,6 @@
 import React from 'react'
 import Validation from "../../components/Validation/Validation"
 import { useState } from 'react'
-import style from "./Form.module.css"
 const Form = () => {
   const [form, setForm] = useState({
     name: "",
