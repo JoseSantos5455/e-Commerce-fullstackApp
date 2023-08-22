@@ -1,5 +1,5 @@
-const getAllProductsController = require ('../../controllers/productsControllers/getAllProductsController')
-const getProductByNameController = require ('../../controllers/productsControllers/getProductByNameController')
+const getAllProductsController = require ('../../controllers/productsControllers/getAllProductsController');
+const getProductsByNameController = require ('../../controllers/productsControllers/getProducstByNameController');
 
 const setPaginationData = (page,size) =>{
     const data = {page:0,
@@ -19,11 +19,11 @@ const getProductsHandler = async(req,res)=>{
 
     try {
         if(name){
-            const result = await getProductByNameController(name,paginationData.page,paginationData.size);
+            const result =  await getProductsByNameController(name,paginationData.page,paginationData.size);
             res.status(200).json(result)
         }
         else{
-            const result = await getAllProductsController(paginationData.page,paginationData.size);
+            const result =  await getAllProductsController(paginationData.page,paginationData.size);
             res.status(200).json(result)
         }
     } catch (error) {
@@ -32,4 +32,4 @@ const getProductsHandler = async(req,res)=>{
     }
 }
 
-module.exports =  getProductsHandler
+module.exports =  getProductsHandler;

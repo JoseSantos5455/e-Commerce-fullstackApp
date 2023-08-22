@@ -1,6 +1,6 @@
 const {Product} = require("../../db")
 
-  const getProductByNameController = async (name)=>{
+  const getProductsByNameController = async (name)=>{
     const productsByName = await Product.findAll(
         {where:
             {name:name}}
@@ -9,4 +9,4 @@ const {Product} = require("../../db")
     return productsByName
 }
 
-module.exports =  getProductByNameController
+module.exports =  getProductsByNameController
