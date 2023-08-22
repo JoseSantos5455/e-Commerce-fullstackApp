@@ -2,9 +2,9 @@ import {POST_PDT, GET_PDT} from './actionTypes'
 import axios from "axios"
 
 
-export const getProducts = ()=>{
+export const getProducts = (page, size)=>{
     return async (dispatch) =>{
-        let endpoint =`http://localhost:3001/products/${page}${size}`
+        let endpoint =`http://localhost:3001/products/?page=${page}&size=${size}`
         try {
             const response = await axios(endpoint)
             let data = response.data
