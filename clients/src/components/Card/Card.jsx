@@ -4,7 +4,7 @@ import Styles from './Card.module.css'
 
 import { AiOutlineHeart, AiFillPlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className={Styles.wrapper}>
         <div className={Styles.div_image}>
