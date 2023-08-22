@@ -11,6 +11,9 @@
   color: black;
   padding: 0%;
 }
+.ul li {
+  padding-top: 5%;
+}
 .ul li:hover{
   color: #ffc502;
 
