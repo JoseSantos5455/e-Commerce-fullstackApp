@@ -20,11 +20,11 @@ export default function Card() {
                 <p>iPhone 14</p>
                 <p>$1.400</p>
             </div>
-            
+
             <div className={Styles.add}>
-                <div className="cantidad">
+                <div className={Styles.div_input}>
                     <AiFillPlusCircle/>
-                    <input type="number" />
+                    <input type="number" placeholder='1' readOnly  />
                     <AiOutlineMinusCircle/>
                 </div>
                 <button>Añadir al carrito</button>

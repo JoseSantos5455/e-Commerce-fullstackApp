@@ -1,8 +1,6 @@
 .wrapper{
     width: 18%;
     margin: 2%;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px 0;
 }
 .stock{
     display: flex;
@@ -16,6 +14,11 @@
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
+.div_image{
+    box-shadow: 0 0 10px 0;
+    border-radius: 1rem;
+
+}
 .img_product{
     width: 100%;
 }
@@ -24,15 +27,14 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    border: 1px solid red;
 }
 .description_card .price{
     width: 90%;
-    border: 1px solid red;
     display: flex;
     flex-flow: column;
     align-content: center;
     align-items: center;
+    font-family: 'Heebo', sans-serif;
 }
 .description_card .add{
     display: flex;
@@ -41,8 +43,14 @@
     align-items: center;
 
 }
+.div_input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .description_card .add input{
-width: 10%;
+width: 35%;
+font-size: .5rem;
 }
 .description_card .add button{
 width: 90%;
@@ -50,4 +58,5 @@ background-color: black;
 color: aliceblue;
 border: none;
 border-radius: 1rem;
+font-size: .6rem;
 }
