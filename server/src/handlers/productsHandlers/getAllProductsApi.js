@@ -15,11 +15,11 @@ const getAllProductsApi = async (req, res) =>{
                          stock:product.stock,
                          valoration: product.valoration,
                          image: product.image,
+                         categoryId:Math.floor(Math.random() * 3) + 1
                        }
      
         )
         );
-// console.log(data)
         let products = await Product.bulkCreate(product)
         res.status(200).json(products)
 
@@ -28,5 +28,4 @@ const getAllProductsApi = async (req, res) =>{
     }
 }
 
-module.exports = 
-    getAllProductsApi
+module.exports = getAllProductsApi;

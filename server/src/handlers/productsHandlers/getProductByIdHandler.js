@@ -1,4 +1,4 @@
-const getProductByIdController = require("../../controllers/productsControllers/getProductsByIdController");
+const getProductByIdController = require("../../controllers/productsControllers/getProductByIdController");
 
 const getProductByIdHandler = async (req, res) => {
     const { id } = req.params;
