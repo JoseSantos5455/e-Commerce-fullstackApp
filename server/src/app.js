@@ -1,9 +1,9 @@
 const express = require("express")
 const server = express()
 const morgan = require("morgan")
-const router = require("./routes/index")
-const   getAllProductsApi = require('./handlers/productsHandlers/getAllProductsApi')
+const router = require('./routes/index');
 
+require('./db.js');
 
 server.use(express.json())
 server.use(express.urlencoded({extended: false}))
@@ -16,8 +16,6 @@ server.use((req, res, next) => {
     next();
   });
   
-  // getAllProductsApi()
-
-  server.use('/', getAllProductsApi)
+server.use('/', router);
   
   module.exports = server;
