@@ -16,7 +16,7 @@ const {Op} = require('sequelize');
           });
     const productsByName = productList.rows.map(product => ({
         ...product.toJSON(),
-        categoria: product.Category.name, 
+        category: product.Category.name, 
         Category: undefined, 
         })
     );
