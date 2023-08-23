@@ -6,6 +6,7 @@ import ListCard from '../../components/Card/ListCard'
 import Nav from '../../components/navBar/Nav'
 import { useDispatch } from 'react-redux'
 import { getProducts } from '../../Redux/actions/actions'
+import Footer from '../../components/Footer/Footer'
 export default function BuyView() {
   let dispatch = useDispatch()
  useEffect(()=>{
@@ -24,6 +25,7 @@ export default function BuyView() {
         <ListCard />
       </ div>
     </div>
+    <Footer/>
     </div>
 
   )
