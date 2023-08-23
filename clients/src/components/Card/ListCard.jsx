@@ -1,38 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import Styles from './ListCard.module.css'
-export default function ListCard() {
+import { useSelector } from 'react-redux';
 
-    // let products = useSelector(state => state.products);
+
+
+export default function ListCard() {
+  let products = useSelector(state => state.products);
+
+  let aviability = products.map(pdt => pdt.stock > 0 ? true : false)
+
+
+
 
     return (
     <div className={Styles.wrapper} >
         <h2 className={Styles.h2}> Destacados </h2>
         <div className={Styles.list}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        </div>
-        <div className={Styles.list}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        </div>
-      {/* {  
-         products && products.length > 0 ?(
-        products.map((pdt, idx)=>(
+       
+    {  
+        products && products.length > 0 ?(
+          products.map((pdt, idx)=>(
             <Card
-            index = {idx} 
-            aviability= { pdt.aviability }     
-            img ={pdt.img}
+            key = {idx} 
+            aviability = { aviability[idx] }     
+            img ={pdt.image}
             name = {pdt.name}
             price = {pdt.price}
             isFavorite = {pdt.favorite}
-      />
-
-      ))
-      ) :( <p> No products </p> )
-    } */}
+            />
+            
+            ))
+            ) :( <p> No products </p> )
+          } 
+          </div>
     </div>
   )
 }
