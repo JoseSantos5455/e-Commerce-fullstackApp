@@ -16,3 +16,13 @@ export const createProducts = (payload) => {
         }
     }
 }
+
+export const getNameProducts = (name) => {
+    return async () => {
+        try {
+            const nameInfo = await axios.get('' + name)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}

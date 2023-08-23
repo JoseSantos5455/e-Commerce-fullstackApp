@@ -1,7 +1,7 @@
 import { POST_PRODUCTS } from "../actions/actions";
 
 const initialState = {
-    
+  
   };
   
   const rootReducer = (state = initialState, action) => {

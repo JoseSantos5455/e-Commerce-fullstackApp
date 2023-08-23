@@ -1,7 +1,6 @@
 import Styles from './Nav.module.css'
 import logo from '../../images/logo.png'
 import { BsSearch } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
 
 export default function Nav() {
   return (
@@ -51,12 +50,9 @@ export default function Nav() {
       <div className={` ${Styles.col_3}`}>
         <div className={Styles.container_btn}>
           <div className={` ${Styles.containerLogin}`}>
-            <Link to= "/home">
             <button className={`${Styles.actionButton2} ${Styles.login}`}>
               Iniciar sesión
             </button>
-            </Link>
-
           </div>
           <div className={`${Styles.containerCreate}`}>
             <button className={`${Styles.actionButton} ${Styles.create}`}>
