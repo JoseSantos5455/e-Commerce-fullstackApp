@@ -12,7 +12,7 @@ module.exports = (sequelize) => {
         allowNull: false,
         unique: true,
         validate:{
-            isNull: {msg:`Category name couldn't be null`}
+            notEmpty: {msg:`Category name couldn't be null`}
         }
     },
   },{timestamps:false});
