@@ -9,7 +9,8 @@ const initialState = {
     switch (action.type) {
       case GET_PDT:
         return{
-          
+          ...state,
+            products: action.payload
 
         }
       case POST_PDT:
