@@ -1,6 +1,6 @@
 import React from 'react'
 import img from "../../images/logo.png"
-import style from "./NotFaund.module.css"
+import style from "./NotFound.module.css"
 import {Link} from "react-router-dom"
 
 const NotFaund = () => {
