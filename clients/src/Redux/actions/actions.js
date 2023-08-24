@@ -2,7 +2,7 @@ import {POST_PDT, GET_PDT, GET_NAME_PRODUCTS} from './actionTypes'
 import axios from "axios"
 
 
-export const getProducts = (page, size)=>{
+export const getProducts = ()=>{
     return async (dispatch) =>{
         let endpoint =`http://localhost:3001/products`
         try {
@@ -22,12 +22,7 @@ export const getProducts = (page, size)=>{
 export const getNameProducts = (name) => {
     return async (dispatch) => {
         try {
-            const nameInfo = await axios.get(`http://localhost:3001/products?name=${name}`)
-            const nameData = nameInfo.data
-            dispatch({
-                type: GET_NAME_PRODUCTS,
-                payload: nameData 
-            })
+            const nameInfo = await axios.get('' + name)
         } catch (error) {
             console.log(error);
         }

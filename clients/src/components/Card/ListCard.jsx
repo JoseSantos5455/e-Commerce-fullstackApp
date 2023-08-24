@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import Styles from './ListCard.module.css'
 import { useSelector } from 'react-redux';
@@ -15,7 +14,7 @@ export default function ListCard() {
 
     return (
     <div className={Styles.wrapper} >
-        <h2 className={Styles.h2}> Destacados </h2>
+        <h2 className={Styles.h2}> Products </h2>
         <div className={Styles.list}>
        
     {  
