@@ -14,12 +14,13 @@ export default function ListCard() {
         {products && products.length > 0 ? (
           products.map((pdt, idx) => (
             <Card
-              key={idx}
-              aviability={aviability[idx]}
-              img={pdt.image}
-              name={pdt.name}
-              price={pdt.price}
-              isFavorite={pdt.favorite}
+            key = {idx}
+            id = {pdt.id} 
+            aviability = { aviability[idx] }     
+            img ={pdt.image}
+            name = {pdt.name}
+            price = {pdt.price}
+            isFavorite = {pdt.favorite}
             />
           ))
         ) : (
