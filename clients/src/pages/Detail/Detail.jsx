@@ -24,8 +24,20 @@ export default function Detail() {
 <div className={Styles.wrapper}>
 <Nav/>
 <div className={Styles.data_detail}>
-  <Images/>
-  <Info/>
+  <Images
+    img1 ={product.image}
+    img2 ={product.image}
+    img3 ={product.image}
+    img4 ={product.image}
+    img_main ={product.image}
+  />
+  <Info
+  name= {product.name}
+  description ={product.description}
+  price = {product.price}
+  valoration = {product.valoration}
+  stock={product.stock}
+  />
 </div>
 <Footer/>
 </div>
