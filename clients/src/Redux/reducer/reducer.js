@@ -1,8 +1,9 @@
-import { POST_PDT, GET_PDT } from "../actions/actionTypes";
+import { POST_PDT, GET_PDT,GET_DET } from "../actions/actionTypes";
 
 const initialState = {
       base: [],
-      products: []
+      products: [],
+      detail:[]
   };
   
   const rootReducer = (state = initialState, action) => {
@@ -12,6 +13,12 @@ const initialState = {
           ...state,
             products: action.payload
 
+        }
+
+      case GET_DET:
+        return{
+          ...state,
+          detail: action.payload
         }
       case POST_PDT:
         return {

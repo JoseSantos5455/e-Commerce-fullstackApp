@@ -26,7 +26,7 @@ export default function Card(props) {
           <p>{props.aviability ? 'Available' : 'Unavailable'}</p>
           <AiOutlineHeart />
         </div>
-        <NavLink to={'/products/detail'}>
+        <NavLink to={`/products/detail/${props.id}`}>
 
         
         <img
