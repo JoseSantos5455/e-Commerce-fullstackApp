@@ -1,4 +1,3 @@
-import React from 'react'
 import Validation from "../../components/Validation/Validation"
 import { useState } from 'react'
 import style from "./Form.module.css"
@@ -42,7 +41,7 @@ const handlerChange = (event) => {
     if (isFormIncomplete) {
       alert("Debes completar todos los campos");
     } else {
-      dispatch(postCreateProduct(form));
+      //dispatch(postCreateProduct(form));
       alert("El Producto se creo de forma exitosa");
       setForm({
         name: "",

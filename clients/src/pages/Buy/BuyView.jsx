@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import Styles from './BuyView.module.css'
-import Card from '../../components/Card/Card.jsx'
 import Categories from '../../components/Categories/Categories'
 import ListCard from '../../components/Card/ListCard'
 import Nav from '../../components/navBar/Nav'

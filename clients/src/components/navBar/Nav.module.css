@@ -131,13 +131,17 @@
 }
 
 .create {
-  color: black;
+  color: #363636;
 }
 
 .actionButton:hover {
-  color: rgb(34, 120, 233);
+  color: #000000;
 }
 
 .actionButton2:hover {
   color: #ffc502;
+}
+.col_search {
+  width: 50%;
+  display: flex;
 }

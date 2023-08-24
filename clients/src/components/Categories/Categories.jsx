@@ -1,4 +1,3 @@
-import React from 'react'
 import Styles from './Categories.module.css'
 
 export default function Categories() {
