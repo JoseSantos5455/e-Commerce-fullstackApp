@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logoDeLujo {
+    width: 125%;
+    height: 90px;
+    background-color:  #ffc502;
+    margin-top: -9px;
+  }
+
+  /*.image{
+    
+  }*/
+
+  .playButton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000102;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .playButton:hover {
+    background-color: #ffc502;
+  }
+
