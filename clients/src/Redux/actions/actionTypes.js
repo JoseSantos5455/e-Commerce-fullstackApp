@@ -1,2 +1,3 @@
 export const POST_PDT = "POST_PRODUCTS"
 export const GET_PDT = "GET_PRODUCTS"
+export const GET_NAME_PRODUCTS ="GET_NAME_PRODUCTS"

@@ -1,4 +1,4 @@
-import { POST_PDT, GET_PDT } from "../actions/actionTypes";
+import { POST_PDT, GET_PDT, GET_NAME_PRODUCTS } from "../actions/actionTypes";
 
 const initialState = {
       base: [],
@@ -16,6 +16,11 @@ const initialState = {
       case POST_PDT:
         return {
           ...state
+        }
+      case GET_NAME_PRODUCTS: 
+        return {
+            ...state,
+            products: action.payload
         }
   
       default:

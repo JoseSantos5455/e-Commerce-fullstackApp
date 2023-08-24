@@ -1,8 +1,11 @@
 import React from 'react'
+import style from "./Form.module.css"
 import Validation from "../../components/Validation/Validation"
 import { useState } from 'react'
-import style from "./Form.module.css"
+import { useDispatch } from "react-redux"
+import { createProducts } from '../../Redux/actions/actions'
 const Form = () => {
+  const dispatch = useDispatch()
   const [form, setForm] = useState({
     name: "",
     price: "",
@@ -42,7 +45,7 @@ const handlerChange = (event) => {
     if (isFormIncomplete) {
       alert("Debes completar todos los campos");
     } else {
-      dispatch(postCreateProduct(form));
+      dispatch(createProducts(form));
       alert("El Producto se creo de forma exitosa");
       setForm({
         name: "",
