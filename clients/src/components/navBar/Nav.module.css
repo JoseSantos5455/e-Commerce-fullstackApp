@@ -141,3 +141,7 @@
 .actionButton2:hover {
   color: #ffc502;
 }
+.col_search {
+  width: 50%;
+  display: flex;
+}

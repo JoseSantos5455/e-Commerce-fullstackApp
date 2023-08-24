@@ -69,7 +69,7 @@ module.exports = (sequelize)=>{
             defaultValue:true,
         },
         categoryId:{
-            type:DataTypes.UUID,
+            type:DataTypes.INTEGER,
             allowNull:true,
         },
     },{timestamps:false});

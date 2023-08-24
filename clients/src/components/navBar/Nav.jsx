@@ -3,6 +3,7 @@ import Styles from './Nav.module.css'
 import logo from '../../images/logo.png'
 import { BsSearch } from 'react-icons/bs'
 import Login from '../Login/Login'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
@@ -19,16 +20,26 @@ export default function Nav() {
     <div className={Styles.wrapper}>
       <div className={`${Styles.col_5}`}>
         <div className={`${Styles.div_logo} ${Styles.col_3}`}>
-          <img src={logo} alt="logo" className={`${Styles.logo}`} />
+          <Link to="/">
+            <img src={logo} alt="logo" className={`${Styles.logo}`} />
+          </Link>
         </div>
         <div className={` ${Styles.col_1}`}>
-          <h6 className={Styles.font}>Inicio</h6>
+          <Link to="/">
+            <button className={`${Styles.background} ${Styles.font}`}>
+              Inicio
+            </button>
+          </Link>
         </div>
         <div className={`${Styles.col_3}`}>
           <div className={Styles.dropdown}>
-            <button className={`${Styles.background} ${Styles.dropdownToggle}`}>
-              Categorías
-            </button>
+            <Link to="/products">
+              <button
+                className={`${Styles.background} ${Styles.dropdownToggle}`}
+              >
+                Products
+              </button>
+            </Link>
             <div className={`${Styles.dropdownMenu}`}>
               <div className={Styles.dropdownHeader}>Discos Duros</div>
               <a href="#" className={Styles.dropdownItem}>
