@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   height: 90vh;
-  width: 90vh;
+  width: 100vh;
   margin-top: 15vh;
 }
 .categories {

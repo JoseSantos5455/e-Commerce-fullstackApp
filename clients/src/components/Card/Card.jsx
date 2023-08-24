@@ -15,7 +15,7 @@ Card.propTypes = {
   price: PropTypes.number.isRequired,
 }
 
-export default function Card({ aviability, img, name, price }) {
+export default function Card({ aviability, img, name, price, id }) {
   const [buyQ, setBuyQ] = useState(1)
 
   const handleMoreQ = () => {
@@ -37,15 +37,13 @@ export default function Card({ aviability, img, name, price }) {
         <AiOutlineHeart />
       </div>
       <div className={Styles.div_image}>
-        <div className={Styles.img_container}>
-          <img className={Styles.img_product} src={img} alt="Image product" />
-        </div>
-        <NavLink to={`/products/detail/${props.id}`}>
+        
+        <NavLink to={`/products/detail/${id}`}>
 
         
         <img
           className={Styles.img_product}
-          src={props.img}
+          src={img}
           alt="Image product"
           />
           </NavLink>
