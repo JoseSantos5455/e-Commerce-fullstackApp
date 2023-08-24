@@ -1,8 +1,8 @@
-import {POST_PDT, GET_PDT} from './actionTypes'
+import { GET_PDT} from './actionTypes'
 import axios from "axios"
 
 
-export const getProducts = (page, size)=>{
+export const getProducts = ()=>{
     return async (dispatch) =>{
         let endpoint =`http://localhost:3001/products`
         try {
@@ -19,10 +19,10 @@ export const getProducts = (page, size)=>{
     }
 }
 
-export const getNameProducts = (name) => {
+export const getNameProducts = () => {
     return async () => {
         try {
-            const nameInfo = await axios.get('' + name)
+            // const nameInfo = await axios.get('' + name)
         } catch (error) {
             console.log(error);
         }

@@ -1,25 +1,45 @@
+import { useState } from 'react'
 import Styles from './Nav.module.css'
 import logo from '../../images/logo.png'
 import { BsSearch } from 'react-icons/bs'
+import Login from '../Login/Login'
 import { Link } from 'react-router-dom'
 
 export default function Nav() {
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true)
+  }
+
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false)
+  }
+
   return (
     <div className={Styles.wrapper}>
       <div className={`${Styles.col_5}`}>
         <div className={`${Styles.div_logo} ${Styles.col_3}`}>
-          <img src={logo} alt="logo" className={`${Styles.logo}`} />
+          <Link to="/">
+            <img src={logo} alt="logo" className={`${Styles.logo}`} />
+          </Link>
         </div>
         <div className={` ${Styles.col_1}`}>
-          <h6 className={Styles.font}>Inicio</h6>
+          <Link to="/">
+            <button className={`${Styles.background} ${Styles.font}`}>
+              Inicio
+            </button>
+          </Link>
         </div>
         <div className={`${Styles.col_3}`}>
           <div className={Styles.dropdown}>
-              <Link to = '/products'>
-            <button className={`${Styles.background} ${Styles.dropdownToggle}`}>
-              Products
-            </button>
-                </Link>
+            <Link to="/products">
+              <button
+                className={`${Styles.background} ${Styles.dropdownToggle}`}
+              >
+                Products
+              </button>
+            </Link>
             <div className={`${Styles.dropdownMenu}`}>
               <div className={Styles.dropdownHeader}>Discos Duros</div>
               <a href="#" className={Styles.dropdownItem}>
@@ -53,7 +73,10 @@ export default function Nav() {
       <div className={` ${Styles.col_3}`}>
         <div className={Styles.container_btn}>
           <div className={` ${Styles.containerLogin}`}>
-            <button className={`${Styles.actionButton2} ${Styles.login}`}>
+            <button
+              className={`${Styles.actionButton2} ${Styles.login}`}
+              onClick={openLoginModal}
+            >
               Iniciar sesión
             </button>
           </div>
@@ -64,6 +87,9 @@ export default function Nav() {
           </div>
         </div>
       </div>
+      {isLoginModalOpen && (
+        <Login isOpen={isLoginModalOpen} onClose={closeLoginModal} />
+      )}
     </div>
   )
 }

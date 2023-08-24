@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import Styles from './ListCard.module.css'
 import { useSelector } from 'react-redux';
