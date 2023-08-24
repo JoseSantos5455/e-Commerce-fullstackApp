@@ -1,90 +1,95 @@
-.wrapper{
-    width: 20%;
-    margin: 2%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: stretch;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.wrapper {
+  width: 40%;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
-.stock{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: start;
-    align-content: start;
-}
-.stock p{
-    font-family: 'Heebo', sans-serif;
-    font-size: .7rem;
-    background-color: rgba(128, 128, 128, 0.407);
-    padding-left: 20%;
-    padding-right: 20%;
-    border-bottom-right-radius: .4rem;
-    border-bottom-left-radius: .4rem;
-    margin: 0%;
-}
-.div_image{
-    box-shadow: 0 0 10px 0;
-    border-radius: 1rem;
-    min-height: 250px;
-    max-height: 250px;
-    overflow: hidden;
-    
-    
-}
-.div_image:hover{
-    transform: scale(1.1);
-}
-.img_product{
-    width: 100%;
+.wrapper:hover {
+  transform: scale(1.04);
 }
 
-.description_card{
-    margin-top: 3%;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+.stock {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.2);
+  padding: 0.2rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: 0px 15px;
+  margin-bottom: 0.5rem;
 }
-.description_card .price{
-    width: 90%;
-    display: flex;
-    flex-flow: column;
-    align-content: center;
-    align-items: center;
-    font-family: 'Heebo', sans-serif;
+.stock p {
+  font-size: 0.7rem;
+  margin: 0;
 }
-.price_number{
-    color: gray;
+.div_image {
+  border-radius: 1rem;
+  overflow: hidden;
+}
 
+.img_container {
+  width: 100%;
+  display: block;
+  overflow: hidden;
 }
-.description_card .add{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
 
+.img_product {
+  width: 100%;
+  display: block;
 }
-.div_input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.description_card {
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
-.description_card .add input{
-width: 35%;
-font-size: .5rem;
+.description_card .price {
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  align-items: center;
 }
-.description_card .add button{
-width: 90%;
-background-color: black;
-color: aliceblue;
-border: none;
-border-radius: 1rem;
-font-size: .6rem;
+.price_number {
+  color: gray;
 }
-.description_card .add button:hover{
-transform: scale(1.1);
-background-color: rgb(238, 187, 35);
-color: black;
-box-shadow: 0 0 5px 0;
+.description_card .add {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.div_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description_card .add input {
+  width: 35%;
+  font-size: 0.5rem;
+}
+.description_card .add button {
+  width: 90%;
+  background-color: black;
+  color: aliceblue;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.6rem;
+}
+.description_card .add button:hover {
+  transform: scale(1.1);
+  background-color: rgb(238, 187, 35);
+  color: black;
+  box-shadow: 0 0 5px 0;
 }

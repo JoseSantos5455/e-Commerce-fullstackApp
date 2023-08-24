@@ -6,9 +6,6 @@ const CreateAccount = () => {
 
   const handleCreateAccount = (e) => {
     e.preventDefault()
-    // Aquí podrías implementar la lógica para crear una nueva cuenta
-    // Por ejemplo, puedes realizar una llamada a la API para registrar al usuario
-    // Después de crear la cuenta, podrías redirigir al usuario a la página de inicio de sesión
   }
 
   return (
