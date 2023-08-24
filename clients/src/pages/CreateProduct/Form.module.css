@@ -1,2 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-  
+.campos {
+    padding-top: 15px;
+}
+
+input {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
