@@ -1,5 +1,5 @@
 .wrapper{
-    width: 25%;
+    width: 20%;
     margin: 2%;
     display: flex;
     flex-flow: column nowrap;
@@ -37,8 +37,8 @@
 }
 .img_product{
     width: 100%;
-   
 }
+
 .description_card{
     margin-top: 3%;
     width: 100%;
