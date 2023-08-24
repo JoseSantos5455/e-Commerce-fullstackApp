@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Styles from './Card.module.css'
+import {NavLink} from 'react-router-dom'
 import {
   AiOutlineHeart,
   AiFillPlusCircle,
@@ -25,11 +26,15 @@ export default function Card(props) {
           <p>{props.aviability ? 'Available' : 'Unavailable'}</p>
           <AiOutlineHeart />
         </div>
+        <NavLink to={'/products/detail'}>
+
+        
         <img
           className={Styles.img_product}
           src={props.img}
           alt="Image product"
-        />
+          />
+          </NavLink>
       </div>
       <div className={Styles.description_card}>
         <div className={Styles.price}>
