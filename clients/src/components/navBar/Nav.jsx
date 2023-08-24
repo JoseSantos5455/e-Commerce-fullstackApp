@@ -1,6 +1,7 @@
 import Styles from './Nav.module.css'
 import logo from '../../images/logo.png'
 import { BsSearch } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
   return (
@@ -14,9 +15,11 @@ export default function Nav() {
         </div>
         <div className={`${Styles.col_3}`}>
           <div className={Styles.dropdown}>
+              <Link to = '/products'>
             <button className={`${Styles.background} ${Styles.dropdownToggle}`}>
-              Categorías
+              Products
             </button>
+                </Link>
             <div className={`${Styles.dropdownMenu}`}>
               <div className={Styles.dropdownHeader}>Discos Duros</div>
               <a href="#" className={Styles.dropdownItem}>

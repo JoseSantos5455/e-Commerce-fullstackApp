@@ -10,15 +10,15 @@ export default function Categories() {
         <li>Ram</li>
         <li>GPU</li>
         <li>Cooling</li>
-        <li>Software</li>
+        <li>Storage</li>
         <li>Mouse</li>
         <li>Keyboard</li>
         <li>Monitor</li>
         <li>Sound</li>
-        <li>Others</li>
-        <li>Others</li>
-        <li>Others</li>
-        <li>Others</li>
+        <li>Accesories</li>
+        <li>Routers</li>
+        <li>Power</li>
+        <li>Case</li>
         <li>Others</li>
       </ul>
     </div>
