@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Styles from './Info.module.css'
+import { useSelector } from 'react-redux'
 export default function Info() {
+   
+
   return (
     <div className={Styles.wrapper}>
         <h3 className={Styles.pdt_name}> Nombre pdt</h3>
