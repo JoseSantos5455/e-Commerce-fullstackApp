@@ -1,8 +1,13 @@
-// const {Router} = require('express');
-// const {addCategoriesHandler} = require('../handlers/categoriesHandlers/categoriesHandlers.js');
+const {Router} = require('express');
+const addCategoryHandler = require('../handlers/categoriesHandlers/createCategoryHandler.js');
+const getAllCategoriesHandler = require('../handlers/categoriesHandlers/getAllCategoriesHandler.js');
+const updateCategoryHandler = require('../handlers/categoriesHandlers/updateCategoryHandler.js');
 
-// const productsRouter = Router();
+const categoryRouter = Router();
 
-// productsRouter.post('/',addCategoriesHandler);
+categoryRouter.get('/',getAllCategoriesHandler);
+categoryRouter.post('/',addCategoryHandler);
+categoryRouter.put('/:id',updateCategoryHandler);
 
-// module.exports = productsRouter;
+
+module.exports = categoryRouter;
