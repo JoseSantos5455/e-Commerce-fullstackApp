@@ -4,7 +4,6 @@ import { AiOutlineHeart, AiFillPlusCircle, AiOutlineMinusCircle } from "react-ic
 
 
 export default function Card(props) {
-    let imgCard = "https://static.skyassets.com/contentstack/assets/blt143e20b03d72047e/bltbae4788745bf0010/6319d665937b9657b5f2b7ee/Carousel_iPhone14ProMax_Purple_Placement02-PreOrder.png"
     
     let [buyQ, setBuyQ] = useState(1)
     let handleMoreQ = ()=>{
@@ -23,16 +22,16 @@ export default function Card(props) {
         <div className={Styles.wrapper}>
         <div className={Styles.div_image}>
             <div className={Styles.stock}>
-                <p>{props.aviability ? 'Avalable' : 'Unavailable'}</p>
+                <p>{props.aviability ? 'Available' : 'Unavailable'}</p>
                 <AiOutlineHeart/>
             </div>
-            <img className={Styles.img_product} src={ imgCard } alt="" />
+            <img className={Styles.img_product} src={ props.img } alt="Image product" />
 
         </div>
         <div className={Styles.description_card}>
             <div className={Styles.price}>
-                <p>iPhone 14</p>
-                <p className={Styles.price_number}>$1.400.00</p>
+                <p>{props.name}</p>
+                <p className={Styles.price_number}>${props.price}</p>
             </div>
 
             <div className={Styles.add}>
@@ -41,7 +40,7 @@ export default function Card(props) {
                     <input type="number"  placeholder={buyQ} readOnly  />
                     <AiOutlineMinusCircle onClick={handleLessQ} />
                 </div>
-                <button>Añadir al carrito</button>
+                <button>Add to kart</button>
             </div>
 
         </div>

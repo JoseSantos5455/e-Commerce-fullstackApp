@@ -15,7 +15,7 @@ export default function ListCard() {
 
     return (
     <div className={Styles.wrapper} >
-        <h2 className={Styles.h2}> Destacados </h2>
+        <h2 className={Styles.h2}> Products </h2>
         <div className={Styles.list}>
        
     {  
