@@ -3,7 +3,7 @@ const  getProductsHandler  = require("../handlers/productsHandlers/getProductsHa
 const  getProductByIdHandler  = require("../handlers/productsHandlers/getProductByIdHandler")
 const  createProductHandler  = require("../handlers/productsHandlers/createProductHandler")
 const  updateProductHandler  = require("../handlers/productsHandlers/updateProductHandler")
-const  deleteProductHandler  = require("../handlers/productsHandlers/createProductHandler")
+const  deleteProductHandler  = require("../handlers/productsHandlers/deleteProductHandler")
 
 
 const productsRouter = Router();
