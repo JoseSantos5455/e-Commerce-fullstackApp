@@ -12,8 +12,9 @@ export default function BuyView() {
     dispatch(getProducts())
     console.log('dispatched')
   }, [dispatch])
+
   return (
-    <div className="">
+    <div className={Styles.container_buy}>
       <Nav />
 
       <div className={Styles.wrapper}>
@@ -24,7 +25,9 @@ export default function BuyView() {
           <ListCard />
         </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }
