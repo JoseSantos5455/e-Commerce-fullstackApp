@@ -4,9 +4,14 @@ import logo from '../../images/logo.png'
 import { BsSearch } from 'react-icons/bs'
 import Login from '../Login/Login'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { getNameProducts } from '../../Redux/actions/actions'
 
 export default function Nav() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+  
+  const [name, setName] = useState("")
+  const dispatch = useDispatch()
 
   const openLoginModal = () => {
     setIsLoginModalOpen(true)
@@ -14,6 +19,17 @@ export default function Nav() {
 
   const closeLoginModal = () => {
     setIsLoginModalOpen(false)
+  }
+
+
+
+  const handlerName = (event) =>{
+      setName(event.target.value)
+  }
+
+  const handlerSubmit = (e) => {
+      e.preventDefault()
+      dispatch (getNameProducts(name))
   }
 
   return (
@@ -62,10 +78,12 @@ export default function Nav() {
         <form className={`${Styles.col_search} `}>
           <input
             type="text"
+            value={name}
             placeholder="Buscar"
+            onChange={handlerName}
             className={`${Styles.searchInput}`}
           />
-          <button type="submit" className={`${Styles.searchButton}`}>
+          <button type="submit" onChange={handlerSubmit} className={`${Styles.searchButton}`}>
             <BsSearch />
           </button>
         </form>
