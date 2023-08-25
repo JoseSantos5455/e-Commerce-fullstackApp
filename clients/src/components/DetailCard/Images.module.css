@@ -1,0 +1,32 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    margin: 1%;
+
+}
+.img_column{
+    display: flex;
+    flex-flow: column wrap;
+    align-items:start;
+}
+.img_column img{
+    border: 1px solid black;
+    padding: 1%;
+    margin: 4%;
+    width: 30%;
+    border-radius: .5rem;
+}
+.img_main{
+    display: flex;
+    align-items: center;
+}
+.img_main img{
+    border-radius: 1rem;
+    min-height: 290px;
+    width: 110%;
+    margin-left: -25%;
+
+}

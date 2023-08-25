@@ -14,6 +14,12 @@ const initialState = {
             products: action.payload
 
         }
+
+      case GET_DET:
+        return{
+          ...state,
+          detail: action.payload
+        }
       case POST_PDT:
         return {
           ...state

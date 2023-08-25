@@ -1,6 +1,8 @@
 .container_footer {
-  height: 15vh;
   background: hsl(46, 100%, 50%);
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
 }
 .list_footer {
   display: flex;

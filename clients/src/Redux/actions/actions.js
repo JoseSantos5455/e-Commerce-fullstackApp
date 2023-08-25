@@ -1,22 +1,21 @@
 import {POST_PDT, GET_PDT, GET_NAME_PRODUCTS, GET_CATEGORIS, GET_PAGINATE} from './actionTypes'
 import axios from "axios"
 
-
-export const getProducts = ()=>{
-    return async (dispatch) =>{
-        let endpoint =`http://localhost:3001/products`
-        try {
-            const response = await axios(endpoint)
-            let data = response.data
-            dispatch({
-                type: GET_PDT,
-                payload: data
-
-            })
-        } catch (error) {
-            console.log(error)
-        }        
+// eslint-disable-next-line
+export const getProducts = (page, size) => {
+  return async (dispatch) => {
+    let endpoint = `http://localhost:3001/products`
+    try {
+      const response = await axios(endpoint)
+      let data = response.data
+      dispatch({
+        type: GET_PDT,
+        payload: data,
+      })
+    } catch (error) {
+      console.log(error)
     }
+  }
 }
 
 export const getNameProducts = (name) => {
