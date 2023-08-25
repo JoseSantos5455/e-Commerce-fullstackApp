@@ -1,9 +1,10 @@
-import { POST_PDT, GET_PDT, GET_NAME_PRODUCTS, GET_CATEGORIS, GET_PAGINATE } from "../actions/actionTypes";
+import { POST_PDT, GET_PDT, GET_NAME_PRODUCTS, GET_CATEGORIS, GET_PAGINATE, GET_DET } from "../actions/actionTypes";
 
 const initialState = {
       base: [],
       products: [],
-      ctgri: []
+      ctgri: [],
+      detail:[]
   };
   
   const rootReducer = (state = initialState, action) => {
@@ -12,7 +13,6 @@ const initialState = {
         return{
           ...state,
             products: action.payload
-
         }
 
       case GET_DET:

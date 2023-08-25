@@ -1,8 +1,8 @@
-import {POST_PDT, GET_PDT, GET_NAME_PRODUCTS, GET_CATEGORIS, GET_PAGINATE} from './actionTypes'
+import {POST_PDT, GET_PDT, GET_NAME_PRODUCTS, GET_CATEGORIS, GET_PAGINATE, GET_DET} from './actionTypes'
 import axios from "axios"
 
 // eslint-disable-next-line
-export const getProducts = (page, size) => {
+export const getProducts = () => {
   return async (dispatch) => {
     let endpoint = `http://localhost:3001/products`
     try {
@@ -22,10 +22,10 @@ export const getNameProducts = (name) => {
     return async (dispatch) => {
         try {
             const nameInfo = await axios.get(`http://localhost:3001/products?name=${name}`)
-            console.log("Datos recibidos:", nameInfo);
+            const result = nameInfo.data
             dispatch({
                 type: GET_NAME_PRODUCTS,
-                payload: nameData
+                payload: result
             })
         } catch (error) {
             console.log(error);
@@ -75,5 +75,22 @@ export const getCategories = () => {
         } catch (error) {
             
         }
+    }
+}
+
+export const getDetail = (id)=>{
+    return async (dispatch)=>{
+        const endpoint = `http://localhost:3001/products/${id}`
+         try {
+            let response = await axios(endpoint)
+            let data = response.data
+      
+        return  dispatch({
+            type: GET_DET,
+            payload: data
+        })
+       } catch (error) {
+        console.log(error.message)
+       }
     }
 }

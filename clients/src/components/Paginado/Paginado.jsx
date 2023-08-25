@@ -4,12 +4,20 @@ import { getPaginatedProducts } from '../../Redux/actions/actions'
 const Paginado = () => {
     const products = useSelector((state)=> state.products)
     const dispatch = useDispatch()
-    const [currentPage, setCurrentPage] = useState(1)
-
-    const handlePageChange = (newPage) => {
-        setCurrentPage(newPage)
-        dispatch(getPaginatedProducts(newPage, 12))
+    const [currentPage, setCurrentPage] = useState(0)
+    const maxPage = Math.ceil(products.length / 12)
+    const nextPage = () => {
+      if (currentPage < maxPage) {
+        setCurrentPage(currentPage + 1)
       }
+    }
+
+    const previousPage = () => {
+      if (currentPage > 0) {
+        setCurrentPage(currentPage - 1)
+      }
+    }
+
 
     useEffect(()=> {
         dispatch(getPaginatedProducts(currentPage, 12))
@@ -24,9 +32,9 @@ const Paginado = () => {
             ))}
           </ul>
           <div>
-            <button onClick={() => handlePageChange(currentPage - 1)}>Previous</button>
-            <span>Page {currentPage}</span>
-            <button onClick={() => handlePageChange(currentPage + 1)}>Next</button>
+            <button onClick={previousPage}  >Previous</button>
+            <span>Page {currentPage + 1}</span>
+            <button onClick={nextPage} >Next</button>
           </div>
         </div>
       )
