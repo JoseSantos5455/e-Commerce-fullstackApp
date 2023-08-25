@@ -1,6 +1,7 @@
 const url = 'http://localhost:5000/products'
 const { Product } = require('../../db')
 const axios = require('axios')
+
 const getAllProductsApi = async (req, res) =>{
     
     try {

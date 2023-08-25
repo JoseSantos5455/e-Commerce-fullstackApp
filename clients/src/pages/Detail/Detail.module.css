@@ -1,0 +1,17 @@
+.wrapper{
+
+    padding-top: 1%;
+    background-color: rgba(128, 128, 128, 0.187);
+}
+.data_detail{
+    border: 1px solid rgba(0, 0, 0, 0.138);
+    background-color: rgba(255, 255, 255, 0.804);
+
+    display: flex;
+    flex-flow: row nowrap;
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
