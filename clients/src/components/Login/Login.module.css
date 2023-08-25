@@ -1,0 +1,85 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+}
+
+.modalOverlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  max-width: 400px; /* Limitar el ancho del modal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputForm {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.inputForm:focus {
+  outline: none;
+  border-color: #ffc502;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px; /* Espacio entre elementos */
+  margin-top: 15px; /* Margen superior para separar los botones del contenido */
+  justify-content: center;
+}
+
+.closeButton {
+  background-color: #ec0404;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  color: #ffffff;
+  background-color: #a00000;
+}
+
+.submitButton {
+  background-color: #ffc502;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #b88d00;
+}

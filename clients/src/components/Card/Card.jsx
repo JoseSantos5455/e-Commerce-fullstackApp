@@ -1,50 +1,61 @@
-import React, {useEffect, useState} from 'react'
+import { useState } from 'react'
+import PropTypes from 'prop-types'
 import Styles from './Card.module.css'
-import { AiOutlineHeart, AiFillPlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
+import { NavLink } from 'react-router-dom'
+import {
+  AiOutlineHeart,
+  AiFillPlusCircle,
+  AiOutlineMinusCircle,
+} from 'react-icons/ai'
 
+Card.propTypes = {
+  aviability: PropTypes.bool.isRequired,
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+}
 
-export default function Card(props) {
-    let imgCard = "https://static.skyassets.com/contentstack/assets/blt143e20b03d72047e/bltbae4788745bf0010/6319d665937b9657b5f2b7ee/Carousel_iPhone14ProMax_Purple_Placement02-PreOrder.png"
-    
-    let [buyQ, setBuyQ] = useState(1)
-    let handleMoreQ = ()=>{
-        setBuyQ(buyQ + 1)
+export default function Card({ aviability, img, name, price, id }) {
+  const [buyQ, setBuyQ] = useState(1)
+
+  const handleMoreQ = () => {
+    setBuyQ(buyQ + 1)
+  }
+
+  const handleLessQ = () => {
+    if (buyQ > 0) {
+      setBuyQ(buyQ - 1)
+    } else {
+      setBuyQ(buyQ)
     }
-    let handleLessQ = ()=>{
-        if(buyQ > 0){
-            
-            setBuyQ(buyQ - 1)
-        }
-        else setBuyQ(buyQ)
-    }
-    
-    
-    return (
-        <div className={Styles.wrapper}>
-        <div className={Styles.div_image}>
-            <div className={Styles.stock}>
-                <p>{props.aviability ? 'Avalable' : 'Unavailable'}</p>
-                <AiOutlineHeart/>
-            </div>
-            <img className={Styles.img_product} src={ imgCard } alt="" />
+  }
 
+  return (
+    <div className={Styles.wrapper}>
+      <div className={Styles.stock}>
+        <p>{aviability ? 'Available' : 'Unavailable'}</p>
+        <AiOutlineHeart />
+      </div>
+      <div className={Styles.div_image}>
+        <NavLink to={`/products/detail/${id}`}>
+          <img className={Styles.img_product} src={img} alt="Image product" />
+        </NavLink>
+      </div>
+      <div className={Styles.description_card}>
+        <div className={Styles.price}>
+          <p>{name}</p>
+          <p className={Styles.price_number}>${price}</p>
         </div>
-        <div className={Styles.description_card}>
-            <div className={Styles.price}>
-                <p>iPhone 14</p>
-                <p className={Styles.price_number}>$1.400.00</p>
-            </div>
-
-            <div className={Styles.add}>
-                <div className={Styles.div_input}>
-                    <AiFillPlusCircle onClick={handleMoreQ}/>
-                    <input type="number"  placeholder={buyQ} readOnly  />
-                    <AiOutlineMinusCircle onClick={handleLessQ} />
-                </div>
-                <button>Añadir al carrito</button>
-            </div>
-
+        <div className={Styles.add}>
+          <div className={Styles.div_input}>
+            <AiFillPlusCircle onClick={handleMoreQ} />
+            <input type="number" value={buyQ} readOnly />
+            <AiOutlineMinusCircle onClick={handleLessQ} />
+          </div>
+          <button>Add to cart</button>
         </div>
+      </div>
     </div>
   )
 }

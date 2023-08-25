@@ -1,16 +1,22 @@
-import Start from "./pages/Home/Start";
-import BuyView from "./pages/Buy/BuyView"
-import Form from '../src/pages/CreateProduct/Form';
-import { Routes, Route} from "react-router-dom";
+import Start from "./pages/Landing/Start";
+import Form from "./pages/CreateProduct/Form";
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
+import Detail from "./pages/Detail/Detail";
+import BuyView from './pages/Buy/BuyView'
+import {Routes, Route} from "react-router-dom"
+
 export default function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Start/>}/>
-        <Route path="/products" element={<BuyView/>}/>
-        <Route path="/form" element={<Form/>}/>
+          <Route exact path="/" Component={Start}/>
+          <Route exact path="/home" Component={Home}/>
+          <Route exact path="/form" Component={Form}/>
+          <Route exact path="/products/detail/:id" Component={Detail}/>
+          <Route exact path="/products" Component={BuyView}/>
+          <Route path="*" Component={NotFound}/>
       </Routes>
     </div>
   )
 }
- 

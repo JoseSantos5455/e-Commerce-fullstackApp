@@ -1,5 +1,5 @@
 const Validation = (error) => {
-    const regexName =  /^(?!.*\s{2})[a-zA-Z0-9\s]{2,18}$/;;
+    const regexName =  /^(?!.*\s{2})[a-zA-Z0-9\s]{2,18}$/;
     const regexDescription = /^.{10,}$/;
     const regexStock = /^[1-9]\d*$/;
     const regexValoration = /^[1-9][0-9]?$|^100$/;
