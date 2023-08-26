@@ -1,6 +1,4 @@
-import { POST_PDT, GET_PDT, GET_NAME_PRODUCTS, GET_CATEGORIS, GET_PAGINATE, GET_DET } from "../actions/actionTypes";
-import { POST_PDT, GET_PDT, GET_DET, GET_CATEGORIES, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION } from "../actions/actionTypes";
-
+import { POST_PDT, GET_PDT, GET_NAME_PRODUCTS, GET_CATEGORIS, GET_PAGINATE, GET_DET, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION } from "../actions/actionTypes";
 const initialState = {
       base: [],
       products: [],
@@ -40,15 +38,8 @@ const initialState = {
           return {
             ...state,
             products: action.payload
-          }
-
-        case GET_CATEGORIES:
-            return {
-                ...state,
-                categories: action.payload
-            }
-
-        case FILTER_BY_CATEGORY:
+          } 
+      case FILTER_BY_CATEGORY:
           const allProductsCat = state.allProducts;
           const filteredCategory = action.payload === 'All'? allProductsCat : allProductsCat.filter(v =>v.category == action.payload);
           return {
