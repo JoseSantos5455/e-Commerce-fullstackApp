@@ -129,7 +129,10 @@
 .div_auth button{
   margin: 10%;
 }
-
+.div_not_auth{
+  display: flex;
+  align-items: center;
+}
 .login {
   color: white;
   background-color: black;
