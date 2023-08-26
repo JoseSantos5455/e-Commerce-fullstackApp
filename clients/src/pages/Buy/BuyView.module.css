@@ -7,14 +7,18 @@
   margin-top: 15vh;
   margin-bottom: 10vh;
 }
+.filters{
+  width: 13%;
+  padding-left: 1%;
+}
 .categories {
-  width: 10%;
+  width: 13%;
   margin-top: 10%;
-  padding-left: 2%;
+  padding-left: 1%;
 }
 .listCard {
   display: flex;
   width: 100%;
   margin-right: 0%;
-  margin-left: 10%;
+  margin-left: 6%;
 }
