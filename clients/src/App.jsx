@@ -6,7 +6,7 @@ import Detail from "./pages/Detail/Detail";
 import BuyView from './pages/Buy/BuyView'
 import {Routes, Route} from "react-router-dom"
 import Paginado from "./components/Paginado/Paginado";
-import searchBar from "./components/searchBar/searchBar";
+import SearchBar from "./components/searchBar/SearchBar";
 export default function App() {
   return (
     <div>
@@ -18,7 +18,7 @@ export default function App() {
           <Route exact path="/products" Component={BuyView}/>
           <Route path="*" Component={NotFound}/>
           <Route exact path="/Paginado" Component={Paginado}/>
-          <Route exact path="/search" Component={searchBar}/>
+          <Route exact path="/search" Component={SearchBar}/>
       </Routes>
     </div>
   )

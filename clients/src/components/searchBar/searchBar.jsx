@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getVideogamesByName } from "../../redux/actions";
+import { getNameProducts } from "../../Redux/actions/actions";
 import s from "./SearchBar.module.css"
 
 export default function SearchBar () {
@@ -15,7 +15,7 @@ export default function SearchBar () {
 
     function handlerSubmit(e) {
         e.preventDefault();
-        dispatch(getVideogamesByName(name));
+        dispatch(getNameProducts(name));
         setName("");
     }
 
