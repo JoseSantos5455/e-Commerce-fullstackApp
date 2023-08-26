@@ -70,7 +70,7 @@ module.exports = (sequelize)=>{
         },
         categoryId:{
             type:DataTypes.INTEGER,
-            allowNull:true,
+            allowNull:false,
         },
     },{timestamps:false});
 };

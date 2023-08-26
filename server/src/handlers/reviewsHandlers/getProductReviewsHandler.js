@@ -1,9 +1,9 @@
 const getProductReviewsController = require('../../controllers/reviewsControllers/getProductReviewsController.js');
 
 const getProductReviewsHandler = async(req,res)=>{
-    const {id} = req.params;
+    const {productId} = req.params;
     try {
-        const result = await getProductReviewsController(id);
+        const result = await getProductReviewsController(productId);
         res.status(200).json(result);    
     } 
     catch (error) {
