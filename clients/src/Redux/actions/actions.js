@@ -1,5 +1,4 @@
-import { GET_PDT, GET_CATEGORIES, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION} from './actionTypes'
-import { GET_PDT, GET_DET} from './actionTypes'
+import { GET_PDT, GET_DET, GET_CATEGORIES, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION} from './actionTypes'
 import axios from "axios"
 
 // eslint-disable-next-line

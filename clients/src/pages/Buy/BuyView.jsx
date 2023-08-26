@@ -1,5 +1,4 @@
 import  { useEffect, useState } from 'react'
-import { useEffect } from 'react'
 import Styles from './BuyView.module.css'
 import Categories from '../../components/Categories/Categories'
 import OrderBy from '../../components/OrderBy/OrderBy'
@@ -54,6 +53,8 @@ export default function BuyView() {
       <div>
         <Footer />
       </div>
+    </div>
+    </div>
     </div>
   )
 }

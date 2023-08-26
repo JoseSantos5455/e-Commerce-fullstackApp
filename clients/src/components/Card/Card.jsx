@@ -12,8 +12,8 @@ Card.propTypes = {
   aviability: PropTypes.bool.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 }
 
 export default function Card({ aviability, img, name, price, id }) {

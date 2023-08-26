@@ -4,8 +4,12 @@ import logo from '../../images/logo.png'
 import { BsSearch } from 'react-icons/bs'
 import Login from '../Login/Login'
 import { Link } from 'react-router-dom'
+import LogInButton from '../Login/LogInButton'
+import Profile from '../Login/Profile'
+import { useAuth0 } from '@auth0/auth0-react'; 
 
 export default function Nav() {
+  const {user, isAuthenticated, isLoading} = useAuth0()
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
 
   const openLoginModal = () => {
@@ -15,7 +19,9 @@ export default function Nav() {
   const closeLoginModal = () => {
     setIsLoginModalOpen(false)
   }
-
+if(isLoading) return(
+  <h1>is loading..</h1>
+)
   return (
     <div className={Styles.wrapper}>
       <div className={`${Styles.col_5}`}>
@@ -73,12 +79,23 @@ export default function Nav() {
       <div className={` ${Styles.col_3}`}>
         <div className={Styles.container_btn}>
           <div className={` ${Styles.containerLogin}`}>
-            <button
+            {
+              !isAuthenticated ? (
+
+                <LogInButton/>
+                ): (
+                <Profile/>
+
+              )
+            }
+           
+           <p></p>
+            {/* <button
               className={`${Styles.actionButton2} ${Styles.login}`}
               onClick={openLoginModal}
             >
               Iniciar sesión
-            </button>
+            </button> */}
           </div>
           <div className={`${Styles.containerCreate}`}>
             <button className={`${Styles.actionButton} ${Styles.create}`}>

@@ -2,7 +2,11 @@ import { useState } from 'react'
 import PropTypes from 'prop-types' // Importa PropTypes
 import Styles from './Login.module.css'
 
+import { useAuth0 } from '@auth0/auth0-react'
+
 const Login = ({ isOpen, onClose }) => {
+
+  const {loginWithRedirect} = useAuth0()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -32,7 +36,10 @@ const Login = ({ isOpen, onClose }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className={Styles.buttonContainer}>
-            <button className={Styles.submitButton} type="submit">
+            <button className={Styles.submitButton} 
+            type="submit"
+            onClick={()=>loginWithRedirect()}
+            >
               Iniciar Sesión
             </button>
             <button className={Styles.closeButton} onClick={onClose}>
