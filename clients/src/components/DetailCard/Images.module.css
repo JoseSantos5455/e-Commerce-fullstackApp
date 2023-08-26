@@ -10,7 +10,7 @@
 .img_column{
     display: flex;
     flex-flow: column wrap;
-    align-items:start;
+    align-items: flex-start;
 }
 .img_column img{
     border: 1px solid black;
