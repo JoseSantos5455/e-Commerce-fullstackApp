@@ -1,35 +1,39 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getNameProducts } from '../../Redux/actions/actions'
-const searchBar = () => {
-    const [name , setName] = useState("");
-    const dispatch = useDispatch();
-    const products = useSelector(state => state.products);
+import React from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getVideogamesByName } from "../../redux/actions";
+import s from "./SearchBar.module.css"
 
-    const handlerName = (e) =>{
-        setName(e.target.value)
+export default function SearchBar () {
+    const dispatch = useDispatch();
+    const [name, setName] = useState("");
+
+    function handlerChange(e) {
+        e.preventDefault();
+        setName(e.target.value);
     }
 
-    const handlerSubmit = (e) =>{
-        e.preventDefault()
-        dispatch(getNameProducts(name))
+    function handlerSubmit(e) {
+        e.preventDefault();
+        dispatch(getVideogamesByName(name));
+        setName("");
     }
 
     return (
-        <div>
-            <h1>Resultados de la búsqueda:</h1>
-            {products.map(result => (
-                <p key={result.id}>{result.name}</p>
-            ))}
-            <input
-                type="text" 
-                placeholder="Buscar producto" 
+        <div className={s.formClass}>
+            <form onSubmit={(e) => handlerSubmit(e)}>
+                <input
+                type="text"
+                placeholder="Search a videogame..."
                 value={name}
-                onChange={(e) => handlerName(e)}
-            />
-            <button onClick={(e) => handlerSubmit(e)}>Buscar</button>
+                onChange={(e) => handlerChange(e)}
+                className={s.input}
+                />
+                <button type="submit" className={s.btn}>
+                    <img className={s.imgs} src='https://w7.pngwing.com/pngs/582/430/png-transparent-search-magnifier-find-zoom-glass-seo-optimization-instagram-icon.png' alt="HOME"/>
+                </button>
+            </form>
+            
         </div>
-    );
+    )
 }
-
-export default searchBar
