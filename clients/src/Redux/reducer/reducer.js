@@ -46,22 +46,6 @@ const initialState = {
               ...state,
               products: filteredCategory
           }
-      
-      case ORDER_BY_PRICE:
-          let orderPriceAsc = state.products.slice().sort((a, b) => {
-
-    case FILTER_BY_CATEGORY: {
-      const allProductsCat = state.allProducts
-      const filteredCategory =
-        action.payload === 'All'
-          ? allProductsCat
-          : allProductsCat.filter((v) => v.category === action.payload)
-      return {
-        ...state,
-        products: filteredCategory,
-      }
-    }
-
     case ORDER_BY_PRICE: {
       const orderPriceAsc = [...state.products].sort((a, b) => {
         if (Number(a.price) > Number(b.price)) return 1
