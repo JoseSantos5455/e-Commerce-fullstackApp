@@ -7,9 +7,10 @@ import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { store, persistor } from './Redux/store.js'
 import { Auth0Provider } from '@auth0/auth0-react'
-
 const domain = import.meta.env.VITE_REACT_APP_AUTH0_DOMAIN;
 const clientId = import.meta.env.VITE_REACT_APP_AUTH0_CLIENT_ID;
+
+console.log(domain, clientId)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

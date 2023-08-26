@@ -122,6 +122,14 @@
   transition: color 0.3s ease;
 }
 
+.div_auth{
+  display: flex;
+  align-items: center;
+}
+.div_auth button{
+  margin: 10%;
+}
+
 .login {
   color: white;
   background-color: black;

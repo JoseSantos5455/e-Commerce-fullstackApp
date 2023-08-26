@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import LogInButton from '../Login/LogInButton'
 import Profile from '../Login/Profile'
 import { useAuth0 } from '@auth0/auth0-react'; 
+import LogOut from '../Login/LogOut'
 
 export default function Nav() {
   const {user, isAuthenticated, isLoading} = useAuth0()
@@ -79,28 +80,31 @@ if(isLoading) return(
       <div className={` ${Styles.col_3}`}>
         <div className={Styles.container_btn}>
           <div className={` ${Styles.containerLogin}`}>
-            {
-              !isAuthenticated ? (
+          {
+            !isAuthenticated ? (
+              <div className={Styles.div_not_auth}>
 
-                <LogInButton/>
-                ): (
+               <LogInButton/>
+                <button className={`${Styles.actionButton} ${Styles.create}`}>
+                Crear cuenta
+                </button>
+              </div>
+            ):(
+
+              <div className={Styles.div_auth}>
                 <Profile/>
-
-              )
-            }
+                <LogOut/>
+              
+              </div>
+             )
+          }
+          
            
-           <p></p>
-            {/* <button
-              className={`${Styles.actionButton2} ${Styles.login}`}
-              onClick={openLoginModal}
-            >
-              Iniciar sesión
-            </button> */}
+               
+           
           </div>
           <div className={`${Styles.containerCreate}`}>
-            <button className={`${Styles.actionButton} ${Styles.create}`}>
-              Crear cuenta
-            </button>
+            
           </div>
         </div>
       </div>
