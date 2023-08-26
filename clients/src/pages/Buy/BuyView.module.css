@@ -1,15 +1,20 @@
-.wrapper{
-    display: flex;
-    padding-top: 7%;
+.container_buy {
+  width: 100%;
+  height: 100%;
 }
-.categories{
-    width: 10%;
-    margin-top: 10%;
-    padding-left: 2%;
+.wrapper {
+  display: flex;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
 }
-.listCard{
-    display: flex;
-    width: 80%;
-    margin-right: 0%;
-    margin-left: 10%;
+.categories {
+  width: 10%;
+  margin-top: 10%;
+  padding-left: 2%;
+}
+.listCard {
+  display: flex;
+  width: 100%;
+  margin-right: 0%;
+  margin-left: 10%;
 }

@@ -1,4 +1,5 @@
 import  { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Styles from './BuyView.module.css'
 import Categories from '../../components/Categories/Categories'
 import OrderBy from '../../components/OrderBy/OrderBy'
@@ -28,23 +29,31 @@ export default function BuyView() {
   function handlerByPrice(e) { 
     dispatch(orderByPrice(e));
   }
+  useEffect(() => {
+    dispatch(getProducts())
+    console.log('dispatched')
+  }, [dispatch])
 
   return (
-    <div className="">
-      <Nav/>
+    <div className={Styles.container_buy}>
+      <Nav />
 
     <div className={Styles.wrapper}>
       <div className={Styles.categories}>
         <OrderBy handlerByValoration={handlerByValoration} handlerByPrice={handlerByPrice} />
         <Filters handlerCategories={handlerCategories}/>
         <Categories />
+      <div className={Styles.wrapper}>
+        <div className={Styles.categories}>
+          <Categories />
+        </div>
+        <div className={Styles.listCard}>
+          <ListCard />
+        </div>
       </div>
-      <div className={Styles.listCard} >
-        <ListCard />
-      </ div>
+      <div>
+        <Footer />
+      </div>
     </div>
-    <Footer/>
-    </div>
-
   )
 }

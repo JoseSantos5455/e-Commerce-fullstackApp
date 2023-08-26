@@ -1,10 +1,12 @@
 import { POST_PDT, GET_PDT, GET_CATEGORIES, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION } from "../actions/actionTypes";
+import { POST_PDT, GET_PDT,GET_DET } from "../actions/actionTypes";
 
 const initialState = {
       base: [],
       products: [],
       allProducts: [],
       categories:[]
+      detail:[]
   };
   
   const rootReducer = (state = initialState, action) => {
@@ -14,6 +16,12 @@ const initialState = {
           ...state,
             products: action.payload,
             allProducts: action.payload
+        }
+
+      case GET_DET:
+        return{
+          ...state,
+          detail: action.payload
         }
       case POST_PDT:
         return {
