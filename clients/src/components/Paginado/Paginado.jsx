@@ -21,7 +21,7 @@ const Paginado = () => {
       }
     }
 
-
+    
     useEffect(()=> {
         dispatch(getPaginatedProducts(currentPage, 12))
     },[dispatch, currentPage])
