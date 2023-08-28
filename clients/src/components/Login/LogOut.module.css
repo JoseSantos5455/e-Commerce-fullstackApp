@@ -1,0 +1,12 @@
+.wrapper{
+ display: flex;
+ flex-flow: row nowrap;
+    
+}
+.wrapper button{
+    padding: 0%;
+    border: none;
+    background-color: transparent;
+    color: blue;
+
+}

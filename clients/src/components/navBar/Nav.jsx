@@ -2,10 +2,27 @@ import { useState } from 'react'
 import Styles from './Nav.module.css'
 import logo from '../../images/logo.png'
 import { BsSearch } from 'react-icons/bs'
-import Login from '../Login/Login'
 import { Link } from 'react-router-dom'
+import LogInButton from '../Login/LogInButton'
+import Profile from '../Login/Profile'
+import { useAuth0 } from '@auth0/auth0-react'; 
+import LogOut from '../Login/LogOut'
 
 export default function Nav() {
+  const { isAuthenticated } = useAuth0()
+  //dropdown para logout profile
+    const [showMenu, setShowMenu] = useState(false);
+
+    const handleMouseEnter = () => {
+      setShowMenu(true);
+    };
+    
+    const handleMouseLeave = () => {
+      setShowMenu(false);
+    };
+
+
+
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
 
   const openLoginModal = () => {
@@ -70,26 +87,53 @@ export default function Nav() {
           </button>
         </form>
       </div>
-      <div className={` ${Styles.col_3}`}>
+      <div className={` ${Styles.col_2}`}>
         <div className={Styles.container_btn}>
           <div className={` ${Styles.containerLogin}`}>
-            <button
-              className={`${Styles.actionButton2} ${Styles.login}`}
-              onClick={openLoginModal}
-            >
-              Iniciar sesión
-            </button>
+          {
+            !isAuthenticated ? (
+              <div className={Styles.div_not_auth}>
+
+               <LogInButton/>
+                <button className={`${Styles.actionButton} ${Styles.create}`}>
+                Sign Up
+                </button>
+              </div>
+            ) : (
+              <div className={Styles.div_auth} onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}>
+                <Profile />
+                 {
+                 showMenu && (
+                  <div className={Styles.drop_user}>
+                    
+                      <LogOut className={Styles.btn_logout} />
+                      <p>Option</p>
+                      <p>Option</p>
+                      <p>Option</p>
+                  </div>
+                 )
+                 }
+              
+              </div>
+                )
+
+              
+                
+          }
+          
+           
+               
+           
           </div>
           <div className={`${Styles.containerCreate}`}>
-            <button className={`${Styles.actionButton} ${Styles.create}`}>
-              Crear cuenta
-            </button>
+            
           </div>
         </div>
       </div>
-      {isLoginModalOpen && (
+      {/* {isLoginModalOpen && (
         <Login isOpen={isLoginModalOpen} onClose={closeLoginModal} />
-      )}
+      )} */}
     </div>
   )
 }
