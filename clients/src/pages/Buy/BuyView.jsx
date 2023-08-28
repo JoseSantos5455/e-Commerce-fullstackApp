@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import  { useEffect, useState } from 'react'
 import Styles from './BuyView.module.css'
 import Categories from '../../components/Categories/Categories'
 import OrderBy from '../../components/OrderBy/OrderBy'
