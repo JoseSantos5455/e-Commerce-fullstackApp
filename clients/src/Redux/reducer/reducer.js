@@ -1,4 +1,5 @@
 
+
 import {
   POST_PDT,
   GET_PDT,
@@ -24,7 +25,6 @@ const rootReducer = (state = initialState, action) => {
     case GET_PDT:
       return {
         ...state,
-       
         products: action.payload,
         allProducts: action.payload,
       }
@@ -37,9 +37,9 @@ const rootReducer = (state = initialState, action) => {
     case GET_NAM:
       return {
         ...state,
-        products:  action.payload,
-        detail:action.payload,
         product_name: action.payload,
+        products : action.payload
+      
       }
     case POST_PDT:
       return {
