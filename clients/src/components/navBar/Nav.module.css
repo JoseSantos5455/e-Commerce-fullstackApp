@@ -122,12 +122,35 @@
   transition: color 0.3s ease;
 }
 
-.login {
-  color: white;
-  background-color: black;
-  padding: 10px;
-  border-radius: 15px;
-  cursor: pointer;
+.div_auth{
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  margin-top: 10%;
+}
+.div_auth button{
+  margin: 10%;
+}
+
+.drop_user{
+  background-color: #fadb3f;
+  box-shadow: 0 0 10px 0;
+  border-radius: 2rem;
+
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  margin-top: 4%;
+  margin-left: -1%;
+  padding: 2%;
+}
+.drop_user p{
+  margin: 0%;
+}
+
+.div_not_auth{
+  display: flex;
+  align-items: center;
 }
 
 .create {
