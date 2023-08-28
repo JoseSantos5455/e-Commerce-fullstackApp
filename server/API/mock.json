@@ -8,6 +8,8 @@
               "stock": 100,
               "valoration": 91,
               "category": "RAM",
+              "categoryid": 17,
+              "marca": "Fury",
               "image": "https://http2.mlstatic.com/D_NQ_NP_667453-MLA50418240420_062022-O.webp"
           },
           {
@@ -17,6 +19,8 @@
               "stock": 50,
               "valoration": 88,
               "category": "Motherboard",
+              "categoryid": 16,
+              "marca": "ATX",
               "image": "https://www.asus.com/media/global/products/rwed1stzwbm96li3/P_setting_xxx_0_90_end_500.png"
           },
           {
@@ -26,6 +30,8 @@
               "stock": 120,
               "valoration": 86,
               "category": "Cooling",
+              "categoryid": 10,
+              "marca": "CoolerMaster",
               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS750IYEe_DP6EqmSdBz3zKr-Wxyx_xtHizOw&usqp=CAU"
           },
           {
@@ -35,6 +41,8 @@
               "stock": 80,
               "valoration": 88,
               "category": "Storage",
+              "categoryid": 11,
+              "marca": "Gigabyte",
               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCS-P_TLJYyiiHgAc6AfSvnRZNf4NxRiQNWg&usqp=CAU"
           },
           {
@@ -44,6 +52,8 @@
               "stock": 40,
               "valoration": 90,
               "category": "Graphics Card",
+              "categoryid": 4,
+              "marca": "Nvidia",
               "image": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/images/design/geforce-rtx-3080-4-960.jpg"
           },
           {
@@ -53,6 +63,8 @@
               "stock": 60,
               "valoration": 84,
               "category": "Power Supply",
+              "categoryid": 15,
+              "marca": "Strix",
               "image": "https://dlcdnwebimgs.asus.com/gain/14422411-D938-4125-A9EC-EA950F4BEB2E/w717/h525"
           },
           {
@@ -62,6 +74,8 @@
               "stock": 90,
               "valoration": 89,
               "category": "Keyboard",
+              "categoryid": 14,
+              "marca": "Logitech",
               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlcvRJTLMEQb3NnAk_nICeGN04EUISCt68nLpQDGXmjuUNPGoiVJ-9s4Cjra-_OE1pAiE&usqp=CAU"
           },
           {
@@ -71,6 +85,8 @@
               "stock": 70,
               "valoration": 87,
               "category": "Monitor",
+              "categoryid": 13,
+              "marca": "Philips",
               "image": "https://images.philips.com/is/image/PhilipsConsumer/343E2E_55-IMS-es_AR?wid=420&hei=360&$jpglarge$"
           },
           {
@@ -80,6 +96,8 @@
               "stock": 110,
               "valoration": 85,
               "category": "Mouse",
+              "categoryid": 6,
+              "marca": "Logitech",
               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfD1ZGWryn1tdK2-w7V8RpiuU1qxmQvewbPFELOLAT4I_UzDd6FC36aMGRHDWe0TLRs30&usqp=CAU"
           },
           {
@@ -89,6 +107,8 @@
               "stock": 100,
               "valoration": 86,
               "category": "Case",
+              "categoryid": 12,
+              "marca": "Game Factor",
               "image": "https://m.media-amazon.com/images/I/71oC-+srxzL._AC_UF894,1000_QL80_.jpg"
           },
           {
@@ -98,6 +118,8 @@
                "stock": 80,
                "valoration": 88,
                "category": "Cooling",
+               "categoryid": 10,
+              "marca": "ASUS",
                "image": "https://m.media-amazon.com/images/I/61adFDT90GL.jpg"
           },
            {
@@ -107,6 +129,8 @@
                "stock": 110,
                "valoration": 85,
                "category": "Storage",
+               "categoryid": 11,
+              "marca": "Samsung",
                "image": "https://www.redinfo.com.ar/web/image/product.template/24705/image"
            },
            
@@ -117,6 +141,8 @@
                "stock": 80,
                "valoration": 88,
                "category": "Routers",
+               "categoryid": 9,
+              "marca": "TP-Link",
                "image": "https://storage-asset.msi.com/global/picture/news/2023/wifi/gaming-router-20230314-1.jpg"
            },
            {
@@ -126,7 +152,9 @@
                "stock": 120,
                "valoration": 87,
                "category": "Accessories",
-               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9faqHZK022TtAr_n3a1yIxCa-SbUROd3Nvw&usqp=CAU"
+               "categoryid": 7,
+              "marca": "EFISH",
+               "image": "https://m.media-amazon.com/images/I/61zUwGDRO4L.__AC_SY300_SX300_QL70_FMwebp_.jpg"
            },
            {
                "name": "USB-C Charging Hub H-400",
@@ -135,6 +163,8 @@
                "stock": 90,
                "valoration": 85,
                "category": "Accessories",
+               "categoryid": 7,
+              "marca": "TOTU",
                "image": "https://m.media-amazon.com/images/I/71gnGTQc2GL._AC_UF894,1000_QL80_.jpg"
            },
            {
@@ -144,7 +174,9 @@
                "stock": 140,
                "valoration": 89,
                "category": "Cooling",
-               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0BqABsSyQKeg4IOgPyYjjV-0x_qwV6b0e4w&usqp=CAU"
+               "categoryid": 10,
+              "marca": "Noctua",
+               "image": "https://m.media-amazon.com/images/I/81QZ4VI-nvL._AC_SX679_.jpg"
           },
            {
                "name": "USB-C to Ethernet Adapter A-400",
@@ -153,7 +185,9 @@
                "stock": 110,
                "valoration": 88,
                "category": "Others",
-               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKtUqg6JpoNO79oB2AXdFHO7oD8a4R0jNRIa1kAqgiFwz6e9O2apItMadCnCMj7C3c_A&usqp=CAU"
+               "categoryid": 17,
+              "marca": "ABLEWE ",
+               "image": "https://m.media-amazon.com/images/I/61OV94+ahvL._AC_SX679_.jpg"
            },
            {
                "name": "RGB Gaming Chair Cushion C-100",
@@ -162,6 +196,8 @@
                "stock": 130,
                "valoration": 87,
                "category": "Furniture",
+               "categoryid": 8,
+              "marca": "AutoFull",
                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUDLPNVxIbCCUduoMLe5jVm6thJZ5RC6dipw&usqp=CAU"
            },
            {
@@ -171,6 +207,8 @@
                "stock": 100,
                "valoration": 86,
                "category": "Mouse",
+               "categoryid": 6,
+              "marca": "Logitech",
                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa6AT_4rmBMed4ufpNuVIGGFwWG0Pio4jjVw&usqp=CAU"
            },
            {
@@ -180,6 +218,8 @@
                "stock": 80,
                "valoration": 85,
                "category": "Others",
+               "categoryid": 5,
+              "marca": "Logitech",
                "image": "https://ergonofis.com/cdn/shop/products/Sway_Maple_Noir_1100x.png?v=1648504900"
            },
            {
@@ -189,6 +229,8 @@
                "stock": 120,
                "valoration": 89,
                "category": "Graphics Card",
+               "categoryid": 4,
+              "marca": "Nvidia",
                "image": "https://m.media-amazon.com/images/I/616bVfHrjYS.jpg"
            },
            {
@@ -198,6 +240,8 @@
                 "stock": 70,
                 "valoration": 89,
                 "category": "Audio",
+                "categoryid": 18,
+              "marca": "Razer",
                 "image": "https://m.media-amazon.com/images/I/71bz1x24XLL._AC_SX522_.jpg"
             },
             {
@@ -207,6 +251,8 @@
                 "stock": 40,
                 "valoration": 87,
                 "category": "Graphics Card",
+                "categoryid": 4,
+              "marca": "Nvidia",
                 "image": "https://m.media-amazon.com/images/I/81QGxHK8m6L._AC_UF1000,1000_QL80_.jpg"
             },
             {
@@ -216,6 +262,8 @@
                 "stock": 120,
                 "valoration": 50,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/71j88memFML._AC_SX679_.jpg"
             },
             {
@@ -224,7 +272,9 @@
                 "description": "Add Wi-Fi 6 connectivity to your desktop PC with this PCIe expansion card.",
                 "stock": 100,
                 "valoration": 90,
-                "category": "Networking",
+                "category": "Accessories",
+                "categoryid": 7,
+              "marca": "EOUP",
                 "image": "https://m.media-amazon.com/images/I/71PJMcjgCHL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -234,6 +284,8 @@
                 "stock": 150,
                 "valoration": 84,
                 "category": "Cooling",
+                "categoryid": 10,
+              "marca": "Game Factor",
                 "image": "https://m.media-amazon.com/images/I/81ZUUX5VZsL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -243,6 +295,8 @@
                 "stock": 130,
                 "valoration": 88,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/71wFe1Hec6L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -252,6 +306,8 @@
                 "stock": 60,
                 "valoration": 87,
                 "category": "Monitor",
+                "categoryid": 13,
+              "marca": "Samsung",
                 "image": "https://m.media-amazon.com/images/I/810ZonthJyL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -261,6 +317,8 @@
                 "stock": 90,
                 "valoration": 85,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "Micomlan",
                 "image": "https://m.media-amazon.com/images/I/71k+ptwjZgL._AC_SY300_SX300_.jpg"
             },
             {
@@ -270,6 +328,8 @@
                 "stock": 80,
                 "valoration": 89,
                 "category": "Power Supply",
+                "categoryid": 15,
+              "marca": "LCPOWER",
                 "image": "https://m.media-amazon.com/images/I/71X0zQ0fW4L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -279,6 +339,8 @@
                 "stock": 60,
                 "valoration": 88,
                 "category": "Furniture",
+                "categoryid": 8,
+              "marca": "Ocelot",
                 "image": "https://m.media-amazon.com/images/I/71qET3tCHaL._AC_SX569_.jpg"
             },
             {
@@ -287,7 +349,9 @@
                 "description": "Add Bluetooth connectivity to your desktop PC with this wireless adapter.",
                 "stock": 150,
                 "valoration": 85,
-                "category": "Networking",
+                "category": "Accessories",
+                "categoryid": 7,
+              "marca": "Lavales",
                 "image": "https://m.media-amazon.com/images/I/51fu8n4g9tL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -297,6 +361,8 @@
                 "stock": 100,
                 "valoration": 87,
                 "category": "Cooling",
+                "categoryid": 10,
+              "marca": "CoolerMaster",
                 "image": "https://m.media-amazon.com/images/I/71jANruAtXL._SX522_.jpg"
             },
             {
@@ -306,6 +372,8 @@
                 "stock": 120,
                 "valoration": 46,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/716l7xk8utL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -315,6 +383,8 @@
                 "stock": 110,
                 "valoration": 90,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "Phixero",
                 "image": "https://m.media-amazon.com/images/I/715OTcL3kaL._AC_SX679_.jpg"
             },
             {
@@ -324,6 +394,8 @@
                 "stock": 40,
                 "valoration": 84,
                 "category": "RAM",
+                "categoryid": 17,
+              "marca": "Fury",
                 "image": "https://m.media-amazon.com/images/I/71AHErCysdL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -333,6 +405,8 @@
                 "stock": 90,
                 "valoration": 88,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/61LVFPLX1AL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -342,6 +416,8 @@
                 "stock": 70,
                 "valoration": 87,
                 "category": "Storage",
+                "categoryid": 11,
+              "marca": "Plot",
                 "image": "https://m.media-amazon.com/images/I/7134lDB2D5L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -351,6 +427,8 @@
                 "stock": 100,
                 "valoration": 85,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "SJZBIN",
                 "image": "https://m.media-amazon.com/images/I/61PadhcakcL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -360,6 +438,8 @@
                 "stock": 120,
                 "valoration": 86,
                 "category": "Storage",
+                "categoryid": 11,
+              "marca": "Samsung",
                 "image": "https://m.media-amazon.com/images/I/610TZSoX2lL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -369,6 +449,8 @@
                 "stock": 150,
                 "valoration": 88,
                 "category": "Cooling",
+                "categoryid": 10,
+              "marca": "AirFan",
                 "image": "https://m.media-amazon.com/images/I/41lB3f8oadL._SY445_SX342_QL70_FMwebp_.jpg"
             },
             {
@@ -378,6 +460,8 @@
                 "stock": 60,
                 "valoration": 89,
                 "category": "Furniture",
+                "categoryid": 8,
+              "marca": "Game Factor",
                 "image": "https://m.media-amazon.com/images/I/810ZRdkyuIL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -386,7 +470,9 @@
                 "description": "Dual-band Wi-Fi router for high-speed wireless connectivity in your home.",
                 "stock": 100,
                 "valoration": 87,
-                "category": "Networking",
+                "category": "Accessories",
+                "categoryid": 7,
+              "marca": "TP-Link",
                 "image": "https://m.media-amazon.com/images/I/51kSjitehLL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -396,6 +482,8 @@
                 "stock": 130,
                 "valoration": 85,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/51KdIYkw0XL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -405,6 +493,8 @@
                 "stock": 80,
                 "valoration": 90,
                 "category": "Cooling",
+                "categoryid": 10,
+              "marca": "Game Factor",
                 "image": "https://m.media-amazon.com/images/I/71irWztV+qL._AC_SY300_SX300_.jpg"
             },
             {
@@ -414,6 +504,8 @@
                 "stock": 70,
                 "valoration": 88,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "UGREEN",
                 "image": "https://m.media-amazon.com/images/I/61r-1YVRJ+L._AC_SY300_SX300_.jpg"
             },
             {
@@ -423,6 +515,8 @@
                 "stock": 50,
                 "valoration": 89,
                 "category": "Monitor",
+                "categoryid": 13,
+              "marca": "ROC",
                 "image": "https://m.media-amazon.com/images/I/810ZonthJyL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -432,6 +526,8 @@
                 "stock": 110,
                 "valoration": 86,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/710GdzHFfrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -441,6 +537,8 @@
                 "stock": 40,
                 "valoration": 87,
                 "category": "Storage",
+                "categoryid": 11,
+              "marca": "Vecto Tech",
                 "image": "https://m.media-amazon.com/images/I/81tUk2PsZCL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -450,6 +548,8 @@
                 "stock": 70,
                 "valoration": 89,
                 "category": "RAM",
+                "categoryid": 17,
+              "marca": "Fury",
                 "image": "https://m.media-amazon.com/images/I/81t2vJvPOJS.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -459,6 +559,8 @@
                 "stock": 50,
                 "valoration": 88,
                 "category": "Monitor",
+                "categoryid": 13,
+              "marca": "ACER",
                 "image": "https://m.media-amazon.com/images/I/71LwWVfvrDL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -468,6 +570,8 @@
                 "stock": 100,
                 "valoration": 87,
                 "category": "Graphics Card",
+                "categoryid": 4,
+              "marca": "Nvidia",
                 "image": "https://m.media-amazon.com/images/I/614yZPso++L._AC_SX300_SY300_.jpg"
             },
             {
@@ -477,6 +581,8 @@
                 "stock": 80,
                 "valoration": 85,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/71DYlRN51tL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -486,6 +592,8 @@
                 "stock": 60,
                 "valoration": 86,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "Kingston",
                 "image": "https://m.media-amazon.com/images/I/61303tEdaPL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -495,6 +603,8 @@
                 "stock": 150,
                 "valoration": 84,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Griarrac Gateron",
                 "image": "https://m.media-amazon.com/images/I/71z8P9Yu0vL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -504,6 +614,8 @@
                 "stock": 120,
                 "valoration": 88,
                 "category": "Furniture",
+                "categoryid": 8,
+              "marca": "Game Factor",
                 "image": "https://m.media-amazon.com/images/I/61493vCszHL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -513,6 +625,8 @@
                 "stock": 110,
                 "valoration": 89,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "WARRKY",
                 "image": "https://m.media-amazon.com/images/I/71tf8hN2SjL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
             },
             {
@@ -522,6 +636,8 @@
                 "stock": 90,
                 "valoration": 86,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "EasySMX",
                 "image": "https://m.media-amazon.com/images/I/4186BzbB4hL._SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -531,6 +647,8 @@
                 "stock": 80,
                 "valoration": 85,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "GVM RGB",
                 "image": "https://m.media-amazon.com/images/I/71heBJ4rxgL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -540,6 +658,8 @@
                 "stock": 70,
                 "valoration": 88,
                 "category": "Cooling",
+                "categoryid": 10,
+              "marca": "ESEWALAS",
                 "image": "https://m.media-amazon.com/images/I/61sPcE5V-fL.__AC_SY445_SX342_QL70_FMwebp_.jpg"
             },
             {
@@ -549,6 +669,8 @@
                 "stock": 50,
                 "valoration": 89,
                 "category": "Storage",
+                "categoryid": 11,
+              "marca": "Kingston",
                 "image": "https://m.media-amazon.com/images/I/81tUk2PsZCL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -558,6 +680,8 @@
                 "stock": 90,
                 "valoration": 86,
                 "category": "Furniture",
+                "categoryid": 8,
+              "marca": "Game Factor",
                 "image": "https://m.media-amazon.com/images/I/51l+oakqSaL._AC_SY300_SX300_.jpg"
             },
             {
@@ -567,6 +691,8 @@
                 "stock": 80,
                 "valoration": 85,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/71hmoYuphjL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -575,7 +701,9 @@
                 "description": "High-quality internal sound card for enhancing audio quality on your PC.",
                 "stock": 60,
                 "valoration": 87,
-                "category": "Audio",
+                "category": "Others",
+                "categoryid": 5,
+              "marca": "Lavales",
                 "image": "https://m.media-amazon.com/images/I/61KZVc98VrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -585,6 +713,8 @@
                 "stock": 120,
                 "valoration": 84,
                 "category": "Cooling",
+                "categoryid": 10,
+              "marca": "UpHere",
                 "image": "https://m.media-amazon.com/images/I/61h6XxPjnAL._AC_SX466_.jpg"
             },
             {
@@ -594,6 +724,8 @@
                 "stock": 100,
                 "valoration": 88,
                 "category": "Audio",
+                "categoryid": 18,
+              "marca": "Turtle Beach",
                 "image": "https://m.media-amazon.com/images/I/51r0z2m2FrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -602,7 +734,9 @@
                 "description": "Mouse bungee with RGB lighting to keep your mouse cable tangle-free.",
                 "stock": 150,
                 "valoration": 89,
-                "category": "Peripherals",
+                "category": "Mouse",
+                "categoryid": 6,
+              "marca": "Glorius",
                 "image": "https://m.media-amazon.com/images/I/51kTivq-WaL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
             },
             {
@@ -612,6 +746,8 @@
                 "stock": 70,
                 "valoration": 87,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "Game Factor",
                 "image": "https://m.media-amazon.com/images/I/61exf-ELhmL._AC_SX679_.jpg"
             },
             {
@@ -620,7 +756,9 @@
                 "description": "Add wireless connectivity to your desktop PC with this compact USB adapter.",
                 "stock": 110,
                 "valoration": 86,
-                "category": "Networking",
+                "category": "Accessories",
+                "categoryid": 7,
+              "marca": "TP-Link",
                 "image": "https://m.media-amazon.com/images/I/61UhAcgFzRL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -630,6 +768,8 @@
                 "stock": 100,
                 "valoration": 87,
                 "category": "Cooling",
+                "categoryid": 10,
+              "marca": "Fury",
                 "image": "https://m.media-amazon.com/images/I/41RTJyPxjVL._SY445_SX342_QL70_FMwebp_.jpg"
             },
             {
@@ -639,6 +779,8 @@
                 "stock": 80,
                 "valoration": 86,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/71i6zpP-DSL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -648,6 +790,8 @@
                 "stock": 120,
                 "valoration": 85,
                 "category": "Cooling",
+                "categoryid": 10,
+              "marca": "EZDIY-FAB",
                 "image": "https://m.media-amazon.com/images/I/41wcwpB4xsL._SY445_SX342_QL70_FMwebp_.jpg"
             },
             {
@@ -657,6 +801,8 @@
                 "stock": 60,
                 "valoration": 88,
                 "category": "Graphics Card",
+                "categoryid": 4,
+              "marca": "Nvidia",
                 "image": "https://m.media-amazon.com/images/I/71wctgG45EL._AC_SX466_.jpg"
             },
             {
@@ -666,6 +812,8 @@
                 "stock": 70,
                 "valoration": 89,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Logitech",
                 "image": "https://m.media-amazon.com/images/I/71nfNpxI0dL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -675,6 +823,8 @@
                 "stock": 90,
                 "valoration": 87,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "CoolerMaster",
                 "image": "https://m.media-amazon.com/images/I/511hGgv6X3L._SX522_.jpg"
             },
             {
@@ -684,6 +834,8 @@
                 "stock": 50,
                 "valoration": 88,
                 "category": "Monitor",
+                "categoryid": 13,
+              "marca": "Samsung",
                 "image": "https://m.media-amazon.com/images/I/81Tg1eIoMNL._AC_SX679_.jpg"
             },
             {
@@ -693,6 +845,8 @@
                 "stock": 130,
                 "valoration": 84,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "LUKAISEN",
                 "image": "https://m.media-amazon.com/images/I/71G+47Zr2qL._AC_SY300_SX300_.jpg"
             },
             {
@@ -702,6 +856,8 @@
                 "stock": 110,
                 "valoration": 86,
                 "category": "Peripherals",
+                "categoryid": 17,
+              "marca": "TP-Link",
                 "image": "https://m.media-amazon.com/images/I/51CAWyGWYwL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -711,6 +867,8 @@
                 "stock": 100,
                 "valoration": 85,
                 "category": "Peripherals",
+                "categoryid": 3,
+              "marca": "Nexigo",
                 "image": "https://m.media-amazon.com/images/I/61BGZKR0OBL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
             },
             {
@@ -720,6 +878,8 @@
                 "stock": 70,
                 "valoration": 89,
                 "category": "Accessories",
+                "categoryid": 7,
+              "marca": "Game Factor",
                 "image": "https://m.media-amazon.com/images/I/61mUcJNDnDS.__AC_SY445_SX342_QL70_FMwebp_.jpg"
             }
       ]
