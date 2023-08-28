@@ -11,14 +11,16 @@ import {
   filterByGenres,
   orderByPrice,
   orderByValoration,
+  getNameProducts,
 } from '../../Redux/actions/actions'
 import Footer from '../../components/Footer/Footer'
+import { useParams } from 'react-router-dom'
 export default function BuyView() {
+  let {name} = useParams()
   let dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(getProducts())
-  }, [dispatch])
+
+
 
   function handlerCategories(e) {
     e.preventDefault()

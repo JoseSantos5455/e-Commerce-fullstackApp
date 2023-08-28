@@ -1,6 +1,8 @@
+
 import {
   POST_PDT,
   GET_PDT,
+  GET_NAM,
   GET_DET,
   GET_CATEGORIES,
   FILTER_BY_CATEGORY,
@@ -14,6 +16,7 @@ const initialState = {
   allProducts: [],
   categories: [],
   detail: [],
+  product_name: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -21,6 +24,7 @@ const rootReducer = (state = initialState, action) => {
     case GET_PDT:
       return {
         ...state,
+       
         products: action.payload,
         allProducts: action.payload,
       }
@@ -29,6 +33,13 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         detail: action.payload,
+      }
+    case GET_NAM:
+      return {
+        ...state,
+        products:  action.payload,
+        detail:action.payload,
+        product_name: action.payload,
       }
     case POST_PDT:
       return {

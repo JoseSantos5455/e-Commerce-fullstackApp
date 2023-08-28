@@ -1,15 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Styles from './Nav.module.css'
 import logo from '../../images/logo.png'
 import { BsSearch } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import LogInButton from '../Login/LogInButton'
 import Profile from '../Login/Profile'
 import { useAuth0 } from '@auth0/auth0-react'; 
 import LogOut from '../Login/LogOut'
+import {useDispatch, useSelector} from 'react-redux'
+import { getNameProducts } from '../../Redux/actions/actions'
+
 
 export default function Nav() {
   const { isAuthenticated } = useAuth0()
+  let name = useSelector( state => state.product_name[0])
+  let dispatch = useDispatch()
   //dropdown para logout profile
     const [showMenu, setShowMenu] = useState(false);
 
@@ -20,43 +25,44 @@ export default function Nav() {
     const handleMouseLeave = () => {
       setShowMenu(false);
     };
+//buscar por nombre redux
+    let [inputSearch, setInputSearch] = useState('')
+    let handleSearch = (e)=>{
+      let {value} = e.target
+      
+      setInputSearch( value )
+    }
+    let dispatchSearch = ()=>{
+      dispatch(getNameProducts(inputSearch))
+      
+    }
+    
 
-
-
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
-
-  const openLoginModal = () => {
-    setIsLoginModalOpen(true)
-  }
-
-  const closeLoginModal = () => {
-    setIsLoginModalOpen(false)
-  }
 
   return (
     <div className={Styles.wrapper}>
       <div className={`${Styles.col_5}`}>
         <div className={`${Styles.div_logo} ${Styles.col_3}`}>
-          <Link to="/">
+          <NavLink to="/">
             <img src={logo} alt="logo" className={`${Styles.logo}`} />
-          </Link>
+          </NavLink>
         </div>
         <div className={` ${Styles.col_1}`}>
-          <Link to="/">
+          <NavLink to="/">
             <button className={`${Styles.background} ${Styles.font}`}>
               Inicio
             </button>
-          </Link>
+          </NavLink>
         </div>
         <div className={`${Styles.col_3}`}>
           <div className={Styles.dropdown}>
-            <Link to="/products">
+            <NavLink to="/products">
               <button
                 className={`${Styles.background} ${Styles.dropdownToggle}`}
               >
                 Products
               </button>
-            </Link>
+            </NavLink>
             <div className={`${Styles.dropdownMenu}`}>
               <div className={Styles.dropdownHeader}>Discos Duros</div>
               <a href="#" className={Styles.dropdownItem}>
@@ -76,16 +82,18 @@ export default function Nav() {
         </div>
       </div>
       <div className={` ${Styles.col_4}`}>
-        <form className={`${Styles.col_search} `}>
+        <div className={`${Styles.col_search} `}>
           <input
             type="text"
             placeholder="Buscar"
             className={`${Styles.searchInput}`}
+            onChange={handleSearch}
           />
-          <button type="submit" className={`${Styles.searchButton}`}>
+          <NavLink to={`/products/`}
+           onClick={dispatchSearch} className={`${Styles.searchButton}`}>
             <BsSearch />
-          </button>
-        </form>
+          </NavLink>
+        </div>
       </div>
       <div className={` ${Styles.col_2}`}>
         <div className={Styles.container_btn}>
