@@ -43,7 +43,7 @@
               "description": "Powerful graphics card with real-time ray tracing for exceptional gaming visuals.",
               "stock": 40,
               "valoration": 90,
-              "category": "GPU",
+              "category": "Graphics Card",
               "image": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/images/design/geforce-rtx-3080-4-960.jpg"
           },
           {
@@ -190,7 +190,538 @@
                "valoration": 89,
                "category": "Graphics Card",
                "image": "https://m.media-amazon.com/images/I/616bVfHrjYS.jpg"
-           }
+           },
+           {
+                "name": "Wireless Gaming Headset H-800",
+                "price": "99.00",
+                "description": "Immersive wireless gaming headset with surround sound and noise-canceling microphone.",
+                "stock": 70,
+                "valoration": 89,
+                "category": "Audio",
+                "image": "https://m.media-amazon.com/images/I/71bz1x24XLL._AC_SX522_.jpg"
+            },
+            {
+                "name": "External Graphics Enclosure EG-550",
+                "price": "199.00",
+                "description": "Upgrade your laptop's graphics performance with this external GPU enclosure.",
+                "stock": 40,
+                "valoration": 87,
+                "category": "Graphics Card",
+                "image": "https://m.media-amazon.com/images/I/81QGxHK8m6L._AC_UF1000,1000_QL80_.jpg"
+            },
+            {
+                "name": "Mechanical Numpad NP-20",
+                "price": "39.99",
+                "description": "Compact mechanical numpad for enhanced number input and improved productivity.",
+                "stock": 120,
+                "valoration": 50,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/71j88memFML._AC_SX679_.jpg"
+            },
+            {
+                "name": "Wi-Fi 6 PCIe Card W-600",
+                "price": "59.00",
+                "description": "Add Wi-Fi 6 connectivity to your desktop PC with this PCIe expansion card.",
+                "stock": 100,
+                "valoration": 90,
+                "category": "Networking",
+                "image": "https://m.media-amazon.com/images/I/71PJMcjgCHL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Ultra Silent Case Fans SF-120",
+                "price": "19.99",
+                "description": "Pack of two 120mm ultra-silent case fans for optimal airflow and cooling.",
+                "stock": 150,
+                "valoration": 84,
+                "category": "Cooling",
+                "image": "https://m.media-amazon.com/images/I/81ZUUX5VZsL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Gaming Mousepad MP-800",
+                "price": "24.99",
+                "description": "Large gaming mousepad with smooth surface for precise mouse movement.",
+                "stock": 130,
+                "valoration": 88,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/71wFe1Hec6L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "144Hz Gaming Monitor G-27",
+                "price": "299.00",
+                "description": "High-refresh-rate gaming monitor with 27-inch display for smooth gameplay.",
+                "stock": 60,
+                "valoration": 87,
+                "category": "Monitor",
+                "image": "https://m.media-amazon.com/images/I/810ZonthJyL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB LED Strip Kit L-300",
+                "price": "39.00",
+                "description": "Customize your PC's lighting with this RGB LED strip kit and controller.",
+                "stock": 90,
+                "valoration": 85,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/71k+ptwjZgL._AC_SY300_SX300_.jpg"
+            },
+            {
+                "name": "Ultra-Quiet Power Supply PSU-650W",
+                "price": "119.00",
+                "description": "650W power supply with ultra-quiet operation and high energy efficiency.",
+                "stock": 80,
+                "valoration": 89,
+                "category": "Power Supply",
+                "image": "https://m.media-amazon.com/images/I/71X0zQ0fW4L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Gaming Chair C-800",
+                "price": "249.99",
+                "description": "Ergonomic gaming chair with RGB lighting and adjustable features for comfort.",
+                "stock": 60,
+                "valoration": 88,
+                "category": "Furniture",
+                "image": "https://m.media-amazon.com/images/I/71qET3tCHaL._AC_SX569_.jpg"
+            },
+            {
+                "name": "Wireless Bluetooth Adapter A-100",
+                "price": "29.00",
+                "description": "Add Bluetooth connectivity to your desktop PC with this wireless adapter.",
+                "stock": 150,
+                "valoration": 85,
+                "category": "Networking",
+                "image": "https://m.media-amazon.com/images/I/51fu8n4g9tL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "120mm RGB Case Fan CF-120",
+                "price": "19.99",
+                "description": "Single 120mm RGB case fan for enhancing airflow and aesthetic in your PC build.",
+                "stock": 100,
+                "valoration": 87,
+                "category": "Cooling",
+                "image": "https://m.media-amazon.com/images/I/71jANruAtXL._SX522_.jpg"
+            },
+            {
+                "name": "Mechanical Gaming Keypad KP-10",
+                "price": "49.00",
+                "description": "Compact mechanical gaming keypad with programmable keys for quick actions.",
+                "stock": 120,
+                "valoration": 46,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/716l7xk8utL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "USB 3.0 Hub H-10",
+                "price": "29.99",
+                "description": "Expand your USB connectivity with this 10-port USB 3.0 hub.",
+                "stock": 110,
+                "valoration": 90,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/715OTcL3kaL._AC_SX679_.jpg"
+            },
+            {
+                "name": "DDR5 RAM Module - 32GB",
+                "price": "169.99",
+                "description": "High-speed DDR5 RAM module with 32GB capacity for cutting-edge performance.",
+                "stock": 40,
+                "valoration": 84,
+                "category": "RAM",
+                "image": "https://m.media-amazon.com/images/I/71AHErCysdL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Wireless Ergonomic Mouse M-900",
+                "price": "59.00",
+                "description": "Ergonomically designed wireless mouse for comfortable extended use.",
+                "stock": 90,
+                "valoration": 88,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/61LVFPLX1AL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "M.2 NVMe SSD Enclosure E-200",
+                "price": "49.00",
+                "description": "Convert your M.2 NVMe SSD into an external drive with this enclosure.",
+                "stock": 70,
+                "valoration": 87,
+                "category": "Storage",
+                "image": "https://m.media-amazon.com/images/I/7134lDB2D5L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Cable Extensions CE-30",
+                "price": "29.00",
+                "description": "Colorful RGB cable extensions to enhance the look of your PC's internal wiring.",
+                "stock": 100,
+                "valoration": 85,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/61PadhcakcL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "External USB CD/DVD Drive D-300",
+                "price": "39.99",
+                "description": "External CD/DVD drive for laptops and PCs without built-in optical drives.",
+                "stock": 120,
+                "valoration": 86,
+                "category": "Storage",
+                "image": "https://m.media-amazon.com/images/I/610TZSoX2lL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "120mm High Airflow Case Fan AF-120",
+                "price": "14.99",
+                "description": "120mm case fan designed for high airflow and efficient cooling.",
+                "stock": 150,
+                "valoration": 88,
+                "category": "Cooling",
+                "image": "https://m.media-amazon.com/images/I/41lB3f8oadL._SY445_SX342_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Gaming Desk GD-800",
+                "price": "299.00",
+                "description": "Spacious gaming desk with cable management and ergonomic design.",
+                "stock": 60,
+                "valoration": 89,
+                "category": "Furniture",
+                "image": "https://m.media-amazon.com/images/I/810ZRdkyuIL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Dual-Band Wi-Fi Router R-AC200",
+                "price": "89.00",
+                "description": "Dual-band Wi-Fi router for high-speed wireless connectivity in your home.",
+                "stock": 100,
+                "valoration": 87,
+                "category": "Networking",
+                "image": "https://m.media-amazon.com/images/I/51kSjitehLL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Gaming Mouse Bungee MB-10",
+                "price": "19.99",
+                "description": "Mouse bungee for managing mouse cable and reducing drag during gaming.",
+                "stock": 130,
+                "valoration": 85,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/51KdIYkw0XL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB CPU Cooler CC-240",
+                "price": "89.00",
+                "description": "RGB CPU cooler with excellent heat dissipation and customizable lighting.",
+                "stock": 80,
+                "valoration": 90,
+                "category": "Cooling",
+                "image": "https://m.media-amazon.com/images/I/71irWztV+qL._AC_SY300_SX300_.jpg"
+            },
+            {
+                "name": "USB-C Docking Station D-500",
+                "price": "139.00",
+                "description": "USB-C docking station for connecting multiple peripherals to your laptop.",
+                "stock": 70,
+                "valoration": 88,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/61r-1YVRJ+L._AC_SY300_SX300_.jpg"
+            },
+            {
+                "name": "240Hz Gaming Monitor G-24X",
+                "price": "399.00",
+                "description": "240Hz gaming monitor with fast refresh rate for competitive gaming.",
+                "stock": 50,
+                "valoration": 89,
+                "category": "Monitor",
+                "image": "https://m.media-amazon.com/images/I/810ZonthJyL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Wireless Mechanical Numpad NP-50",
+                "price": "59.99",
+                "description": "Wireless mechanical numpad for quick numerical input with tactile switches.",
+                "stock": 110,
+                "valoration": 86,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/710GdzHFfrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "External USB 3.1 Gen 2 SSD - 1TB",
+                "price": "199.00",
+                "description": "High-speed external SSD with USB 3.1 Gen 2 interface and 1TB storage.",
+                "stock": 40,
+                "valoration": 87,
+                "category": "Storage",
+                "image": "https://m.media-amazon.com/images/I/81tUk2PsZCL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB LED RAM Module - 32GB",
+                "price": "149.99",
+                "description": "High-performance DDR4 RAM module with customizable RGB lighting and 32GB capacity.",
+                "stock": 70,
+                "valoration": 89,
+                "category": "RAM",
+                "image": "https://m.media-amazon.com/images/I/81t2vJvPOJS.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Ultra-Wide Gaming Monitor G-34C",
+                "price": "599.00",
+                "description": "34-inch ultra-wide gaming monitor with curved display for immersive gameplay.",
+                "stock": 50,
+                "valoration": 88,
+                "category": "Monitor",
+                "image": "https://m.media-amazon.com/images/I/71LwWVfvrDL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB GPU Backplate BP-100",
+                "price": "59.00",
+                "description": "Customizable RGB backplate for adding style to your graphics card.",
+                "stock": 100,
+                "valoration": 87,
+                "category": "Graphics Card",
+                "image": "https://m.media-amazon.com/images/I/614yZPso++L._AC_SX300_SY300_.jpg"
+            },
+            {
+                "name": "Wireless Mechanical Gaming Keyboard K-900",
+                "price": "129.00",
+                "description": "Wireless mechanical gaming keyboard with responsive switches and customizable lighting.",
+                "stock": 80,
+                "valoration": 85,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/71DYlRN51tL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "External Thunderbolt 3 Dock D-600",
+                "price": "279.00",
+                "description": "External Thunderbolt 3 dock for connecting multiple devices to your laptop.",
+                "stock": 60,
+                "valoration": 86,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/61303tEdaPL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Mechanical Switch Tester T-10",
+                "price": "19.99",
+                "description": "Switch tester with various mechanical switches for testing tactile preferences.",
+                "stock": 150,
+                "valoration": 84,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/71z8P9Yu0vL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Gaming Desk Mat M-200",
+                "price": "34.99",
+                "description": "Large gaming desk mat with RGB lighting for an immersive gaming setup.",
+                "stock": 120,
+                "valoration": 88,
+                "category": "Furniture",
+                "image": "https://m.media-amazon.com/images/I/61493vCszHL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "USB-C to HDMI Adapter A-200",
+                "price": "29.00",
+                "description": "Connect your USB-C device to an HDMI display with this adapter.",
+                "stock": 110,
+                "valoration": 89,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/71tf8hN2SjL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Wireless Gaming Controller C-500",
+                "price": "49.99",
+                "description": "Wireless gaming controller for PC gaming with comfortable design.",
+                "stock": 90,
+                "valoration": 86,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/4186BzbB4hL._SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Lighting Kit L-400",
+                "price": "39.00",
+                "description": "Complete RGB lighting kit for adding dynamic lighting effects to your PC.",
+                "stock": 80,
+                "valoration": 85,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/71heBJ4rxgL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Liquid Cooling Tubing Kit TK-300",
+                "price": "89.99",
+                "description": "Complete liquid cooling tubing kit for creating a custom cooling loop in your PC.",
+                "stock": 70,
+                "valoration": 88,
+                "category": "Cooling",
+                "image": "https://m.media-amazon.com/images/I/61sPcE5V-fL.__AC_SY445_SX342_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "USB 3.1 Gen 2 External SSD - 2TB",
+                "price": "249.00",
+                "description": "High-speed external SSD with USB 3.1 Gen 2 interface and 2TB storage capacity.",
+                "stock": 50,
+                "valoration": 89,
+                "category": "Storage",
+                "image": "https://m.media-amazon.com/images/I/81tUk2PsZCL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Desk Organizer O-100",
+                "price": "29.00",
+                "description": "Desk organizer with built-in RGB lighting for a neat and stylish workspace.",
+                "stock": 90,
+                "valoration": 86,
+                "category": "Furniture",
+                "image": "https://m.media-amazon.com/images/I/51l+oakqSaL._AC_SY300_SX300_.jpg"
+            },
+            {
+                "name": "Wireless Ergonomic Split Keyboard K-100",
+                "price": "89.00",
+                "description": "Wireless split keyboard with ergonomic design for comfortable typing.",
+                "stock": 80,
+                "valoration": 85,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/71hmoYuphjL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Internal Sound Card SC-200",
+                "price": "59.99",
+                "description": "High-quality internal sound card for enhancing audio quality on your PC.",
+                "stock": 60,
+                "valoration": 87,
+                "category": "Audio",
+                "image": "https://m.media-amazon.com/images/I/61KZVc98VrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Fan Controller FC-300",
+                "price": "24.99",
+                "description": "Fan controller with RGB lighting control for managing fan speeds and colors.",
+                "stock": 120,
+                "valoration": 84,
+                "category": "Cooling",
+                "image": "https://m.media-amazon.com/images/I/61h6XxPjnAL._AC_SX466_.jpg"
+            },
+            {
+                "name": "USB-C Gaming Headset H-700",
+                "price": "79.00",
+                "description": "USB-C gaming headset with immersive audio and noise-canceling microphone.",
+                "stock": 100,
+                "valoration": 88,
+                "category": "Audio",
+                "image": "https://m.media-amazon.com/images/I/51r0z2m2FrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Mouse Bungee MB-20",
+                "price": "19.00",
+                "description": "Mouse bungee with RGB lighting to keep your mouse cable tangle-free.",
+                "stock": 150,
+                "valoration": 89,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/51kTivq-WaL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Dual Monitor Arm Mount AM-200",
+                "price": "89.00",
+                "description": "Dual monitor arm mount for maximizing desk space and ergonomic viewing.",
+                "stock": 70,
+                "valoration": 87,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/61exf-ELhmL._AC_SX679_.jpg"
+            },
+            {
+                "name": "Wireless USB Adapter A-300",
+                "price": "24.00",
+                "description": "Add wireless connectivity to your desktop PC with this compact USB adapter.",
+                "stock": 110,
+                "valoration": 86,
+                "category": "Networking",
+                "image": "https://m.media-amazon.com/images/I/61UhAcgFzRL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB RAM Cooler RC-150",
+                "price": "34.99",
+                "description": "Cooling solution designed specifically to keep RGB RAM modules running efficiently.",
+                "stock": 100,
+                "valoration": 87,
+                "category": "Cooling",
+                "image": "https://m.media-amazon.com/images/I/41RTJyPxjVL._SY445_SX342_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "Wireless Bluetooth Keyboard K-200",
+                "price": "49.00",
+                "description": "Wireless Bluetooth keyboard with slim profile and quiet keystrokes.",
+                "stock": 80,
+                "valoration": 86,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/71i6zpP-DSL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "M.2 NVMe Heatsink HS-10",
+                "price": "19.00",
+                "description": "Heatsink designed to keep M.2 NVMe SSDs cool under heavy workloads.",
+                "stock": 120,
+                "valoration": 85,
+                "category": "Cooling",
+                "image": "https://m.media-amazon.com/images/I/41wcwpB4xsL._SY445_SX342_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "USB-C External Graphics Card Enclosure E-300",
+                "price": "169.00",
+                "description": "External enclosure to boost graphics performance on laptops using a desktop GPU.",
+                "stock": 60,
+                "valoration": 88,
+                "category": "Graphics Card",
+                "image": "https://m.media-amazon.com/images/I/71wctgG45EL._AC_SX466_.jpg"
+            },
+            {
+                "name": "Wireless Mechanical Keyboard and Mouse Combo KM-300",
+                "price": "129.99",
+                "description": "Wireless combo featuring a mechanical keyboard and precision gaming mouse.",
+                "stock": 70,
+                "valoration": 89,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/71nfNpxI0dL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Controller Hub CH-200",
+                "price": "29.99",
+                "description": "Controller hub for managing and synchronizing RGB lighting effects.",
+                "stock": 90,
+                "valoration": 87,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/511hGgv6X3L._SX522_.jpg"
+            },
+            {
+                "name": "Ultra-Wide Curved Monitor G-38",
+                "price": "799.00",
+                "description": "38-inch ultra-wide curved monitor for immersive gaming and productivity.",
+                "stock": 50,
+                "valoration": 88,
+                "category": "Monitor",
+                "image": "https://m.media-amazon.com/images/I/81Tg1eIoMNL._AC_SX679_.jpg"
+            },
+            {
+                "name": "RGB Cable Management Clips CC-10",
+                "price": "14.00",
+                "description": "Set of cable clips with RGB lighting to keep your cables organized and stylish.",
+                "stock": 130,
+                "valoration": 84,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/71G+47Zr2qL._AC_SY300_SX300_.jpg"
+            },
+            {
+                "name": "Wireless Presenter Remote R-100",
+                "price": "39.00",
+                "description": "Wireless presenter remote for seamless presentations and control.",
+                "stock": 110,
+                "valoration": 86,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/51CAWyGWYwL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "External Webcam W-1080",
+                "price": "79.00",
+                "description": "External webcam with Full HD 1080p resolution for high-quality video calls.",
+                "stock": 100,
+                "valoration": 85,
+                "category": "Peripherals",
+                "image": "https://m.media-amazon.com/images/I/61BGZKR0OBL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            },
+            {
+                "name": "RGB Desk Lamp L-500",
+                "price": "49.99",
+                "description": "RGB desk lamp with adjustable lighting modes and colors to enhance your workspace.",
+                "stock": 70,
+                "valoration": 89,
+                "category": "Accessories",
+                "image": "https://m.media-amazon.com/images/I/61mUcJNDnDS.__AC_SY445_SX342_QL70_FMwebp_.jpg"
+            }
       ]
       
 

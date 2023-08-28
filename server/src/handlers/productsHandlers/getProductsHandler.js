@@ -15,7 +15,14 @@ const setPaginationData = (page,size) =>{
 
 const getProductsHandler = async(req,res)=>{
     const { name , page, size}= req.query;
-    const paginationData = setPaginationData(page,size);
+    const paginationData = {};
+    if(page && size){
+        paginationData = setPaginationData(page,size);
+    }
+    else{
+        paginationData.page = 0;
+        paginationData.size = 100;
+    }
 
     try {
         if(name){
