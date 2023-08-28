@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getNameProducts } from "../../Redux/actions/actions";
+import getNameProducts from "../../Redux/actions/actions"
 import s from "./SearchBar.module.css"
 
 export default function SearchBar () {
