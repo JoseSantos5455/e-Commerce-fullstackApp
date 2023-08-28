@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@auth0/auth0-react": "^2.2.1",
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.11.2",
     "react-router-dom": "^6.15.0"
   }
 }
