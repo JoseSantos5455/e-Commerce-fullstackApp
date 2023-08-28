@@ -12,7 +12,7 @@ export default function LogInButton() {
                 <button  
                 onClick={()=>loginWithRedirect()}
                 >
-            LOGIN
+            LogIn
         
         </button>
         

@@ -1,5 +1,12 @@
 
+.no_deco{
+    text-decoration: dotted;
+}
 .img_profile{
     width: 20%;
     border-radius: 10rem;
+}
+.p_user_name {
+   
+    color: rgb(0, 0, 0);
 }
