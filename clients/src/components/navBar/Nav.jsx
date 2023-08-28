@@ -50,7 +50,7 @@ export default function Nav() {
         <div className={` ${Styles.col_1}`}>
           <NavLink to="/">
             <button className={`${Styles.background} ${Styles.font}`}>
-              Inicio
+              Home
             </button>
           </NavLink>
         </div>
@@ -63,7 +63,7 @@ export default function Nav() {
                 Products
               </button>
             </NavLink>
-            <div className={`${Styles.dropdownMenu}`}>
+            {/* <div className={`${Styles.dropdownMenu}`}>
               <div className={Styles.dropdownHeader}>Discos Duros</div>
               <a href="#" className={Styles.dropdownItem}>
                 SSD
@@ -71,21 +71,21 @@ export default function Nav() {
               <a href="#" className={Styles.dropdownItem}>
                 Rígido
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={` ${Styles.col_1}`}>
-          <h6 className={Styles.font}>Ayuda</h6>
+          <h6 className={Styles.font}>Help</h6>
         </div>
         <div className={` ${Styles.col_4}`}>
-          <h6 className={Styles.font}>Sobre Nosotros</h6>
+          <h6 className={Styles.font}>About</h6>
         </div>
       </div>
       <div className={` ${Styles.col_4}`}>
         <div className={`${Styles.col_search} `}>
           <input
             type="text"
-            placeholder="Buscar"
+            placeholder="Search"
             className={`${Styles.searchInput}`}
             onChange={handleSearch}
           />

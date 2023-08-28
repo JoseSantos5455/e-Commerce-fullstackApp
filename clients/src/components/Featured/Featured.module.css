@@ -35,6 +35,7 @@
 .btn_better {
   background-color: black;
   border-radius: 1rem;
+  text-decoration: none;
   color: white;
   padding: 0.5rem 1rem;
   width: 11.875rem;

@@ -5,7 +5,7 @@ import OrderBy from '../../components/OrderBy/OrderBy'
 import Filters from '../../components/Filters/Filters'
 import ListCard from '../../components/Card/ListCard'
 import Nav from '../../components/navBar/Nav'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   getProducts,
   filterByGenres,
@@ -20,7 +20,9 @@ export default function BuyView() {
   let dispatch = useDispatch()
 
 
-
+  useEffect(()=>{
+    dispatch(getProducts())
+  },[])
 
   function handlerCategories(e) {
     e.preventDefault()
@@ -35,6 +37,8 @@ export default function BuyView() {
     dispatch(orderByPrice(e))
   }
 
+
+  
   return (
     <div>
       <div className={Styles.container_buy}>
