@@ -1,10 +1,10 @@
-import { GET_PDT, GET_DET, GET_CATEGORIES, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION} from './actionTypes'
+import { GET_PDT, GET_DET, GET_NAM, GET_CATEGORIES, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION} from './actionTypes'
 import axios from "axios"
 
 // eslint-disable-next-line
 export const getProducts = (page, size) => {
+  let endpoint = `http://localhost:3001/products`
   return async (dispatch) => {
-    let endpoint = `http://localhost:3001/products`
     try {
       const response = await axios(endpoint)
       let data = response.data
@@ -19,9 +19,18 @@ export const getProducts = (page, size) => {
 }
 
 export const getNameProducts = (name) => {
-  return async () => {
+  return async (dispatch) => {
+    let endpoint = `http://localhost:3001/products/?name=${name}`
     try {
-      await axios.get('' + name)
+      const response = await axios.get(endpoint)
+      let data = response.data
+
+      dispatch({
+        type: GET_NAM,
+        payload: data,
+      })
+      console.log(name)
+    
     } catch (error) {
       console.log(error)
     }
