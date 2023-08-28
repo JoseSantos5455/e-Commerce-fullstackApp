@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 
 export default function ListCard() {
   let products = useSelector((state) => state.products)
-console.log("Productos",products);
   // Convertir la propiedad price a números antes de pasarla al componente Card
   products = products.map((pdt) => ({
   ...pdt,

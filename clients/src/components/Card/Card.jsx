@@ -12,7 +12,7 @@ Card.propTypes = {
   aviability: PropTypes.bool.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   id: PropTypes.string.isRequired,
 }
 
