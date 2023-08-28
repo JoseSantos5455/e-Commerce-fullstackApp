@@ -2,12 +2,14 @@ import { GET_PDT, GET_DET, GET_NAM, GET_CATEGORIES, FILTER_BY_CATEGORY, ORDER_BY
 import axios from "axios"
 
 // eslint-disable-next-line
-export const getProducts = (page, size) => {
+export const getProducts =  (page, size) => {
   let endpoint = `http://localhost:3001/products`
   return async (dispatch) => {
     try {
       const response = await axios(endpoint)
       let data = response.data
+      console.log('despacha')
+
       dispatch({
         type: GET_PDT,
         payload: data,
