@@ -3,10 +3,11 @@ import axios from "axios"
 
 export const getProducts = () => {
   return async (dispatch) => {
-    let endpoint = `http://localhost:3001/products`
     try {
       const response = await axios(endpoint)
       let data = response.data
+      console.log('despacha')
+
       dispatch({
         type: GET_PDT,
         payload: data,
@@ -18,17 +19,21 @@ export const getProducts = () => {
 }
 
 export const getNameProducts = (name) => {
-    return async (dispatch) => {
-        try {
-            const nameInfo = await axios.get(`http://localhost:3001/products?name=${name}`)
-            const result = nameInfo.data
-            dispatch({
-                type: GET_NAME_PRODUCTS,
-                payload: result
-            })
-        } catch (error) {
-            console.log(error);
-        }
+  return async (dispatch) => {
+    let endpoint = `http://localhost:3001/products/?name=${name}`
+    try {
+      const response = await axios.get(endpoint)
+      let data = response.data
+
+      dispatch({
+        type: GET_NAM,
+        payload: data,
+      })
+      console.log(name)
+    
+    } catch (error) {
+      console.log(error)
+    }
     }
 }
 

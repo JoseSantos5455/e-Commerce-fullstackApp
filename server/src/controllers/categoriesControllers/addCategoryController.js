@@ -4,7 +4,7 @@ const {Category} = require('../../db.js');
 const fakeCategories = [
                         {name:'Computadoras PC'},
                         {name:'Laptops'},
-                        {name:'Perifericos'},
+                        {name:'Peripherals'},
                     {name:'Graphics Card'},
                     {name:'Others'},
                     {name:'Mouse'},
@@ -16,9 +16,10 @@ const fakeCategories = [
                     {name:'Case'},
                     {name:'Monitor'},
                     {name:'Keyboard'},
-                    {name:'Power Supply'},                    
+                    {name:'Power Supply'},                  
                     {name:'Motherboard'},
-                    {name:'RAM'},];
+                    {name:'RAM'},
+                {name: 'Audio'}];
 
 const addCategories = async()=>{
     const categories = await Category.bulkCreate(fakeCategories);

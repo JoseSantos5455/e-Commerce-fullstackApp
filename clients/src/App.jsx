@@ -16,6 +16,7 @@ export default function App() {
           <Route exact path="/form" Component={Form}/>
           <Route exact path="/products/detail/:id" Component={Detail}/>
           <Route exact path="/products" Component={BuyView}/>
+          
           <Route path="*" Component={NotFound}/>
           <Route exact path="/Paginado" Component={Paginado}/>
           <Route exact path="/search" Component={SearchBar}/>

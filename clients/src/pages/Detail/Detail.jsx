@@ -13,10 +13,12 @@ export default function Detail() {
   let dispatch = useDispatch()
   let product = useSelector((state) => state.detail)
   const { id } = useParams()
-
+  
   useEffect(() => {
     dispatch(getDetail(id))
   }, [dispatch, id])
+
+
 
   return (
     <div className={Styles.wrapper}>

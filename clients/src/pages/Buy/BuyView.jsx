@@ -5,20 +5,24 @@ import OrderBy from '../../components/OrderBy/OrderBy'
 import Filters from '../../components/Filters/Filters'
 import ListCard from '../../components/Card/ListCard'
 import Nav from '../../components/navBar/Nav'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   getProducts,
   filterByGenres,
   orderByPrice,
   orderByValoration,
+  getNameProducts,
 } from '../../Redux/actions/actions'
 import Footer from '../../components/Footer/Footer'
+import { useParams } from 'react-router-dom'
 export default function BuyView() {
+  let {name} = useParams()
   let dispatch = useDispatch()
 
-  useEffect(() => {
+
+  useEffect(()=>{
     dispatch(getProducts())
-  }, [dispatch])
+  },[])
 
   function handlerCategories(e) {
     e.preventDefault()
@@ -33,6 +37,8 @@ export default function BuyView() {
     dispatch(orderByPrice(e))
   }
 
+
+  
   return (
     <div>
       <div className={Styles.container_buy}>
