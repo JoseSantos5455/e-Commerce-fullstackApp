@@ -14,16 +14,16 @@ const setPaginationData = (page,size) =>{
 };
 
 const getProductsHandler = async(req,res)=>{
-    const { name , page, size,categoryFilter,brandFilter}= req.query;
+    const { name , page, size,categoryFilter,brandFilter,orderBy,direction}= req.query;
     const paginationData = setPaginationData(page,size);
 
     try {
         if(name){
-            const result =  await getProductsByNameController(name,paginationData.page,paginationData.size,categoryFilter,brandFilter);
+            const result =  await getProductsByNameController(name,paginationData.page,paginationData.size,categoryFilter,brandFilter,orderBy,direction);
             res.status(200).json(result)
         }
         else{
-            const result =  await getAllProductsController(paginationData.page,paginationData.size,categoryFilter,brandFilter);
+            const result =  await getAllProductsController(paginationData.page,paginationData.size,categoryFilter,brandFilter,orderBy,direction);
             res.status(200).json(result)
         }
     } catch (error) {

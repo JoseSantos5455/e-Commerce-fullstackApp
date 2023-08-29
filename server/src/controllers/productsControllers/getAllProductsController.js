@@ -43,7 +43,7 @@ const productsPaginated = async (page,size,whereConditions) => {
   return products;
 };
 
-const getAllProductsController= async (page,size,categoryFilter,brandFilter)=>{
+const getAllProductsController= async (page,size,categoryFilter,brandFilter,orderBy,direction)=>{
   let products = [];
   const whereConditions = {};
   if (categoryFilter) whereConditions.categoryId = categoryFilter;
@@ -52,7 +52,23 @@ const getAllProductsController= async (page,size,categoryFilter,brandFilter)=>{
   if (!page && !size) 
     products = await allProducts(whereConditions);
   else 
-    products = await productsPaginated(page,size,whereConditions)
+    products = await productsPaginated(page,size,whereConditions);
+  if (orderBy){
+    let productsByNameSorted = [];
+    if (orderBy==='price'){
+      if (direction==='ascending') 
+        productsByNameSorted=products.sort((product1, product2) =>product1.price - product2.price);
+      else  
+        productsByNameSorted=products.sort((product1, product2) =>product2.price - product1.price)
+    }
+    else{
+      if (direction==='ascending') 
+        productsByNameSorted=products.sort((product1, product2) =>product1.valoration - product2.valoration);
+      else  
+        productsByNameSorted=products.sort((product1, product2) =>product2.valoration - product1.valoration)
+    };
+    return productsByNameSorted;
+  };
   return products;
 }
 
