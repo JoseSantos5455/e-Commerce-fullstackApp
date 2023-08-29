@@ -1,39 +1,62 @@
 import Card from './Card'
 import Styles from './ListCard.module.css'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { useState } from 'react';
+import { getPaginatedProducts } from '../../Redux/actions/actions';
 
 export default function ListCard() {
-  let products = useSelector((state) => state.products)
-console.log("Productos",products);
-  // Convertir la propiedad price a números antes de pasarla al componente Card
-  products = products.map((pdt) => ({
-  ...pdt,
-  price: parseFloat(pdt.price), // Convertir a número
-  //id: parseInt(pdt.id)
-}));
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+  const [currentPage, setCurrentPage] = useState(0);
+  const pageSize = 12;
+  const maxPage = Math.ceil(products.length / pageSize);
 
-  let aviability = products.map((pdt) => (pdt.stock > 0 ? true : false))
+  const handlePreviousPage = () => {
+    if (currentPage > 0) {
+      dispatch(getPaginatedProducts(currentPage - 1, pageSize));
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < maxPage - 1) {
+      dispatch(getPaginatedProducts(currentPage + 1, pageSize));
+      setCurrentPage(currentPage + 1);
+    }
+  };
+  const startIdx = currentPage * pageSize;
+  const endIdx = startIdx + pageSize;
+  const productsToRender = products.slice(startIdx, endIdx);
 
   return (
     <div className={Styles.wrapper}>
       <h2 className={Styles.h2}> Products </h2>
       <div className={Styles.list}>
-        {products && products.length > 0 ? (
-          products.map((pdt, idx) => (
+        {productsToRender && productsToRender.length > 0 ? (
+          productsToRender.map((pdt, idx) => (
             <Card
-            key = {idx}
-            id = {pdt.id} 
-            aviability = { aviability[idx] }     
-            img ={pdt.image}
-            name = {pdt.name}
-            price = {pdt.price}
-            isFavorite = {pdt.favorite}
+              key={startIdx + idx}
+              id={pdt.id}
+              aviability={pdt.stock > 0}
+              img={pdt.image}
+              name={pdt.name}
+              price={parseFloat(pdt.price)}
+              isFavorite={pdt.favorite}
             />
           ))
         ) : (
           <p> No products </p>
         )}
       </div>
+      <div>
+        <button onClick={handlePreviousPage} disabled={currentPage === 0}>
+          Previous
+        </button>
+        <span>Page {currentPage + 1}</span>
+        <button onClick={handleNextPage} disabled={currentPage === maxPage - 1}>
+          Next
+        </button>
+      </div>
     </div>
-  )
+  );
 }
