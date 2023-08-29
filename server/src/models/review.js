@@ -11,5 +11,17 @@ module.exports = (sequelize) => {
             type:DataTypes.STRING,
             allowNul:false,
         },
+        productId:{
+            type:DataTypes.UUID,
+            allowNul:false,
+        },
+        userId:{
+            type:DataTypes.UUID,
+            allowNul:false,
+        },
+        isActive:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:true,
+        },
     },{timestamps:false});
 };
