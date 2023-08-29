@@ -1,11 +1,16 @@
 const {Product,Category} = require("../../db");
 const {Op} = require('sequelize');
 
-  const getProductByNameController = async (name,page,size)=>{
+  const getProductByNameController = async (name,page,size,categoryFilter,brandFilter)=>{
+    size=size||12;
+    page=page||0;
+    const whereConditions = {name:{[Op.iLike]:`%${name}%`}};
+    if (categoryFilter) whereConditions.categoryId = categoryFilter;
+    if (brandFilter) whereConditions.brand = brandFilter;
     const productList = await Product.findAndCountAll({
             limit:size,
             offset:page * size,
-            where:{name:{[Op.iLike]:`%${name}%`}},
+            where:whereConditions,
             include: [
               {
                 model: Category,
@@ -20,7 +25,7 @@ const {Op} = require('sequelize');
         Category: undefined, 
         })
     );
-    return productsByName
+    return productsByName;
 }
 
 module.exports =  getProductByNameController;
