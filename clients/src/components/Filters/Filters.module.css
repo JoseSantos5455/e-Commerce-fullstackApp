@@ -1,0 +1,27 @@
+.titles {
+    font-family: 'Heebo', sans-serif;
+    color: rgba(128, 128, 128, 0.722);
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.select {
+    width: 110px;
+    background-color: #dedef5;
+    border-width: 2px;
+    margin-bottom: 15px;
+}
+
+select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    height: 3em;
+    padding: 0 1em 0 1em;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
