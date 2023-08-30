@@ -20,12 +20,12 @@ const {Category,Product,Review,User} = sequelize.models;
 
 Product.belongsToMany(User,{through:'product_user'});
 User.belongsToMany(Product,{through:'product_user'});
-User.hasMany(Review);
-Review.belongsTo(User);
+Review.belongsTo(User,{foreignKey:'userId'});
+User.hasMany(Review,{foreignKey:'userId'});
 Product.belongsTo(Category,{foreignKey:'categoryId'});
 Category.hasMany(Product,{foreignKey:'categoryId'});
-Product.hasMany(Review);
-Review.belongsTo(Product);
+Product.hasMany(Review,{foreignKey:'productId'});
+Review.belongsTo(Product,{foreignKey:'productId'});
 
 module.exports = {...sequelize.models,
                     conn:sequelize}
