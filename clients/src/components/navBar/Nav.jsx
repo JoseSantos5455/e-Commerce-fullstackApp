@@ -17,6 +17,7 @@ export default function Nav() {
   let dispatch = useDispatch()
   //dropdown para logout profile
     const [showMenu, setShowMenu] = useState(false);
+ 
 
     const handleMouseEnter = () => {
       setShowMenu(true);
@@ -27,18 +28,25 @@ export default function Nav() {
     };
 //buscar por nombre redux
     let [inputSearch, setInputSearch] = useState('')
-    let handleSearch = (e)=>{
-      let {value} = e.target
-      
-      setInputSearch( value )
-    }
+//para buscar con enter 
+let handleSearch = (e) => {
+  let { value } = e.target;
+  setInputSearch(value);
+ 
+};
+
+   
     let dispatchSearch = ()=>{
       dispatch(getNameProducts(inputSearch))
       
     }
     
-
-
+//para buscar con enter 
+function handleKeyDown(e) {
+  if (e.key === 'Enter') {
+    console.log('asd');
+  }
+}
   return (
     <div className={Styles.wrapper}>
       <div className={`${Styles.col_5}`}>
@@ -83,16 +91,24 @@ export default function Nav() {
       </div>
       <div className={` ${Styles.col_4}`}>
         <div className={`${Styles.col_search} `}>
+          <form className={`${Styles.form_search}`} onSubmit={dispatchSearch} >
+
           <input
             type="text"
             placeholder="Search"
             className={`${Styles.searchInput}`}
             onChange={handleSearch}
-          />
-          <NavLink to={`/products/`}
-           onClick={dispatchSearch} className={`${Styles.searchButton}`}>
-            <BsSearch />
+            
+            />
+          <NavLink to={`/products`}>
+          <button
+          className={`${Styles.searchButton}`}
+          onClick={dispatchSearch}
+          >
+              <BsSearch />
+          </button>
           </NavLink>
+            </form>
         </div>
       </div>
       <div className={` ${Styles.col_2}`}>
