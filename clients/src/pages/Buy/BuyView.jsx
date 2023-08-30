@@ -22,10 +22,11 @@ export default function BuyView() {
   const {  isAuthenticated, isLoading } = useAuth0();
   const navigate = useNavigate();
   let dispatch = useDispatch()
-  let prods = useSelector(state => state.product_name)
+  let prods = useSelector(state => state.products)
  
   useEffect(()=>{
     if(!prods){
+      console.log('no products')
       dispatch(getProducts())
     }
   },[])
