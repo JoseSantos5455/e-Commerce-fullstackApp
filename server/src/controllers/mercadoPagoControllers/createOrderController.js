@@ -20,10 +20,11 @@ const createOrderController = async (req, res) => {
         //     quantity: 1,
         // }
         ,
+        // estas rutas son las que se van a ejecutar cuando se realice la compra, si es exitosa, si falla o si esta pendiente, en este caso son rutas locales, pero deberian ser rutas de la app
         back_urls: {
             success: 'http://localhost:3002/success',
             failure: 'http://localhost:3002/failure',
-            pending: "http://localhost:3002/pending",
+            pending: "",
         }
     })
 
