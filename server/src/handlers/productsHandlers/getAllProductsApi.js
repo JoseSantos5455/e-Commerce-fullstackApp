@@ -9,18 +9,19 @@ const getAllProductsApi = async (req, res) =>{
         const data = response.data;
 
         const product = data.map((product)=> (
-            {
+                        {
                          name: product.name,
                          description: product.description,
                          price: Number(product.price),
                          stock:product.stock,
                          valoration: product.valoration,
                          image: product.image,
-                         categoryId:Math.floor(Math.random() * 17) + 1
+                         brand:product.marca,
+                         categoryId:Math.floor(Math.random() * 17) + 1,
                        }
      
-        )
-        );
+                    )
+                );
         let products = await Product.bulkCreate(product)
         res.status(200).json(products)
 

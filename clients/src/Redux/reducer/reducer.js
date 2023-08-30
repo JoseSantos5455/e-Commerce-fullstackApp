@@ -9,6 +9,7 @@ import {
   FILTER_BY_CATEGORY,
   ORDER_BY_PRICE,
   ORDER_BY_VALORATION,
+  POST_PAGO
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -92,6 +93,12 @@ const rootReducer = (state = initialState, action) => {
         products: orderValorationAsc,
       }
     }
+
+    case POST_PAGO:
+      return {
+        ...state,
+      }
+
     default:
       return state
   }
