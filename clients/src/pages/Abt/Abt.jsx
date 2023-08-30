@@ -1,10 +1,13 @@
 import React from 'react'
 import Styles from './Abt.module.css'
+import Nav from '../../components/navBar/Nav'
 
 export default function Abt() {
     return (
-        <div className={Styles.wrapper}>
-        <h1>Welcome to Dlujo!</h1>
+            <div className={Styles.view}>
+                <div className={Styles.wrapper}>
+                    <Nav/>
+                <h1>We are Dlujo®</h1>
         <div className={Styles.text}>
 
         <p>At Dlujo, we believe in the magic of the online shopping experience. Established in 2023, our mission is to provide you with a unique and exciting way to discover exceptional products and find items that perfectly fit your lifestyle.
@@ -31,6 +34,13 @@ export default function Abt() {
         </p>
 
         </div>
-    </div>
+        <div className={Styles.images}>
+        <img src="https://cu1.uicdn.net/e71/bb128f124110d97f707933a62ad0c/webapp/33904-n-stage-ssl-front-int.png" alt="" />
+            <img src="https://www.buysafeamerica.org/getmedia/ed65bf3d-010a-4963-b0f6-6a5bdb0d01f9/BSAC_Logos_Finals_BSAC-Logo_color.png?width=461&height=220&ext=.png" alt="" />
+            <img src="https://neosmiles.com.sg/wp-content/uploads/2021/09/Traffv-Trust-Verified.png" alt="" />
+            
+        </div>
+                </div>
+            </div>
   )
 }
