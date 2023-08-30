@@ -1,4 +1,9 @@
-import {POST_PDT, GET_PDT, GET_NAME_PRODUCTS, GET_CATEGORIS, GET_PAGINATE, GET_DET, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION} from './actionTypes'
+import {POST_PDT,
+        GET_PDT,
+         GET_NAM, 
+         GET_CATEGORIES,
+          GET_PAGINATE,
+           GET_DET, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION,} from './actionTypes'
 import axios from "axios"
 
 export const getProducts = () => {
@@ -73,7 +78,7 @@ export const getCategories = () => {
             const ctgri = await axios.get(`http://localhost:3001/Categories`)
             const catgoData = ctgri.data
             dispatch({
-                type: GET_CATEGORIS,
+                type: GET_CATEGORIES,
                 payload: catgoData
             })
         } catch (error) {
@@ -98,6 +103,27 @@ export const getDetail = (id)=>{
        }
     }
 }
+
+export const mercadoPago = (product) => {
+    return async () => {
+        try {
+            const response = await axios.post('http://localhost:3001/mercadopago', {
+                items: [
+                    {
+                        title: product.name,
+                        description: product.description,
+                        unit_price: parseFloat(product.price),
+                        quantity: 1,
+                    }
+                ]
+            });
+            return response;
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
+    };
+};
 
 
 export function filterByGenres(payload) {

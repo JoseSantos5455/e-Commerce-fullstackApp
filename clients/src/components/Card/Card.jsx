@@ -1,4 +1,4 @@
-import {Cloudinary} from "@cloudinary/url-gen";
+//import {Cloudinary} from "@cloudinary/url-gen";
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Styles from './Card.module.css'

@@ -7,7 +7,7 @@ import { createProducts } from '../../Redux/actions/actions'
 import { getCategories } from '../../Redux/actions/actions'
 const Form = () => {
 
-  const categori = useSelector((state)=> state.ctgri)
+  const categori = useSelector((state)=> state.categories)
   const dispatch = useDispatch()
 
   useEffect(()=>{

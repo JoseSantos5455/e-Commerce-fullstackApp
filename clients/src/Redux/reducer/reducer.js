@@ -9,6 +9,8 @@ import {
   FILTER_BY_CATEGORY,
   ORDER_BY_PRICE,
   ORDER_BY_VALORATION,
+  GET_PAGINATE,
+  POST_PAGO
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -63,7 +65,6 @@ const rootReducer = (state = initialState, action) => {
         products: filteredCategory,
       }
     }
-
       case GET_DET:
         return{
           ...state,
@@ -73,15 +74,9 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state
         }
-      case GET_NAME_PRODUCTS: 
+      case POST_PAGO: 
         return {
-            ...state,
-            products: action.payload
-        }
-      case GET_CATEGORIS:
-        return {
-          ...state,
-          ctgri: action.payload
+          ...state
         }
       case GET_PAGINATE:
           return {
