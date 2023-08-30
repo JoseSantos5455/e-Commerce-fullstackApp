@@ -118,6 +118,12 @@ const rootReducer = (state = initialState, action) => {
         products: orderValorationAsc,
       }
     }
+
+    case POST_PAGO:
+      return {
+        ...state,
+      }
+
     default:
       return state
   }

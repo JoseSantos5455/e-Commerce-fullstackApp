@@ -13,22 +13,22 @@ export const getProducts = () => {
       let data = response.data
       console.log('despacha')
 
-      dispatch({
-        type: GET_PDT,
-        payload: data,
-      })
-    } catch (error) {
-      console.log(error)
+            dispatch({
+                type: GET_PDT,
+                payload: data,
+            })
+        } catch (error) {
+            console.log(error)
+        }
     }
-  }
 }
 
 export const getNameProducts = (name) => {
-  return async (dispatch) => {
-    let endpoint = `http://localhost:3001/products/?name=${name}`
-    try {
-      const response = await axios.get(endpoint)
-      let data = response.data
+    return async (dispatch) => {
+        let endpoint = `http://localhost:3001/products/?name=${name}`
+        try {
+            const response = await axios.get(endpoint)
+            let data = response.data
 
       dispatch({
         type: GET_NAM,
@@ -90,17 +90,17 @@ export const getCategories = () => {
 export const getDetail = (id)=>{
     return async (dispatch)=>{
         const endpoint = `http://localhost:3001/products/${id}`
-         try {
+        try {
             let response = await axios(endpoint)
             let data = response.data
-      
-        return  dispatch({
-            type: GET_DET,
-            payload: data
-        })
-       } catch (error) {
-        console.log(error.message)
-       }
+
+            return dispatch({
+                type: GET_DET,
+                payload: data
+            })
+        } catch (error) {
+            console.log(error.message)
+        }
     }
 }
 
@@ -144,5 +144,34 @@ export function orderByPrice(payload) {
     return {
         type: ORDER_BY_PRICE,
         payload
+    }
+}
+
+// export const createProducts = (payload) => {
+//     return async () =>{
+//         try {
+//             const response = await axios.post('', payload)
+//             return {
+//                 type: POST_PDT,
+//                 response
+//             }
+//         } catch (error) {
+//             console.log(error);
+//         }
+//     }
+// }
+
+export const createOrder = (payload) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.post('http://localhost:3001/mercadopago/create-order', payload)
+            window.open(response.data, '_blank');
+            return dispatch({
+                type: POST_PAGO
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
     }
 }

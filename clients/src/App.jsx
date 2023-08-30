@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import Detail from "./pages/Detail/Detail";
 import BuyView from './pages/Buy/BuyView'
+import ShoppingCar from "./components/ShoppingCar/ShoppingCar";
 import {Routes, Route} from "react-router-dom"
 import SearchBar from "./components/searchBar/SearchBar";
 import MercadoPago from "./components/MercadoPago/MercadoPago";
@@ -16,6 +17,7 @@ export default function App() {
           <Route exact path="/form" Component={Form}/>
           <Route exact path="/products/detail/:id" Component={Detail}/>
           <Route exact path="/products" Component={BuyView}/>
+          <Route exact path="/ShoppingCar" Component={ShoppingCar}/>
           <Route path="*" Component={NotFound}/>
           <Route exact path="/search" Component={SearchBar}/>
           <Route exact path="/pagos" Component={MercadoPago}/>
