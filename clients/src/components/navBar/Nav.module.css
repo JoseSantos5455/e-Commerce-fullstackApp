@@ -87,6 +87,10 @@
   color: black;
   text-decoration: none;
 }
+.btn_help{
+  text-decoration: none;
+  color: black;
+}
 .container_btn {
   display: flex;
   align-items: center;

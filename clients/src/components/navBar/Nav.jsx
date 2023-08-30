@@ -83,10 +83,16 @@ function handleKeyDown(e) {
           </div>
         </div>
         <div className={` ${Styles.col_1}`}>
-          <h6 className={Styles.font}>Help</h6>
+          <h6 className={Styles.font}>
+            Help
+          </h6>
         </div>
         <div className={` ${Styles.col_4}`}>
-          <h6 className={Styles.font}>About</h6>
+          <NavLink to={'/about'} className={Styles.btn_help}>
+          <h6 className={Styles.font}>
+            About
+          </h6>
+          </NavLink>
         </div>
       </div>
       <div className={` ${Styles.col_4}`}>
