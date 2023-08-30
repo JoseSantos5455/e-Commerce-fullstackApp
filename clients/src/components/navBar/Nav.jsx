@@ -89,7 +89,7 @@ export default function Nav() {
             className={`${Styles.searchInput}`}
             onChange={handleSearch}
           />
-          <NavLink to={`/products/`}
+          <NavLink to={`/products`}
            onClick={dispatchSearch} className={`${Styles.searchButton}`}>
             <BsSearch />
           </NavLink>
