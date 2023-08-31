@@ -17,7 +17,7 @@ const getAllProductsApi = async (req, res) =>{
                          valoration: product.valoration,
                          image: product.image,
                          brand:product.marca,
-                         categoryId:Math.floor(Math.random() * 17) + 1,
+                         categoryId:product.categoryid
                        }
      
                     )
