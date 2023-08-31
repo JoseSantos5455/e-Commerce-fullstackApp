@@ -1,14 +1,14 @@
 import s from './OrderBy.module.css'
 
-export default function OrderBy({ handlerByValoration, handlerByPrice }) {
+export default function OrderBy({ handlerFilters }) {
   return (
     <div className={s.divSort}>
       <p className={s.titles}>SORT BY</p>
 
       <div className={s.divRating}>
         <button
-          onClick={() => {
-            handlerByValoration()
+          onClick={(e) => {
+            handlerFilters("valoration", "valoration")
           }}
           className={s.btn}
         >
@@ -16,7 +16,7 @@ export default function OrderBy({ handlerByValoration, handlerByPrice }) {
         </button>
         <button
           onClick={() => {
-            handlerByPrice('asc')
+            handlerFilters('price', 'ascending')
           }}
           className={s.btn}
         >
@@ -24,7 +24,7 @@ export default function OrderBy({ handlerByValoration, handlerByPrice }) {
         </button>
         <button
           onClick={() => {
-            handlerByPrice('desc')
+            handlerFilters('price','descending')
           }}
           className={s.btn}
         >

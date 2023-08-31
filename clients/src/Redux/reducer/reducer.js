@@ -6,9 +6,8 @@ import {
   GET_NAM,
   GET_DET,
   GET_CATEGORIES,
+  GET_BRANDS,
   FILTER_BY_CATEGORY,
-  ORDER_BY_PRICE,
-  ORDER_BY_VALORATION,
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -16,8 +15,10 @@ const initialState = {
   products: [],
   allProducts: [],
   categories: [],
+  brands: [],
   detail: [],
-  product_name: []
+  product_name: [],
+  filters: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -52,46 +53,20 @@ const rootReducer = (state = initialState, action) => {
         categories: action.payload,
       }
 
+    case GET_BRANDS:{
+      return {
+        ...state,
+        brands: action.payload,
+      }
+    }
+
     case FILTER_BY_CATEGORY: {
-      const allProductsCat = state.allProducts
-      const filteredCategory =
-        action.payload === 'All'
-          ? allProductsCat
-          : allProductsCat.filter((v) => v.category === action.payload)
       return {
         ...state,
-        products: filteredCategory,
+        products: action.payload,
       }
     }
 
-    case ORDER_BY_PRICE: {
-      const orderPriceAsc = [...state.products].sort((a, b) => {
-        if (Number(a.price) > Number(b.price)) return 1
-        if (Number(b.price) > Number(a.price)) return -1
-        return 0
-      })
-
-      return {
-        ...state,
-        products:
-          action.payload === 'asc' ? orderPriceAsc : orderPriceAsc.reverse(),
-      }
-    }
-
-    case ORDER_BY_VALORATION: {
-      let orderValorationAsc = state.products.slice().sort((a, b) => {
-        if (Number(a.valoration) > Number(b.valoration)) return 1
-
-        if (Number(b.valoration) > Number(a.valoration)) return -1
-
-        return 0
-      })
-
-      return {
-        ...state,
-        products: orderValorationAsc,
-      }
-    }
     default:
       return state
   }
