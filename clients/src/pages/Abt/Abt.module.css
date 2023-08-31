@@ -1,0 +1,16 @@
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgb(244, 188, 20);
+    margin: 5%;
+    border-radius: 1rem;
+}
+
+.wrapper h1{
+    margin-top: 2%;
+}
+.wrapper .text{
+    align-self: start;
+    margin: 5%;
+}

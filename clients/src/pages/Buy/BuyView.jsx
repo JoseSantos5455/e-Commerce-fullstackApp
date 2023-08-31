@@ -5,6 +5,7 @@ import OrderBy from '../../components/OrderBy/OrderBy'
 import Filters from '../../components/Filters/Filters'
 import ListCard from '../../components/Card/ListCard'
 import Nav from '../../components/navBar/Nav'
+import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from 'react-redux'
 import {
   getProducts,
@@ -14,14 +15,20 @@ import {
   getNameProducts,
 } from '../../Redux/actions/actions'
 import Footer from '../../components/Footer/Footer'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+
+
 export default function BuyView() {
-  let {name} = useParams()
+  const {  isAuthenticated, isLoading } = useAuth0();
+  const navigate = useNavigate();
   let dispatch = useDispatch()
-
-
+  let prods = useSelector(state => state.products)
+ 
   useEffect(()=>{
-    dispatch(getProducts())
+    if(!prods){
+      console.log('no products')
+      dispatch(getProducts())
+    }
   },[])
 
   function handlerCategories(e) {
