@@ -27,6 +27,12 @@ export default function BuyView() {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [currentBrandValue, setCurrentBrandValue] = useState('');
   const [filters, setFilters] = useState(initialFilters);
+  const [activeFilters, setActiveFilters] = useState({
+    category: false,
+    brand: false,
+    valoration: false,
+    price: false,
+  });
 
   let dispatch = useDispatch()
 
@@ -63,7 +69,11 @@ export default function BuyView() {
         category: e
       };
       setFilters(updatedFilters);
-      dispatch(filterByGenres(filters))
+      setActiveFilters((prevFilters) => ({
+        ...prevFilters,
+        category: true,
+      }));
+      dispatch(filterByGenres(updatedFilters))
     }
     if(filterType === "brand"){
       const updatedFilters = {
@@ -71,7 +81,11 @@ export default function BuyView() {
         brand: e,
       };
       setFilters(updatedFilters);
-      dispatch(filterByGenres(filters))
+      setActiveFilters((prevFilters) => ({
+        ...prevFilters,
+        brand: true,
+      }));
+      dispatch(filterByGenres(updatedFilters))
     } 
     if(filterType === "valoration"){
       const updatedFilters = {
@@ -80,6 +94,10 @@ export default function BuyView() {
         price: ''
       };
       setFilters(updatedFilters);
+      setActiveFilters((prevFilters) => ({
+        ...prevFilters,
+        valoration: true,
+      }));
       dispatch(filterByGenres(filters))
     } 
     if(filterType === "price"){
@@ -89,10 +107,15 @@ export default function BuyView() {
         valoration:''
       };
       setFilters(updatedFilters);
+      setActiveFilters((prevFilters) => ({
+        ...prevFilters,
+        price: true,
+      }));
       dispatch(filterByGenres(filters))
     } 
     if(filterType === "reset"){
       setFilters(initialFilters);
+      setActiveFilters(initialFilters);
       dispatch(filterByGenres(initialFilters))
     }
   }
@@ -111,7 +134,35 @@ export default function BuyView() {
               selectedCategory={selectedCategory} 
               onSelectChange={handleSelectChange} 
               currentBrandValue={currentBrandValue}
-              onSelectChangeBrand={handleSelectChangeBrand}/>                     
+              onSelectChangeBrand={handleSelectChangeBrand}/>           
+            <div >          
+              <div>Active Filters</div>     
+              {activeFilters.valoration > 0 && (     
+              <button className={Styles.sortTags}>
+                  Avg Customer Review
+              </button>
+              )}
+              {activeFilters.price && (  
+              <button className={Styles.sortTags}>
+                Price: Low to High
+              </button>
+              )}
+              {activeFilters.price && (  
+              <button className={Styles.sortTags}>
+                Price: High to Low
+              </button>
+              )}   
+              {activeFilters.category > 0 && (
+              <button className={Styles.filtersTags}>
+                Categories
+              </button>   
+              )}
+              {activeFilters.brand && (
+              <button className={Styles.filtersTags}>
+                Brands
+              </button>    
+              )}
+            </div>         
           </div>
           <div className={Styles.listCard}>
             <ListCard />
