@@ -13,6 +13,7 @@ const createOrderController = async (req, res) => {
     const result = await mercadopago.preferences.create({
 
         items: shoppingCar
+        
         // {
         //     title: "Laptop",
         //     unit_price: 100,
@@ -22,8 +23,8 @@ const createOrderController = async (req, res) => {
         ,
         // estas rutas son las que se van a ejecutar cuando se realice la compra, si es exitosa, si falla o si esta pendiente, en este caso son rutas locales, pero deberian ser rutas de la app
         back_urls: {
-            success: 'http://localhost:3002/success',
-            failure: 'http://localhost:3002/failure',
+            success: 'http://localhost:3002',
+            failure: 'http://localhost:3002',
             pending: "",
         }
     })

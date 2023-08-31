@@ -121,7 +121,7 @@ export const createOrder = (payload) => {
     return async (dispatch) => {
         try {
             const response = await axios.post('http://localhost:3001/mercadopago/create-order', payload)
-            window.open(response.data, '_blank');
+            window.location.href = response.data;
             return dispatch({
                 type: POST_PAGO
             })

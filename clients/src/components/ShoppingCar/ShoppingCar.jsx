@@ -6,6 +6,8 @@ import { createOrder } from '../../Redux/actions/actions'
 
 export default function ShoppingCar (){
     const dispatch = useDispatch();
+
+
     const shoppingCar = [{
         title: "Laptop",
         unit_price: 300,
@@ -17,7 +19,7 @@ export default function ShoppingCar (){
             unit_price: 60,
             current_id: "ARS",
             quantity: 1,
-        }] 
+        }]
 
     const handleBuy = async () => {
     
