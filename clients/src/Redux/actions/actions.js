@@ -6,16 +6,15 @@ import {
         GET_CATEGORIES,
         GET_PAGINATE,
         GET_DET, 
-        FILTER_BY_CATEGORY, 
-        ORDER_BY_PRICE, 
-        ORDER_BY_VALORATION,
+        GET_BRANDS,
+        FILTER_BY_CATEGORY
     } from './actionTypes'
 import axios from "axios"
 
 export const getProducts = () => {
   return async (dispatch) => {
     try {
-      const response = await axios(endpoint)
+      const response = await axios("http://localhost:3001/products")
       let data = response.data
 
             dispatch({
@@ -138,11 +137,6 @@ export function filterByGenres(filters) {
 
       if(filters.price.length > 0) endpoint += `orderBy=price&direction=${filters.price}&`;
 
-      /*
-      if (page) endpoint += `page=${page}&`;
-      if (size) endpoint += `size=${size}&`;
-*/
-      // Elimina el último '&' si existe
       if (endpoint.endsWith('&')) {
         endpoint = endpoint.slice(0, -1);
       }

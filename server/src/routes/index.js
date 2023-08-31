@@ -5,7 +5,6 @@ const usersRouter = require('./usersRouter.js');
 const reviewsRouter = require('./reviewsRouter');
 const mercadoPagoRouter = require('./mercadoPagoRouter')
 
-const reviewsRouter = require('./reviewsRouter.js');
 const brandsRouter = require('./brandsRouter.js');
 const ordersRouter = require('./ordersRouter.js');
 

@@ -19,9 +19,9 @@ export default function App() {
           <Route exact path="/products" Component={BuyView}/>
           <Route exact path="/products/:search" Component={BuyView}/>
           <Route exact path="/about" Component={Abt}/>
-
           <Route path="*" Component={NotFound}/>
-          <Route exact path="/search" Component={SearchBar}/>
+          <Route exact path="/about" Component={Abt}/>
+          <Route exact path="/ShoppingCar" Component={ShoppingCar}/>
       </Routes>
           
     </div>

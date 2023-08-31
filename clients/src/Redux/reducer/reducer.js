@@ -1,5 +1,3 @@
-
-
 import {
   POST_PDT,
   GET_PDT,
@@ -44,11 +42,6 @@ const rootReducer = (state = initialState, action) => {
         products : action.payload
       
       }
-    case POST_PDT:
-      return {
-        ...state,
-      }
-
     case GET_CATEGORIES:
       return {
         ...state,
@@ -61,11 +54,6 @@ const rootReducer = (state = initialState, action) => {
         brands: action.payload,
       }
     }
-      case GET_DET:
-        return{
-          ...state,
-          detail: action.payload
-        }
       case POST_PDT:
         return {
           ...state
@@ -77,22 +65,14 @@ const rootReducer = (state = initialState, action) => {
       case GET_PAGINATE:
           return {
             ...state,
-            products: action.payload
+            allProducts: action.payload
           } 
-      case FILTER_BY_CATEGORY:
-          const allProductsCat = state.allProducts;
-          const filteredCategory = action.payload === 'All'? allProductsCat : allProductsCat.filter(v =>v.category == action.payload);
-          return {
-              ...state,
-              products: filteredCategory
-          }
     case FILTER_BY_CATEGORY: {
       return {
         ...state,
         products: action.payload,
       }
     }
-
     default:
       return state
   }

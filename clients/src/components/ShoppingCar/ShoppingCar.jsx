@@ -1,11 +1,9 @@
 import { useDispatch } from 'react-redux'
 import { createOrder } from '../../Redux/actions/actions'
-
-
-
-
+import { useSelector } from 'react-redux';
 export default function ShoppingCar (){
     const dispatch = useDispatch();
+    const productos1 = useSelector((state) => state.allProducts)
     const shoppingCar = [{
         title: "Laptop",
         unit_price: 300,
