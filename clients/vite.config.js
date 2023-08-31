@@ -9,13 +9,7 @@ export default defineConfig({
       'application/javascript': ['js'],
     },
   },
-  build: {
-    rollupOptions: {
-      external: [
-        '@cloudinary/url-gen', // Agrega esta línea
-      ],
-    },
-  },
+  
  
   plugins: [react()],
 })

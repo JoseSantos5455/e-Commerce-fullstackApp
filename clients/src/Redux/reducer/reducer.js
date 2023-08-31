@@ -18,7 +18,8 @@ const initialState = {
   brands: [],
   detail: [],
   product_name: [],
-  filters: []
+  filters: [],
+   user:[]
 }
 
 const rootReducer = (state = initialState, action) => {
