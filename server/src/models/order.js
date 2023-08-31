@@ -7,15 +7,23 @@ module.exports = (sequelize)=>{
             primaryKey:true,
             defaultValue:DataTypes.UUIDV4,
         },
+        productId:{
+            type:DataTypes.UUID,
+            allowNul:false,
+        },
+        userId:{
+            type:DataTypes.UUID,
+            allowNul:false,
+        },
         orderDate:{
             type:DataTypes.DATEONLY,
             allowNull:false,
             defaultValue:sequelize.NOW
         },
         status:{
-            type:DataTypes.ENUM('confirmed','prepared','delivered','canceled'),
+            type:DataTypes.ENUM('pending','confirmed','delivered','canceled'),
             allowNull:false,
-            defaultValue:'confirmed',
+            defaultValue:'pending',
         },
         quantity:{
             type:DataTypes.INTEGER,
