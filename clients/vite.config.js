@@ -6,5 +6,10 @@ export default defineConfig({
   server: {
     port: 3002,
   },
+  build: {
+    rollupOptions: {
+      external: ['@cloudinary/url-gen/qualifiers/quality'],
+    },
+  },
   plugins: [react()],
 })
