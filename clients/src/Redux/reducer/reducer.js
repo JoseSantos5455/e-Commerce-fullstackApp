@@ -6,10 +6,13 @@ import {
   GET_NAM,
   GET_DET,
   GET_CATEGORIES,
+  GET_BRANDS,
   FILTER_BY_CATEGORY,
+
   ORDER_BY_PRICE,
   ORDER_BY_VALORATION,
   POST_PAGO
+
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -17,8 +20,10 @@ const initialState = {
   products: [],
   allProducts: [],
   categories: [],
+  brands: [],
   detail: [],
-  product_name: []
+  product_name: [],
+  filters: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -53,17 +58,20 @@ const rootReducer = (state = initialState, action) => {
         categories: action.payload,
       }
 
-    case FILTER_BY_CATEGORY: {
-      const allProductsCat = state.allProducts
-      const filteredCategory =
-        action.payload === 'All'
-          ? allProductsCat
-          : allProductsCat.filter((v) => v.category === action.payload)
+    case GET_BRANDS:{
       return {
         ...state,
-        products: filteredCategory,
+        brands: action.payload,
       }
     }
+
+    case FILTER_BY_CATEGORY: {
+      return {
+        ...state,
+        products: action.payload,
+      }
+    }
+
 
     case ORDER_BY_PRICE: {
       const orderPriceAsc = [...state.products].sort((a, b) => {

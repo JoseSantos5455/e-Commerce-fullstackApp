@@ -106,7 +106,7 @@ function handleKeyDown(e) {
             onChange={handleSearch}
             
             />
-          <NavLink to={`/products`}>
+          <NavLink to={`/products/search`}>
           <button
           className={`${Styles.searchButton}`}
           onClick={dispatchSearch}
