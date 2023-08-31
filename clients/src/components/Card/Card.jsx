@@ -1,4 +1,5 @@
-//import {Cloudinary} from "@cloudinary/url-gen";
+import {Cloudinary} from "@cloudinary/url-gen";
+import GalleryProduct from "./GalleryProduct";
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Styles from './Card.module.css'
@@ -37,7 +38,7 @@ export default function Card({ aviability, img, name, price, id }) {
   const myImage = cldInstance
   .image(`${img}`)
   .setDeliveryType('fetch')
-
+//<GalleryProduct/><img className={Styles.img_product} src={myImage.toURL()} alt="Image product" />
   return (
     <div className={Styles.wrapper}>
       <div className={Styles.stock}>

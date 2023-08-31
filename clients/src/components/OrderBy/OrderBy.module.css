@@ -1,7 +1,7 @@
 .titles {
     font-family: 'Heebo', sans-serif;
-    color: rgba(128, 128, 128, 0.722);
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .btn {

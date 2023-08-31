@@ -1,12 +1,16 @@
 .wrapper{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    margin-top: 0%;
-    margin-bottom: 5%;
-    margin: 1%;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 1em;
+    margin: 3em auto;
 
 }
+
+.img_product {
+    width: 100%;
+    display: block;
+  }
+
 .img_column{
     display: flex;
     flex-flow: column wrap;
