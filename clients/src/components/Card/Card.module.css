@@ -32,7 +32,18 @@
 }
 .div_image {
   border-radius: 1rem;
-  overflow: hidden;
+
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 1em;
+  margin: 3em auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 1em;
+  margin: 3em auto;
 }
 
 .img_container {
