@@ -1,9 +1,15 @@
-import {POST_PDT,
+import {
+        POST_PAGO,
+        POST_PDT,
         GET_PDT,
-         GET_NAM, 
-         GET_CATEGORIES,
-          GET_PAGINATE,
-           GET_DET, FILTER_BY_CATEGORY, ORDER_BY_PRICE, ORDER_BY_VALORATION,} from './actionTypes'
+        GET_NAM, 
+        GET_CATEGORIES,
+        GET_PAGINATE,
+        GET_DET, 
+        FILTER_BY_CATEGORY, 
+        ORDER_BY_PRICE, 
+        ORDER_BY_VALORATION,
+    } from './actionTypes'
 import axios from "axios"
 
 export const getProducts = () => {
@@ -104,27 +110,6 @@ export const getDetail = (id)=>{
     }
 }
 
-export const mercadoPago = (product) => {
-    return async () => {
-        try {
-            const response = await axios.post('http://localhost:3001/mercadopago', {
-                items: [
-                    {
-                        title: product.name,
-                        description: product.description,
-                        unit_price: parseFloat(product.price),
-                        quantity: 1,
-                    }
-                ]
-            });
-            return response;
-        } catch (error) {
-            console.log(error);
-            throw error;
-        }
-    };
-};
-
 
 export function filterByGenres(payload) {
     return {
@@ -147,25 +132,11 @@ export function orderByPrice(payload) {
     }
 }
 
-// export const createProducts = (payload) => {
-//     return async () =>{
-//         try {
-//             const response = await axios.post('', payload)
-//             return {
-//                 type: POST_PDT,
-//                 response
-//             }
-//         } catch (error) {
-//             console.log(error);
-//         }
-//     }
-// }
-
 export const createOrder = (payload) => {
     return async (dispatch) => {
         try {
             const response = await axios.post('http://localhost:3001/mercadopago/create-order', payload)
-            window.open(response.data, '_blank');
+            window.open(response.data,);
             return dispatch({
                 type: POST_PAGO
             })

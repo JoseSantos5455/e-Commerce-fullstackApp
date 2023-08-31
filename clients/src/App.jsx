@@ -7,7 +7,6 @@ import BuyView from './pages/Buy/BuyView'
 import ShoppingCar from "./components/ShoppingCar/ShoppingCar";
 import {Routes, Route} from "react-router-dom"
 import SearchBar from "./components/searchBar/SearchBar";
-import MercadoPago from "./components/MercadoPago/MercadoPago";
 export default function App() {
   return (
     <div>
@@ -20,7 +19,6 @@ export default function App() {
           <Route exact path="/ShoppingCar" Component={ShoppingCar}/>
           <Route path="*" Component={NotFound}/>
           <Route exact path="/search" Component={SearchBar}/>
-          <Route exact path="/pagos" Component={MercadoPago}/>
       </Routes>
     </div>
   )

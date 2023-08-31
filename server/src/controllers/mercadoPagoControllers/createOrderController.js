@@ -2,7 +2,6 @@ const mercadopago = require('mercadopago');
 require('dotenv').config();
 const { TOKEN_MERCADO_PAGO } = process.env
 
-
 const createOrderController = async (req, res) => {
     const shoppingCar = req.body;
     mercadopago.configure({
@@ -22,7 +21,7 @@ const createOrderController = async (req, res) => {
         ,
         // estas rutas son las que se van a ejecutar cuando se realice la compra, si es exitosa, si falla o si esta pendiente, en este caso son rutas locales, pero deberian ser rutas de la app
         back_urls: {
-            success: 'http://localhost:3002/success',
+            success: 'http://localhost:3002/',
             failure: 'http://localhost:3002/failure',
             pending: "",
         }

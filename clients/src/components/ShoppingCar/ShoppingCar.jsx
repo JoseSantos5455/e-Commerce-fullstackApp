@@ -29,7 +29,6 @@ export default function ShoppingCar (){
         <div>
             
                 <div className='card'>
-                    {/* <img src={img} alt='Product Image' /> */}
                     <h3>Productos</h3>
                     <p className='price'>100 $</p>
                     <button onClick={handleBuy}>Buy</button>
