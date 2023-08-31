@@ -11,6 +11,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
 
 
+
 export default function Nav() {
   const { isAuthenticated } = useAuth0()
   let name = useSelector( state => state.product_name[0])

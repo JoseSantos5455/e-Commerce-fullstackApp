@@ -1,17 +1,31 @@
+import React, { useEffect } from 'react'
+import style from "./Form.module.css"
 import Validation from "../../components/Validation/Validation"
 import { useState } from 'react'
-import style from "./Form.module.css"
+import { useDispatch, useSelector } from "react-redux"
+import { createProducts } from '../../Redux/actions/actions'
+import { getCategories } from '../../Redux/actions/actions'
 const Form = () => {
+
+  const categori = useSelector((state)=> state.categories)
+  const dispatch = useDispatch()
+
+  useEffect(()=>{
+      dispatch(getCategories())
+  },[dispatch])
+
+
   const [form, setForm] = useState({
     name: "",
     price: "",
     description: "",
     stock: "",
     valoration: "",
-    category: "",
+    category: [],
     image: "",
-}
-)
+  }
+  )
+
 
 const [error, setError] = useState({
   name: "",
@@ -19,7 +33,7 @@ const [error, setError] = useState({
   description: "",
   stock: "",
   valoration: "",
-  category: "",
+  category: [],
   image: "",
 })
 
@@ -33,7 +47,27 @@ const handlerChange = (event) => {
       ...form,
       [event.target.name]: event.target.value
   }))
+  console.log(form);
 }
+
+const handlerCheck = (event) => {
+  const { value, checked } = event.target;
+  const selectedCategory = form.category;
+
+  if (checked) {
+    if (selectedCategory.length >= 1) {
+      setError({ ...error, category: "Solo se permiten una categoria" });
+      return;
+    }
+    setForm({ ...form, category: [...selectedCategory, value] });
+  } else {
+    const updatedCategory = selectedCategory.filter((ctgo) => ctgo !== value);
+    setForm({ ...form, category: updatedCategory });
+  }
+  setError({ ...error, category: "" });
+};
+
+
 
   const handlerSubmit = (event) => {
     event.preventDefault()
@@ -41,7 +75,7 @@ const handlerChange = (event) => {
     if (isFormIncomplete) {
       alert("Debes completar todos los campos");
     } else {
-      //dispatch(postCreateProduct(form));
+      dispatch(createProducts(form));
       alert("El Producto se creo de forma exitosa");
       setForm({
         name: "",
@@ -49,7 +83,7 @@ const handlerChange = (event) => {
         description: "",
         stock: "",
         valoration: "",
-        category: "",
+        category: [],
         image: "",
       })
     }
@@ -89,8 +123,21 @@ return (
         </div>
         
         <div className={style.campos}>
-        <label>Categoria:</label>
-        <input  type="text" value={form.category} name="category" onChange={handlerChange}/>
+        {
+          categori.map((ctg) => {
+            return (
+              <label key={ctg.id}>
+                <input
+                  type="checkbox"
+                  value={ctg.id}
+                  name="category"
+                  onChange={handlerCheck}
+                />
+                {ctg.name}
+              </label>
+            );
+          })
+        }
         {error.category && <span>{error.category}</span>}
         </div>
         
