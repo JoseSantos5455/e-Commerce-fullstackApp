@@ -7,6 +7,7 @@ import BuyView from './pages/Buy/BuyView'
 import {Routes, Route} from "react-router-dom"
 import Abt from "./pages/Abt/Abt";
 import Info from "./pages/Info/Info";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route exact path="/products/:search" Component={BuyView}/>
           <Route exact path="/about" Component={Abt}/>
           <Route exact path="/howedoit" Component={Info}/>
+          <Route exact path="/admin" Component={Dashboard}/>
           <Route path="*" Component={NotFound}/>
       </Routes>
           
