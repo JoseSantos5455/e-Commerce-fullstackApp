@@ -14,13 +14,7 @@ module.exports = (sequelize)=>{
                 notEmpty: {msg:'Name could not be null'}
             },    
         },
-        lastName:{
-            type:DataTypes.STRING,
-            allowNull:true,
-            validate:{
-                notEmpty: {msg:'Last Name could not be null'}
-            },
-        },
+        
         country:{
             type:DataTypes.STRING,
             allowNull:true,

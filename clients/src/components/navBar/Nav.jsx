@@ -9,12 +9,24 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LogOut from '../Login/LogOut'
 import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
+import { createUser } from '../../Redux/actions/actions'
 
 
 export default function Nav() {
-  const { isAuthenticated } = useAuth0()
-  let name = useSelector( state => state.product_name[0])
   let dispatch = useDispatch()
+
+  const {user, isAuthenticated } = useAuth0()
+  const userLog = useSelector(state => state.user)
+
+  useEffect(()=>{
+
+    if(user && user.name !== userLog.name && isAuthenticated){
+    dispatch(createUser(user.name))
+  }
+  },[user])
+
+  
+  let name = useSelector( state => state.product_name[0])
   //dropdown para logout profile
     const [showMenu, setShowMenu] = useState(false);
  
@@ -47,6 +59,7 @@ function handleKeyDown(e) {
     console.log('asd');
   }
 }
+
   return (
     <div className={Styles.wrapper}>
       <div className={`${Styles.col_5}`}>
