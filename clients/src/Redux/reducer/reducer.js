@@ -8,6 +8,7 @@ import {
   GET_CATEGORIES,
   GET_BRANDS,
   FILTER_BY_CATEGORY,
+  POST_USER
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -67,6 +68,11 @@ const rootReducer = (state = initialState, action) => {
         products: action.payload,
       }
     }
+    case POST_USER:
+      return{
+        ...state,
+        user: action.payload
+      }
 
     default:
       return state

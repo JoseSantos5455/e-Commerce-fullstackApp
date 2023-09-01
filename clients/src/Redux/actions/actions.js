@@ -1,4 +1,4 @@
-import { GET_PDT, GET_DET, GET_NAM, GET_CATEGORIES, GET_BRANDS, FILTER_BY_CATEGORY} from './actionTypes'
+import { GET_PDT, GET_DET, GET_NAM, GET_CATEGORIES, GET_BRANDS, FILTER_BY_CATEGORY, POST_USER} from './actionTypes'
 import axios from "axios"
 
 // eslint-disable-next-line
@@ -119,6 +119,23 @@ export function filterByGenres(filters) {
       }        
   }
 }
+
+export const createUser = (name) => {
+  return async (dispatch) => {
+    try {
+      const requestData = { name };
+
+      const response = await axios.post('http://localhost:3001/users', requestData);
+
+    
+      dispatch({ type: POST_USER,
+                   payload: response.data });
+    } catch (error) {
+      dispatch({ type: 'CREATE_USER_FAILURE',
+                 payload: error.message });
+    }
+  };
+};
 
 // export const createProducts = (payload) => {
 //     return async () =>{

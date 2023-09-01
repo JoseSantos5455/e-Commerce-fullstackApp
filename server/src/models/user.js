@@ -16,21 +16,21 @@ module.exports = (sequelize)=>{
         },
         lastName:{
             type:DataTypes.STRING,
-            allowNull:false,
+            allowNull:true,
             validate:{
                 notEmpty: {msg:'Last Name could not be null'}
             },
         },
         country:{
             type:DataTypes.STRING,
-            allowNull:false,
+            allowNull:true,
             validate:{
                 notEmpty: {msg:'Country could not be null'}
             },
         },
         email:{
             type:DataTypes.STRING,
-            allowNull:false,
+            allowNull:true,
             unique:true,
             validate:{
                 isEmail: {
@@ -42,29 +42,15 @@ module.exports = (sequelize)=>{
                 },    
             },
         },
-        password:{
-            type:DataTypes.STRING,
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[6,10],
-                    msg:`Pasword must be between 6 and 10 characters`,
-                },
-                isStrongPassword(value) {
-                    if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/.test(value)) {
-                        throw new Error(`Password must contain at least one lowercase letter, 
-                        one uppercase letter, one digit, and one special character`)};
-                },
-            }, 
-        },
+        
         profile:{
             type:DataTypes.ENUM('Administrator','User'),
-            allowNull:false,
+            allowNull:true,
             defaultValue:'User',
         },  
         address:{
             type:DataTypes.STRING,
-            allowNull:false,
+            allowNull:true,
         },
         isActive:{
             type:DataTypes.BOOLEAN,

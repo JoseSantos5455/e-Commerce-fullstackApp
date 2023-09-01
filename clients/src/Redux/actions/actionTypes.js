@@ -5,5 +5,6 @@ export const GET_BRANDS = "GET_BRANDS"
 export const FILTER_BY_CATEGORY = "FILTER_BY_CATEGORY"
 export const GET_DET = "GET_DETAILS"
 export const GET_NAM = "GET_NAME"
+export const POST_USER = "CREATE_USER_SUCCESS"
 
 
