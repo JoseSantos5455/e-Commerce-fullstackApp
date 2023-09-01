@@ -8,6 +8,7 @@ import {Routes, Route} from "react-router-dom"
 import Abt from "./pages/Abt/Abt";
 import Info from "./pages/Info/Info";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import LoginForm from "./components/LoginForm/LoginForm";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route exact path="/about" Component={Abt}/>
           <Route exact path="/howedoit" Component={Info}/>
           <Route exact path="/admin" Component={Dashboard}/>
+          <Route exact path="/login" Component={LoginForm}/>
           <Route path="*" Component={NotFound}/>
       </Routes>
           

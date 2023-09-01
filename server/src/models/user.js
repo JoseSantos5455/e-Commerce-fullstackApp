@@ -46,6 +46,11 @@ module.exports = (sequelize)=>{
             type:DataTypes.STRING,
             allowNull:true,
         },
+        zip:{
+            type:DataTypes.INTEGER,
+            allowNull:true,
+        },
+
         isActive:{
             type:DataTypes.BOOLEAN,
             defaultValue:true,
