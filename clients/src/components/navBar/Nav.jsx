@@ -21,7 +21,7 @@ export default function Nav() {
   useEffect(()=>{
 
     if(user && user.name !== userLog.name && isAuthenticated){
-    dispatch(createUser(user.name))
+    dispatch(createUser(user.name, user.email))
   }
   },[user])
 

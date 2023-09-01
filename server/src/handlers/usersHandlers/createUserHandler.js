@@ -1,10 +1,10 @@
 const  createUserController  = require("../../controllers/usersControllers/createUserController.js")
 
 const createUserHandler = async(req,res)=>{
-    const {name}= req.body;
+    const {name, email}= req.body;
 
     try {
-        const result = await createUserController(name);
+        const result = await createUserController(name, email);
         res.status(201).json(result)
     } catch (error) {
         res.status(400).json({error: error.message})
@@ -12,5 +12,3 @@ const createUserHandler = async(req,res)=>{
 }
 
 module.exports = createUserHandler;
-// ,lastName,country,email,password,profile,address
-// ,lastName,country,email,password,profile,address

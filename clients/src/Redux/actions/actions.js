@@ -120,10 +120,10 @@ export function filterByGenres(filters) {
   }
 }
 
-export const createUser = (name) => {
+export const createUser = (name, email) => {
   return async (dispatch) => {
     try {
-      const requestData = { name };
+      const requestData = { name, email };
 
       const response = await axios.post('http://localhost:3001/users', requestData);
 
