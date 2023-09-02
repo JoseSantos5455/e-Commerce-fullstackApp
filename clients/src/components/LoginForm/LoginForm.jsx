@@ -10,7 +10,9 @@ export default function LoginForm() {
 
    let [user, setUser] =  useState({
     country: null,
-    adress: null,
+    adress_st: null,
+    adress_num: null,
+    department: null,
     zip: null
     }
    )
@@ -46,14 +48,29 @@ export default function LoginForm() {
              onChange={handleChange} />
 
             <label htmlFor="adress">Your adress</label>
-            <input type="text"
-             name='adress'
-             onChange={handleChange} />
-             
-            <label htmlFor="zip">The ZIP code</label>
-            <input type="text" 
-            name='zip'
-            onChange={handleChange} />
+            <div className={Styles.inp_adress}>
+                <input type="text"
+                 name='adress_st'
+                 onChange={handleChange}
+                 placeholder=' St: Evergreen Av.' />
+                <input type="number"
+                name='adress_num'
+                placeholder='N°: 742'
+                onChange={handleChange} />
+            </div>
+            <div className={Styles.div_zip}>
+                <div className="">
+                <label htmlFor="zip">The ZIP code</label>
+                    <input type="number"
+                    name='zip'
+                    onChange={handleChange} />
+                </div>
+                <div className="">
+                <label htmlFor="zip">Departament N°</label>
+                <input type="number" name='department' placeholder='Departament or Stage'
+                onChange={handleChange} />
+                </div>
+            </div>
             <button type='submit' className={Styles.btn_submit}>Submit</button>
         </form>
     </div>
