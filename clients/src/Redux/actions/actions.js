@@ -1,32 +1,40 @@
-import {UPD_USER, GET_PDT, GET_DET, GET_NAM, GET_CATEGORIES, GET_BRANDS, FILTER_BY_CATEGORY, POST_USER} from './actionTypes'
+import {
+        POST_PAGO,
+        POST_PDT,
+       UPD_USER, GET_PDT,
+        GET_NAM, 
+        GET_CATEGORIES,
+        GET_PAGINATE,
+        GET_DET, 
+        GET_BRANDS,
+        FILTER_BY_CATEGORY
+    , POST_USER} from './actionTypes'
 import axios from "axios"
 
 // eslint-disable-next-line
-
-
 export const getProducts =  (page, size) => {
   let endpoint = `http://localhost:3001/products`
   return async (dispatch) => {
     try {
-      const response = await axios(endpoint)
+      const response = await axios("http://localhost:3001/products")
       let data = response.data
 
-      dispatch({
-        type: GET_PDT,
-        payload: data,
-      })
-    } catch (error) {
-      console.log(error)
+            dispatch({
+                type: GET_PDT,
+                payload: data,
+            })
+        } catch (error) {
+            console.log(error)
+        }
     }
-  }
 }
 
 export const getNameProducts = (name) => {
-  return async (dispatch) => {
-    let endpoint = `http://localhost:3001/products/?name=${name}`
-    try {
-      const response = await axios.get(endpoint)
-      let data = response.data
+    return async (dispatch) => {
+        let endpoint = `http://localhost:3001/products/?name=${name}`
+        try {
+            const response = await axios.get(endpoint)
+            let data = response.data
 
       dispatch({
         type: GET_NAM,
@@ -37,40 +45,71 @@ export const getNameProducts = (name) => {
     } catch (error) {
       console.log(error)
     }
-  }
-}
-export const getDetail = (id)=>{
-    return async (dispatch)=>{
-        const endpoint = `http://localhost:3001/products/${id}`
-         try {
-            let response = await axios(endpoint)
-            let data = response.data
-      
-        return  dispatch({
-            type: GET_DET,
-            payload: data
-        })
-       } catch (error) {
-        console.log(error.message)
-       }
     }
 }
 
-export function getCategories() {
-    return async (dispatch) =>{
-        let endpoint =`http://localhost:3001/categories`
+export const getPaginatedProducts = (page, size) =>{
+    return async (dispatch) => {
         try {
-            const response = await axios(endpoint)
-            let data = response.data
+            const paginate = await axios.get(`http://localhost:3001/products?page=${page}&size=${size}`)
+            const result = paginate.data
+            dispatch({
+                type: GET_PAGINATE,
+                payload: result
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
+export const createProducts = (payload) => {
+    
+    return async () =>{
+        try {
+        const response = await axios.post('http://localhost:3001/products', payload)
+        return {
+            type: POST_PDT,
+            response
+        }  
+        } catch (error) {
+            console.log(error);        
+        }
+    }
+}
+
+export const getCategories = () => {
+    return async (dispatch) => {
+        try {
+            const ctgri = await axios.get(`http://localhost:3001/Categories`)
+            const catgoData = ctgri.data
             dispatch({
                 type: GET_CATEGORIES,
+                payload: catgoData
+            })
+        } catch (error) {
+            
+        }
+    }
+}
+
+export const getDetail = (id)=>{
+    return async (dispatch)=>{
+        const endpoint = `http://localhost:3001/products/${id}`
+        try {
+            let response = await axios(endpoint)
+            let data = response.data
+
+            return dispatch({
+                type: GET_DET,
                 payload: data
             })
         } catch (error) {
-            console.log(error)
-        }        
+            console.log(error.message)
+        }
     }
 }
+
 
 export function getBrands(){
   return async (dispatch) =>{
@@ -100,11 +139,6 @@ export function filterByGenres(filters) {
 
       if(filters.price.length > 0) endpoint += `orderBy=price&direction=${filters.price}&`;
 
-      /*
-      if (page) endpoint += `page=${page}&`;
-      if (size) endpoint += `size=${size}&`;
-*/
-      // Elimina el último '&' si existe
       if (endpoint.endsWith('&')) {
         endpoint = endpoint.slice(0, -1);
       }
@@ -159,16 +193,17 @@ export const updateUser = (id,  adress_st, country, adress_num, department, zip)
 
 
 
-// export const createProducts = (payload) => {
-//     return async () =>{
-//         try {
-//             const response = await axios.post('', payload)
-//             return {
-//                 type: POST_PDT,
-//                 response
-//             }
-//         } catch (error) {
-//             console.log(error);
-//         }
-//     }
-// }
+export const createOrder = (payload) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.post('http://localhost:3001/mercadopago/create-order', payload)
+            window.open(response.data,);
+            return dispatch({
+                type: POST_PAGO
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}

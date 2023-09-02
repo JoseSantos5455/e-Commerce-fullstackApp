@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import Detail from "./pages/Detail/Detail";
 import BuyView from './pages/Buy/BuyView'
+import ShoppingCar from "./components/ShoppingCar/ShoppingCar";
 import {Routes, Route} from "react-router-dom"
 import Abt from "./pages/Abt/Abt";
 import Info from "./pages/Info/Info";
@@ -25,6 +26,8 @@ export default function App() {
           <Route exact path="/admin" Component={Dashboard}/>
           <Route exact path="/login" Component={LoginForm}/>
           <Route path="*" Component={NotFound}/>
+          <Route exact path="/about" Component={Abt}/>
+          <Route exact path="/ShoppingCar" Component={ShoppingCar}/>
       </Routes>
           
     </div>
