@@ -42,10 +42,19 @@ module.exports = (sequelize)=>{
             allowNull:true,
             defaultValue:'User',
         },  
-        address:{
+        address_st:{
             type:DataTypes.STRING,
             allowNull:true,
         },
+        address_num:{
+            type:DataTypes.INTEGER,
+            allowNull:true,
+        },
+        department:{
+            type:DataTypes.INTEGER,
+            allowNull:true,
+        },
+        
         zip:{
             type:DataTypes.INTEGER,
             allowNull:true,
