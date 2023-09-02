@@ -1,6 +1,6 @@
 const {User} = require('../../db.js');
 
-const createUserController = async (name, country, email, adress_st, adress_num, department, zip)=>{
+const createUserController = async (name,  email, country, adress_st, adress_num, department, zip)=>{
     const newUserData = {
         name,
         email,

@@ -151,6 +151,9 @@ function handleKeyDown(e) {
                   <div className={Styles.drop_user}>
                     
                       <LogOut className={Styles.btn_logout} />
+                      <NavLink to='/login'>
+                        complete profile
+                      </NavLink>
                       <p>Option</p>
                       <p>Option</p>
                       <p>Option</p>

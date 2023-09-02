@@ -1,6 +1,7 @@
 
 
 import {
+  UPD_USER,
   POST_PDT,
   GET_PDT,
   GET_NAM,
@@ -69,6 +70,11 @@ const rootReducer = (state = initialState, action) => {
       }
     }
     case POST_USER:
+      return{
+        ...state,
+        user: action.payload
+      }
+    case UPD_USER:
       return{
         ...state,
         user: action.payload

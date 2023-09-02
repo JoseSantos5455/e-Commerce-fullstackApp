@@ -15,26 +15,26 @@ module.exports = (sequelize)=>{
             },    
         },
         
+        
+        email:{
+            type:DataTypes.STRING,
+            allowNull:true,
+            unique:false,
+            validate:{
+                isEmail: {
+                    args: true,
+                    msg:'Invalid e-mail format'},
+                notEmpty:{
+                    args:true,
+                    msg:`E-mail couln't be empty`
+                },    
+            },
+        },
         country:{
             type:DataTypes.STRING,
             allowNull:true,
             
         },
-        email:{
-            type:DataTypes.STRING,
-            allowNull:true,
-            unique:false,
-            // validate:{
-            //     isEmail: {
-            //         args: true,
-            //         msg:'Invalid e-mail format'},
-            //     notEmpty:{
-            //         args:true,
-            //         msg:`E-mail couln't be empty`
-            //     },    
-            // },
-        },
-        
         profile:{
             type:DataTypes.ENUM('Administrator','User'),
             allowNull:true,

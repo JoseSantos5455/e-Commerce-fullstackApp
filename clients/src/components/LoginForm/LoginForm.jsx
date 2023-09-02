@@ -3,13 +3,14 @@ import Styles from './LoginForm.module.css'
 import Nav from '../navBar/Nav';
 import { useDispatch, useSelector } from 'react-redux';
 import Footer from '../Footer/Footer';
-import { createUser } from '../../Redux/actions/actions';
+import {  updateUser } from '../../Redux/actions/actions';
 
 
 export default function LoginForm() {
     let userRedux = useSelector(state => state.user)
     let dispatch = useDispatch()
    let [user, setUser] =  useState({
+    id: 'b3bfd620-8a1e-419b-afdc-efc4e3806575',
     country: null,
     adress_st: null,
     adress_num: null,
@@ -28,8 +29,9 @@ export default function LoginForm() {
     console.log(user)
    }
 
-   let submitForm = ()=>{
-    dispatch(createUser(user))
+   let submitForm = (e)=>{
+    e.preventDefault()
+    dispatch(updateUser(user.id, user.adress_st, user.country, user.adress_num, user.department, user.zip))
    }
 
   return (
@@ -45,7 +47,7 @@ export default function LoginForm() {
         className={Styles.img_delivery}/>
 
         </div>
-        <form onSubmit={submitForm} className={Styles.form}>
+        <form  className={Styles.form}>
             <label htmlFor="country">Your Country</label>
             <input type="text"
              name='country'
@@ -75,7 +77,7 @@ export default function LoginForm() {
                 onChange={handleChange} />
                 </div>
             </div>
-            <button type='submit' className={Styles.btn_submit}>Submit</button>
+            <button type='submit' onClick={submitForm} className={Styles.btn_submit}>Submit</button>
         </form>
     </div>
     <div className={Styles.footer}>
