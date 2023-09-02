@@ -1,0 +1,32 @@
+.wrapper{
+    margin-top: 15%;
+    display: flex;
+    padding-bottom: 10%;  
+    justify-content: space-evenly;
+}
+.text{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.img_delivery{
+    width: 25%;
+    margin-top: -8%;
+    align-self: flex-end;
+}
+.form{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+}
+.form input{
+    width: 100%;
+}
+.btn_submit{
+    align-self: center;
+    margin-top: 5%;
+
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+}
