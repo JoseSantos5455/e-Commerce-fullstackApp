@@ -10,7 +10,7 @@ export default function LoginForm() {
     let userRedux = useSelector(state => state.user)
     let dispatch = useDispatch()
    let [user, setUser] =  useState({
-    id: 'b3bfd620-8a1e-419b-afdc-efc4e3806575',
+    id: userRedux.id,
     country: null,
     adress_st: null,
     adress_num: null,
