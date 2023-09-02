@@ -1,17 +1,19 @@
 import {
         POST_PAGO,
         POST_PDT,
-        GET_PDT,
+       UPD_USER, GET_PDT,
         GET_NAM, 
         GET_CATEGORIES,
         GET_PAGINATE,
         GET_DET, 
         GET_BRANDS,
         FILTER_BY_CATEGORY
-    } from './actionTypes'
+    , POST_USER} from './actionTypes'
 import axios from "axios"
 
-export const getProducts = () => {
+// eslint-disable-next-line
+export const getProducts =  (page, size) => {
+  let endpoint = `http://localhost:3001/products`
   return async (dispatch) => {
     try {
       const response = await axios("http://localhost:3001/products")
@@ -153,6 +155,43 @@ export function filterByGenres(filters) {
       }        
   }
 }
+
+export const createUser = (name, email, adress_st, adress_num, department, zip) => {
+  return async (dispatch) => {
+    try {
+      const requestData = { name, email, adress_st, adress_num, department, zip };
+
+      const response = await axios.post('http://localhost:3001/users', requestData);
+
+    
+      dispatch({ type: POST_USER,
+                   payload: response.data });
+    } catch (error) {
+      dispatch({ type: 'CREATE_USER_FAILURE',
+                 payload: error.message });
+    }
+  };
+};
+export const updateUser = (id,  adress_st, country, adress_num, department, zip) => {
+  return async (dispatch) => {
+    try {
+      console.log('submitesdaa')
+
+      const requestData = { id,  adress_st, country,  adress_num, department, zip };
+
+      const response = await axios.put('http://localhost:3001/users', requestData);
+
+    
+      dispatch({ type: UPD_USER,
+                   payload: response.data });
+    } catch (error) {
+      dispatch({ type: 'UPDATE_USER_FAILURE',
+                 payload: error.message });
+    }
+  };
+};
+
+
 
 export const createOrder = (payload) => {
     return async (dispatch) => {
