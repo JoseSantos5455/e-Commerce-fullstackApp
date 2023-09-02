@@ -1,9 +1,14 @@
 const {User} = require('../../db.js');
 
-const createUserController = async (name, email)=>{
+const createUserController = async (name, country, email, adress_st, adress_num, department, zip)=>{
     const newUserData = {
         name,
-        email
+        email,
+        country,
+        adress_st,
+        adress_num,
+         department,
+          zip
         
     };
     const newUser = await User.create(newUserData);

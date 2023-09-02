@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import Styles from './LoginForm.module.css'
 import Nav from '../navBar/Nav';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Footer from '../Footer/Footer';
+import { createUser } from '../../Redux/actions/actions';
 
 
 export default function LoginForm() {
     let userRedux = useSelector(state => state.user)
-
+    let dispatch = useDispatch()
    let [user, setUser] =  useState({
     country: null,
     adress_st: null,
@@ -27,6 +28,9 @@ export default function LoginForm() {
     console.log(user)
    }
 
+   let submitForm = ()=>{
+    dispatch(createUser(user))
+   }
 
   return (
  <div className={Styles.view}>
@@ -41,7 +45,7 @@ export default function LoginForm() {
         className={Styles.img_delivery}/>
 
         </div>
-        <form action="" className={Styles.form}>
+        <form onSubmit={submitForm} className={Styles.form}>
             <label htmlFor="country">Your Country</label>
             <input type="text"
              name='country'

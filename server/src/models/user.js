@@ -18,23 +18,21 @@ module.exports = (sequelize)=>{
         country:{
             type:DataTypes.STRING,
             allowNull:true,
-            validate:{
-                notEmpty: {msg:'Country could not be null'}
-            },
+            
         },
         email:{
             type:DataTypes.STRING,
             allowNull:true,
-            unique:true,
-            validate:{
-                isEmail: {
-                    args: true,
-                    msg:'Invalid e-mail format'},
-                notEmpty:{
-                    args:true,
-                    msg:`E-mail couln't be empty`
-                },    
-            },
+            unique:false,
+            // validate:{
+            //     isEmail: {
+            //         args: true,
+            //         msg:'Invalid e-mail format'},
+            //     notEmpty:{
+            //         args:true,
+            //         msg:`E-mail couln't be empty`
+            //     },    
+            // },
         },
         
         profile:{
@@ -42,11 +40,11 @@ module.exports = (sequelize)=>{
             allowNull:true,
             defaultValue:'User',
         },  
-        address_st:{
+        adress_st:{
             type:DataTypes.STRING,
             allowNull:true,
         },
-        address_num:{
+        adress_num:{
             type:DataTypes.INTEGER,
             allowNull:true,
         },
