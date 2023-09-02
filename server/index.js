@@ -1,8 +1,17 @@
-const server = require("./src/app")
-require('dotenv').config();
+const server = require('./src/app')
+const { conn } = require('./src/db')
+const getAllProductsApi = require('./src/handlers/productsHandlers/getAllProductsApi.js')
+const {
+  addCategories,
+} = require('./src/controllers/categoriesControllers/addCategoryController.js')
+require('dotenv').config()
 
-const port = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001
 
-server.listen(port, () => {
-    console.log('%s listening at 3001')
+conn.sync({ force: true }).then(() => {
+  addCategories()
+  getAllProductsApi()
+  server.listen(PORT, () => {
+    console.log(`%s listening at ${PORT}`) // eslint-disable-line no-console
+  })
 })

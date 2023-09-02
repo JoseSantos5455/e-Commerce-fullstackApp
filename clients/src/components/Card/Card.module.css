@@ -1,0 +1,105 @@
+.wrapper {
+  width: 300px;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wrapper:hover {
+  transform: scale(1.04);
+}
+
+.stock {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.2);
+  padding: 0.2rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: 0px 15px;
+  margin-bottom: 0.5rem;
+}
+.stock p {
+  font-size: 0.7rem;
+  margin: 0;
+}
+.div_image {
+  border-radius: 1rem;
+
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 1em;
+  margin: 3em auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 1em;
+  margin: 3em auto;
+}
+
+.img_container {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.img_product {
+  width: 100%;
+  display: block;
+}
+
+.description_card {
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.description_card .price {
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  align-items: center;
+}
+.price_number {
+  color: gray;
+}
+.description_card .add {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.div_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description_card .add input {
+  width: 35%;
+  font-size: 0.5rem;
+}
+.description_card .add button {
+  width: 90%;
+  background-color: black;
+  color: aliceblue;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.6rem;
+}
+.description_card .add button:hover {
+  transform: scale(1.1);
+  background-color: rgb(238, 187, 35);
+  color: black;
+  box-shadow: 0 0 5px 0;
+}

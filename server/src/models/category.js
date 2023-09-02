@@ -3,16 +3,16 @@ const {DataTypes} = require('sequelize');
 module.exports = (sequelize) => {
     sequelize.define('Category', {
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       primaryKey: true,
-      defaultValue: DataTypes.UUV4,
+      autoIncrement: true,
     },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
         validate:{
-            isNull: {msg:`Name couldn't be null`}
+            notEmpty: {msg:`Category name couldn't be null`}
         }
     },
   },{timestamps:false});

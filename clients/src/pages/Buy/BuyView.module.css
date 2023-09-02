@@ -1,0 +1,71 @@
+.container_buy {
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+}
+.filters{
+  width: 13%;
+  padding-left: 1%;
+}
+.sortTags{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: .8rem;
+  text-align: center;
+  border: none;
+  background: #ffc502;
+
+  display: inline-block;
+  border-radius: 3px;
+  padding: .2em .5em .3em;
+  border-radius: 2px;
+  font-weight: 600;
+  margin: .25em .1em
+}
+.filtersTags {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  background: #ffc502;
+
+  display: inline-block;
+  border-radius: 3px;
+  padding: .2em .5em .3em;
+  border-radius: 2px;
+  font-weight: 600;
+  margin: .25em .1em;
+  width: 98%
+}
+
+.listCard {
+  display: flex;
+  width: 100%;
+  margin-right: 0%;
+  margin-left: 6%;
+}
+
+.btn {
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  z-index: 1;
+   transition:all .5s ease-in-out;
+}

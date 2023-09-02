@@ -1,0 +1,32 @@
+.wrapper {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.pdt_name {
+  font-weight: bold;
+  align-self: center;
+}
+.pdt_description {
+  font-family: 'Montserrat';
+}
+.pdt_price {
+  color: gray;
+  align-self: center;
+  font-size: 1.5rem;
+}
+.btn_buy {
+  width: 50%;
+  margin-top: 10%;
+  align-self: center;
+  border: none;
+
+  border-radius: 1rem;
+
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.btn_buy:hover {
+  color: rgb(233, 170, 36);
+}

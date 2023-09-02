@@ -1,0 +1,36 @@
+.wrapper{
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 1em;
+    margin: 3em auto;
+
+}
+
+.img_product {
+    width: 100%;
+    display: block;
+  }
+
+.img_column{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+.img_column img{
+    border: 1px solid black;
+    padding: 1%;
+    margin: 4%;
+    width: 30%;
+    border-radius: .5rem;
+}
+.img_main{
+    display: flex;
+    align-items: center;
+}
+.img_main img{
+    border-radius: 1rem;
+    min-height: 290px;
+    width: 110%;
+    margin-left: -25%;
+
+}

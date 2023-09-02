@@ -5,27 +5,27 @@ module.exports = (sequelize)=>{
         id:{
             type:DataTypes.UUID,
             primaryKey:true,
-            defaultValue:DataTypes.UUV4,
+            defaultValue:DataTypes.UUIDV4,
         },
         name:{
             type:DataTypes.STRING,
             allowNull:false,
             validate:{
-                isNull: {msg:'Name could not be null'}
+                notEmpty: {msg:'Name could not be null'}
             },    
         },
         lastName:{
             type:DataTypes.STRING,
             allowNull:false,
             validate:{
-                isNull: {msg:'Last Name could not be null'}
+                notEmpty: {msg:'Last Name could not be null'}
             },
         },
         country:{
             type:DataTypes.STRING,
             allowNull:false,
             validate:{
-                isNull: {msg:'Country could not be null'}
+                notEmpty: {msg:'Country could not be null'}
             },
         },
         email:{
@@ -61,6 +61,14 @@ module.exports = (sequelize)=>{
             type:DataTypes.ENUM('Administrator','User'),
             allowNull:false,
             defaultValue:'User',
-        },      
+        },  
+        address:{
+            type:DataTypes.STRING,
+            allowNull:false,
+        },
+        isActive:{
+            type:DataTypes.BOOLEAN,
+            defaultValue:true,
+        },    
     },{timestamps:false});
 };

@@ -28,6 +28,7 @@ module.exports = (sequelize)=>{
         },
         price:{///considerar un key para el tipo de moneda????
             type:DataTypes.DECIMAL(10,2),
+
             allowNull:false,
             validate:{
                 notEmpty:{
@@ -35,11 +36,11 @@ module.exports = (sequelize)=>{
                 },
             },
         },
-        /*stock:{
-            type:DataTypes.INTEGER,
+        stock:{
+            type: DataTypes.INTEGER,
             defaultValue:0,
-            min:0,  
-        },*/
+            min:0,
+        },    
         valoration: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -63,18 +64,18 @@ module.exports = (sequelize)=>{
                 }
             }
         },
-        /*shipping:{
-            type:DataTypes.INTEGER,
-            max:30,
-            min:3,
-        },*/
         isActive:{
             type:DataTypes.BOOLEAN,
             defaultValue:true,
         },
         categoryId:{
-            type:DataTypes.UUID,
+            type:DataTypes.INTEGER,
             allowNull:false,
         },
+        brand:{
+            type:DataTypes.STRING,
+            allowNull:false,
+        },
+
     },{timestamps:false});
 };
