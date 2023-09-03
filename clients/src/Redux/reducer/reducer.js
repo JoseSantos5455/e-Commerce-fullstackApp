@@ -1,6 +1,5 @@
-
-
 import {
+  UPD_USER,
   POST_PDT,
   GET_PDT,
   GET_NAM,
@@ -8,11 +7,12 @@ import {
   GET_CATEGORIES,
   GET_BRANDS,
   FILTER_BY_CATEGORY,
-
-  ORDER_BY_PRICE,
-  ORDER_BY_VALORATION,
-  POST_PAGO
-
+  GET_PAGINATE,
+  POST_PAGO,
+  POST_USER,
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  CLEAR_CART,
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -23,7 +23,9 @@ const initialState = {
   brands: [],
   detail: [],
   product_name: [],
-  filters: []
+  filters: [],
+  user: [],
+  cart: [],
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -44,69 +46,67 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         product_name: action.payload,
-        products : action.payload
-      
-      }
-    case POST_PDT:
-      return {
-        ...state,
-      }
+        products: action.payload
 
+      }
     case GET_CATEGORIES:
       return {
         ...state,
         categories: action.payload,
       }
 
-    case GET_BRANDS:{
+    case GET_BRANDS: {
       return {
         ...state,
         brands: action.payload,
       }
     }
-
+    case POST_PDT:
+      return {
+        ...state
+      }
+    case POST_PAGO:
+      return {
+        ...state
+      }
+    case GET_PAGINATE:
+      return {
+        ...state,
+        allProducts: action.payload
+      }
     case FILTER_BY_CATEGORY: {
       return {
         ...state,
         products: action.payload,
       }
     }
-
-
-    case ORDER_BY_PRICE: {
-      const orderPriceAsc = [...state.products].sort((a, b) => {
-        if (Number(a.price) > Number(b.price)) return 1
-        if (Number(b.price) > Number(a.price)) return -1
-        return 0
-      })
-
+    case POST_USER:
       return {
         ...state,
-        products:
-          action.payload === 'asc' ? orderPriceAsc : orderPriceAsc.reverse(),
+        user: action.payload
       }
-    }
-
-    case ORDER_BY_VALORATION: {
-      let orderValorationAsc = state.products.slice().sort((a, b) => {
-        if (Number(a.valoration) > Number(b.valoration)) return 1
-
-        if (Number(b.valoration) > Number(a.valoration)) return -1
-
-        return 0
-      })
-
+    case UPD_USER:
       return {
         ...state,
-        products: orderValorationAsc,
+        user: action.payload
       }
-    }
 
-    case POST_PAGO:
+    case ADD_TO_CART:
       return {
         ...state,
+        cart: [...state.cart, action.payload]
       }
-
+    case REMOVE_FROM_CART:
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload.id)
+      }
+    case CLEAR_CART:
+      return {
+        ...state,
+        cart: []
+      }
+      
     default:
       return state
   }

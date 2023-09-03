@@ -25,7 +25,11 @@ const Featured = () => {
               Shopping
             </Link>
             </button>
-        <button className={styles.btn_category}>How it works?</button>
+            <Link to={'/howedoit'}>
+        <button className={styles.btn_category}>
+          How it works?
+          </button>
+            </Link>
       </div>
     </div>
   )

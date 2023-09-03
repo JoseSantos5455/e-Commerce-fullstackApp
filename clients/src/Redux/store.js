@@ -7,9 +7,9 @@ import storage from "redux-persist/lib/storage"
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const persistConfig = {
-  key: "root", 
+  key: "root",
   storage,
-  whitelist: ["allProducts"],
+  whitelist: ["allProducts", "user", "cart"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -19,6 +19,6 @@ const store = createStore(
   composeEnhancer(applyMiddleware(thunkMiddleware))
 );
 
-const persistor = persistStore(store); 
+const persistor = persistStore(store);
 
 export { store, persistor };
