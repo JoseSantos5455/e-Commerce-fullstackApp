@@ -5,6 +5,7 @@ const productModel = require('../src/models/product');
 const reviewModel = require('../src/models/review');
 const userModel = require('../src/models/user');
 const orderModel= require('../src/models/order');
+const orderDetailModel = require('../src/models/orderDetail');
 const {DB_DIALECT, DB_USER,DB_PASSWORD,DB_HOST,DB_NAME } =  process.env
 const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
 {
@@ -17,11 +18,10 @@ productModel(sequelize);
 reviewModel(sequelize);
 userModel(sequelize);
 orderModel(sequelize);
+orderDetailModel(sequelize); 
 
-const {Category,Product,Review,User,Order} = sequelize.models;
+const {Category,Product,Review,User,Order,orderDetail} = sequelize.models;
 
-// Product.belongsToMany(User,{through:Order,foreignKey:'productId',otherKey:'userId'});
-// User.belongsToMany(Product,{through:Order,foreignKey:'userId',otherKey:'productId'});
 User.hasMany(Review,{foreignKey:'userId'});
 Review.belongsTo(User,{foreignKey:'userId'});
 Category.hasMany(Product,{foreignKey:'categoryId'});
@@ -30,8 +30,9 @@ Product.hasMany(Review,{foreignKey:'productId'});
 Review.belongsTo(Product,{foreignKey:'productId'});
 User.hasMany(Order,{foreignKey:'userId'});
 Order.belongsTo(User,{foreignKey:'userId'});
-Product.hasMany(Order,{foreignKey:'productId'});
-Order.belongsTo(Product,{foreignKey:'productId'});
+Product.belongsToMany(Order, { through: 'orderDetail', foreignKey: 'productId' });
+Order.belongsToMany(Product, { through: 'orderDetail', foreignKey: 'orderId' });
+
 
 module.exports = {...sequelize.models,
                     conn:sequelize}

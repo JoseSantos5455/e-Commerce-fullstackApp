@@ -1,18 +1,19 @@
-const {Order} = require('../../db.js');
+const { Order, User,Product } = require('../../db.js');
 
-const getAllOrdersController = async (state)=>{
-    const whereConditions ={};
-    if (state)
-        whereConditions.state = state;
-    const orders = Order.findAll({
-        where: whereConditions,
-        include:[
-            {   model:User,
-                attributes:['name','lastname']
-            },
-        ],
+const getAllOrdersController = async (status) => {
+  const whereConditions = {};
+  if (status) whereConditions.status = status; 
+
+  const orders = await Order.findAll({
+     where: whereConditions,
+     include: [
+                {model: Product,
+                attributes: ['name'],
+                through: {attributes: ['ProductId']},
+                },
+            ],
     });
-    return orders;
+  return orders;
 };
 
 module.exports = getAllOrdersController;
