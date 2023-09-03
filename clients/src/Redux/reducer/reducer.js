@@ -8,7 +8,7 @@ import {
   GET_BRANDS,
   FILTER_BY_CATEGORY,
   GET_PAGINATE,
-  POST_PAGO
+  POST_PAGO,
   POST_USER
 } from '../actions/actionTypes'
 
