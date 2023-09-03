@@ -28,17 +28,7 @@ export default function Nav() {
 
   
   let name = useSelector( state => state.product_name[0])
-  //dropdown para logout profile
-    const [showMenu, setShowMenu] = useState(false);
  
-
-    const handleMouseEnter = () => {
-      setShowMenu(true);
-    };
-    
-    const handleMouseLeave = () => {
-      setShowMenu(false);
-    };
 //buscar por nombre redux
     let [inputSearch, setInputSearch] = useState('')
 //para buscar con enter 
@@ -85,15 +75,7 @@ function handleKeyDown(e) {
                 Products
               </button>
             </NavLink>
-            {/* <div className={`${Styles.dropdownMenu}`}>
-              <div className={Styles.dropdownHeader}>Discos Duros</div>
-              <a href="#" className={Styles.dropdownItem}>
-                SSD
-              </a>
-              <a href="#" className={Styles.dropdownItem}>
-                Rígido
-              </a>
-            </div> */}
+           
           </div>
         </div>
         <div className={` ${Styles.col_1}`}>
@@ -144,23 +126,9 @@ function handleKeyDown(e) {
                 </button>
               </div>
             ) : (
-              <div className={Styles.div_auth} onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}>
+              <div className={Styles.div_auth} >
                 <Profile />
-                 {
-                 showMenu && (
-                  <div className={Styles.drop_user}>
-                    
-                      <LogOut className={Styles.btn_logout} />
-                      <NavLink to='/login'>
-                        complete profile
-                      </NavLink>
-                      <p>Option</p>
-                      <p>Option</p>
-                      <p>Option</p>
-                  </div>
-                 )
-                 }
+                 
               
               </div>
                 )
