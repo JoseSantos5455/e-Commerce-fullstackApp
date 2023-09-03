@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getVideogamesByName } from "../../redux/actions";
+//import { getVideogamesByName } from "../../redux/actions";
 import s from "./SearchBar.module.css"
 
 export default function SearchBar () {

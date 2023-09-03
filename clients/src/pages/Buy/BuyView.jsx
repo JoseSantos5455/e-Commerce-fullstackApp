@@ -12,6 +12,7 @@ import {
   filterByGenres,
 } from '../../Redux/actions/actions'
 import Footer from '../../components/Footer/Footer'
+import { useParams } from 'react-router-dom'
 
 
 const initialFilters = { 
@@ -24,6 +25,7 @@ const initialFilters = {
 export default function BuyView() {
   //const {  isAuthenticated, isLoading } = useAuth0();
   let prods = useSelector(state => state.products)
+  let { search } = useParams()
   const [selectedCategory, setSelectedCategory] = useState('');
   const [currentBrandValue, setCurrentBrandValue] = useState('');
   const [filters, setFilters] = useState(initialFilters);
@@ -37,20 +39,26 @@ export default function BuyView() {
   let dispatch = useDispatch()
 
   useEffect(()=>{
-    if(!prods){
+    if(!search){
       dispatch(getProducts())
-    }
-  },[])
+      console.log('despacha getproducts')
+      dispatch(filterByGenres(filters));
 
+      
+    }
+    
+  },[])
+  
   useEffect(()=>{
     if(!prods){
       dispatch(getBrands())
+      console.log('despacha brands')
     }
   },[])
 
-  useEffect(() => {
-    dispatch(filterByGenres(filters));
-  }, [filters]);
+  // useEffect(() => {
+  //   dispatch(filterByGenres(filters));
+  // }, [filters]);
 
   const handleSelectChange = (event) => {
     setSelectedCategory(event.target.value);

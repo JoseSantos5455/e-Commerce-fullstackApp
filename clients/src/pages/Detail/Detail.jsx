@@ -9,11 +9,13 @@ import { getDetail } from '../../Redux/actions/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
+
 export default function Detail() {
   let dispatch = useDispatch()
   let product = useSelector((state) => state.detail)
   const { id } = useParams()
-  
+  const cart = useSelector((state) => state.cart)
+
   useEffect(() => {
     dispatch(getDetail(id))
   }, [dispatch, id])
@@ -32,6 +34,8 @@ export default function Detail() {
           img_main={product.image}
         />
         <Info
+        cart={cart}
+          id={product.id}
           name={product.name}
           description={product.description}
           price={product.price}

@@ -21,10 +21,7 @@ const Validation = (error) => {
       err.stock = "El stock debe ser un número entero positivo.";
     }
     if (!regexValoration.test(error.valoration)) {
-      err.valoration = "La valoración debe estar entre 1 y 100.";
-    }
-    if (!error.category) {
-      err.category = "La categoría es requerida.";
+      err.valoration = "La valoración debe estar entre 1 y 5.";
     }
     if (error.image === ""){
       err.image = "Debe agregar una Imagen"

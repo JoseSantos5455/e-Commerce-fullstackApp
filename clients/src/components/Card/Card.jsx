@@ -9,6 +9,10 @@ import {
   AiFillPlusCircle,
   AiOutlineMinusCircle,
 } from 'react-icons/ai'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { addToCart, removeFromCart } from '../../Redux/actions/actions'
 
 Card.propTypes = {
   aviability: PropTypes.bool.isRequired,
@@ -21,6 +25,22 @@ Card.propTypes = {
 export default function Card({ aviability, img, name, price, id }) {
   const cldInstance = new Cloudinary({cloud: {cloudName: 'dckiqiqjl'}});
 
+  const dispatch = useDispatch()
+  const cart = useSelector((state) => state.cart)
+  const [isCart, setIsCart] = useState(false);
+  // funcion que detecte si el producto ya esta en el carrito
+  let productInCart
+
+  useEffect(() => {
+    const productInCart = cart.find((item) => item.id === id)
+    if (productInCart) {
+      setBuyQ(productInCart.buyQ)
+      setIsCart(true)
+    }
+    // dispatch(getDetail(id))
+  }, [dispatch, id])
+
+
   const [buyQ, setBuyQ] = useState(1)
 
   const handleMoreQ = () => {
@@ -28,11 +48,23 @@ export default function Card({ aviability, img, name, price, id }) {
   }
 
   const handleLessQ = () => {
-    if (buyQ > 0) {
+    if (buyQ > 1) {
       setBuyQ(buyQ - 1)
     } else {
       setBuyQ(buyQ)
     }
+  }
+  const handleAddToCart = () => {
+    if (productInCart) {
+      setIsCart(false)
+
+      setBuyQ(1)
+      dispatch(removeFromCart(id))
+      return
+    }
+    setIsCart(true)
+    dispatch(addToCart({ id, name, price, buyQ }))
+
   }
 
   const myImage = cldInstance
@@ -61,7 +93,16 @@ export default function Card({ aviability, img, name, price, id }) {
             <input type="number" value={buyQ} readOnly />
             <AiOutlineMinusCircle onClick={handleLessQ} />
           </div>
-          <button>Add to cart</button>
+          {
+            !isCart ?
+              (
+                <button onClick={handleAddToCart}>Add to cart</button>
+              ) :
+              (
+                <button onClick={handleAddToCart}>Remove from cart</button>
+              )
+          }
+          {/* <button>Add to cart</button> */}
         </div>
       </div>
     </div>

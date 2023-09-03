@@ -2,10 +2,12 @@ const express = require('express')
 const server = express()
 const morgan = require('morgan')
 const router = require('./routes/index')
+const cors = require('cors')
 
 require('./db.js')
 
 server.use(express.json())
+server.use(cors())
 server.use(express.urlencoded({ extended: false }))
 server.use(morgan('dev'))
 server.use((req, res, next) => {

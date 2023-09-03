@@ -20,14 +20,18 @@ orderModel(sequelize);
 
 const {Category,Product,Review,User,Order} = sequelize.models;
 
-Product.belongsToMany(User,{through:Order,foreignKey:'productId',otherKey:'userId'});
-User.belongsToMany(Product,{through:Order,foreignKey:'userId',otherKey:'productId'});
-User.hasMany(Review);
-Review.belongsTo(User);
-Product.belongsTo(Category,{foreignKey:'categoryId'});
+// Product.belongsToMany(User,{through:Order,foreignKey:'productId',otherKey:'userId'});
+// User.belongsToMany(Product,{through:Order,foreignKey:'userId',otherKey:'productId'});
+User.hasMany(Review,{foreignKey:'userId'});
+Review.belongsTo(User,{foreignKey:'userId'});
 Category.hasMany(Product,{foreignKey:'categoryId'});
-Product.hasMany(Review);
-Review.belongsTo(Product);
+Product.belongsTo(Category,{foreignKey:'categoryId'});
+Product.hasMany(Review,{foreignKey:'productId'});
+Review.belongsTo(Product,{foreignKey:'productId'});
+User.hasMany(Order,{foreignKey:'userId'});
+Order.belongsTo(User,{foreignKey:'userId'});
+Product.hasMany(Order,{foreignKey:'productId'});
+Order.belongsTo(Product,{foreignKey:'productId'});
 
 module.exports = {...sequelize.models,
                     conn:sequelize}
