@@ -6,10 +6,11 @@ import { useSelector } from 'react-redux'
 
 export default function ShoppingCar() {
     const dispatch = useDispatch();
+
     const shoppingCart = useSelector((state) => state.cart)
 
 
-    const shoppingCart2 = shoppingCart.map((item) => {
+    let shoppingCart2 = shoppingCart.map((item) => {
         return {
             title: item.name,
             unit_price: item.price,
@@ -18,9 +19,27 @@ export default function ShoppingCar() {
         };
     });
 
+    // const shoppingCart22 = [
+    //     {
+    //         current_id: "ARS",
+    //         quantity: 1,
+    //         unit_price: 100,
+    //         title: "Laptop"
+    //     },
+    //     {
+    //         current_id: "ARS",
+    //         quantity: 1,
+    //         unit_price: 200,
+    //         title: "a"
+    //     }
+    // ]
+  
+
     const handleBuy = async () => {
-        console.log(shoppingCart2);
+       
+        
         dispatch(createOrder(shoppingCart2))
+        // dispatch(createOrder(shoppingCart));
     }
 
     return (
