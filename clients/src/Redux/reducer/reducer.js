@@ -1,4 +1,5 @@
 import {
+  UPD_USER,
   POST_PDT,
   GET_PDT,
   GET_NAM,
@@ -7,7 +8,8 @@ import {
   GET_BRANDS,
   FILTER_BY_CATEGORY,
   GET_PAGINATE,
-  POST_PAGO
+  POST_PAGO,
+  POST_USER
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -18,7 +20,8 @@ const initialState = {
   brands: [],
   detail: [],
   product_name: [],
-  filters: []
+  filters: [],
+   user:[]
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -73,6 +76,17 @@ const rootReducer = (state = initialState, action) => {
         products: action.payload,
       }
     }
+    case POST_USER:
+      return{
+        ...state,
+        user: action.payload
+      }
+    case UPD_USER:
+      return{
+        ...state,
+        user: action.payload
+      }
+
     default:
       return state
   }

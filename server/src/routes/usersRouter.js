@@ -10,7 +10,7 @@ const userRouter = Router();
 userRouter.get("/", getUsersHandler);
 userRouter.get("/:id", getUserByIdHandler);
 userRouter.post("/", createUserHandler);
-userRouter.put("/:id", updateUserHandler);
+userRouter.put("/", updateUserHandler);
 userRouter.delete("/:id", deleteUserHandler);
 
 module.exports = userRouter;
