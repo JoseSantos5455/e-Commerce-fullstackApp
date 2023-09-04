@@ -18,6 +18,11 @@
   height: auto;
 }
 
+.cart {
+  width: 15%;
+  height: auto;
+}
+
 .col_5 {
   display: flex;
   align-items: center;

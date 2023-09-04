@@ -1,23 +1,27 @@
 import {
-        POST_PAGO,
-        POST_PDT,
-       UPD_USER, GET_PDT,
-        GET_NAM, 
-        GET_CATEGORIES,
-        GET_PAGINATE,
-        GET_DET, 
-        GET_BRANDS,
-        FILTER_BY_CATEGORY
-    , POST_USER} from './actionTypes'
+    POST_PAGO,
+    POST_PDT,
+    UPD_USER, GET_PDT,
+    GET_NAM,
+    GET_CATEGORIES,
+    GET_PAGINATE,
+    GET_DET,
+    GET_BRANDS,
+    FILTER_BY_CATEGORY,
+    POST_USER,
+    ADD_TO_CART,
+    REMOVE_FROM_CART,
+    CLEAR_CART
+} from './actionTypes'
 import axios from "axios"
 
 // eslint-disable-next-line
-export const getProducts =  (page, size) => {
-  let endpoint = `http://localhost:3001/products`
-  return async (dispatch) => {
-    try {
-      const response = await axios("http://localhost:3001/products")
-      let data = response.data
+export const getProducts = (page, size) => {
+    let endpoint = `http://localhost:3001/products`
+    return async (dispatch) => {
+        try {
+            const response = await axios("http://localhost:3001/products")
+            let data = response.data
 
             dispatch({
                 type: GET_PDT,
@@ -111,49 +115,33 @@ export const getDetail = (id)=>{
 }
 
 
-export function getBrands(){
-  return async (dispatch) =>{
-    let endpoint =`http://localhost:3001/brands`
-    try {
-        const response = await axios(endpoint)
-        let data = response.data
-        dispatch({
-            type: GET_BRANDS,
-            payload: data
-        })
-    } catch (error) {
-        console.log(error)
-    }        
-  }
-}
-
 export function filterByGenres(filters) {
-    return async (dispatch) =>{
-      let endpoint = `http://localhost:3001/products?`;
+    return async (dispatch) => {
+        let endpoint = `http://localhost:3001/products?`;
 
-      if(filters.category > 0) endpoint +=`categoryFilter=${filters.category}&`;
+        if (filters.category > 0) endpoint += `categoryFilter=${filters.category}&`;
 
-      if(filters.brand.length > 0) endpoint += `brandFilter=${filters.brand}&`;
+        if (filters.brand.length > 0) endpoint += `brandFilter=${filters.brand}&`;
 
-      if(filters.valoration.length > 0) endpoint += `orderBy=${filters.valoration}&direction=asc&`;
+        if (filters.valoration.length > 0) endpoint += `orderBy=${filters.valoration}&direction=asc&`;
 
-      if(filters.price.length > 0) endpoint += `orderBy=price&direction=${filters.price}&`;
+        if (filters.price.length > 0) endpoint += `orderBy=price&direction=${filters.price}&`;
 
       if (endpoint.endsWith('&')) {
         endpoint = endpoint.slice(0, -1);
       }
 
-      try {
-          const response = await axios(endpoint)
-          let data = response.data
-          dispatch({
-              type: FILTER_BY_CATEGORY,
-              payload: data
-          })
-      } catch (error) {
-          console.log(error)
-      }        
-  }
+        try {
+            const response = await axios(endpoint)
+            let data = response.data
+            dispatch({
+                type: FILTER_BY_CATEGORY,
+                payload: data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 export const createUser = (name, email, adress_st, adress_num, department, zip) => {
@@ -197,7 +185,8 @@ export const createOrder = (payload) => {
     return async (dispatch) => {
         try {
             const response = await axios.post('http://localhost:3001/mercadopago/create-order', payload)
-            window.open(response.data,);
+            // window.open(response.data);
+            window.location.href = response.data;
             return dispatch({
                 type: POST_PAGO
             })
@@ -207,3 +196,24 @@ export const createOrder = (payload) => {
         }
     }
 }
+
+export const addToCart = (payload) => {
+    return {
+        type: ADD_TO_CART,
+        payload
+    }
+}
+
+export const removeFromCart = (payload) => {
+    return {
+        type: REMOVE_FROM_CART,
+        payload
+    }
+}
+
+export const clearCart = () => {
+    return {
+        type: CLEAR_CART
+    }
+}
+
