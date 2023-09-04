@@ -10,3 +10,37 @@
    
     color: rgb(0, 0, 0);
 }
+.drop_user{
+    background-color: #f3f3f3;
+    border-radius: .5rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border-bottom: 1px solid black;
+    
+    padding: 2%;
+    margin-top: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+
+}
+.drop_user p{
+      text-decoration: none;
+      margin: 0%;
+      font-size: .8rem;
+      padding: 3%;
+      padding-top: 10%;
+      color: black;
+    }
+.drop_user p:hover{
+    transform: scale(1.2);
+    color: rgb(0, 0, 0);
+  }
+    .link_complete_profile{
+      text-decoration: none;
+      color: black;
+
+  }
+  .link_complete_profile:hover{
+    transform: scale(1.2);
+  }

@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
         <div className={styles.div_logo}>
           <img src={logo} alt="logo" className={styles.logo} />
-          <p className={styles.paragraph}>Todos los derechos reservados.</p>
+          <p className={styles.paragraph}>All rights reserved®.</p>
         </div>
       </div>
     </div>

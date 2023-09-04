@@ -1,10 +1,23 @@
 const updateUserController = require('../../controllers/usersControllers/updateUserController.js');
 
 const updateUserHandler = async (req,res)=>{
-    const {id} = req.params;
-    const {name,lastName,country,email,password,profile,address} = req.body;
+    // const {id} = req.params;
+    const {
+        id,name,
+        email,
+        country,
+         adress_st,
+          adress_num,
+           department,
+            zip}= req.body;
     try {
-        const result = await updateUserController(id,name,lastName,country,email,password,profile,address);
+        const result = await updateUserController(id,name,
+            email,
+            country,
+             adress_st,
+              adress_num,
+               department,
+                zip);
         res.status(200).json(result);    
     } 
     catch (error) {

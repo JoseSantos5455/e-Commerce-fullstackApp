@@ -7,8 +7,10 @@ import Footer from '../../components/Footer/Footer'
 
 
 
+
 export default function Start() {
-  
+ 
+
   
   return (
     <div className={Styles.container}>

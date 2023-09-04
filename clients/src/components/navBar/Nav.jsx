@@ -9,23 +9,26 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LogOut from '../Login/LogOut'
 import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
+import { createUser } from '../../Redux/actions/actions'
+
 
 
 export default function Nav() {
-  const { isAuthenticated } = useAuth0()
-  let name = useSelector( state => state.product_name[0])
   let dispatch = useDispatch()
-  //dropdown para logout profile
-    const [showMenu, setShowMenu] = useState(false);
- 
 
-    const handleMouseEnter = () => {
-      setShowMenu(true);
-    };
-    
-    const handleMouseLeave = () => {
-      setShowMenu(false);
-    };
+  const {user, isAuthenticated } = useAuth0()
+  const userLog = useSelector(state => state.user)
+
+  useEffect(()=>{
+
+    if(user && user.name !== userLog.name && isAuthenticated){
+    dispatch(createUser(user.name, user.email))
+  }
+  },[user])
+
+  
+  let name = useSelector( state => state.product_name[0])
+ 
 //buscar por nombre redux
     let [inputSearch, setInputSearch] = useState('')
 //para buscar con enter 
@@ -47,6 +50,7 @@ function handleKeyDown(e) {
     console.log('asd');
   }
 }
+
   return (
     <div className={Styles.wrapper}>
       <div className={`${Styles.col_5}`}>
@@ -71,15 +75,7 @@ function handleKeyDown(e) {
                 Products
               </button>
             </NavLink>
-            {/* <div className={`${Styles.dropdownMenu}`}>
-              <div className={Styles.dropdownHeader}>Discos Duros</div>
-              <a href="#" className={Styles.dropdownItem}>
-                SSD
-              </a>
-              <a href="#" className={Styles.dropdownItem}>
-                Rígido
-              </a>
-            </div> */}
+           
           </div>
         </div>
         <div className={` ${Styles.col_1}`}>
@@ -106,7 +102,7 @@ function handleKeyDown(e) {
             onChange={handleSearch}
             
             />
-          <NavLink to={`/products`}>
+          <NavLink to={`/products/search`}>
           <button
           className={`${Styles.searchButton}`}
           onClick={dispatchSearch}
@@ -130,20 +126,9 @@ function handleKeyDown(e) {
                 </button>
               </div>
             ) : (
-              <div className={Styles.div_auth} onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}>
+              <div className={Styles.div_auth} >
                 <Profile />
-                 {
-                 showMenu && (
-                  <div className={Styles.drop_user}>
-                    
-                      <LogOut className={Styles.btn_logout} />
-                      <p>Option</p>
-                      <p>Option</p>
-                      <p>Option</p>
-                  </div>
-                 )
-                 }
+                 
               
               </div>
                 )

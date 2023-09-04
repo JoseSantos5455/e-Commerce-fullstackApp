@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import Styles from './Profile.module.css'
 import { Link } from "react-router-dom";
-
+import { NavLink } from 'react-router-dom'
+import LogOut from "./LogOut";
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
@@ -10,11 +11,25 @@ const Profile = () => {
     return <div>Loading ...</div>;
   }
 
+ //dropdown para logout profile
+    const [showMenu, setShowMenu] = useState(false);
+ 
+
+    const handleMouseEnter = () => {
+      setShowMenu(true);
+    };
+    
+    const handleMouseLeave = () => {
+      setShowMenu(false);
+    };
+
+
   return (
     
-      <div>
+      <div onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
        
-          <Link to={'/user'} className={Styles.no_deco}>
+          { !showMenu &&  (<Link to={'/user'} className={Styles.no_deco}>
 
           <div className={Styles.div_user}>
 
@@ -24,8 +39,27 @@ const Profile = () => {
             
              <p className={Styles.p_user_name}>{user.given_name}</p>
           </div>
-             </Link>
-        
+             </Link>)}
+        {
+                 showMenu && (
+                  <div className={Styles.drop_user}>
+                  <img src={user.picture}
+                    alt={user.name}
+                     className={Styles.img_profile} />
+
+                      <p>My profile</p>
+                      <NavLink to='/login' className={Styles.link_complete_profile}  >
+                        <p>
+                        complete profile
+                        </p>
+                      </NavLink>
+                      <p>
+                        <LogOut/>
+                      </p>
+                      
+                  </div>
+                 )
+                 }
         
       </div>
     

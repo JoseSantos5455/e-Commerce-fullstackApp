@@ -1,7 +1,6 @@
 const { Order, User, Product, orderDetail } = require('../../db.js');
 
-const ordersFormatted = (orders)=>{
-  const ordersWithFormat = orders.map((order)=>{
+const ordersFormatted = (order)=>{
     return ({
             id:order.id,
             user:order.User.dataValues.userFullName,
@@ -16,18 +15,11 @@ const ordersFormatted = (orders)=>{
                               subTotal:orderDetail.subTotal,
                               });
                         }),
-          });});
-  return ordersWithFormat;        
+          });
 };
 
-const getAllOrdersController = async (status,userId,page,size) => {
-  const whereConditions = {};
-  if (['confirmed','delivered','canceled'].includes(status)) whereConditions.status = status;
-  if (userId) whereConditions.userId = userId;
-  const orderList = await Order.findAndCountAll({
-    limit:size,
-    offset:page * size,
-    where: whereConditions,
+const getOrderByIdController = async (id) => {
+  const order = await Order.findByPk(id, {
     include: [
       {model: User,
         attributes: [
@@ -44,8 +36,8 @@ const getAllOrdersController = async (status,userId,page,size) => {
     ],
   });
 
-  return ordersFormatted(orderList.rows); 
+  return ordersFormatted(order); 
 };
 
-module.exports = getAllOrdersController;
+module.exports = getOrderByIdController;
 
