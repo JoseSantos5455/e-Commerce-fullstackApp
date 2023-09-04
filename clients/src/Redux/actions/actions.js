@@ -114,6 +114,21 @@ export const getDetail = (id)=>{
     }
 }
 
+export function getBrands() {
+    return async (dispatch) => {
+        let endpoint = `http://localhost:3001/brands`
+        try {
+            const response = await axios(endpoint)
+            let data = response.data
+            dispatch({
+                type: GET_BRANDS,
+                payload: data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
 
 export function filterByGenres(filters) {
     return async (dispatch) => {
