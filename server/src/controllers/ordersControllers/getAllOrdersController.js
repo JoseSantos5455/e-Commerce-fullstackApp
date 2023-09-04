@@ -20,11 +20,13 @@ const ordersFormatted = (orders)=>{
   return ordersWithFormat;        
 };
 
-const getAllOrdersController = async (status,userId) => {
+const getAllOrdersController = async (status,userId,page,size) => {
   const whereConditions = {};
   if (['confirmed','delivered','canceled'].includes(status)) whereConditions.status = status;
   if (userId) whereConditions.userId = userId;
-  const orderList = await Order.findAll({
+  const orderList = await Order.findAndCountAll({
+    limit:size,
+    offset:page * size,
     where: whereConditions,
     include: [
       {model: User,
@@ -42,7 +44,7 @@ const getAllOrdersController = async (status,userId) => {
     ],
   });
 
-  return ordersFormatted(orderList); 
+  return ordersFormatted(orderList.rows); 
 };
 
 module.exports = getAllOrdersController;
