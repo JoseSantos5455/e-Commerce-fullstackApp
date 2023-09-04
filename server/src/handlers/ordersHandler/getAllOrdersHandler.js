@@ -1,9 +1,9 @@
 const getAllOrdersController = require('../../controllers/ordersControllers/getAllOrdersController.js');
 
 const getAllOrdersHandler = async(req,res)=>{
-    const {status} = req.query;
+    const {status,userId} = req.query;
     try {
-        const result = await getAllOrdersController(status);
+        const result = await getAllOrdersController(status,userId);
         res.status(200).json(result);
     } 
     catch (error) {

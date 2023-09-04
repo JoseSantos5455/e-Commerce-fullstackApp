@@ -1,19 +1,49 @@
-const { Order, User,Product } = require('../../db.js');
+const { Order, User, Product, orderDetail } = require('../../db.js');
 
-const getAllOrdersController = async (status) => {
+const ordersFormatted = (orders)=>{
+  const ordersWithFormat = orders.map((order)=>{
+    return ({
+            id:order.id,
+            user:order.User.dataValues.userFullName,
+            orderDate:order.orderDate,
+            status:order.status,
+            total:order.total,
+            deliveredDate:order.deliveredDate,
+            orderDetails:order.orderDetails.map(orderDetail=>{
+                        return({
+                              product:orderDetail.Product.name,
+                              quantity:orderDetail.quantity,
+                              subTotal:orderDetail.subTotal,
+                              });
+                        }),
+          });});
+  return ordersWithFormat;        
+};
+
+const getAllOrdersController = async (status,userId) => {
   const whereConditions = {};
-  if (status) whereConditions.status = status; 
+  if (['confirmed','delivered','canceled'].includes(status)) whereConditions.status = status;
+  if (userId) whereConditions.userId = userId;
+  const orderList = await Order.findAll({
+    where: whereConditions,
+    include: [
+      {model: User,
+        attributes: [
+          [User.sequelize.literal(`"User"."name" || ' ' || "User"."lastName"`), 'userFullName'],
+        ],
+      },
+      {model: orderDetail,
+        attributes: ['quantity', 'subTotal'],
+        include: [
+                  {model: Product,
+                  attributes: ['name'],
+                  },],
+      },
+    ],
+  });
 
-  const orders = await Order.findAll({
-     where: whereConditions,
-     include: [
-                {model: Product,
-                attributes: ['name'],
-                through: {attributes: ['ProductId']},
-                },
-            ],
-    });
-  return orders;
+  return ordersFormatted(orderList); 
 };
 
 module.exports = getAllOrdersController;
+

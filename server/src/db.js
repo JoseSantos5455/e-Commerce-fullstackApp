@@ -32,7 +32,10 @@ User.hasMany(Order,{foreignKey:'userId'});
 Order.belongsTo(User,{foreignKey:'userId'});
 Product.belongsToMany(Order, { through: 'orderDetail', foreignKey: 'productId' });
 Order.belongsToMany(Product, { through: 'orderDetail', foreignKey: 'orderId' });
-
+Order.hasMany(orderDetail,{foreignKey:'orderId'});
+orderDetail.belongsTo(Order,{foreignKey:'orderId'});
+Product.hasMany(orderDetail,{foreignKey:'productId'});
+orderDetail.belongsTo(Product,{foreignKey:'productId'});
 
 module.exports = {...sequelize.models,
                     conn:sequelize}
