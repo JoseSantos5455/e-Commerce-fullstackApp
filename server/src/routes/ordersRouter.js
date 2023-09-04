@@ -3,7 +3,7 @@ const getAllOrdersHandler = require('../handlers/ordersHandler/getAllOrdersHandl
 const getOrderByIdHandler = require('../handlers/ordersHandler/getOrderByIdHandler.js');
 const createOrderHandler = require('../handlers/ordersHandler/createOrderHandler.js');
 const putStateOrderHandler = require('../handlers/ordersHandler/putStateOrderHandler.js');
-const deleteOrderHandler = require('../handlers/ordersHandler/deleteOrderHandler.js');
+const cancelOrderHandler = require('../handlers/ordersHandler/cancelOrderHandler.js');
 
 const ordersRouter = Router();
 
@@ -11,7 +11,7 @@ ordersRouter.get('/',getAllOrdersHandler);
 ordersRouter.get('/:id',getOrderByIdHandler); 
 ordersRouter.post('/:userId',createOrderHandler);
 ordersRouter.put('/:id',putStateOrderHandler);
-// ordersRouter.delete('/:id',deleteOrderHandler); 
+ordersRouter.delete('/:id',cancelOrderHandler); 
 
 
 module.exports = ordersRouter;
