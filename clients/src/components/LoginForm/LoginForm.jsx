@@ -72,7 +72,7 @@ export default function LoginForm() {
                     onChange={handleChange} />
                 </div>
                 <div className="">
-                <label htmlFor="zip">Departament N°</label>
+                <label htmlFor="zip">Apartment N°</label>
                 <input type="number" name='department' placeholder='Departament or Stage'
                 onChange={handleChange} />
                 </div>

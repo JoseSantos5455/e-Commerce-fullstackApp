@@ -1,11 +1,11 @@
 const createOrderController = require('../../controllers/ordersControllers/createOrderController.js');  
 
 const createOrderHandler = async (req,res) =>{
-    const {quantity,productId}=req.body;
+    const {productIds}=req.body;
     const {userId} = req.params;
 
     try {
-        const result = await createOrderController(userId,productId,quantity);
+        const result = await createOrderController(userId,productIds);
         res.status(200).json(result);    
     } 
     catch (error) {

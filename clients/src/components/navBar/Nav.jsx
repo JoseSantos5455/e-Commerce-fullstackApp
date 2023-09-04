@@ -10,11 +10,16 @@ import LogOut from '../Login/LogOut'
 import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
 import { createUser } from '../../Redux/actions/actions'
+<<<<<<< HEAD
 import shoppingcart from '../../images/shoppingcart.png'
+=======
+
+>>>>>>> fc36056e6423fa2def4444be95256f4db9e435d4
 
 
 export default function Nav() {
   let dispatch = useDispatch()
+<<<<<<< HEAD
 
   const {user, isAuthenticated } = useAuth0()
   const userLog = useSelector(state => state.user)
@@ -31,14 +36,22 @@ export default function Nav() {
   //dropdown para logout profile
     const [showMenu, setShowMenu] = useState(false);
  
+=======
+>>>>>>> fc36056e6423fa2def4444be95256f4db9e435d4
 
-    const handleMouseEnter = () => {
-      setShowMenu(true);
-    };
-    
-    const handleMouseLeave = () => {
-      setShowMenu(false);
-    };
+  const {user, isAuthenticated } = useAuth0()
+  const userLog = useSelector(state => state.user)
+
+  useEffect(()=>{
+
+    if(user && user.name !== userLog.name && isAuthenticated){
+    dispatch(createUser(user.name, user.email))
+  }
+  },[user])
+
+  
+  let name = useSelector( state => state.product_name[0])
+ 
 //buscar por nombre redux
     let [inputSearch, setInputSearch] = useState('')
 //para buscar con enter 
@@ -85,15 +98,7 @@ function handleKeyDown(e) {
                 Products
               </button>
             </NavLink>
-            {/* <div className={`${Styles.dropdownMenu}`}>
-              <div className={Styles.dropdownHeader}>Discos Duros</div>
-              <a href="#" className={Styles.dropdownItem}>
-                SSD
-              </a>
-              <a href="#" className={Styles.dropdownItem}>
-                Rígido
-              </a>
-            </div> */}
+           
           </div>
         </div>
         <div className={` ${Styles.col_1}`}>
@@ -149,8 +154,7 @@ function handleKeyDown(e) {
                 </button>
               </div>
             ) : (
-              <div className={Styles.div_auth} onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}>
+              <div className={Styles.div_auth} >
                 <Profile />
                  {
                  showMenu && (
