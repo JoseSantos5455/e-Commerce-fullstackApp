@@ -10,7 +10,7 @@ const ordersRouter = Router();
 ordersRouter.get('/',getAllOrdersHandler); 
 ordersRouter.get('/:id',getOrderByIdHandler); 
 ordersRouter.post('/:userId',createOrderHandler);
-// ordersRouter.put('/:id',putStateOrderHandler);
+ordersRouter.put('/:id',putStateOrderHandler);
 // ordersRouter.delete('/:id',deleteOrderHandler); 
 
 
