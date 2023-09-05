@@ -35,8 +35,8 @@
 
 .col_3,
 .col_4 {
-  width: 30%;
-  text-align: center;
+  width: 20%;
+  text-align: end;
 }
 
 .background {
@@ -97,15 +97,13 @@
   text-decoration: none;
   color: black;
 }
-.container_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .form_search{
   display: flex;
+  width: 150%;
 }
 .searchInput {
+  min-width: 180px;
   border: none;
   background-color: rgba(217, 217, 217, 0.69);
   font-weight: 600;
