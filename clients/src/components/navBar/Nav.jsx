@@ -121,9 +121,7 @@ function handleKeyDown(e) {
               <div className={Styles.div_not_auth}>
 
                <LogInButton/>
-                <button className={`${Styles.actionButton} ${Styles.create}`}>
-                Sign Up
-                </button>
+                
               </div>
             ) : (
               <div className={Styles.div_auth} >
