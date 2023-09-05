@@ -9,5 +9,8 @@ export const GET_NAM = "GET_NAME"
 export const POST_PAGO = "POST_PAGO"
 export const POST_USER = "CREATE_USER_SUCCESS"
 export const UPD_USER = "UPDATE_SUCCESS"
+export const ADD_TO_CART = "ADD_TO_CART"
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
+export const CLEAR_CART = "CLEAR_CART"
 
 
