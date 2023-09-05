@@ -1,4 +1,16 @@
 const { Order, Product, User } = require('../../db.js');
+const transporter = require('../../utils/mailer.js');
+
+const sendConfirmationByMail = async (email,name,orderId)=>{
+    const info = await transporter.sendMail({
+        from: 'dLujo <dlujoshopstotr@gmail.com>', // sender address
+        to: email,
+        subject: "Order confirmed ✔", 
+        html: `<b>Hello dear ${name}, your purchase is confirmed, order number: ${orderId}</b>`, // html body
+      });
+    
+    return info;  
+};
 
 const createOrderController = async (userId, productIds) => {
     const user = await User.findByPk(userId);
@@ -30,7 +42,7 @@ const createOrderController = async (userId, productIds) => {
                     }, 0);
 
     await newOrder.update({ total });
-
+    sendConfirmationByMail(user.email, user.name,newOrder.id);                 
     return newOrder;
 };
 
