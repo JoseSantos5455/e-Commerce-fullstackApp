@@ -1,7 +1,5 @@
 import Styles from './Info.module.css'
-
-// eslint-disable-next-line react/prop-types
-
+import Rating from '../Rating/Rating'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
@@ -12,6 +10,7 @@ import {
   AiOutlineMinusCircle,
 } from 'react-icons/ai'
 
+// eslint-disable-next-line react/prop-types
 
 export default function Info({id,name, description,stock,price}) {
 
@@ -74,7 +73,8 @@ export default function Info({id,name, description,stock,price}) {
     <div className={Styles.wrapper}>
       <h3 className={Styles.pdt_name}>{name} </h3>
       <p className={Styles.pdt_description}>{description}</p>
-      <p className={Styles.pdt_stock}>stock: {stock}</p>
+      <div><Rating valoration={valoration}></Rating></div>
+      <p className={Styles.pdt_stock}>Stock: {stock}</p>
       <p className={Styles.pdt_price}>${price}</p>
       {/* <button className={Styles.btn_buy}>Buy now</button> */}
       <div className={Styles.div_input}>

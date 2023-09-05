@@ -5,9 +5,9 @@ const updateProductReviewByUserHandler = require ('../handlers/reviewsHandlers/u
 const deleteProductReviewByUserHandler = require ('../handlers/reviewsHandlers/deleteProductReviewByUserHandler.js');
 const reviewRouter = Router();
 
-reviewRouter.get('/:productId',getProductReviewsHandler);//id corresponde a producto
-reviewRouter.post('/:productId',postProductReviewByUserHandler);//id de user pasado por query
-reviewRouter.put('/:productId',updateProductReviewByUserHandler);//id de user pasado por query
-reviewRouter.delete('/:productId',deleteProductReviewByUserHandler);//id de user pasado por query
+reviewRouter.get('/:productId',getProductReviewsHandler);
+reviewRouter.post('/:orderId',postProductReviewByUserHandler);
+reviewRouter.put('/:reviewId',updateProductReviewByUserHandler);
+reviewRouter.delete('/:reviewId',deleteProductReviewByUserHandler);
 
 module.exports = reviewRouter;

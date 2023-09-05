@@ -180,10 +180,17 @@ export const createUser = (name, email, adress_st, adress_num, department, zip) 
         }
     };
 };
+<<<<<<< HEAD
 export const updateUser = (id, adress_st, country, adress_num, department, zip) => {
     return async (dispatch) => {
         try {
             console.log('submitesdaa')
+=======
+export const updateUser = (id,  adress_st, country, adress_num, department, zip) => {
+  return async (dispatch) => {
+    try {
+      console.log('action update user')
+>>>>>>> cd7264054b30424fee2f5d15dfc01943bfeede9a
 
             const requestData = { id, adress_st, country, adress_num, department, zip };
 
