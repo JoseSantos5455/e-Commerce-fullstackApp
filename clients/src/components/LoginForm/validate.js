@@ -10,17 +10,17 @@ export default function validate (input){
         errors.country = 'Enter a valid country';
       }
 
-    if(!input.adress_st ){
-        errors.adress_st = 'Add a valid adress'
+    if(input.adress_st === null ){
+        errors.adress_st = 'Invalid street name'
       }
-      if(typeof input.adress_st !== 'string' ){
+      else if(typeof input.adress_st !== 'string' ){
         errors.adress_st = 'Can not contain special characters'
       }
     if(!input.adress_num){
         errors.adress_num = 'Add a valid adress number'
       }
       if(typeof input.adress_num != 'string'){
-          errors.adress_num = 'Adress Must be a number'
+          errors.adress_num = 'Must be a number'
         }
     if(!input.department){
         errors.department = 'Add a valid apartment number or 0'
@@ -37,11 +37,9 @@ export default function validate (input){
       if(typeof input.zip !== 'string'){
           errors.zip = 'ZIP Must be a number'
         }
-        else if (input.zip.length > 3) {
-            errors.zip = 'Add a valid zip number';
+        else if (!/^\d{3,5}$/.test(input.zip)) {
+         errors.zip = 'Add a valid zip number';  
           }
-    
-      
       
       return errors;
 }

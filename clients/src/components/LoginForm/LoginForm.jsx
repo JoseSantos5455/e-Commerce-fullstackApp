@@ -23,15 +23,15 @@ export default function LoginForm() {
    let handleChange = (e)=>{
     const { name, value} = e.target; 
     const validationErrors = validate(user); 
-
-          setUser(
-        {
+    
+    setUser(
+      {
         ...user,
-       [ name]: value,
-    }
-    )
-  
-    console.log(errors)
+        [ name]: value,
+      }
+      )
+      
+      console.log(errors)
    }
 
    let submitForm = (e) => {
@@ -54,7 +54,7 @@ export default function LoginForm() {
        
       setErrors(validationErrors);
 
-      alert('Por favor, corrija los errores en el formulario.');
+      alert('Please, correct the errors in the form.');
     }
   };
 
@@ -89,7 +89,11 @@ export default function LoginForm() {
 
                 <input type="text"
                  name='adress_st'
-                 placeholder='St: Evergreen Av.'
+                 placeholder={errors.adress_num ? (
+                  `${errors.adress_st}`
+                  ):('St: Evergreen Av.')}
+                 
+                 
                    />
               </div>
               <div className="number">
