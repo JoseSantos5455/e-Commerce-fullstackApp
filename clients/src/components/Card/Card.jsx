@@ -24,7 +24,7 @@ Card.propTypes = {
   id: PropTypes.string.isRequired,
 }
 
-export default function Card({ aviability, valoration, img, name, price, id }) {
+export default function Card({ aviability, valoration, img, name, price, id,stock }) {
   const cldInstance = new Cloudinary({cloud: {cloudName: 'dckiqiqjl'}});
 
   const dispatch = useDispatch()
@@ -50,10 +50,11 @@ export default function Card({ aviability, valoration, img, name, price, id }) {
 
 
   const handleMoreQ = () => {
-    setBuyQ(buyQ + 1)
-    if (productInCart){
-      dispatch(setQuantity({id, buyQ : buyQ+1}))
-      console.log("a");
+    if (stock > buyQ) {
+      setBuyQ(buyQ + 1)
+      if (productInCart) {
+        dispatch(setQuantity({ id, buyQ: buyQ + 1 }))
+      }
     }
   }
 
