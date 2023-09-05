@@ -12,7 +12,11 @@
   "dependencies": {
     "@auth0/auth0-react": "^2.2.1",
     "@cloudinary/url-gen": "^1.11.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mercadopago/sdk-react": "^0.0.14",
+    "@mui/icons-material": "^5.14.7",
+    "@mui/material": "^5.14.7",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "prop-types": "^15.8.1",

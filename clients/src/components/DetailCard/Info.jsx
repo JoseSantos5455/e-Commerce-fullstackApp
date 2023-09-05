@@ -1,7 +1,9 @@
 import Styles from './Info.module.css'
+import Rating from '../Rating/Rating'
 
 // eslint-disable-next-line react/prop-types
 
+export default function Info({name, description, price, valoration, stock,}) {
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
@@ -64,7 +66,8 @@ export default function Info({cart,id,name, description,stock,price}) {
     <div className={Styles.wrapper}>
       <h3 className={Styles.pdt_name}>{name} </h3>
       <p className={Styles.pdt_description}>{description}</p>
-      <p className={Styles.pdt_stock}>stock: {stock}</p>
+      <div><Rating valoration={valoration}></Rating></div>
+      <p className={Styles.pdt_stock}>Stock: {stock}</p>
       <p className={Styles.pdt_price}>${price}</p>
       {/* <button className={Styles.btn_buy}>Buy now</button> */}
       <div className={Styles.div_input}>

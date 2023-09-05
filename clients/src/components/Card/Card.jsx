@@ -1,5 +1,6 @@
 import {Cloudinary} from "@cloudinary/url-gen";
 import GalleryProduct from "./GalleryProduct";
+import Rating from "../Rating/Rating";
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Styles from './Card.module.css'
@@ -16,13 +17,14 @@ import { addToCart, removeFromCart } from '../../Redux/actions/actions'
 
 Card.propTypes = {
   aviability: PropTypes.bool.isRequired,
+  valoration: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   id: PropTypes.string.isRequired,
 }
 
-export default function Card({ aviability, img, name, price, id }) {
+export default function Card({ aviability, valoration, img, name, price, id }) {
   const cldInstance = new Cloudinary({cloud: {cloudName: 'dckiqiqjl'}});
 
   const dispatch = useDispatch()
@@ -82,9 +84,14 @@ export default function Card({ aviability, img, name, price, id }) {
           <img className={Styles.img_product} src={myImage.toURL()} alt="Image product" />
         </NavLink>
       </div>
+      
       <div className={Styles.description_card}>
+
         <div className={Styles.price}>
-          <p>{name}</p>
+          <p className={Styles.name_card}>{name}</p>
+          <div>
+            <Rating valoration={valoration}></Rating>
+          </div>  
           <p className={Styles.price_number}>${price}</p>
         </div>
         <div className={Styles.add}>
