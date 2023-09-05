@@ -10,7 +10,7 @@
               "category": "RAM",
               "categoryid": 17,
               "marca": "Fury",
-              "image": "https://http2.mlstatic.com/D_NQ_NP_667453-MLA50418240420_062022-O.webp"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/1_Ram_fury.webp?alt=media&token=d04d7596-48b1-4264-8aa5-e99570dbd36b"
           },
           {
               "name": "ATX Motherboard M-550",
@@ -21,7 +21,7 @@
               "category": "Motherboard",
               "categoryid": 16,
               "marca": "ATX",
-              "image": "https://www.asus.com/media/global/products/rwed1stzwbm96li3/P_setting_xxx_0_90_end_500.png"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/2_ATX%20Motherboard%20M-550.png?alt=media&token=3646400b-6db4-4dc3-bdcb-45233ff7afda"
           },
           {
               "name": "CPU Cooler CoolerMaster V-10",
@@ -32,7 +32,7 @@
               "category": "Cooling",
               "categoryid": 10,
               "marca": "CoolerMaster",
-              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS750IYEe_DP6EqmSdBz3zKr-Wxyx_xtHizOw&usqp=CAU"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/3_CPU%20Cooler%20CoolerMaster%20V-10.jpeg?alt=media&token=8d1259a4-b66a-4489-ad3f-669a82d21781"
           },
           {
               "name": "NVMe SSD - 1TB",
@@ -43,7 +43,7 @@
               "category": "Storage",
               "categoryid": 11,
               "marca": "Gigabyte",
-              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCS-P_TLJYyiiHgAc6AfSvnRZNf4NxRiQNWg&usqp=CAU"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/4_NVMe%20SSD%20-%201TB.jpeg?alt=media&token=8a1c3d0b-dc82-4fdb-8891-1e5084db0c68"
           },
           {
               "name": "Graphics Card GTX-3080",
@@ -54,7 +54,7 @@
               "category": "Graphics Card",
               "categoryid": 4,
               "marca": "Nvidia",
-              "image": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/images/design/geforce-rtx-3080-4-960.jpg"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/5_Graphics%20Card%20GTX-3080.jpg?alt=media&token=ce8b5bb8-8d72-46b6-8767-b824d43d3e3d"
           },
           {
               "name": "Power Supply Unit PSU-750W",
@@ -65,7 +65,7 @@
               "category": "Power Supply",
               "categoryid": 15,
               "marca": "Strix",
-              "image": "https://dlcdnwebimgs.asus.com/gain/14422411-D938-4125-A9EC-EA950F4BEB2E/w717/h525"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/6_Power%20Supply%20Unit%20PSU-750W.png?alt=media&token=ed828446-f58a-4165-9904-984a0450a4af"
           },
           {
               "name": "Mechanical Gaming Keyboard MX-700",
@@ -76,7 +76,7 @@
               "category": "Keyboard",
               "categoryid": 14,
               "marca": "Logitech",
-              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlcvRJTLMEQb3NnAk_nICeGN04EUISCt68nLpQDGXmjuUNPGoiVJ-9s4Cjra-_OE1pAiE&usqp=CAU"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/7_Mechanical%20Gaming%20Keyboard%20MX-700.jpeg?alt=media&token=99f9b8cb-1fc5-448b-86ed-95faaeb5805b"
           },
           {
               "name": "Ultrawide Monitor Philips",
@@ -87,7 +87,7 @@
               "category": "Monitor",
               "categoryid": 13,
               "marca": "Philips",
-              "image": "https://images.philips.com/is/image/PhilipsConsumer/343E2E_55-IMS-es_AR?wid=420&hei=360&$jpglarge$"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/8_Ultrawide%20Monitor%20Philips.webp?alt=media&token=f2a17e1e-4edb-4d09-abb8-848694b8308e"
           },
           {
               "name": "Wireless Gaming Mouse G-700",
@@ -98,7 +98,7 @@
               "category": "Mouse",
               "categoryid": 6,
               "marca": "Logitech",
-              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfD1ZGWryn1tdK2-w7V8RpiuU1qxmQvewbPFELOLAT4I_UzDd6FC36aMGRHDWe0TLRs30&usqp=CAU"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/9_Wireless%20Gaming%20Mouse%20G-700.jpeg?alt=media&token=261c49d1-96bc-4eaa-971f-c1e732e6b6ef"
           },
           {
               "name": "Micro ATX Case C-200",
@@ -109,7 +109,7 @@
               "category": "Case",
               "categoryid": 12,
               "marca": "Game Factor",
-              "image": "https://m.media-amazon.com/images/I/71oC-+srxzL._AC_UF894,1000_QL80_.jpg"
+              "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/10_Micro%20ATX%20Case%20C-200.jpg?alt=media&token=d3127972-7845-4aff-8559-4683334ebcc9"
           },
           {
                "name": "Liquid CPU Cooler LC-240",
@@ -120,7 +120,7 @@
                "category": "Cooling",
                "categoryid": 10,
               "marca": "ASUS",
-               "image": "https://m.media-amazon.com/images/I/61adFDT90GL.jpg"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/11_Liquid%20CPU%20Cooler%20LC-240.jpg?alt=media&token=c2668a79-01e7-4cd9-8551-adc914aa2517"
           },
            {
                "name": "SATA SSD - 500GB",
@@ -131,9 +131,8 @@
                "category": "Storage",
                "categoryid": 11,
               "marca": "Samsung",
-               "image": "https://www.redinfo.com.ar/web/image/product.template/24705/image"
-           },
-           
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/12_SATA%20SSD%20-%20500GB.jpeg?alt=media&token=3db73fa6-0ff6-4c18-9d1e-a67d32af4e19"
+           },           
            {
                "name": "Wi-Fi 6 Router R-AX600",
                "price": "149.00",
@@ -143,7 +142,7 @@
                "category": "Routers",
                "categoryid": 9,
               "marca": "TP-Link",
-               "image": "https://storage-asset.msi.com/global/picture/news/2023/wifi/gaming-router-20230314-1.jpg"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/13_Wi-Fi%206%20Router%20R-AX600.jpg?alt=media&token=5eeaf0ee-95da-4a30-b70d-07a968271404"
            },
            {
                "name": "Mechanical Gaming Mousepad MP-300",
@@ -154,7 +153,7 @@
                "category": "Accessories",
                "categoryid": 7,
               "marca": "EFISH",
-               "image": "https://m.media-amazon.com/images/I/61zUwGDRO4L.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/14_Mechanical%20Gaming%20Mousepad%20MP-300.webp?alt=media&token=b7a8e51d-6bb3-4173-9a1b-82eb21a67d63"
            },
            {
                "name": "USB-C Charging Hub H-400",
@@ -165,7 +164,7 @@
                "category": "Accessories",
                "categoryid": 7,
               "marca": "TOTU",
-               "image": "https://m.media-amazon.com/images/I/71gnGTQc2GL._AC_UF894,1000_QL80_.jpg"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/15_USB-C%20Charging%20Hub%20H-400.jpg?alt=media&token=fa16d7a9-a292-491f-9fc8-c2a394ae5a37"
            },
            {
                "name": "Ultra-Quiet Case Fan AF-140",
@@ -176,7 +175,7 @@
                "category": "Cooling",
                "categoryid": 10,
               "marca": "Noctua",
-               "image": "https://m.media-amazon.com/images/I/81QZ4VI-nvL._AC_SX679_.jpg"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/16_Ultra-Quiet%20Case%20Fan%20AF-140.jpg?alt=media&token=3bb9551c-4a88-4dba-b080-399ec2f9e7f4"
           },
            {
                "name": "USB-C to Ethernet Adapter A-400",
@@ -187,7 +186,7 @@
                "category": "Others",
                "categoryid": 17,
               "marca": "ABLEWE ",
-               "image": "https://m.media-amazon.com/images/I/61OV94+ahvL._AC_SX679_.jpg"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/17_USB-C%20to%20Ethernet%20Adapter%20A-400.jpg?alt=media&token=a6f936f3-83ec-4638-a565-356e2b8f4e74"
            },
            {
                "name": "RGB Gaming Chair Cushion C-100",
@@ -198,7 +197,7 @@
                "category": "Furniture",
                "categoryid": 8,
               "marca": "AutoFull",
-               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUDLPNVxIbCCUduoMLe5jVm6thJZ5RC6dipw&usqp=CAU"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/18_RGB%20Gaming%20Chair%20Cushion%20C-100.jpeg?alt=media&token=1c28c63f-5b1c-410e-816d-25107f65df86"
            },
            {
                "name": "Wireless Vertical Mouse M-300",
@@ -209,7 +208,7 @@
                "category": "Mouse",
                "categoryid": 6,
               "marca": "Logitech",
-               "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa6AT_4rmBMed4ufpNuVIGGFwWG0Pio4jjVw&usqp=CAU"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/19_Wireless%20Vertical%20Mouse%20M-300.jpeg?alt=media&token=9e1ed927-f9b7-4f14-bc27-6ee83a18ec20"
            },
            {
                "name": "Anti-Fatigue Standing Desk Mat M-100",
@@ -220,7 +219,7 @@
                "category": "Others",
                "categoryid": 5,
               "marca": "Logitech",
-               "image": "https://ergonofis.com/cdn/shop/products/Sway_Maple_Noir_1100x.png?v=1648504900"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/20_Anti-Fatigue%20Standing%20Desk%20Mat%20M-100.webp?alt=media&token=68ffe263-33fe-457d-9577-e050c3397520"
            },
            {
                "name": "RGB GPU Support Bracket B-200",
@@ -231,7 +230,7 @@
                "category": "Graphics Card",
                "categoryid": 4,
               "marca": "Nvidia",
-               "image": "https://m.media-amazon.com/images/I/616bVfHrjYS.jpg"
+               "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/21_RGB%20GPU%20Support%20Bracket%20B-200.jpg?alt=media&token=2cde440c-093d-4d59-b3a6-90439d577d7c"
            },
            {
                 "name": "Wireless Gaming Headset H-800",
@@ -242,7 +241,7 @@
                 "category": "Audio",
                 "categoryid": 18,
               "marca": "Razer",
-                "image": "https://m.media-amazon.com/images/I/71bz1x24XLL._AC_SX522_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/22_Wireless%20Gaming%20Headset%20H-800.jpg?alt=media&token=764770b2-a0e8-49ac-bc36-8c3a569960da"
             },
             {
                 "name": "External Graphics Enclosure EG-550",
@@ -253,7 +252,7 @@
                 "category": "Graphics Card",
                 "categoryid": 4,
               "marca": "Nvidia",
-                "image": "https://m.media-amazon.com/images/I/81QGxHK8m6L._AC_UF1000,1000_QL80_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/23_External%20Graphics%20Enclosure%20EG-550.jpg?alt=media&token=48d18b48-a6ec-4aa6-9d97-7f66b434231f"
             },
             {
                 "name": "Mechanical Numpad NP-20",
@@ -264,7 +263,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/71j88memFML._AC_SX679_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/24_Mechanical%20Numpad%20NP-20.jpg?alt=media&token=03d8566d-24fe-4bdd-8306-44d4e73c0f8c"
             },
             {
                 "name": "Wi-Fi 6 PCIe Card W-600",
@@ -275,7 +274,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "EOUP",
-                "image": "https://m.media-amazon.com/images/I/71PJMcjgCHL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/25_Wi-Fi%206%20PCIe%20Card%20W-600.webp?alt=media&token=8006e556-6ab9-455f-939f-d2582878c02c"
             },
             {
                 "name": "Ultra Silent Case Fans SF-120",
@@ -286,7 +285,7 @@
                 "category": "Cooling",
                 "categoryid": 10,
               "marca": "Game Factor",
-                "image": "https://m.media-amazon.com/images/I/81ZUUX5VZsL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/26_Ultra%20Silent%20Case%20Fans%20SF-120.webp?alt=media&token=0dfb067e-77a4-43bd-8777-493e953f5373"
             },
             {
                 "name": "Gaming Mousepad MP-800",
@@ -297,7 +296,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/71wFe1Hec6L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/27_Gaming%20Mousepad%20MP-800.webp?alt=media&token=4fe0bf59-f9da-43d3-9be1-490a7b4854f8"
             },
             {
                 "name": "144Hz Gaming Monitor G-27",
@@ -308,7 +307,7 @@
                 "category": "Monitor",
                 "categoryid": 13,
               "marca": "Samsung",
-                "image": "https://m.media-amazon.com/images/I/810ZonthJyL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/28_144Hz%20Gaming%20Monitor%20G-27.webp?alt=media&token=dda1e371-2978-4f7c-ac0e-cc45a26b8b05"
             },
             {
                 "name": "RGB LED Strip Kit L-300",
@@ -319,7 +318,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "Micomlan",
-                "image": "https://m.media-amazon.com/images/I/71k+ptwjZgL._AC_SY300_SX300_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/29_RGB%20LED%20Strip%20Kit%20L-300.jpg?alt=media&token=ab18cba2-898f-4886-9ebf-0b9de71609db"
             },
             {
                 "name": "Ultra-Quiet Power Supply PSU-650W",
@@ -330,7 +329,7 @@
                 "category": "Power Supply",
                 "categoryid": 15,
               "marca": "LCPOWER",
-                "image": "https://m.media-amazon.com/images/I/71X0zQ0fW4L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/30_Ultra-Quiet%20Power%20Supply%20PSU-650W.webp?alt=media&token=ca4f54cc-8023-4da8-b293-31acc5f3dc8a"
             },
             {
                 "name": "RGB Gaming Chair C-800",
@@ -341,7 +340,7 @@
                 "category": "Furniture",
                 "categoryid": 8,
               "marca": "Ocelot",
-                "image": "https://m.media-amazon.com/images/I/71qET3tCHaL._AC_SX569_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/31_RGB%20Gaming%20Chair%20C-800.jpg?alt=media&token=ca5d462e-a268-45bd-9cc1-3aa024c5dcd2"
             },
             {
                 "name": "Wireless Bluetooth Adapter A-100",
@@ -352,7 +351,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "Lavales",
-                "image": "https://m.media-amazon.com/images/I/51fu8n4g9tL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/32_Wireless%20Bluetooth%20Adapter%20A-100.webp?alt=media&token=7a330909-5df9-4521-88e8-77eb2d433643"
             },
             {
                 "name": "120mm RGB Case Fan CF-120",
@@ -363,7 +362,7 @@
                 "category": "Cooling",
                 "categoryid": 10,
               "marca": "CoolerMaster",
-                "image": "https://m.media-amazon.com/images/I/71jANruAtXL._SX522_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/33_120mm%20RGB%20Case%20Fan%20CF-120.jpg?alt=media&token=082127c6-3ece-40b0-8956-3de2c95e41dc"
             },
             {
                 "name": "Mechanical Gaming Keypad KP-10",
@@ -374,7 +373,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/716l7xk8utL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/34_Mechanical%20Gaming%20Keypad%20KP-10.webp?alt=media&token=582bb0e8-b9a2-4c75-b569-602f60baa191"
             },
             {
                 "name": "USB 3.0 Hub H-10",
@@ -385,7 +384,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "Phixero",
-                "image": "https://m.media-amazon.com/images/I/715OTcL3kaL._AC_SX679_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/35_USB%203.0%20Hub%20H-10.jpg?alt=media&token=d06b591e-c32e-443d-84ac-86bb36734aa7"
             },
             {
                 "name": "DDR5 RAM Module - 32GB",
@@ -396,7 +395,7 @@
                 "category": "RAM",
                 "categoryid": 17,
               "marca": "Fury",
-                "image": "https://m.media-amazon.com/images/I/71AHErCysdL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/36_DDR5%20RAM%20Module%20-%2032GB.webp?alt=media&token=b8b3d53f-da57-4dc5-80b8-6526f97b2fc6"
             },
             {
                 "name": "Wireless Ergonomic Mouse M-900",
@@ -407,7 +406,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/61LVFPLX1AL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/37_Wireless%20Ergonomic%20Mouse%20M-900.webp?alt=media&token=04236898-5e21-4b06-bd66-c1da90830dd6"
             },
             {
                 "name": "M.2 NVMe SSD Enclosure E-200",
@@ -418,7 +417,7 @@
                 "category": "Storage",
                 "categoryid": 11,
               "marca": "Plot",
-                "image": "https://m.media-amazon.com/images/I/7134lDB2D5L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/38_M.2%20NVMe%20SSD%20Enclosure%20E-200.webp?alt=media&token=91eb7a53-9893-460b-8d93-34fb87647e70"
             },
             {
                 "name": "RGB Cable Extensions CE-30",
@@ -429,7 +428,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "SJZBIN",
-                "image": "https://m.media-amazon.com/images/I/61PadhcakcL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/39_RGB%20Cable%20Extensions%20CE-30.webp?alt=media&token=aca5f7b7-7ed1-4518-aebd-80d823454786"
             },
             {
                 "name": "External USB CD/DVD Drive D-300",
@@ -440,7 +439,7 @@
                 "category": "Storage",
                 "categoryid": 11,
               "marca": "Samsung",
-                "image": "https://m.media-amazon.com/images/I/610TZSoX2lL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/40_External%20USB%20CD%20DVD%20Drive%20D-300.webp?alt=media&token=64a2252a-e599-4654-a6f5-aec983e7b383"
             },
             {
                 "name": "120mm High Airflow Case Fan AF-120",
@@ -451,7 +450,7 @@
                 "category": "Cooling",
                 "categoryid": 10,
               "marca": "AirFan",
-                "image": "https://m.media-amazon.com/images/I/41lB3f8oadL._SY445_SX342_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/41_120mm%20High%20Airflow%20Case%20Fan%20AF-120.webp?alt=media&token=08aae0d0-f42e-42b3-b4e1-c0117a0747e8"
             },
             {
                 "name": "Gaming Desk GD-800",
@@ -462,7 +461,7 @@
                 "category": "Furniture",
                 "categoryid": 8,
               "marca": "Game Factor",
-                "image": "https://m.media-amazon.com/images/I/810ZRdkyuIL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/42_Gaming%20Desk%20GD-800.webp?alt=media&token=2d9af2d6-e268-4827-a63b-da7ec0d3f91d"
             },
             {
                 "name": "Dual-Band Wi-Fi Router R-AC200",
@@ -473,7 +472,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "TP-Link",
-                "image": "https://m.media-amazon.com/images/I/51kSjitehLL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/43_Dual-Band%20Wi-Fi%20Router%20R-AC200.webp?alt=media&token=d636de17-2332-47b3-91d0-4ed28acba61c"
             },
             {
                 "name": "Gaming Mouse Bungee MB-10",
@@ -484,7 +483,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/51KdIYkw0XL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/44_Gaming%20Mouse%20Bungee%20MB-10.webp?alt=media&token=7aae9c72-c1c8-46a8-9d2c-2174721ed344"
             },
             {
                 "name": "RGB CPU Cooler CC-240",
@@ -495,7 +494,7 @@
                 "category": "Cooling",
                 "categoryid": 10,
               "marca": "Game Factor",
-                "image": "https://m.media-amazon.com/images/I/71irWztV+qL._AC_SY300_SX300_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/45_RGB%20CPU%20Cooler%20CC-240.jpg?alt=media&token=c7ebedef-e795-4512-8fda-973de7e22688"
             },
             {
                 "name": "USB-C Docking Station D-500",
@@ -506,7 +505,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "UGREEN",
-                "image": "https://m.media-amazon.com/images/I/61r-1YVRJ+L._AC_SY300_SX300_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/46_USB-C%20Docking%20Station%20D-500.jpg?alt=media&token=6b95f84b-df0b-4ca9-beff-41916f0a91e7"
             },
             {
                 "name": "240Hz Gaming Monitor G-24X",
@@ -517,7 +516,7 @@
                 "category": "Monitor",
                 "categoryid": 13,
               "marca": "ROC",
-                "image": "https://m.media-amazon.com/images/I/810ZonthJyL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/47_240Hz%20Gaming%20Monitor%20G-24X.webp?alt=media&token=1641ee46-a4cf-4e59-a364-353d2084d114"
             },
             {
                 "name": "Wireless Mechanical Numpad NP-50",
@@ -528,7 +527,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/710GdzHFfrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/48_Wireless%20Mechanical%20Numpad%20NP-50.webp?alt=media&token=37a3b1b4-5a36-4662-94a5-0820acf8d8b9"
             },
             {
                 "name": "External USB 3.1 Gen 2 SSD - 1TB",
@@ -539,7 +538,7 @@
                 "category": "Storage",
                 "categoryid": 11,
               "marca": "Vecto Tech",
-                "image": "https://m.media-amazon.com/images/I/81tUk2PsZCL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/49_External%20USB%203.1%20Gen%202%20SSD%20-%201TB.webp?alt=media&token=3b5daeb7-22e9-4cba-934d-fa4e375654f3"
             },
             {
                 "name": "RGB LED RAM Module - 32GB",
@@ -550,7 +549,7 @@
                 "category": "RAM",
                 "categoryid": 17,
               "marca": "Fury",
-                "image": "https://m.media-amazon.com/images/I/81t2vJvPOJS.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/50_RGB%20LED%20RAM%20Module%20-%2032GB.webp?alt=media&token=38a92999-22ca-42ef-ac73-4dd795594fa3"
             },
             {
                 "name": "Ultra-Wide Gaming Monitor G-34C",
@@ -561,7 +560,7 @@
                 "category": "Monitor",
                 "categoryid": 13,
               "marca": "ACER",
-                "image": "https://m.media-amazon.com/images/I/71LwWVfvrDL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/51_Ultra-Wide%20Gaming%20Monitor%20G-34C.webp?alt=media&token=59fa954a-facf-4288-a513-b89c5c31ac13"
             },
             {
                 "name": "RGB GPU Backplate BP-100",
@@ -572,7 +571,7 @@
                 "category": "Graphics Card",
                 "categoryid": 4,
               "marca": "Nvidia",
-                "image": "https://m.media-amazon.com/images/I/614yZPso++L._AC_SX300_SY300_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/52_RGB%20GPU%20Backplate%20BP-100.jpg?alt=media&token=04cdd8c4-4fbe-4ea7-a788-086dfeaf3bb1"
             },
             {
                 "name": "Wireless Mechanical Gaming Keyboard K-900",
@@ -583,7 +582,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/71DYlRN51tL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/53_Wireless%20Mechanical%20Gaming%20Keyboard%20K-900.webp?alt=media&token=98178085-3c07-4d71-b111-ec5854e932c9"
             },
             {
                 "name": "External Thunderbolt 3 Dock D-600",
@@ -594,7 +593,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "Kingston",
-                "image": "https://m.media-amazon.com/images/I/61303tEdaPL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/54_External%20Thunderbolt%203%20Dock%20D-600.webp?alt=media&token=6b72d72c-49aa-4c4c-aa24-d69d927ee590"
             },
             {
                 "name": "Mechanical Switch Tester T-10",
@@ -605,7 +604,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Griarrac Gateron",
-                "image": "https://m.media-amazon.com/images/I/71z8P9Yu0vL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/55_Mechanical%20Switch%20Tester%20T-10.webp?alt=media&token=b8a9b5e7-cec2-498e-bfe1-de052c60ac7f"
             },
             {
                 "name": "RGB Gaming Desk Mat M-200",
@@ -616,7 +615,7 @@
                 "category": "Furniture",
                 "categoryid": 8,
               "marca": "Game Factor",
-                "image": "https://m.media-amazon.com/images/I/61493vCszHL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/56_RGB%20Gaming%20Desk%20Mat%20M-200.webp?alt=media&token=e477334c-450c-4abd-bd36-ccf5287ad890"
             },
             {
                 "name": "USB-C to HDMI Adapter A-200",
@@ -627,7 +626,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "WARRKY",
-                "image": "https://m.media-amazon.com/images/I/71tf8hN2SjL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/57_USB-C%20to%20HDMI%20Adapter%20A-200.webp?alt=media&token=8efcb333-208f-415f-9d05-1e773a4ec5c2"
             },
             {
                 "name": "Wireless Gaming Controller C-500",
@@ -638,7 +637,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "EasySMX",
-                "image": "https://m.media-amazon.com/images/I/4186BzbB4hL._SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/58_Wireless%20Gaming%20Controller%20C-500.webp?alt=media&token=a6006fe8-55cf-490e-9aaa-7b415219b05e"
             },
             {
                 "name": "RGB Lighting Kit L-400",
@@ -649,7 +648,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "GVM RGB",
-                "image": "https://m.media-amazon.com/images/I/71heBJ4rxgL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/59_RGB%20Lighting%20Kit%20L-400.webp?alt=media&token=e4dde98b-ab64-49a4-8f5b-85e6e8898bb0"
             },
             {
                 "name": "Liquid Cooling Tubing Kit TK-300",
@@ -660,7 +659,7 @@
                 "category": "Cooling",
                 "categoryid": 10,
               "marca": "ESEWALAS",
-                "image": "https://m.media-amazon.com/images/I/61sPcE5V-fL.__AC_SY445_SX342_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/60_Liquid%20Cooling%20Tubing%20Kit%20TK-300.webp?alt=media&token=d242f709-313b-42e6-a9c8-f27cb0f4c684"
             },
             {
                 "name": "USB 3.1 Gen 2 External SSD - 2TB",
@@ -671,7 +670,7 @@
                 "category": "Storage",
                 "categoryid": 11,
               "marca": "Kingston",
-                "image": "https://m.media-amazon.com/images/I/81tUk2PsZCL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/61_USB%203.1%20Gen%202%20External%20SSD%20-%202TB.webp?alt=media&token=e40de3d6-e3f9-4012-9578-f2ac9a463469"
             },
             {
                 "name": "RGB Desk Organizer O-100",
@@ -682,7 +681,7 @@
                 "category": "Furniture",
                 "categoryid": 8,
               "marca": "Game Factor",
-                "image": "https://m.media-amazon.com/images/I/51l+oakqSaL._AC_SY300_SX300_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/62_RGB%20Desk%20Organizer%20O-100.jpg?alt=media&token=0931f0f3-9758-4bba-8c33-d3f428567f6c"
             },
             {
                 "name": "Wireless Ergonomic Split Keyboard K-100",
@@ -693,7 +692,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/71hmoYuphjL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/63_Wireless%20Ergonomic%20Split%20Keyboard%20K-100.webp?alt=media&token=f0d00710-0eb0-4cd4-9a22-54cc9f5726bd"
             },
             {
                 "name": "Internal Sound Card SC-200",
@@ -704,7 +703,7 @@
                 "category": "Others",
                 "categoryid": 5,
               "marca": "Lavales",
-                "image": "https://m.media-amazon.com/images/I/61KZVc98VrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/64_Internal%20Sound%20Card%20SC-200.webp?alt=media&token=0c1e16c0-963c-41f3-a94e-bf9de4e96764"
             },
             {
                 "name": "RGB Fan Controller FC-300",
@@ -715,7 +714,7 @@
                 "category": "Cooling",
                 "categoryid": 10,
               "marca": "UpHere",
-                "image": "https://m.media-amazon.com/images/I/61h6XxPjnAL._AC_SX466_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/65_RGB%20Fan%20Controller%20FC-300.jpg?alt=media&token=3cd320d5-fc07-46a7-85f7-5e47a1b77ac0"
             },
             {
                 "name": "USB-C Gaming Headset H-700",
@@ -726,7 +725,7 @@
                 "category": "Audio",
                 "categoryid": 18,
               "marca": "Turtle Beach",
-                "image": "https://m.media-amazon.com/images/I/51r0z2m2FrL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/66_USB-C%20Gaming%20Headset%20H-700.webp?alt=media&token=6f4ba352-f153-4f74-9f21-02765f8116c8"
             },
             {
                 "name": "RGB Mouse Bungee MB-20",
@@ -737,7 +736,7 @@
                 "category": "Mouse",
                 "categoryid": 6,
               "marca": "Glorius",
-                "image": "https://m.media-amazon.com/images/I/51kTivq-WaL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/67_RGB%20Mouse%20Bungee%20MB-20.webp?alt=media&token=3c1b28ff-4755-4a90-abd5-018cfa9e8115"
             },
             {
                 "name": "Dual Monitor Arm Mount AM-200",
@@ -748,7 +747,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "Game Factor",
-                "image": "https://m.media-amazon.com/images/I/61exf-ELhmL._AC_SX679_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/68_Dual%20Monitor%20Arm%20Mount%20AM-200.jpg?alt=media&token=11984cee-da3f-4bff-bcd3-f87c491723cd"
             },
             {
                 "name": "Wireless USB Adapter A-300",
@@ -759,7 +758,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "TP-Link",
-                "image": "https://m.media-amazon.com/images/I/61UhAcgFzRL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/69_Wireless%20USB%20Adapter%20A-300.webp?alt=media&token=5d7d36ed-d958-4362-98cb-447c6f260c02"
             },
             {
                 "name": "RGB RAM Cooler RC-150",
@@ -770,7 +769,7 @@
                 "category": "Cooling",
                 "categoryid": 10,
               "marca": "Fury",
-                "image": "https://m.media-amazon.com/images/I/41RTJyPxjVL._SY445_SX342_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/70_RGB%20RAM%20Cooler%20RC-150.webp?alt=media&token=fd00d82a-997c-4280-bc7a-3a0d692bd4db"
             },
             {
                 "name": "Wireless Bluetooth Keyboard K-200",
@@ -781,7 +780,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/71i6zpP-DSL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/71_Wireless%20Bluetooth%20Keyboard%20K-200.webp?alt=media&token=dabe6b8b-4b03-4729-ab4a-f59e525b9f9c"
             },
             {
                 "name": "M.2 NVMe Heatsink HS-10",
@@ -792,7 +791,7 @@
                 "category": "Cooling",
                 "categoryid": 10,
               "marca": "EZDIY-FAB",
-                "image": "https://m.media-amazon.com/images/I/41wcwpB4xsL._SY445_SX342_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/72_M.2%20NVMe%20Heatsink%20HS-10.webp?alt=media&token=14a7b7b8-e630-4ff0-832c-96fa160772b9"
             },
             {
                 "name": "USB-C External Graphics Card Enclosure E-300",
@@ -803,7 +802,7 @@
                 "category": "Graphics Card",
                 "categoryid": 4,
               "marca": "Nvidia",
-                "image": "https://m.media-amazon.com/images/I/71wctgG45EL._AC_SX466_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/73_USB-C%20External%20Graphics%20Card%20Enclosure%20E-300.jpg?alt=media&token=c6dd8d3d-14db-4c2b-b8b5-325e77b10218"
             },
             {
                 "name": "Wireless Mechanical Keyboard and Mouse Combo KM-300",
@@ -814,7 +813,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Logitech",
-                "image": "https://m.media-amazon.com/images/I/71nfNpxI0dL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/74_Wireless%20Mechanical%20Keyboard%20and%20Mouse%20Combo%20KM-300.webp?alt=media&token=d212979b-d5d6-48c7-b160-8758d49cb20b"
             },
             {
                 "name": "RGB Controller Hub CH-200",
@@ -825,7 +824,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "CoolerMaster",
-                "image": "https://m.media-amazon.com/images/I/511hGgv6X3L._SX522_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/75_RGB%20Controller%20Hub%20CH-200.jpg?alt=media&token=09b41e22-e041-4971-86f1-147303cd089d"
             },
             {
                 "name": "Ultra-Wide Curved Monitor G-38",
@@ -836,7 +835,7 @@
                 "category": "Monitor",
                 "categoryid": 13,
               "marca": "Samsung",
-                "image": "https://m.media-amazon.com/images/I/81Tg1eIoMNL._AC_SX679_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/76_Ultra-Wide%20Curved%20Monitor%20G-38.jpg?alt=media&token=e19ecb3c-62bb-4c86-9b6b-b0b2ab30528c"
             },
             {
                 "name": "RGB Cable Management Clips CC-10",
@@ -847,7 +846,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "LUKAISEN",
-                "image": "https://m.media-amazon.com/images/I/71G+47Zr2qL._AC_SY300_SX300_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/77_RGB%20Cable%20Management%20Clips%20CC-10.jpg?alt=media&token=b87cb345-946a-4495-84f2-576cf97d4a82"
             },
             {
                 "name": "Wireless Presenter Remote R-100",
@@ -858,7 +857,7 @@
                 "category": "Peripherals",
                 "categoryid": 17,
               "marca": "TP-Link",
-                "image": "https://m.media-amazon.com/images/I/51CAWyGWYwL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/78_Wireless%20Presenter%20Remote%20R-100.webp?alt=media&token=c6f5914c-3e50-4c2d-8c59-cf227c5f0066"
             },
             {
                 "name": "External Webcam W-1080",
@@ -869,7 +868,7 @@
                 "category": "Peripherals",
                 "categoryid": 3,
               "marca": "Nexigo",
-                "image": "https://m.media-amazon.com/images/I/61BGZKR0OBL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/79_External%20Webcam%20W-1080.webp?alt=media&token=289cf96c-efb4-44fd-8c59-56b04c0cf0ba"
             },
             {
                 "name": "RGB Desk Lamp L-500",
@@ -880,7 +879,7 @@
                 "category": "Accessories",
                 "categoryid": 7,
               "marca": "Game Factor",
-                "image": "https://m.media-amazon.com/images/I/61mUcJNDnDS.__AC_SY445_SX342_QL70_FMwebp_.jpg"
+                "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/80_RGB%20Desk%20Lamp%20L-500.webp?alt=media&token=a1737f7b-bcd3-4630-90b9-6c808123f568"
             }
       ]
       
