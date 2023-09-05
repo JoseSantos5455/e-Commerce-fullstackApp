@@ -10,16 +10,11 @@ import LogOut from '../Login/LogOut'
 import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
 import { createUser } from '../../Redux/actions/actions'
-<<<<<<< HEAD
 import shoppingcart from '../../images/shoppingcart.png'
-=======
-
->>>>>>> fc36056e6423fa2def4444be95256f4db9e435d4
 
 
 export default function Nav() {
   let dispatch = useDispatch()
-<<<<<<< HEAD
 
   const {user, isAuthenticated } = useAuth0()
   const userLog = useSelector(state => state.user)
@@ -36,11 +31,8 @@ export default function Nav() {
   //dropdown para logout profile
     const [showMenu, setShowMenu] = useState(false);
  
-=======
->>>>>>> fc36056e6423fa2def4444be95256f4db9e435d4
 
-  const {user, isAuthenticated } = useAuth0()
-  const userLog = useSelector(state => state.user)
+  
 
   useEffect(()=>{
 
@@ -49,9 +41,7 @@ export default function Nav() {
   }
   },[user])
 
-  
-  let name = useSelector( state => state.product_name[0])
- 
+
 //buscar por nombre redux
     let [inputSearch, setInputSearch] = useState('')
 //para buscar con enter 

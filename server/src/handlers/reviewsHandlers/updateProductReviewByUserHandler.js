@@ -1,11 +1,10 @@
 const updateProductReviewByUserController = require('../../controllers/reviewsControllers/updateProductReviewByUserController.js');
 
 const updateProductReviewByUserHandler = async (req,res) => {
-    const {productId}= req.params;
-    const {userId} = req.query;
+    const {reviewId}= req.params;
     const {description} = req.body;
     try {
-        const result = await updateProductReviewByUserController(productId, userId,description);
+        const result = await updateProductReviewByUserController(reviewId,description);
         res.status(200).json(result);    
     } 
     catch (error) {

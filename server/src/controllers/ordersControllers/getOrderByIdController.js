@@ -10,6 +10,7 @@ const ordersFormatted = (order)=>{
             deliveredDate:order.deliveredDate,
             orderDetails:order.orderDetails.map(orderDetail=>{
                         return({
+                              productId:orderDetail.Product.id,
                               product:orderDetail.Product.name,
                               quantity:orderDetail.quantity,
                               subTotal:orderDetail.subTotal,
@@ -30,7 +31,7 @@ const getOrderByIdController = async (id) => {
         attributes: ['quantity', 'subTotal'],
         include: [
                   {model: Product,
-                  attributes: ['name'],
+                  attributes: ['id','name'],
                   },],
       },
     ],
