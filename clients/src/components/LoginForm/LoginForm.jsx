@@ -75,7 +75,10 @@ export default function LoginForm() {
                 <input type="text"
                  name='adress_st'
                  placeholder={errors.adress_st ? (
-                    `${errors.adress_st}`
+                   <p>
+
+                       `${errors.adress_st}`
+                   </p>
                   ):(' St: Evergreen Av.')}
                   />
                 <input type="number"
@@ -122,8 +125,7 @@ export default function LoginForm() {
         </form>
         
     </div>
-    <div className={Styles.footer}>
-    </div>
+    
 </div>
   )
 }
