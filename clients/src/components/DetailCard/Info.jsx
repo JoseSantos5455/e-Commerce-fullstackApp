@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { addToCart, removeFromCart } from '../../Redux/actions/actions'
+import { addToCart, removeFromCart,setQuantity } from '../../Redux/actions/actions'
 import {
   AiFillPlusCircle,
   AiOutlineMinusCircle,
@@ -12,35 +12,46 @@ import {
 
 // eslint-disable-next-line react/prop-types
 
-export default function Info({cart, id, name, description, price, valoration, stock,}) {
+export default function Info({id,name, description,stock,price,valoration}) {
 
   const dispatch = useDispatch()
 
-  // const cart = useSelector((state) => state.cart)
+  const cart = useSelector((state) => state.cart)
 
   const [isCart, setIsCart] = useState(false);
   // funcion que detecte si el producto ya esta en el carrito
-  let productInCart
+  let productInCart = cart.find((item) => item.id === id)
+  const [buyQ, setBuyQ] = useState(1)
 
   useEffect(() => {
-    productInCart = cart.find((item) => item.name === name)
+    productInCart = cart.find((item) => item.id === id)
     if (productInCart) {
       setIsCart(true)
       setBuyQ(productInCart.buyQ)
+    }else{
+      setIsCart(false)
+      setBuyQ(1)
     }
-  }, [dispatch,name])
+  }, [dispatch, id])
 
 
-  const [buyQ, setBuyQ] = useState(1)
 
   const handleMoreQ = () => {
-
-    setBuyQ(buyQ + 1)
+    if (stock > buyQ){
+      setBuyQ(buyQ + 1)
+      if (productInCart) {
+        dispatch(setQuantity({ id, buyQ: buyQ + 1 }))
+      }
+    }
+    
   }
 
   const handleLessQ = () => {
     if (buyQ > 1) {
       setBuyQ(buyQ - 1)
+      if (productInCart) {
+        dispatch(setQuantity({ id, buyQ: buyQ - 1 }))
+      }
     } else {
       setBuyQ(buyQ)
     }
@@ -52,10 +63,11 @@ export default function Info({cart, id, name, description, price, valoration, st
 
       setBuyQ(1)
       dispatch(removeFromCart(id))
-      return
+    }else{
+      
+      setIsCart(true)
+      dispatch(addToCart({ id, name, price:parseFloat(price), buyQ }))
     }
-    setIsCart(true)
-    dispatch(addToCart({ id, name, price, buyQ }))
 
   }
 

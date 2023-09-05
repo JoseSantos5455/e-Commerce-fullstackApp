@@ -13,7 +13,7 @@ import {
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { addToCart, removeFromCart } from '../../Redux/actions/actions'
+import { addToCart, removeFromCart, setQuantity } from '../../Redux/actions/actions'
 
 Card.propTypes = {
   aviability: PropTypes.bool.isRequired,
@@ -24,48 +24,62 @@ Card.propTypes = {
   id: PropTypes.string.isRequired,
 }
 
-export default function Card({ aviability, valoration, img, name, price, id }) {
+export default function Card({ aviability, valoration, img, name, price, id,stock }) {
   const cldInstance = new Cloudinary({cloud: {cloudName: 'dckiqiqjl'}});
 
   const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart)
   const [isCart, setIsCart] = useState(false);
   // funcion que detecte si el producto ya esta en el carrito
-  let productInCart
+  let productInCart = cart.find((item) => item.id === id)
 
+  const [buyQ, setBuyQ] = useState(1)
   useEffect(() => {
-    const productInCart = cart.find((item) => item.id === id)
+    productInCart = cart.find((item) => item.id === id)
     if (productInCart) {
       setBuyQ(productInCart.buyQ)
       setIsCart(true)
+
+    }else{
+      setIsCart(false)
+      setBuyQ(1)
     }
     // dispatch(getDetail(id))
   }, [dispatch, id])
 
 
-  const [buyQ, setBuyQ] = useState(1)
 
   const handleMoreQ = () => {
-    setBuyQ(buyQ + 1)
+    if (stock > buyQ) {
+      setBuyQ(buyQ + 1)
+      if (productInCart) {
+        dispatch(setQuantity({ id, buyQ: buyQ + 1 }))
+      }
+    }
   }
 
   const handleLessQ = () => {
     if (buyQ > 1) {
       setBuyQ(buyQ - 1)
+      if (productInCart){
+        dispatch(setQuantity({id, buyQ : buyQ-1}))
+      }
     } else {
       setBuyQ(buyQ)
     }
   }
   const handleAddToCart = () => {
+
     if (productInCart) {
       setIsCart(false)
 
       setBuyQ(1)
       dispatch(removeFromCart(id))
-      return
+    }else{
+
+      setIsCart(true)
+      dispatch(addToCart({ id, name, price, buyQ }))
     }
-    setIsCart(true)
-    dispatch(addToCart({ id, name, price, buyQ }))
 
   }
 

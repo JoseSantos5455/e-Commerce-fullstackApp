@@ -13,6 +13,7 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   CLEAR_CART,
+  SET_QUANTITY
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -99,14 +100,24 @@ const rootReducer = (state = initialState, action) => {
     case REMOVE_FROM_CART:
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload.id)
+        cart: state.cart.filter((item) => item.id !== action.payload)
       }
     case CLEAR_CART:
       return {
         ...state,
         cart: []
       }
-      
+
+    case SET_QUANTITY:
+      const item = state.cart.find(item => item.id === action.payload.id);
+      if (item) {
+        item.buyQ = action.payload.buyQ;
+      }
+      return {
+        ...state,
+        cart: state.cart
+      };
+
     default:
       return state
   }
