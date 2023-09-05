@@ -1,5 +1,3 @@
-import {Cloudinary} from "@cloudinary/url-gen";
-import GalleryProduct from "./GalleryProduct";
 import Rating from "../Rating/Rating";
 import { useState } from 'react'
 import PropTypes from 'prop-types'
@@ -25,7 +23,6 @@ Card.propTypes = {
 }
 
 export default function Card({ aviability, valoration, img, name, price, id,stock }) {
-  const cldInstance = new Cloudinary({cloud: {cloudName: 'dckiqiqjl'}});
 
   const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart)
@@ -83,10 +80,6 @@ export default function Card({ aviability, valoration, img, name, price, id,stoc
 
   }
 
-  const myImage = cldInstance
-  .image(`${img}`)
-  .setDeliveryType('fetch')
-//<GalleryProduct/><img className={Styles.img_product} src={myImage.toURL()} alt="Image product" />
   return (
     <div className={Styles.wrapper}>
       <div className={Styles.stock}>
@@ -95,7 +88,7 @@ export default function Card({ aviability, valoration, img, name, price, id,stoc
       </div>
       <div className={Styles.div_image}>
         <NavLink to={`/products/detail/${id}`}>
-          <img className={Styles.img_product} src={myImage.toURL()} alt="Image product" />
+          <img className={Styles.img_product} src={img} alt="Image product" />
         </NavLink>
       </div>
       

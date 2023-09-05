@@ -6,31 +6,73 @@
 
 }
 
-.img_product {
-    width: 100%;
-    display: block;
-  }
-
 .img_column{
-    display: flex;
+    /*display: flex;
     flex-flow: column wrap;
-    align-items: flex-start;
+    align-items: flex-start;*/
+
+     width: 200px; /* Define el ancho deseado para las imágenes */
+  height: 200px; /* Define la altura deseada para las imágenes */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+  position: relative; /* Asegura que el posicionamiento sea relativo */
+
 }
 .img_column img{
-    border: 1px solid black;
-    padding: 1%;
-    margin: 4%;
-    width: 30%;
-    border-radius: .5rem;
+    border: 2px solid black;
+   /* width: 25%;*/
+    border-radius: 1rem;
+
+     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
+  object-fit: cover; /* Escala la imagen para que cubra todo el contenedor sin distorsión */
+  position: absolute; /* Permite un posicionamiento preciso dentro del contenedor */
+  top: 0; /* Coloca la imagen en la parte superior del contenedor */
+  left: 0; /* Coloca la imagen en la parte izquierda del contenedor */
+
 }
 .img_main{
-    display: flex;
+  /*  display: flex;
     align-items: center;
+    width: 55%;
+    margin-bottom: 20%;*/
+    margin-left: 35%;
+
+        width: 500px; /* Define el ancho deseado para las imágenes */
+  height: 500px; /* Define la altura deseada para las imágenes */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+  position: relative; /* Asegura que el posicionamiento sea relativo */
+
 }
 .img_main img{
-    border-radius: 1rem;
-    min-height: 290px;
-    width: 110%;
+    
+    
+    /*border-radius: 2rem;
     margin-left: -25%;
+    min-height: 290px;
+    width: 110%;*/
+    border-radius: 1rem;
 
+     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
+  object-fit: cover; /* Escala la imagen para que cubra todo el contenedor sin distorsión */
+  position: absolute; /* Permite un posicionamiento preciso dentro del contenedor */
+  top: 0; /* Coloca la imagen en la parte superior del contenedor */
+  left: 0; /* Coloca la imagen en la parte izquierda del contenedor */
+
+}
+
+.image-container {
+  width: 200px; /* Define el ancho deseado para las imágenes */
+  height: 200px; /* Define la altura deseada para las imágenes */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+  position: relative; /* Asegura que el posicionamiento sea relativo */
+}
+
+.image-container img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
+  object-fit: cover; /* Escala la imagen para que cubra todo el contenedor sin distorsión */
+  position: absolute; /* Permite un posicionamiento preciso dentro del contenedor */
+  top: 0; /* Coloca la imagen en la parte superior del contenedor */
+  left: 0; /* Coloca la imagen en la parte izquierda del contenedor */
 }
