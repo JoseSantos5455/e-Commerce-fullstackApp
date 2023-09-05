@@ -22,6 +22,9 @@
 .form input{
     width: 100%;
 }
+.div_country{
+    display: flex;
+}
 .inp_adress{
     display: flex;
     justify-content: space-around;
@@ -44,4 +47,18 @@
 }
 .btn_submit:hover{
     color: hsl(46, 100%, 50%);
+}
+.p_advert{
+    margin-top: 10%;
+    align-self: flex-end;
+    font-size: .8rem;
+}
+.div_errors{
+    display: flex;
+    flex-flow: row nowrap;
+    align-self: flex-start;
+    color: red;
+    font-size: .8rem;
+    margin-top: 1%;
+    margin-left: 2%;
 }

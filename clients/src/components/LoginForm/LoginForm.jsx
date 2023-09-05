@@ -14,7 +14,7 @@ export default function LoginForm() {
     id: userRedux.id,
     country: null,
     adress_st: null,
-    adress_num: 0,
+    adress_num: null,
     department: 0,
     zip: 0
     }
@@ -22,29 +22,41 @@ export default function LoginForm() {
    const [errors, setErrors] = useState({})
    let handleChange = (e)=>{
     const { name, value} = e.target; 
-    
+    const validationErrors = validate(user); 
+
           setUser(
         {
         ...user,
        [ name]: value,
     }
     )
+  
     console.log(errors)
-    console.log(user)
    }
 
-   let submitForm = (e)=>{
-    e.preventDefault()
-    setErrors(validate( (prevValues)=>( {
-        ...prevValues,
-        [errors]: value
-    })))
-    if(!errors.error && Object.keys(errors).length === 0){
+   let submitForm = (e) => {
+    e.preventDefault();
+    const validationErrors = validate(user);
+    
+  
+    if (Object.keys(validationErrors).length === 0) {
+      dispatch(
+        updateUser(
+          user.id,
+          user.adress_st,
+          user.country,
+          user.adress_num,
+          user.department,
+          user.zip
+        )
+      );
+    } else {
+       
+      setErrors(validationErrors);
 
-        dispatch(updateUser(user.id, user.adress_st, user.country, user.adress_num, user.department, user.zip))
+      alert('Por favor, corrija los errores en el formulario.');
     }
-    else(alert(errors.error))
-   }
+  };
 
   return (
  <div className={Styles.view}>
@@ -62,6 +74,7 @@ export default function LoginForm() {
         onChange={handleChange}
         >
             <label htmlFor="country">*Your Country</label>
+            
             <input type="text"
              name='country'
              placeholder= {errors.country ? (
@@ -70,25 +83,27 @@ export default function LoginForm() {
               />
               
 
-            <label htmlFor="adress">*Your adress</label>
             <div className={Styles.inp_adress}>
+              <div className="street">
+            <label htmlFor="adress_st">*Street Name</label>
+
                 <input type="text"
                  name='adress_st'
-                 placeholder={errors.adress_st ? (
-                   <p>
+                 placeholder='St: Evergreen Av.'
+                   />
+              </div>
+              <div className="number">
 
-                       `${errors.adress_st}`
-                   </p>
-                  ):(' St: Evergreen Av.')}
-                  />
+                   <label htmlFor="adress_num">N°</label>
                 <input type="number"
                 name='adress_num'
                 placeholder={errors.adress_num ? (
-                    `${errors.adress_num}`
+                  `${errors.adress_num}`
                   ):('N°: 742')}
-                
-                
-                 />
+                  
+                  
+                  />
+              </div>
             </div>
             <div className={Styles.div_zip}>
                 <div className="">
@@ -113,15 +128,15 @@ export default function LoginForm() {
                 </div>
             </div>
             <button type='submit' onClick={submitForm} className={Styles.btn_submit}>Submit</button>
+              <p className={Styles.p_advert}>  The fields marked with (*) are required.</p>
             <div className={Styles.div_errors}>
-        {Object.keys(errors).length !== 0 ? (
-          Object.values(errors).map((err, index) => (
-            <p key={index}>{err}</p>
-          ))
-        ) : (
-          null
-        )}
-      </div>
+  {Object.keys(errors).length !== 0 && (
+    <div className={Styles.div_errors}>
+      <p>Check your form again!</p>
+    </div>
+  )}
+</div>
+
         </form>
         
     </div>
