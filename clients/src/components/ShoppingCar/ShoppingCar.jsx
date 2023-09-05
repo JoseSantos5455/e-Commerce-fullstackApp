@@ -1,39 +1,65 @@
-import { useDispatch } from 'react-redux'
-import { createOrder } from '../../Redux/actions/actions'
-import { useSelector } from 'react-redux';
-export default function ShoppingCar (){
-    const dispatch = useDispatch();
-    const productos1 = useSelector((state) => state.allProducts)
-    const shoppingCar = [{
-        title: "Laptop",
-        unit_price: 300,
-        current_id: "ARS",
-        quantity: 6,
-    },
-        {
-            title: "PC",
-            unit_price: 60,
-            current_id: "ARS",
-            quantity: 1,
-        }] 
+import styles from "./ShoppingCart.module.css";
+import { useDispatch } from "react-redux";
+import { createOrder } from "../../Redux/actions/actions";
+import { useSelector } from "react-redux";
+import { FaDeleteLeft } from "react-icons/fa6";
 
-    const handleBuy = async () => {
-    
-        dispatch(createOrder(shoppingCar))
+export default function ShoppingCar() {
+  const dispatch = useDispatch();
+
+  const shoppingCart = useSelector((state) => state.cart);
+  console.log(shoppingCart);
+
+  // Agrupa los productos por id y suma las cantidades
+  const groupedCart = shoppingCart.reduce((acc, item) => {
+    if (!acc[item.id]) {
+      acc[item.id] = { ...item, quantity: 0 };
     }
+    acc[item.id].quantity += item.buyQ;
+    return acc;
+  }, {});
 
-    return(
-            // En este componente se renderiza el carrito de compras, en el cual tal vez se muestren los productos y un boton de comprar, dicho boton de comprar deberia redirigir a la pagina de mercadopago, donde se realizara la compra
-        <div>
-            
-                <div className='card'>
-                    <h3>Productos</h3>
-                    <p className='price'>100 $</p>
-                    <button onClick={handleBuy}>Buy</button>
-                    
-                </div>
+  const shoppingCart2 = Object.values(groupedCart).map((item) => ({
+    title: item.name,
+    unit_price: item.price,
+    current_id: "ARS",
+    quantity: item.quantity,
+  }));
+
+  const handleBuy = async () => {
+    dispatch(createOrder(shoppingCart2));
+    // dispatch(createOrder(shoppingCart));
+  };
+
+  return (
+    <div className={styles.container_shoppingCart}>
+      {Object.values(groupedCart).map((item, index) => (
+        <div key={item.id} className={styles.cart_products}>
+          <h4>
+            <b>Order #{index + 1}</b>{" "}
+          </h4>
+          <h6>
+            <b>Product name: </b> {item.name}
+          </h6>
+          <h6>
+            <b> Price: </b> {item.price}
+          </h6>
+          <div className={styles.container_quantity}> 
+
+          <h6>
+            <b>Quantity: </b>
+            {item.quantity}
+          </h6>
+          <button className={styles.btn_delete}>
+            <FaDeleteLeft className={styles.btn}/>
+          </button>
+          </div>
         </div>
+      ))}
 
-    )
+      <div className={styles.buy_container}>
+        <button onClick={handleBuy} className={styles.buy_btn}>Buy</button>
+      </div>
+    </div>
+  );
 }
-

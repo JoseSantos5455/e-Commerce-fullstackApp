@@ -10,7 +10,7 @@ import LogOut from '../Login/LogOut'
 import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
 import { createUser } from '../../Redux/actions/actions'
-
+import shoppingcart from '../../images/shoppingcart.png'
 
 
 export default function Nav() {
@@ -28,7 +28,20 @@ export default function Nav() {
 
   
   let name = useSelector( state => state.product_name[0])
+  //dropdown para logout profile
+    const [showMenu, setShowMenu] = useState(false);
  
+
+  
+
+  useEffect(()=>{
+
+    if(user && user.name !== userLog.name && isAuthenticated){
+    dispatch(createUser(user.name, user.email))
+  }
+  },[user])
+
+
 //buscar por nombre redux
     let [inputSearch, setInputSearch] = useState('')
 //para buscar con enter 
@@ -113,6 +126,11 @@ function handleKeyDown(e) {
             </form>
         </div>
       </div>
+      <div className={Styles.col_4}>
+        <NavLink to="/ShoppingCar">
+          <img src={shoppingcart} alt="shoppingCart" className={`${Styles.cart}`} />
+        </NavLink>
+      </div>
       <div className={` ${Styles.col_2}`}>
         <div className={Styles.container_btn}>
           <div className={` ${Styles.containerLogin}`}>
@@ -126,7 +144,20 @@ function handleKeyDown(e) {
             ) : (
               <div className={Styles.div_auth} >
                 <Profile />
-                 
+                 {
+                 showMenu && (
+                  <div className={Styles.drop_user}>
+                    
+                      <LogOut className={Styles.btn_logout} />
+                      <NavLink to='/login'>
+                        complete profile
+                      </NavLink>
+                      <p>Option</p>
+                      <p>Option</p>
+                      <p>Option</p>
+                  </div>
+                 )
+                 }
               
               </div>
                 )

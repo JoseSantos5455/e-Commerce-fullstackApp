@@ -21,8 +21,18 @@ const createOrderController = async (req, res) => {
         ,
         // estas rutas son las que se van a ejecutar cuando se realice la compra, si es exitosa, si falla o si esta pendiente, en este caso son rutas locales, pero deberian ser rutas de la app
         back_urls: {
+            /*  success: async () => {
+                // Abre la URL de éxito en una nueva pestaña del navegador
+                await openUrlAndCallBackEnd('http://localhost:3002/', async () => {
+                    // Llama a la ruta del backend para pasar  cosas del frontend
+                    const response = await fetch('http://localhost:3002/orders');?
+                    const data = await response.json();
+
+                    ...
+                });
+            }, */
             success: 'http://localhost:3002/',
-            failure: 'http://localhost:3002/failure',
+            failure: 'http://localhost:3002/',
             pending: "",
         }
     })

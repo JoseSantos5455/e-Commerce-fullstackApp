@@ -30,3 +30,12 @@
 .btn_buy:hover {
   color: rgb(233, 170, 36);
 }
+
+.div_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 20%; */
+  margin-left: 26%;
+  width: 50%;
+}
