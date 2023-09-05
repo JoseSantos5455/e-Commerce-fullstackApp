@@ -132,54 +132,25 @@ function handleKeyDown(e) {
         </NavLink>
       </div>
       <div className={` ${Styles.col_2}`}>
-        <div className={Styles.container_btn}>
           <div className={` ${Styles.containerLogin}`}>
           {
             !isAuthenticated ? (
               <div className={Styles.div_not_auth}>
 
                <LogInButton/>
-                <button className={`${Styles.actionButton} ${Styles.create}`}>
-                Sign Up
-                </button>
+                
               </div>
             ) : (
               <div className={Styles.div_auth} >
                 <Profile />
-                 {
-                 showMenu && (
-                  <div className={Styles.drop_user}>
-                    
-                      <LogOut className={Styles.btn_logout} />
-                      <NavLink to='/login'>
-                        complete profile
-                      </NavLink>
-                      <p>Option</p>
-                      <p>Option</p>
-                      <p>Option</p>
-                  </div>
-                 )
-                 }
-              
               </div>
                 )
-
-              
-                
           }
+          </div>
+      
           
-           
-               
-           
-          </div>
-          <div className={`${Styles.containerCreate}`}>
-            
-          </div>
-        </div>
       </div>
-      {/* {isLoginModalOpen && (
-        <Login isOpen={isLoginModalOpen} onClose={closeLoginModal} />
-      )} */}
+      
     </div>
   )
 }

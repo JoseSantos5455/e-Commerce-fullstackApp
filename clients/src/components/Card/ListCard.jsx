@@ -38,10 +38,12 @@ export default function ListCard() {
               key={startIdx + idx}
               id={pdt.id}
               aviability={pdt.stock > 0}
+              valoration={pdt.valoration}
               img={pdt.image}
               name={pdt.name}
               price={parseFloat(pdt.price)}
               isFavorite={pdt.favorite}
+              stock={pdt.stock}
             />
           ))
         ) : (

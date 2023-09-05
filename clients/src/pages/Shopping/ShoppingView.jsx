@@ -1,6 +1,6 @@
-import { NavCart } from "../../components/ShoppingCar/NavCart"
-import ShoppingCar from "../../components/ShoppingCar/ShoppingCar"
-import { Static } from "../../components/ShoppingCar/Static"
+import  NavCart  from "../../components/ShoppingCart/ShoppingCart"
+import ShoppingCar from "../../components/ShoppingCart/ShoppingCart"
+import { Static } from "../../components/ShoppingCart/Static"
 import styles from './Shopping.module.css'
 export const ShoppingView = ()=>{
 return (

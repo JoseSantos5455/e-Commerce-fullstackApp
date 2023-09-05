@@ -64,6 +64,12 @@
   flex-flow: row nowrap;
   justify-content: center;
 }
+.price {
+  text-align: center;
+}
+.name_card{
+  margin-left: 7px;
+}
 .description_card .price {
   width: 90%;
   display: flex;
