@@ -178,7 +178,7 @@ export const createUser = (name, email, adress_st, adress_num, department, zip) 
 export const updateUser = (id,  adress_st, country, adress_num, department, zip) => {
   return async (dispatch) => {
     try {
-      console.log('submitesdaa')
+      console.log('action update user')
 
       const requestData = { id,  adress_st, country,  adress_num, department, zip };
 
