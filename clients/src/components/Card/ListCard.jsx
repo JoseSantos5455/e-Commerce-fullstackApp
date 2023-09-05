@@ -43,6 +43,7 @@ export default function ListCard() {
               name={pdt.name}
               price={parseFloat(pdt.price)}
               isFavorite={pdt.favorite}
+              stock={pdt.stock}
             />
           ))
         ) : (

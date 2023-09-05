@@ -12,7 +12,7 @@ import {
 
 // eslint-disable-next-line react/prop-types
 
-export default function Info({id,name, description,stock,price}) {
+export default function Info({id,name, description,stock,price,valoration}) {
 
   const dispatch = useDispatch()
 
@@ -37,11 +37,13 @@ export default function Info({id,name, description,stock,price}) {
 
 
   const handleMoreQ = () => {
-
-    setBuyQ(buyQ + 1)
-    if (productInCart) {
-      dispatch(setQuantity({ id, buyQ: buyQ + 1 }))
+    if (stock > buyQ){
+      setBuyQ(buyQ + 1)
+      if (productInCart) {
+        dispatch(setQuantity({ id, buyQ: buyQ + 1 }))
+      }
     }
+    
   }
 
   const handleLessQ = () => {
@@ -64,7 +66,7 @@ export default function Info({id,name, description,stock,price}) {
     }else{
       
       setIsCart(true)
-      dispatch(addToCart({ id, name, price, buyQ }))
+      dispatch(addToCart({ id, name, price:parseFloat(price), buyQ }))
     }
 
   }
