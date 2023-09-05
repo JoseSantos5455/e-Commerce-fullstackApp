@@ -1,13 +1,9 @@
 const {Review} = require('../../db.js');
 
-const deleteProductReviewByUserController = async (productId,userId)=>{
-    const reviewToDelete = await Review.findOne({
-        where:{
-            productId: productId,
-            userId: userId
-        },
-    });
+const deleteProductReviewByUserController = async (reviewId)=>{
+    const reviewToDelete = await Review.findByPk(reviewId);
     if (!reviewToDelete) throw new Error(`Review not found`);
+    
     await reviewToDelete.update({isActive:false});
     return reviewToDelete;
 };

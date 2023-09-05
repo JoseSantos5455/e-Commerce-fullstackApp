@@ -1,10 +1,9 @@
 const deleteProductReviewByUserController = require('../../controllers/reviewsControllers/deleteProductReviewByUserController.js');
 
 const deleteProductReviewByUserHandler = async(req,res) =>{
-    const {productId} = req.params;
-    const {userId} = req.query;
+    const {reviewId} = req.params;
     try {
-        const result = await deleteProductReviewByUserController(productId, userId);
+        const result = await deleteProductReviewByUserController(reviewId);
         res.status(200).json(result);    
     } 
     catch (error) {
