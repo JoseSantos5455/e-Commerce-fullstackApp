@@ -1,12 +1,7 @@
 const {Review} = require('../../db.js');
 
-const updateProductReviewByUserController = async (productId,userId,description)=>{
-    const reviewToUpdate = await Review.findOne({
-        where:{
-            productId: productId,
-            userId: userId,
-        },
-    });
+const updateProductReviewByUserController = async (reviewId,description)=>{
+    const reviewToUpdate = await Review.findByPk(reviewId);
     if (!reviewToUpdate) throw new Error(`Review not found`);
 
     await reviewToUpdate.update({description: description});

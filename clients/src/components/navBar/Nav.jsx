@@ -10,16 +10,11 @@ import LogOut from '../Login/LogOut'
 import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
 import { createUser } from '../../Redux/actions/actions'
-<<<<<<< HEAD
 import shoppingcart from '../../images/shoppingcart.png'
-=======
-
->>>>>>> fc36056e6423fa2def4444be95256f4db9e435d4
 
 
 export default function Nav() {
   let dispatch = useDispatch()
-<<<<<<< HEAD
 
   const {user, isAuthenticated } = useAuth0()
   const userLog = useSelector(state => state.user)
@@ -36,11 +31,8 @@ export default function Nav() {
   //dropdown para logout profile
     const [showMenu, setShowMenu] = useState(false);
  
-=======
->>>>>>> fc36056e6423fa2def4444be95256f4db9e435d4
 
-  const {user, isAuthenticated } = useAuth0()
-  const userLog = useSelector(state => state.user)
+  
 
   useEffect(()=>{
 
@@ -49,9 +41,7 @@ export default function Nav() {
   }
   },[user])
 
-  
-  let name = useSelector( state => state.product_name[0])
- 
+
 //buscar por nombre redux
     let [inputSearch, setInputSearch] = useState('')
 //para buscar con enter 
@@ -142,54 +132,25 @@ function handleKeyDown(e) {
         </NavLink>
       </div>
       <div className={` ${Styles.col_2}`}>
-        <div className={Styles.container_btn}>
           <div className={` ${Styles.containerLogin}`}>
           {
             !isAuthenticated ? (
               <div className={Styles.div_not_auth}>
 
                <LogInButton/>
-                <button className={`${Styles.actionButton} ${Styles.create}`}>
-                Sign Up
-                </button>
+                
               </div>
             ) : (
               <div className={Styles.div_auth} >
                 <Profile />
-                 {
-                 showMenu && (
-                  <div className={Styles.drop_user}>
-                    
-                      <LogOut className={Styles.btn_logout} />
-                      <NavLink to='/login'>
-                        complete profile
-                      </NavLink>
-                      <p>Option</p>
-                      <p>Option</p>
-                      <p>Option</p>
-                  </div>
-                 )
-                 }
-              
               </div>
                 )
-
-              
-                
           }
+          </div>
+      
           
-           
-               
-           
-          </div>
-          <div className={`${Styles.containerCreate}`}>
-            
-          </div>
-        </div>
       </div>
-      {/* {isLoginModalOpen && (
-        <Login isOpen={isLoginModalOpen} onClose={closeLoginModal} />
-      )} */}
+      
     </div>
   )
 }

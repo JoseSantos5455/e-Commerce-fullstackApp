@@ -11,7 +11,8 @@ import {
     POST_USER,
     ADD_TO_CART,
     REMOVE_FROM_CART,
-    CLEAR_CART
+    CLEAR_CART,
+    SET_QUANTITY
 } from './actionTypes'
 import axios from "axios"
 
@@ -40,19 +41,19 @@ export const getNameProducts = (name) => {
             const response = await axios.get(endpoint)
             let data = response.data
 
-      dispatch({
-        type: GET_NAM,
-        payload: data,
-      })
-      console.log(name)
-    
-    } catch (error) {
-      console.log(error)
-    }
+            dispatch({
+                type: GET_NAM,
+                payload: data,
+            })
+            console.log(name)
+
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 
-export const getPaginatedProducts = (page, size) =>{
+export const getPaginatedProducts = (page, size) => {
     return async (dispatch) => {
         try {
             const paginate = await axios.get(`http://localhost:3001/products?page=${page}&size=${size}`)
@@ -68,16 +69,16 @@ export const getPaginatedProducts = (page, size) =>{
 }
 
 export const createProducts = (payload) => {
-    
-    return async () =>{
+
+    return async () => {
         try {
-        const response = await axios.post('http://localhost:3001/products', payload)
-        return {
-            type: POST_PDT,
-            response
-        }  
+            const response = await axios.post('http://localhost:3001/products', payload)
+            return {
+                type: POST_PDT,
+                response
+            }
         } catch (error) {
-            console.log(error);        
+            console.log(error);
         }
     }
 }
@@ -92,13 +93,13 @@ export const getCategories = () => {
                 payload: catgoData
             })
         } catch (error) {
-            
+
         }
     }
 }
 
-export const getDetail = (id)=>{
-    return async (dispatch)=>{
+export const getDetail = (id) => {
+    return async (dispatch) => {
         const endpoint = `http://localhost:3001/products/${id}`
         try {
             let response = await axios(endpoint)
@@ -114,6 +115,21 @@ export const getDetail = (id)=>{
     }
 }
 
+export function getBrands() {
+    return async (dispatch) => {
+        let endpoint = `http://localhost:3001/brands`
+        try {
+            const response = await axios(endpoint)
+            let data = response.data
+            dispatch({
+                type: GET_BRANDS,
+                payload: data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
 
 export function filterByGenres(filters) {
     return async (dispatch) => {
@@ -127,9 +143,9 @@ export function filterByGenres(filters) {
 
         if (filters.price.length > 0) endpoint += `orderBy=price&direction=${filters.price}&`;
 
-      if (endpoint.endsWith('&')) {
-        endpoint = endpoint.slice(0, -1);
-      }
+        if (endpoint.endsWith('&')) {
+            endpoint = endpoint.slice(0, -1);
+        }
 
         try {
             const response = await axios(endpoint)
@@ -145,38 +161,46 @@ export function filterByGenres(filters) {
 }
 
 export const createUser = (name, email, adress_st, adress_num, department, zip) => {
-  return async (dispatch) => {
-    try {
-      const requestData = { name, email, adress_st, adress_num, department, zip };
+    return async (dispatch) => {
+        try {
+            const requestData = { name, email, adress_st, adress_num, department, zip };
 
-      const response = await axios.post('http://localhost:3001/users', requestData);
+            const response = await axios.post('http://localhost:3001/users', requestData);
 
-    
-      dispatch({ type: POST_USER,
-                   payload: response.data });
-    } catch (error) {
-      dispatch({ type: 'CREATE_USER_FAILURE',
-                 payload: error.message });
-    }
-  };
+
+            dispatch({
+                type: POST_USER,
+                payload: response.data
+            });
+        } catch (error) {
+            dispatch({
+                type: 'CREATE_USER_FAILURE',
+                payload: error.message
+            });
+        }
+    };
 };
 export const updateUser = (id,  adress_st, country, adress_num, department, zip) => {
   return async (dispatch) => {
     try {
-      console.log('submitesdaa')
+      console.log('action update user')
 
-      const requestData = { id,  adress_st, country,  adress_num, department, zip };
+            const requestData = { id, adress_st, country, adress_num, department, zip };
 
-      const response = await axios.put('http://localhost:3001/users', requestData);
+            const response = await axios.put('http://localhost:3001/users', requestData);
 
-    
-      dispatch({ type: UPD_USER,
-                   payload: response.data });
-    } catch (error) {
-      dispatch({ type: 'UPDATE_USER_FAILURE',
-                 payload: error.message });
-    }
-  };
+
+            dispatch({
+                type: UPD_USER,
+                payload: response.data
+            });
+        } catch (error) {
+            dispatch({
+                type: 'UPDATE_USER_FAILURE',
+                payload: error.message
+            });
+        }
+    };
 };
 
 
@@ -217,3 +241,9 @@ export const clearCart = () => {
     }
 }
 
+export const setQuantity = (payload) => {
+    return {
+        type: SET_QUANTITY,
+        payload
+    }
+}

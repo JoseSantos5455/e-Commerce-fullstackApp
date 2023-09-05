@@ -4,17 +4,19 @@ import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import Detail from "./pages/Detail/Detail";
 import BuyView from './pages/Buy/BuyView'
-import ShoppingCar from "./components/ShoppingCar/ShoppingCar";
 import {Routes, Route} from "react-router-dom"
 import Abt from "./pages/Abt/Abt";
 import Info from "./pages/Info/Info";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import LoginForm from "./components/LoginForm/LoginForm";
+import { ShoppingView } from "./pages/Shopping/ShoppingView";
+import LoginView from "./pages/Login/LoginView";
 
 export default function App() {
   return (
     <div>
       <Routes>
+        
           <Route exact path="/" Component={Start}/>
           <Route exact path="/home" Component={Home}/>
           <Route exact path="/form" Component={Form}/>
@@ -24,10 +26,10 @@ export default function App() {
           <Route exact path="/about" Component={Abt}/>
           <Route exact path="/howedoit" Component={Info}/>
           <Route exact path="/admin" Component={Dashboard}/>
-          <Route exact path="/login" Component={LoginForm}/>
+          <Route exact path="/login" Component={LoginView}/>
           <Route path="*" Component={NotFound}/>
           <Route exact path="/about" Component={Abt}/>
-          <Route exact path="/ShoppingCar" Component={ShoppingCar}/>
+          <Route exact path="/ShoppingCar" Component={ShoppingView}/>
       </Routes>
           
     </div>

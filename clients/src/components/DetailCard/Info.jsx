@@ -1,47 +1,57 @@
 import Styles from './Info.module.css'
-
-// eslint-disable-next-line react/prop-types
-
+import Rating from '../Rating/Rating'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { addToCart, removeFromCart } from '../../Redux/actions/actions'
+import { addToCart, removeFromCart,setQuantity } from '../../Redux/actions/actions'
 import {
   AiFillPlusCircle,
   AiOutlineMinusCircle,
 } from 'react-icons/ai'
 
+// eslint-disable-next-line react/prop-types
 
-export default function Info({cart,id,name, description,stock,price}) {
+export default function Info({id,name, description,stock,price,valoration}) {
 
   const dispatch = useDispatch()
 
-  // const cart = useSelector((state) => state.cart)
+  const cart = useSelector((state) => state.cart)
 
   const [isCart, setIsCart] = useState(false);
   // funcion que detecte si el producto ya esta en el carrito
-  let productInCart
+  let productInCart = cart.find((item) => item.id === id)
+  const [buyQ, setBuyQ] = useState(1)
 
   useEffect(() => {
-    productInCart = cart.find((item) => item.name === name)
+    productInCart = cart.find((item) => item.id === id)
     if (productInCart) {
       setIsCart(true)
       setBuyQ(productInCart.buyQ)
+    }else{
+      setIsCart(false)
+      setBuyQ(1)
     }
-  }, [dispatch,name])
+  }, [dispatch, id])
 
 
-  const [buyQ, setBuyQ] = useState(1)
 
   const handleMoreQ = () => {
-
-    setBuyQ(buyQ + 1)
+    if (stock > buyQ){
+      setBuyQ(buyQ + 1)
+      if (productInCart) {
+        dispatch(setQuantity({ id, buyQ: buyQ + 1 }))
+      }
+    }
+    
   }
 
   const handleLessQ = () => {
     if (buyQ > 1) {
       setBuyQ(buyQ - 1)
+      if (productInCart) {
+        dispatch(setQuantity({ id, buyQ: buyQ - 1 }))
+      }
     } else {
       setBuyQ(buyQ)
     }
@@ -53,10 +63,11 @@ export default function Info({cart,id,name, description,stock,price}) {
 
       setBuyQ(1)
       dispatch(removeFromCart(id))
-      return
+    }else{
+      
+      setIsCart(true)
+      dispatch(addToCart({ id, name, price:parseFloat(price), buyQ }))
     }
-    setIsCart(true)
-    dispatch(addToCart({ id, name, price, buyQ }))
 
   }
 
@@ -64,7 +75,8 @@ export default function Info({cart,id,name, description,stock,price}) {
     <div className={Styles.wrapper}>
       <h3 className={Styles.pdt_name}>{name} </h3>
       <p className={Styles.pdt_description}>{description}</p>
-      <p className={Styles.pdt_stock}>stock: {stock}</p>
+      <div><Rating valoration={valoration}></Rating></div>
+      <p className={Styles.pdt_stock}>Stock: {stock}</p>
       <p className={Styles.pdt_price}>${price}</p>
       {/* <button className={Styles.btn_buy}>Buy now</button> */}
       <div className={Styles.div_input}>
