@@ -42,7 +42,7 @@ export default function Card({ aviability, valoration, img, name, price, id,stoc
       setBuyQ(1)
     }
     // dispatch(getDetail(id))
-  }, [dispatch, id])
+  }, [dispatch, id, productInCart])
 
 
 

@@ -8,7 +8,6 @@ import {Routes, Route} from "react-router-dom"
 import Abt from "./pages/Abt/Abt";
 import Info from "./pages/Info/Info";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import LoginForm from "./components/LoginForm/LoginForm";
 import { ShoppingView } from "./pages/Shopping/ShoppingView";
 import LoginView from "./pages/Login/LoginView";
 

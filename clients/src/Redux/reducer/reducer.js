@@ -107,16 +107,16 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         cart: []
       }
-
-    case SET_QUANTITY:
-      const item = state.cart.find(item => item.id === action.payload.id);
-      if (item) {
-        item.buyQ = action.payload.buyQ;
+      case SET_QUANTITY: {
+        const item = state.cart.find(item => item.id === action.payload.id);
+        if (item) {
+          item.buyQ = action.payload.buyQ;
+        }
+        return {
+          ...state,
+          cart: state.cart
+        };
       }
-      return {
-        ...state,
-        cart: state.cart
-      };
 
     default:
       return state

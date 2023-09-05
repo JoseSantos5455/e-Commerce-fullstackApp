@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import LogInButton from '../Login/LogInButton'
 import Profile from '../Login/Profile'
 import { useAuth0 } from '@auth0/auth0-react'; 
-import LogOut from '../Login/LogOut'
+// import LogOut from '../Login/LogOut'
 import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
 import { createUser } from '../../Redux/actions/actions'
@@ -24,22 +24,15 @@ export default function Nav() {
     if(user && user.name !== userLog.name && isAuthenticated){
     dispatch(createUser(user.name, user.email))
   }
-  },[user])
-
-  
+  },[user,dispatch,userLog, isAuthenticated])
   let name = useSelector( state => state.product_name[0])
   //dropdown para logout profile
-    const [showMenu, setShowMenu] = useState(false);
- 
-
-  
-
   useEffect(()=>{
 
     if(user && user.name !== userLog.name && isAuthenticated){
     dispatch(createUser(user.name, user.email))
   }
-  },[user])
+  },[user,dispatch, isAuthenticated, userLog])
 
 
 //buscar por nombre redux
@@ -58,11 +51,7 @@ let handleSearch = (e) => {
     }
     
 //para buscar con enter 
-function handleKeyDown(e) {
-  if (e.key === 'Enter') {
-    console.log('asd');
-  }
-}
+
 
   return (
     <div className={Styles.wrapper}>

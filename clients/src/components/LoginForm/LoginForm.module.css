@@ -16,7 +16,7 @@
 .form{
     display: flex;
     flex-flow: column;
-    align-items: start;
+    align-items: flex-start;
     max-width: 30%;
     }
 .form input{

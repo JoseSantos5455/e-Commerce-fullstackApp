@@ -21,7 +21,7 @@ export const getProducts = (page, size) => {
     let endpoint = `http://localhost:3001/products`
     return async (dispatch) => {
         try {
-            const response = await axios("http://localhost:3001/products")
+            const response = await axios(endpoint)
             let data = response.data
 
             dispatch({
@@ -93,6 +93,7 @@ export const getCategories = () => {
                 payload: catgoData
             })
         } catch (error) {
+            console.log(error)
 
         }
     }
