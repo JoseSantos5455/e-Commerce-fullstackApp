@@ -1,4 +1,4 @@
-import  NavCart  from "../../components/ShoppingCart/ShoppingCart"
+import {NavCart} from "../../components/ShoppingCart/NavCart"
 import ShoppingCar from "../../components/ShoppingCart/ShoppingCart"
 import { Static } from "../../components/ShoppingCart/Static"
 import styles from './Shopping.module.css'
