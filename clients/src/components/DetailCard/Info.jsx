@@ -1,9 +1,5 @@
 import Styles from './Info.module.css'
 import Rating from '../Rating/Rating'
-
-// eslint-disable-next-line react/prop-types
-
-export default function Info({name, description, price, valoration, stock,}) {
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
@@ -14,8 +10,9 @@ import {
   AiOutlineMinusCircle,
 } from 'react-icons/ai'
 
+// eslint-disable-next-line react/prop-types
 
-export default function Info({cart,id,name, description,stock,price}) {
+export default function Info({cart, id, name, description, price, valoration, stock,}) {
 
   const dispatch = useDispatch()
 
