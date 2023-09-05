@@ -19,8 +19,8 @@ export default function validate (input){
     if(!input.adress_num){
         errors.adress_num = 'Add a valid adress number'
       }
-      if(typeof input.adress_num !== 'string'){
-          errors.adress_num = 'Must be a number'
+      if(typeof input.adress_num != 'string'){
+          errors.adress_num = 'Adress Must be a number'
         }
     if(!input.department){
         errors.department = 'Add a valid apartment number or 0'
@@ -35,7 +35,7 @@ export default function validate (input){
         errors.zip = 'Add a valid zip number'
       }
       if(typeof input.zip !== 'string'){
-          errors.zip = 'Must be a number'
+          errors.zip = 'ZIP Must be a number'
         }
         else if (input.zip.length > 3) {
             errors.zip = 'Add a valid zip number';
