@@ -1,7 +1,6 @@
 const {User} = require('../../db.js');
 
-const updateUserController = async(id,name,
-    email,
+const updateUserController = async(id,
     country,
     adress_st,
     adress_num,
@@ -11,9 +10,7 @@ const updateUserController = async(id,name,
     if (!userToUpdate) throw new Error (`User with ${id} doesn't exist`);
 
         const dataToUpdate = {
-            name: name || userToUpdate.name,
             country: country || userToUpdate.country,
-            email:email || userToUpdate.email,
             department: department || userToUpdate.department,
             adress_st: adress_st || userToUpdate,
             adress_num: adress_num || userToUpdate,
