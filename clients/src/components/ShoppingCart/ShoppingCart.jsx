@@ -1,6 +1,6 @@
 import styles from "./ShoppingCart.module.css";
 import { useDispatch } from "react-redux";
-import { createOrder } from "../../Redux/actions/actions";
+import { createOrder, removeFromCart } from "../../Redux/actions/actions";
 import { useSelector } from "react-redux";
 import { FaDeleteLeft } from "react-icons/fa6";
 
@@ -8,7 +8,7 @@ export default function ShoppingCar() {
   const dispatch = useDispatch();
 
   const shoppingCart = useSelector((state) => state.cart);
-  console.log(shoppingCart);
+  const user = useSelector((state) => state.user);
 
   // Agrupa los productos por id y suma las cantidades
   const groupedCart = shoppingCart.reduce((acc, item) => {
@@ -27,9 +27,18 @@ export default function ShoppingCar() {
   }));
 
   const handleBuy = async () => {
-    dispatch(createOrder(shoppingCart2));
+    if (user.id && shoppingCart2.length > 0) {
+      dispatch(createOrder(shoppingCart2));
+    }else{
+      alert('You must be logged in to make a purchase')
+    }
+    // dispatch(createOrder(shoppingCart2));
     // dispatch(createOrder(shoppingCart));
   };
+
+  const removeItem = (event) => {
+    dispatch(removeFromCart(event.target.name));
+  }
 
   return (
     <div className={styles.container_shoppingCart}>
@@ -44,13 +53,13 @@ export default function ShoppingCar() {
           <h6>
             <b> Price: </b> {item.price}
           </h6>
-          <div className={styles.container_quantity}> 
+          <div className={styles.container_quantity}>
 
           <h6>
             <b>Quantity: </b>
             {item.quantity}
           </h6>
-          <button className={styles.btn_delete}>
+          <button onClick={removeItem} name={item.id}className={styles.btn_delete}>
             <FaDeleteLeft className={styles.btn}/>
           </button>
           </div>

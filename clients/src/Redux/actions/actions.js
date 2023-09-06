@@ -12,7 +12,9 @@ import {
     ADD_TO_CART,
     REMOVE_FROM_CART,
     CLEAR_CART,
-    SET_QUANTITY
+    SET_QUANTITY,
+    VALIDATE_SUCCESS_ORDER,
+    CREATE_ORDER_SUCCESS
 } from './actionTypes'
 import axios from "axios"
 
@@ -251,5 +253,26 @@ export const setQuantity = (payload) => {
     return {
         type: SET_QUANTITY,
         payload
+    }
+}
+
+export const validateSuccessOrder = (payload) => {
+    return {
+        type: VALIDATE_SUCCESS_ORDER,
+        payload
+    }
+}
+
+export const createOrderSuccess = (payload) => {
+    return async (dispatch) => {
+        
+        try {
+            const response = await axios.post(`http://localhost:3001/orders/${payload.userId}`, payload.productsIds)
+            return dispatch({
+                type: CREATE_ORDER_SUCCESS,
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
