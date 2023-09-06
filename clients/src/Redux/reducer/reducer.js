@@ -13,7 +13,9 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   CLEAR_CART,
-  SET_QUANTITY
+  SET_QUANTITY,
+  VALIDATE_SUCCESS_ORDER,
+  CREATE_ORDER_SUCCESS
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -27,6 +29,7 @@ const initialState = {
   filters: [],
   user: [],
   cart: [],
+  validate_order: null
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -117,6 +120,17 @@ const rootReducer = (state = initialState, action) => {
           cart: state.cart
         };
       }
+
+      case VALIDATE_SUCCESS_ORDER:
+        return {
+          ...state,
+          validate_order: action.payload
+        }
+
+      case CREATE_ORDER_SUCCESS:
+        return {
+          ...state
+        }
 
     default:
       return state

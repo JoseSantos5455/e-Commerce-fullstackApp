@@ -8,7 +8,6 @@ export default function ShoppingCar() {
   const dispatch = useDispatch();
 
   const shoppingCart = useSelector((state) => state.cart);
-  console.log(shoppingCart);
 
   // Agrupa los productos por id y suma las cantidades
   const groupedCart = shoppingCart.reduce((acc, item) => {
@@ -27,6 +26,7 @@ export default function ShoppingCar() {
   }));
 
   const handleBuy = async () => {
+    
     dispatch(createOrder(shoppingCart2));
     // dispatch(createOrder(shoppingCart));
   };
