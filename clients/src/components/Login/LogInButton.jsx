@@ -1,24 +1,13 @@
-import React, { useEffect } from 'react'
-import { useAuth0 } from '@auth0/auth0-react'; 
-import { useDispatch, useSelector } from 'react-redux'
-
+import { useAuth0 } from "@auth0/auth0-react";
+import styles from "./LoginButton.module.css";
 export default function LogInButton() {
-    const {loginWithRedirect} = useAuth0()
-    
+  const { loginWithRedirect } = useAuth0();
 
   return (
     <div>
-       
-
-                <button  
-                onClick={()=>loginWithRedirect()}
-                >
-            LogIn
-        
-        </button>
-        
-        
-      
+      <button className={styles.btn_login} onClick={() => loginWithRedirect()}>
+        Log In
+      </button>
     </div>
-  )
+  );
 }

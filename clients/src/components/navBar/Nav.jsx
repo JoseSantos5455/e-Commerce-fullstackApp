@@ -10,7 +10,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import {useDispatch, useSelector} from 'react-redux'
 import { getNameProducts } from '../../Redux/actions/actions'
 import { createUser } from '../../Redux/actions/actions'
-import shoppingcart from '../../images/shoppingcart.png'
+import { BsCart3 } from "react-icons/bs";
 
 
 export default function Nav() {
@@ -25,6 +25,7 @@ export default function Nav() {
     dispatch(createUser(user.name, user.email))
   }
   },[user,dispatch,userLog, isAuthenticated])
+  /* eslint-disable no-unused-vars */
   let name = useSelector( state => state.product_name[0])
   //dropdown para logout profile
   useEffect(()=>{
@@ -68,7 +69,7 @@ let handleSearch = (e) => {
             </button>
           </NavLink>
         </div>
-        <div className={`${Styles.col_3}`}>
+        <div className={`${Styles.col_1}`}>
           <div className={Styles.dropdown}>
             <NavLink to="/products">
               <button
@@ -117,7 +118,7 @@ let handleSearch = (e) => {
       </div>
       <div className={Styles.col_4}>
         <NavLink to="/ShoppingCar">
-          <img src={shoppingcart} alt="shoppingCart" className={`${Styles.cart}`} />
+          <BsCart3 className={`${Styles.cart}`} />
         </NavLink>
       </div>
       <div className={` ${Styles.col_2}`}>
@@ -126,7 +127,7 @@ let handleSearch = (e) => {
             !isAuthenticated ? (
               <div className={Styles.div_not_auth}>
 
-               <LogInButton/>
+               <LogInButton />
                 
               </div>
             ) : (

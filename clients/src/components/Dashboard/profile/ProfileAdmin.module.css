@@ -1,0 +1,12 @@
+.wrapper{
+    margin: 5% 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.wrapper img{
+    width: 2%;
+}
+.div_adress{
+    display: flex;
+}

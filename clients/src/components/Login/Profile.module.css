@@ -33,14 +33,10 @@
       color: black;
     }
 .drop_user p:hover{
-    transform: scale(1.2);
     color: rgb(0, 0, 0);
   }
     .link_complete_profile{
       text-decoration: none;
       color: black;
 
-  }
-  .link_complete_profile:hover{
-    transform: scale(1.1);
   }

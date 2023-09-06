@@ -27,8 +27,7 @@ export default function LoginForm() {
         [ name]: value,
       }
       )
-      
-      console.log(errors)
+    
    }
 
    let submitForm = (e) => {
@@ -40,13 +39,18 @@ export default function LoginForm() {
       dispatch(
         updateUser(
           user.id,
-          user.adress_st,
           user.country,
+          user.adress_st,
           user.adress_num,
           user.department,
           user.zip
         )
+
       );
+      history.push('/products');
+    
+    alert('Your profile has been updated :)');
+      
     } else {
        
       setErrors(validationErrors);
