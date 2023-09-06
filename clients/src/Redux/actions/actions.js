@@ -180,12 +180,17 @@ export const createUser = (name, email, adress_st, adress_num, department, zip) 
         }
     };
 };
-export const updateUser = (id,  adress_st, country, adress_num, department, zip) => {
+export const updateUser = (id, country, adress_st,  adress_num, department, zip) => {
   return async (dispatch) => {
     try {
       console.log('action update user')
 
-            const requestData = { id, adress_st, country, adress_num, department, zip };
+      const parsedAdressSt = Number(adress_st);
+      const parsedAdressNum = Number(adress_num);
+      const parsedZip= Number(zip);
+
+      const requestData = { id, adress_st: parsedAdressSt, country, adress_num: parsedAdressNum, department, zip: parsedZip };
+
 
             const response = await axios.put('http://localhost:3001/users', requestData);
 

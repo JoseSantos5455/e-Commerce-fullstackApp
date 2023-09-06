@@ -3,16 +3,14 @@ const updateUserController = require('../../controllers/usersControllers/updateU
 const updateUserHandler = async (req,res)=>{
     // const {id} = req.params;
     const {
-        id,name,
-        email,
+        id,
         country,
          adress_st,
           adress_num,
            department,
             zip}= req.body;
     try {
-        const result = await updateUserController(id,name,
-            email,
+        const result = await updateUserController(id,
             country,
              adress_st,
               adress_num,

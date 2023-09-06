@@ -49,7 +49,10 @@ export default function LoginForm() {
           user.department,
           user.zip
         )
+
       );
+window.location= '/'
+      
     } else {
        
       setErrors(validationErrors);
