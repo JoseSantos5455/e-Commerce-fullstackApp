@@ -1,5 +1,5 @@
 import Start from "./pages/Landing/Start";
-import Form from "./pages/CreateProduct/Form";
+import Form from "./components/CreateProduct/Form";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import Detail from "./pages/Detail/Detail";
@@ -27,9 +27,9 @@ export default function App() {
           <Route exact path="/howedoit" Component={Info}/>
           <Route exact path="/admin" Component={Dashboard}/>
           <Route exact path="/login" Component={LoginView}/>
-          <Route path="*" Component={NotFound}/>
           <Route exact path="/about" Component={Abt}/>
           <Route exact path="/ShoppingCar" Component={ShoppingView}/>
+          <Route path="*" Component={NotFound}/>
       </Routes>
           
     </div>

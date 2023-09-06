@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import style from "./Form.module.css"
-import Validation from "../../components/Validation/Validation"
+import Validation from "./Validation"
 import { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { createProducts } from '../../Redux/actions/actions'
@@ -23,6 +23,7 @@ const Form = () => {
     valoration: "",
     category: [],
     image: "",
+    brand:[]
   }
   )
 
