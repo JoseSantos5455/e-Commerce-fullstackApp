@@ -185,11 +185,11 @@ export const updateUser = (id, country, adress_st,  adress_num, department, zip)
     try {
       console.log('action update user')
 
-      const parsedAdressSt = Number(adress_st);
+      const parsedApartment = Number(department);
       const parsedAdressNum = Number(adress_num);
       const parsedZip= Number(zip);
 
-      const requestData = { id, adress_st: parsedAdressSt, country, adress_num: parsedAdressNum, department, zip: parsedZip };
+      const requestData = { id, country, adress_st,  adress_num: parsedAdressNum, department: parsedApartment, zip: parsedZip };
 
 
             const response = await axios.put('http://localhost:3001/users', requestData);

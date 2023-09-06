@@ -30,7 +30,7 @@ export default function LoginForm() {
         [ name]: value,
       }
       )
-      
+      console.log(user)
       console.log(errors)
    }
 
@@ -43,8 +43,8 @@ export default function LoginForm() {
       dispatch(
         updateUser(
           user.id,
-          user.adress_st,
           user.country,
+          user.adress_st,
           user.adress_num,
           user.department,
           user.zip

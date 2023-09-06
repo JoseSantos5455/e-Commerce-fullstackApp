@@ -1,7 +1,6 @@
 const updateUserController = require('../../controllers/usersControllers/updateUserController.js');
 
 const updateUserHandler = async (req,res)=>{
-    // const {id} = req.params;
     const {
         id,
         country,

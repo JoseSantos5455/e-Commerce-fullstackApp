@@ -12,8 +12,8 @@ const updateUserController = async(id,
         const dataToUpdate = {
             country: country || userToUpdate.country,
             department: department || userToUpdate.department,
-            adress_st: adress_st ,
-            adress_num: adress_num ,
+            adress_st: adress_st || userToUpdate,
+            adress_num: adress_num || userToUpdate,
             zip: zip || userToUpdate.department,
         };
     const [rowsUpdated,[userUpdated]] = await User.update(
