@@ -17,23 +17,21 @@ export default function Info({id,name, description,stock,price,valoration}) {
   const dispatch = useDispatch()
 
   const cart = useSelector((state) => state.cart)
-
+  const [buyQ, setBuyQ] = useState(1)
   const [isCart, setIsCart] = useState(false);
   // funcion que detecte si el producto ya esta en el carrito
   let productInCart = cart.find((item) => item.id === id)
-  const [buyQ, setBuyQ] = useState(1)
 
   useEffect(() => {
-    productInCart = cart.find((item) => item.id === id)
+    const productInCart = cart.find((item) => item.id === id); // Declare it here
     if (productInCart) {
-      setIsCart(true)
-      setBuyQ(productInCart.buyQ)
-    }else{
-      setIsCart(false)
-      setBuyQ(1)
+      setIsCart(true);
+      setBuyQ(productInCart.buyQ);
+    } else {
+      setIsCart(false);
+      setBuyQ(1);
     }
-  }, [dispatch, id])
-
+  }, [dispatch, id, cart]);
 
 
   const handleMoreQ = () => {

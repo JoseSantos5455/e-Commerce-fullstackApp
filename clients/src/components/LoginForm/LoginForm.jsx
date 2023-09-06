@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import Styles from './LoginForm.module.css'
-import Nav from '../navBar/Nav';
 import { useDispatch, useSelector } from 'react-redux';
-import Footer from '../Footer/Footer';
 import {  updateUser } from '../../Redux/actions/actions';
 import validate from './validate';
 
@@ -22,7 +20,6 @@ export default function LoginForm() {
    const [errors, setErrors] = useState({})
    let handleChange = (e)=>{
     const { name, value} = e.target; 
-    const validationErrors = validate(user); 
     
     setUser(
       {

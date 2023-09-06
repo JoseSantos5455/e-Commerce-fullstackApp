@@ -1,4 +1,3 @@
-import { number } from "prop-types";
 
 export default function validate (input){
     const errors = {};

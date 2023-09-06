@@ -1,8 +1,9 @@
-import Card from './Card'
-import Styles from './ListCard.module.css'
-import { useSelector, useDispatch } from 'react-redux'
-import { useState } from 'react';
-import { getPaginatedProducts } from '../../Redux/actions/actions';
+import Card from "./Card";
+import Styles from "./ListCard.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import { getPaginatedProducts } from "../../Redux/actions/actions";
+import { BiLeftArrowCircle, BiRightArrowCircle } from "react-icons/bi";
 
 export default function ListCard() {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ export default function ListCard() {
       setCurrentPage(currentPage + 1);
     }
   };
+
   const startIdx = currentPage * pageSize;
   const endIdx = startIdx + pageSize;
   const productsToRender = products.slice(startIdx, endIdx);
@@ -50,13 +52,21 @@ export default function ListCard() {
           <p> No products </p>
         )}
       </div>
-      <div>
-        <button onClick={handlePreviousPage} disabled={currentPage === 0}>
-          Previous
+      <div className={Styles.div_pagination}>
+        <button
+          onClick={handlePreviousPage}
+          disabled={currentPage === 0}
+          className={Styles.previous}
+        >
+          <BiLeftArrowCircle />
         </button>
-        <span>Page {currentPage + 1}</span>
-        <button onClick={handleNextPage} disabled={currentPage === maxPage - 1}>
-          Next
+        <span className={Styles.currentPage}>Page {currentPage + 1}</span>
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === maxPage - 1}
+          className={Styles.next}
+        >
+          <BiRightArrowCircle />
         </button>
       </div>
     </div>
