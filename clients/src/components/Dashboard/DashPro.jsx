@@ -9,7 +9,7 @@ export default function DashPro() {
   return (
     <div className={Styles.view}>
       <h2>Admin dashboard</h2>
-       <ProfileAdmin className={Styles.profile}/>
+       <ProfileAdmin />
 
 
       <UserBuys/>

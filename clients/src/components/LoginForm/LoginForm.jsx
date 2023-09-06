@@ -30,8 +30,7 @@ export default function LoginForm() {
         [ name]: value,
       }
       )
-      console.log(user)
-      console.log(errors)
+    
    }
 
    let submitForm = (e) => {
@@ -51,7 +50,9 @@ export default function LoginForm() {
         )
 
       );
-window.location= '/'
+      history.push('/products');
+    
+    alert('Your profile has been updated :)');
       
     } else {
        

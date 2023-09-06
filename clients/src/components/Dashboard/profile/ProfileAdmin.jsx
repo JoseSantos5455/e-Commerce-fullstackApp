@@ -12,9 +12,11 @@ export default function ProfileAdmin() {
         <img src={user.picture} alt="" />
         <p>{userRedux.name}</p>
         {
-          userRedux.adress_st ? (<div className="">
-                    <p>{userRedux.adress_st}</p>
-                    <p>{userRedux.adress_num}</p>
+          userRedux.adress_st ? (<div className={Styles.div_adress}>
+            <p> Your adress:</p>
+                    <p>{`${userRedux.adress_st}`}</p>
+                    <p>{`, N° ${userRedux.adress_num} - `}</p>
+                    <p>{` Apt. ${userRedux.department}`}</p>
           </div>
             
           ):(

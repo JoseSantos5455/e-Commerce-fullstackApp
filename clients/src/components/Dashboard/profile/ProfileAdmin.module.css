@@ -7,3 +7,6 @@
 .wrapper img{
     width: 2%;
 }
+.div_adress{
+    display: flex;
+}

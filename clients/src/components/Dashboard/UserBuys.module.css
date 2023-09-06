@@ -10,13 +10,17 @@
     max-height: 400px;
     box-shadow: 0 0 10px 0;
     border-radius: 1rem;
-    overflow:auto;
+    overflow:scroll;
     margin: 5%;
     display: flex;
     flex-flow: column;
     background-color: #ffffffff;
 }
 
+.buys_wrapper::-webkit-scrollbar {
+    display: none;
+
+}
 .buys_wrapper h2{
     position: absolute;
     font-size: 1rem;
@@ -70,6 +74,10 @@
     box-shadow: 0 0 10px 0;
     border-radius: 1rem;
     overflow: scroll;
+}
+.sells_wrapper::-webkit-scrollbar {
+    display: none;
+
 }
 .sells_wrapper h2{
     font-size: 1rem;
