@@ -17,13 +17,13 @@ const Form = () => {
 
   const [form, setForm] = useState({
     name: "",
-    price: "",
     description: "",
+    price: "",
     stock: "",
     valoration: "",
     category: [],
     image: "",
-    brand:[]
+    brand:""
   }
   )
 
