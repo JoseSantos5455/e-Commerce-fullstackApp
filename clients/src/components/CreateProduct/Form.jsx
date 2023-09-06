@@ -20,8 +20,8 @@ const Form = () => {
     description: "",
     price: "",
     stock: "",
-    valoration: "",
-    category: [],
+    valoration: 0,
+    categoryId: [],
     image: "",
     brand:""
   }
@@ -30,12 +30,13 @@ const Form = () => {
 
 const [error, setError] = useState({
   name: "",
-  price: "",
   description: "",
+  price: "",
   stock: "",
-  valoration: "",
-  category: [],
+  valoration: 0,
+  categoryId: [],
   image: "",
+  brand:""
 })
 
 
@@ -51,22 +52,6 @@ const handlerChange = (event) => {
   console.log(form);
 }
 
-const handlerCheck = (event) => {
-  const { value, checked } = event.target;
-  const selectedCategory = form.category;
-
-  if (checked) {
-    if (selectedCategory.length >= 1) {
-      setError({ ...error, category: "Solo se permiten una categoria" });
-      return;
-    }
-    setForm({ ...form, category: [...selectedCategory, value] });
-  } else {
-    const updatedCategory = selectedCategory.filter((ctgo) => ctgo !== value);
-    setForm({ ...form, category: updatedCategory });
-  }
-  setError({ ...error, category: "" });
-};
 
 
 
@@ -76,17 +61,18 @@ const handlerCheck = (event) => {
     if (isFormIncomplete) {
       alert("Complete all fields");
     } else {
-      dispatch(createProducts(form));
       alert("Product added");
       setForm({
         name: "",
-        price: "",
         description: "",
+        price: "",
         stock: "",
-        valoration: "",
-        category: [],
+        valoration: 0,
+        categoryId: [],
         image: "",
+        brand:""
       })
+      dispatch(createProducts(form));
     }
   }
 
@@ -121,12 +107,12 @@ return (
         <div className={Styles.separador_valoration}>
            <div className={Styles.valoration}>
                <label>Brand:</label>
-               <input  type="text"  name="valoration" onChange=       {handlerChange}/>
+               <input  type="text"  name="brand" onChange={handlerChange}/>
            </div>
 
            <div className={Styles.category}>
           <p>Category</p>
-        <select name="category"  onChange={handlerCheck}>
+        <select name="categoryId"  onChange={handlerChange}>
          {category.map((ctg, idx) => (
            <option key={idx} value={ctg.id}>
                 {ctg.name}
