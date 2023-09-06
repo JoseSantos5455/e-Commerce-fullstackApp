@@ -1,7 +1,7 @@
 import React from 'react'
 import DashPro from '../../components/Dashboard/DashPro'
 import { useAuth0 } from '@auth0/auth0-react'; 
-import DashUser from '../../components/Dashboard/DashUser';
+import NotFound from '../NotFound/NotFound'
 import Nav from '../../components/navBar/Nav';
 import Footer from '../../components/Footer/Footer';
 import Styles from './Dashboard.module.css'
@@ -15,7 +15,9 @@ export default function Dashboard() {
 
         {isAuthenticated ?(
           <DashPro></DashPro>
-          ):( <DashUser/>)
+          ):(
+            <NotFound/>
+          )
         }            
         </div>
       <Footer/>
