@@ -47,7 +47,12 @@ const Profile = () => {
                     alt={user.name}
                      className={Styles.img_profile} />
 
-                      <p>My profile</p>
+                      <NavLink to={"/admin"}>
+                        <p>
+                          Profile
+                          </p>
+                          </NavLink>
+                      
                       <NavLink to='/login' className={Styles.link_complete_profile}  >
                         <p>
                         complete profile
