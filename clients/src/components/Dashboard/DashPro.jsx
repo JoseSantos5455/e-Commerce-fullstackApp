@@ -2,13 +2,16 @@ import React from 'react'
 import Styles from './DashPro.module.css';
 import Form from '../CreateProduct/Form';
 import UserBuys from './UserBuys';
+import ProfileAdmin from './profile/ProfileAdmin';
 
 
 export default function DashPro() {
   return (
     <div className={Styles.view}>
-      <h1>Admin dashboard</h1>
-      
+      <h2>Admin dashboard</h2>
+       <ProfileAdmin className={Styles.profile}/>
+
+
       <UserBuys/>
       <div className={Styles.form_wrapper}>
         <div className={Styles.form_left}>
