@@ -7,10 +7,11 @@
 }
 
 .select {
-    width: 110px;
+    width: 100%;
     background-color: #dedef5;
     border-width: 2px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 select {
