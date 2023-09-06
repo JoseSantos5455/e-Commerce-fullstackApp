@@ -74,10 +74,10 @@ const handlerCheck = (event) => {
     event.preventDefault()
     const isFormIncomplete = Object.values(form).some((value) => value === "");
     if (isFormIncomplete) {
-      alert("Debes completar todos los campos");
+      alert("Complete all fields");
     } else {
       dispatch(createProducts(form));
-      alert("El Producto se creo de forma exitosa");
+      alert("Product added");
       setForm({
         name: "",
         price: "",
@@ -95,22 +95,20 @@ return (
     <form onSubmit={handlerSubmit}>
         <div className={Styles}>
         <label>Product Name:</label>
-        <input  type="text" value={form.name} name='name' onChange={handlerChange} />
-        {/* {error.name && <span>{error.name}</span>} */}
+        <input  type="text" value={form.name} placeholder='Monitor' name='name' onChange={handlerChange} />
         </div>
 
         
         <div className={Styles.description}>
         <label>Description:</label>
         <textarea  type="text" className={Styles.inp_description} value={form.description} name="description" onChange={handlerChange}></textarea>
-        {/* {error.description && <span>{error.description}</span>} */}
         </div>
         <div  className={Styles.separador_price}>
         
         <div className={` ${Styles.price} `}>
         <label>Price:</label>
-        <input  type="text" value={form.price} name='price' onChange={handlerChange} />
-        {/* {error.price && <span>{error.price}</span>} */}
+
+        <input  type="number" value={form.price} placeholder={`${form.price}$`} name='price' onChange={handlerChange} />
         </div>
 
 

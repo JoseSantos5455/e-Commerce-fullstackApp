@@ -2,6 +2,8 @@
     display: flex;
     flex-flow: column;
     width: 30%;
+    padding: 10%;
+    margin: 5%;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
@@ -9,6 +11,7 @@
     padding: 2%;
 background-color: #fff;
 box-shadow: 0 0 10px 0;
+font-size: .9rem;
 }
 
 
@@ -23,6 +26,7 @@ box-shadow: 0 0 10px 0;
     width: 100%;
     min-height: 100px;
     resize: vertical;
+    font-size: .7rem;
   }
   .separador_price{
     display: flex;
@@ -43,9 +47,6 @@ box-shadow: 0 0 10px 0;
 
   .valoration{
     width: 30%;
-  }
-  .category{
-    font-size: 1rem;
   }
   .category select{
     font-size: .8rem;
