@@ -4,16 +4,61 @@
     width: 30%;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 2%;
+background-color: #fff;
+box-shadow: 0 0 10px 0;
 }
 
-.campos {
-    padding-top: 15px;
-}
 
-.campos input {
+
+.container input {
     width: 100%;
     margin: 10px 0;
     border-radius: 10px;
     border: 1px solid #ccc;
   }
+ .inp_description{
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+  }
+  .separador_price{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .price {
+    width: 35%;
+  }
+  .separador_valoration{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+
+  .valoration{
+    width: 30%;
+  }
+  .category{
+    font-size: 1rem;
+  }
+  .category select{
+    font-size: .8rem;
+  }
+  .btn_submit{
+    align-self: center;
+    margin-top: 5%;
+
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+}
+.btn_submit:hover{
+    color: hsl(46, 100%, 50%);
+}

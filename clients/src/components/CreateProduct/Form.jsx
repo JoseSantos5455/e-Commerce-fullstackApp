@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import style from "./Form.module.css"
+import Styles from "./Form.module.css"
 import Validation from "./Validation"
 import { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
@@ -7,7 +7,7 @@ import { createProducts } from '../../Redux/actions/actions'
 import { getCategories } from '../../Redux/actions/actions'
 const Form = () => {
 
-  const categori = useSelector((state)=> state.categories)
+  const category = useSelector((state)=> state.categories)
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -91,63 +91,63 @@ const handlerCheck = (event) => {
   }
 
 return (
-  <div className={style.container}>
+  <div className={Styles.container}>
     <form onSubmit={handlerSubmit}>
-        <div className={style.campos}>
-        <label>Nombre:</label>
+        <div className={Styles}>
+        <label>Product Name:</label>
         <input  type="text" value={form.name} name='name' onChange={handlerChange} />
-        {error.name && <span>{error.name}</span>}
+        {/* {error.name && <span>{error.name}</span>} */}
         </div>
 
-        <div className={style.campos}>
-        <label>Precio:</label>
-        <input  type="text" value={form.price} name='price' onChange={handlerChange} />
-        {error.price && <span>{error.price}</span>}
-        </div>
-
-        <div className={style.campos}>
-        <label>Descripcion:</label>
-        <input  type="text" value={form.description} name="description" onChange={handlerChange}/>
-        {error.description && <span>{error.description}</span>}
-        </div>
         
-        <div className={style.campos}>
+        <div className={Styles.description}>
+        <label>Description:</label>
+        <textarea  type="text" className={Styles.inp_description} value={form.description} name="description" onChange={handlerChange}></textarea>
+        {/* {error.description && <span>{error.description}</span>} */}
+        </div>
+        <div  className={Styles.separador_price}>
+        
+        <div className={` ${Styles.price} `}>
+        <label>Price:</label>
+        <input  type="text" value={form.price} name='price' onChange={handlerChange} />
+        {/* {error.price && <span>{error.price}</span>} */}
+        </div>
+
+
+
+        <div className={` ${Styles.price} `}>
         <label>Stock:</label>
         <input  type="number" value={form.stock} name="stock" onChange={handlerChange}/>
-        {error.stock && <span>{error.stock}</span>}
         </div>
-        
-        <div className={style.campos}>
-        <label>Valoracion:</label>
-        <input  type="number" value={form.valoration} name="valoration" onChange={handlerChange}/>
-        {error.valoration && <span>{error.valoration}</span>}
         </div>
-        
-        <div className={style.campos}>
-        {
-          categori.map((ctg) => {
-            return (
-              <label key={ctg.id}>
-                <input
-                  type="checkbox"
-                  value={ctg.id}
-                  name="category"
-                  onChange={handlerCheck}
-                />
+        <div className={Styles.separador_valoration}>
+           <div className={Styles.valoration}>
+               <label>Brand:</label>
+               <input  type="text"  name="valoration" onChange=       {handlerChange}/>
+           </div>
+
+           <div className={Styles.category}>
+          <p>Category</p>
+        <select name="category"  onChange={handlerCheck}>
+         {category.map((ctg, idx) => (
+           <option key={idx} value={ctg.id}>
                 {ctg.name}
-              </label>
-            );
-          })
-        }
-        {error.category && <span>{error.category}</span>}
+             </option>
+             ))}
+         </select>
+        </div>
         </div>
         
-        <div className={style.campos}>
-        <label>Imagen:</label>
+        
+        
+        
+        <div className={Styles.img_div}>
+        <label>Image:</label>
         <input  type="text" value={form.image} name="image" onChange={handlerChange}/>
-        {error.image && <span>{error.image}</span>}                
         </div>
-          <button type='submit'>Crear Productos</button>
+
+
+          <button className={Styles.btn_submit} type='submit'>Sell product</button>
     </form>
   </div>
   )
