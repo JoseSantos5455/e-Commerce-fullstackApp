@@ -106,7 +106,7 @@ export default function BuyView() {
         ...prevFilters,
         valoration: true,
       }));
-      dispatch(filterByGenres(filters))
+      dispatch(filterByGenres(updatedFilters))
     } 
     if(filterType === "price"){
       const updatedFilters = {
@@ -119,7 +119,7 @@ export default function BuyView() {
         ...prevFilters,
         price: true,
       }));
-      dispatch(filterByGenres(filters))
+      dispatch(filterByGenres(updatedFilters))
     } 
     if(filterType === "reset"){
       setFilters(initialFilters);
@@ -134,7 +134,7 @@ export default function BuyView() {
         <Nav />
         <div className={Styles.wrapper}>
           <div className={Styles.filters}>
-            <button className={Styles.btn} onClick={() => {handlerFilters("reset", "")}}>
+            <button className={Styles.resetfilters} onClick={() => {handlerFilters("reset", "")}}>
               Reset Filters
             </button>   
             <OrderBy handlerFilters={handlerFilters}/>
@@ -144,7 +144,7 @@ export default function BuyView() {
               currentBrandValue={currentBrandValue}
               onSelectChangeBrand={handleSelectChangeBrand}/>           
             <div >          
-              <div>Active Filters</div>     
+              <div className={Styles.activefilters}>Active Filters</div>     
               {activeFilters.valoration > 0 && (     
               <button className={Styles.sortTags}>
                   Avg Customer Review
