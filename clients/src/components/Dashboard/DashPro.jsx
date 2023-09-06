@@ -22,7 +22,7 @@ export default function DashPro() {
                 <div className={Styles.datos}>
                   <p>#123</p>
                   <p>23/07/2023</p>
-                  <p>Producto</p>
+                  <p>Cacatúa</p>
                   <p> Payd </p>
                   <p> 29/07/2023</p>
 
@@ -40,7 +40,7 @@ export default function DashPro() {
                 <div className={Styles.datos}>
                   <p>#123</p>
                   <p>23/07/2023</p>
-                  <p>Producto</p>
+                  <p>Keyboard Bluetooth</p>
                   <p> Payd </p>
                   <p> 29/07/2023</p>
 
@@ -57,7 +57,7 @@ export default function DashPro() {
                   <div className={Styles.datos}>
                     <p>#123</p>
                     <p>23/07/2023</p>
-                    <p>Producto</p>
+                    <p>Pillow 2.0</p>
                     <p> Payd </p>
                     <p> 29/07/2023</p>
   

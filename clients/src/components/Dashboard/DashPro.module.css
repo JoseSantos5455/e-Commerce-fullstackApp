@@ -1,7 +1,7 @@
 .view{
     display: flex;
     flex-flow: column nowrap;
-    background-color: rgb(249, 234, 135);
+    background-color: rgb(255, 217, 47);
 }
 .separador{
     display: flex;
@@ -19,8 +19,7 @@
     margin: 5%;
     display: flex;
     flex-flow: column;
-    background-color: #fff;
-    
+    background-color: #ffffffff;
 }
 
 .buys_wrapper h2{
@@ -40,11 +39,10 @@
     flex-flow: column nowrap;
     align-items: center;
     
-    border: 1px solid orange;
-    padding-top: 4%;
-    border-radius: 1rem;
+    padding-top: 10%;
+    border-bottom: 1px solid rgba(130, 125, 125, 0.231);
     
-    margin: 5% 3%;
+    margin: 0 3%;
 }
 
 .items{
@@ -82,4 +80,11 @@
     font-size: 1rem;
     color: gray;
     padding: 2% 0 0 10%;
+}
+.form_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
