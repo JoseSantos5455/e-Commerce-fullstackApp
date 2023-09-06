@@ -1,0 +1,16 @@
+.btn_login{
+    border-radius: 8px;
+    background: var(--Contraste, #000);
+    padding: 8px 16px;
+    font-weight: 600;
+    color: var(--BlancoCards, #FFF);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 143.9%;
+}
+.btn_login:hover{
+    background-color: #faa92f;
+    color: black;
+}

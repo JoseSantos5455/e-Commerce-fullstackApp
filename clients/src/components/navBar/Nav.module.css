@@ -19,8 +19,8 @@
 }
 
 .cart {
-  width: 15%;
-  height: auto;
+  font-size: 2rem;
+  color:black;
 }
 
 .col_5 {
@@ -29,14 +29,14 @@
 }
 
 .col_1 {
-  width: 10%;
+  width: 20%;
   text-align: center;
 }
 
 .col_3,
 .col_4 {
   width: 20%;
-  text-align: end;
+  text-align: center;
 }
 
 .background {
@@ -164,4 +164,15 @@
 .col_search {
   width: 50%;
   display: flex;
+}
+@media (max-width: 800px) {
+  .font{
+    display: none;
+  }
+  .col_1{
+    display: none;
+  }
+  .logo{
+    width: 100px;
+  }
 }
