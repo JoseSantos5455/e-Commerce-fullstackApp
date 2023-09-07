@@ -25,7 +25,7 @@ export default function Info({id,name, description,stock,price,valoration}) {
   const cart = useSelector((state) => state.cart)
   const [buyQ, setBuyQ] = useState(1)
   const [isCart, setIsCart] = useState(false);
-  const [ setReview] = useState(initialReview);
+  const [review, setReview] = useState(initialReview);
   const [reviews, setReviews] = useState([]) // Use an array to store multiple reviews
   // funcion que detecte si el producto ya esta en el carrito
   let productInCart = cart.find((item) => item.id === id)
