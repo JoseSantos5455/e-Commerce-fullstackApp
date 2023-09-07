@@ -58,6 +58,15 @@
 .order .datos p{
     margin: 0 3%;
 }
+
+.no_buys{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    padding: 25%;
+}
 .sells_wrapper{
     background-color: #fff;
     width: 100%;
@@ -90,4 +99,11 @@
 .sells_wrapper p{
     position: absolute;
     margin: 5% 10%;
+}
+.no_sells{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25%;    
 }
