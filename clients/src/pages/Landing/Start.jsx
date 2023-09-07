@@ -13,11 +13,13 @@ export default function Start() {
   const dispatch = useDispatch()
   const currentURL = window.location.href;
   const cart = useSelector((state) => state.cart)
-  const userId = useSelector((state) => state.user.id)
+  const userId = useSelector((state) => state.validate_user)
   const validate_order = useSelector((state) => state.validate_order)
   const productsIds = {
     productIds: cart
   }
+  
+
   // Parsea los parámetros de la URL
   const urlParams = new URLSearchParams(currentURL);
 
@@ -26,19 +28,16 @@ export default function Start() {
   const statusValue = urlParams.get('status');
 
   // verificar que validate_order sea diferente al payment_id
-  const  validate =  validate_order !== paymentIdValue
-
+  const validate = validate_order !== paymentIdValue
+  
 
   useEffect(() => {
     if (statusValue === 'approved' && validate === true && cart.length > 0) {
+      dispatch(createOrderSuccess({ userId: userId.id, productsIds }))
       dispatch(validateSuccessOrder(paymentIdValue))
       dispatch(clearCart())
-      dispatch(createOrderSuccess({ userId: userId , productsIds }))
-      // dispatch(createOrderSuccess({ userId: userId || "6e32721a-c13b-4c0c-836c-21ab54668e8d", productsIds }))
-      
     }
-    
-  }, []  )
+  }, [dispatch])
 
   return (
     <div className={Styles.container}>

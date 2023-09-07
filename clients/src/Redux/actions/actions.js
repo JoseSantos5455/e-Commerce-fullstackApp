@@ -16,7 +16,9 @@ import {
     GET_ORD,
     SELL,
     VALIDATE_SUCCESS_ORDER,
-    CREATE_ORDER_SUCCESS
+    CREATE_ORDER_SUCCESS,
+    LOGOUT,
+    GET_USER
 } from './actionTypes'
 import axios from "axios"
 
@@ -323,6 +325,7 @@ export const createOrderSuccess = (payload) => {
     return async (dispatch) => {
         
         try {
+            // console.log(payload);
             const response = await axios.post(`http://localhost:3001/orders/${payload.userId}`, payload.productsIds)
             return dispatch({
                 type: CREATE_ORDER_SUCCESS,
@@ -333,3 +336,12 @@ export const createOrderSuccess = (payload) => {
         }
     }
 }
+
+
+export const logoutUser = () => {
+    return {
+        type: LOGOUT
+    }
+}
+
+// export const getUser = () => {
