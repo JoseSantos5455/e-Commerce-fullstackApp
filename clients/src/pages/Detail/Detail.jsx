@@ -35,7 +35,7 @@ export default function Detail() {
           name={product.name}
           description={product.description}
           price={product.price}
-          valoration={product.valoration}
+          valoration={product.valoration || 3}
           stock={product.stock}
         />
       </div>

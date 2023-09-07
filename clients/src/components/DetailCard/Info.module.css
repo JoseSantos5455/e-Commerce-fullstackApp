@@ -36,8 +36,10 @@
   justify-content: center;
   align-items: center;
   /* padding-left: 20%; */
-  margin-left: 26%;
-  width: 50%;
+}
+.div_input input {
+  width: 20%;
+  text-align: center;
 }
 
 /* Para centrar el h2 */
