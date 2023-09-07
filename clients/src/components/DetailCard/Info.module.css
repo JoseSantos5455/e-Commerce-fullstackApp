@@ -39,3 +39,18 @@
   margin-left: 26%;
   width: 50%;
 }
+
+/* Para centrar el h2 */
+.centerText {
+  margin-top: 15%;
+  text-align: center;
+}
+
+/* Para los textareas */
+.fullWidth {
+  width: 95%;
+  align-items: center;
+  box-sizing: border-box;
+  resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+  margin: 0 auto; /* Centra horizontalmente */
+}

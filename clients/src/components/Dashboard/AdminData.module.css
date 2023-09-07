@@ -1,26 +1,33 @@
 .separador{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    
 }
 .buys_wrapper{
     width: 100%;
-    height: 56vh;
-    min-height: 200px;
-    max-height: 400px;
+    height: 50vh;
     box-shadow: 0 0 10px 0;
     border-radius: 1rem;
     overflow:scroll;
-    margin: 5%;
     display: flex;
     flex-flow: column;
     background-color: #ffffffff;
+    margin: 5%;
 }
 
 .buys_wrapper::-webkit-scrollbar {
-    display: none;
-
+    width: 10px; /* Ancho de la barra de desplazamiento vertical */
+    height: 0px; /* Altura de la barra de desplazamiento horizontal */
+    background-color: rgba(46, 42, 42, 0);
 }
+
+.buys_wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(246, 192, 43, 0.987); /* Color del pulgar */
+    border-radius: 5px; /* Radio de borde del pulgar */
+    margin-right: 20px;
+    border-left: 1px solid black;
+  }
+  
 .buys_wrapper h2{
     position: absolute;
     font-size: 1rem;
@@ -65,18 +72,21 @@
     align-items: center;
     justify-content: center;
     text-align: start;
-    padding: 25%;
+    padding: 15% 10%;
 }
 .sells_wrapper{
-    background-color: #fff;
     width: 100%;
-    margin: 5%;
-    height: 56vh; 
+    height: 50vh;
     min-height: 200px;
     max-height: 400px;
     box-shadow: 0 0 10px 0;
     border-radius: 1rem;
-    overflow: scroll;
+    overflow:scroll;
+    margin: 5%;
+    display: flex;
+    flex-flow: column;
+    background-color: #ffffffff;
+
 }
 .sells_wrapper h2{
     position: absolute;
@@ -92,13 +102,32 @@
     
 }
 .sells_wrapper::-webkit-scrollbar {
-    display: none;
-
+    width: 10px; /* Ancho de la barra de desplazamiento vertical */
+    height: 0px; /* Altura de la barra de desplazamiento horizontal */
+    background-color: rgba(46, 42, 42, 0);
 }
 
-.sells_wrapper p{
-    position: absolute;
-    margin: 5% 10%;
+.sells_wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(246, 192, 43, 0.987); /* Color del pulgar */
+    border-radius: 5px; /* Radio de borde del pulgar */
+    margin-right: 20px;
+    border-left: 1px solid black;
+  }
+  
+
+
+.btn_sell{
+    background-color: black;
+  color: aliceblue;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+    margin: 1%;
+    align-self:center;
+}
+.btn_sell:hover{
+    transform: scale(1.2);
+    color: rgb(45, 94, 217);
 }
 .no_sells{
     display: flex;

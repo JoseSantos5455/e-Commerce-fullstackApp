@@ -11,8 +11,8 @@ export default function LoginForm() {
    let [user, setUser] =  useState({
     id: userRedux.id,
     country: null,
-    adress_st: null,
-    adress_num: null,
+    address_st: null,
+    address_num: null,
     department: 0,
     zip: 0
     }
@@ -40,21 +40,21 @@ export default function LoginForm() {
         updateUser(
           user.id,
           user.country,
-          user.adress_st,
-          user.adress_num,
+          user.address_st,
+          user.address_num,
           user.department,
           user.zip
         )
 
       );
+      alert('Your profile has been updated :)');
      window.location = ('/admin');
     
-    alert('Your profile has been updated :)');
       
     } else {
        
       setErrors(validationErrors);
-
+      console.log(errors)
       alert('Please, correct the errors in the form.');
     }
   };
@@ -89,9 +89,9 @@ export default function LoginForm() {
             <label htmlFor="adress_st">*Street Name</label>
 
                 <input type="text"
-                 name='adress_st'
+                 name='address_st'
                  placeholder={errors.adress_num ? (
-                  `${errors.adress_st}`
+                  `${errors.address_st}`
                   ):('St: Evergreen Av.')}
                  
                  
@@ -101,9 +101,9 @@ export default function LoginForm() {
 
                    <label htmlFor="adress_num">N°</label>
                 <input type="number"
-                name='adress_num'
+                name='address_num'
                 placeholder={errors.adress_num ? (
-                  `${errors.adress_num}`
+                  `${errors.address_num}`
                   ):('N°: 742')}
                   
                   
