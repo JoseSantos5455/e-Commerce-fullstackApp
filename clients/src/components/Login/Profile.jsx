@@ -4,7 +4,10 @@ import Styles from './Profile.module.css'
 import { Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom'
 import LogOut from "./LogOut";
+import { useSelector } from "react-redux";
 const Profile = () => {
+
+  let userRedux = useSelector(state => state.user)
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
@@ -45,19 +48,25 @@ const Profile = () => {
                   <div className={Styles.drop_user}>
                   <img src={user.picture}
                     alt={user.name}
-                     className={Styles.img_profile} />
-
-                      <NavLink to={"/admin"}>
-                        <p>
+                     className={Styles.img_profile_drop} />
+                <h6 className={Styles.p_user_name}>{user.given_name}</h6>
+                      <NavLink to={"/admin"} className={Styles.profile_p}>
+                        <p >
                           Profile
                           </p>
+                          
                           </NavLink>
+                      {
+                        !userRedux.adress_st && (
+                            <NavLink to='/login' className={Styles.link_complete_profile}  >
+                              <p>
+                              complete profile
+                              </p>
+                            </NavLink>
+
+                        )
+                      }
                       
-                      <NavLink to='/login' className={Styles.link_complete_profile}  >
-                        <p>
-                        complete profile
-                        </p>
-                      </NavLink>
                       <p>
                         <LogOut/>
                       </p>
