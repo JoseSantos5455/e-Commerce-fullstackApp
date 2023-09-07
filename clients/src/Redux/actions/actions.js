@@ -13,6 +13,7 @@ import {
     REMOVE_FROM_CART,
     CLEAR_CART,
     SET_QUANTITY,
+    GET_ORD,
     VALIDATE_SUCCESS_ORDER,
     CREATE_ORDER_SUCCESS
 } from './actionTypes'
@@ -227,6 +228,23 @@ export const createOrder = (payload) => {
             console.log(error);
         }
     }
+}
+
+export const getOrders = ()=>{
+        return async (dispatch)=>{
+                try {
+                    const response = await axios('http://localhost:3001/orders')
+                    const data = response.data
+                    return dispatch({
+                        type: GET_ORD,
+                        payload: data
+                    })
+                } catch (error) {
+                    dispatch({
+                        type: 'GET_ORDER_FAILURE',
+                        payload: error.message
+                    });   }
+        }
 }
 
 export const addToCart = (payload) => {

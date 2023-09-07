@@ -24,7 +24,7 @@ const getOrderByIdController = async (id) => {
     include: [
       {model: User,
         attributes: [
-          [User.sequelize.literal(`"User"."name" || ' ' || "User"."lastName"`), 'userFullName'],
+          [User.sequelize.literal(`"User"."name"`), 'userFullName'],
         ],
       },
       {model: orderDetail,

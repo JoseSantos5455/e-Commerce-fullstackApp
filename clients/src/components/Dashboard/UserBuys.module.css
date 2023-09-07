@@ -24,12 +24,14 @@
 .buys_wrapper h2{
     position: absolute;
     font-size: 1rem;
-    color: gray;
-    padding: 1% 5% 1%;
+    color: rgb(128, 128, 128);
+    padding: 1% 2% 2% 1%;
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
+    border-bottom: 2px solid rgb(223, 188, 81);
     background-color: rgb(255, 255, 255);
     z-index: 1;
+    box-shadow: 0 0 5px 0;
     
 }
 .order{
@@ -38,28 +40,20 @@
     flex-flow: column nowrap;
     align-items: center;
     
-    padding-top: 10%;
+    padding-top: 5%;
     border-bottom: 1px solid rgba(130, 125, 125, 0.231);
     
     margin: 0 3%;
 }
 
-.items{
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    justify-content: center;
-    
-}
-.order .items p{
-    margin: 0 6%;
-    
-}
+
+
 .order .datos{
     display: flex;
-    flex-flow: row nowrap;
-    
+    flex-flow: row wrap;
+    justify-content: center;
     width: 100%;
+    padding-top: 10%;
 }
 .order .datos p{
     margin: 0 3%;
@@ -75,15 +69,24 @@
     border-radius: 1rem;
     overflow: scroll;
 }
+.sells_wrapper h2{
+    position: absolute;
+    font-size: 1rem;
+    color: rgb(128, 128, 128);
+    padding: 1% 2% 2% 1%;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom: 2px solid rgb(223, 188, 81);
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    box-shadow: 0 0 5px 0;
+    
+}
 .sells_wrapper::-webkit-scrollbar {
     display: none;
 
 }
-.sells_wrapper h2{
-    font-size: 1rem;
-    color: gray;
-    padding: 2% 0 0 10%;
-}
+
 .sells_wrapper p{
     position: absolute;
     margin: 5% 10%;
