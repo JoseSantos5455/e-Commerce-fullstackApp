@@ -1,4 +1,3 @@
-import React from 'react'
 import Styles from './DashPro.module.css';
 import Form from '../CreateProduct/Form';
 import AdminData from './AdminData';

@@ -1,4 +1,3 @@
-import React from 'react'
 import DashPro from '../../components/Dashboard/DashPro'
 import { useAuth0 } from '@auth0/auth0-react'; 
 import NotFound from '../NotFound/NotFound'

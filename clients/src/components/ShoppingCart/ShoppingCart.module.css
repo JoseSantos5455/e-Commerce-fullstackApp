@@ -3,13 +3,20 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    height: 14vh;
 }
 .backIcon {
-    font-size: 3rem; 
-    color: black; 
-    margin-left: 2%;
-    margin-right: 40px; 
+    font-size: 2rem;
+    color: #000;
+    margin-left: 30%;
+    margin-right: 40px;
+}
+.title{
+    font-size: 1.6rem;
+}
 
+  .logo{
+    height: 13vh;
   }
 .orderTitle{
     display: flex;
@@ -20,8 +27,9 @@
 .container_shoppingCart{
     background-color: #f3f3f3;    
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+    align-items: center;
     margin-top: 5%;
     width: 60%;
     
@@ -30,7 +38,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 10%;
+    height: 150px;
+    width: 500px;
+    padding: 1rem;
+    margin: 1vh;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 .container_quantity{
     display: flex;
@@ -38,38 +52,33 @@
     align-items: center;
     width: 50%;
 }
-.btn_delete{
+.btn_delete {
     background-color: transparent;
-    border: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    margin-right: 20%;
-}
-.btn{
-    color:black;
-    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn_delete:hover {
+    transform: scale(1.2); 
+    color: red;
 }
 
 
-.hr_line{
-    color: black;
 
-}
 .buy_container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 10%;
     margin-top: 1rem;
+    margin-bottom: 100px;
 }
 .buy_btn{
     background-color: black;
     color: white;
     border: 2px solid white;
     border-radius: 10px;
-    width: 60%;
+    padding:6px 30px;
+    width: 200px;
 }
 .static_container{
     background-image:url(https://http2.mlstatic.com/D_NQ_919924-MLA70749172958_072023-OO.webp);
@@ -78,7 +87,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    filter: blur(0px)
+    height: 90vh;
 
 }
 .static_title{
