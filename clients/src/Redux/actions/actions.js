@@ -230,16 +230,32 @@ export const createOrder = (payload) => {
     }
 }
 
-export const getOrders = ()=>{
+export const getOrders = (userId)=>{
         return async (dispatch)=>{
                 try {
-                    const response = await axios('http://localhost:3001/orders')
-                    const data = response.data
-                    return dispatch({
-                        type: GET_ORD,
-                        payload: data
-                    })
+                    if(userId){
+                        const response = await axios(`http://localhost:3001/orders?userId=${userId}`)
+    
+                        const data = response.data
+                        return dispatch({
+                            type: GET_ORD,
+                            payload: data
+                        })
+                    }
+                    else{
+                        const response = await axios(`http://localhost:3001/orders`)
+                        
+                        const data = response.data
+
+                        return dispatch({
+                            type: GET_ORD,
+                            payload: data
+                        })
+                    }
+                    
+                    
                 } catch (error) {
+                    console.log(error.message)
                     dispatch({
                         type: 'GET_ORDER_FAILURE',
                         payload: error.message
