@@ -90,7 +90,7 @@ const rootReducer = (state = initialState, action) => {
     case POST_USER:
   let profile = 'User'; // Definir el perfil por defecto como 'User'
 
-  if (action.payload.email === 'juanlluviasb@gmail.com') {
+  if (action.payload.email === 'admin@gmail.com') {
     profile = 'Admin'; // Cambiar el perfil a 'Admin' si el email coincide
   }
 
