@@ -41,13 +41,15 @@
   width: 20%;
   text-align: center;
 }
-
 /* Para centrar el h2 */
 .centerText {
   margin-top: 15%;
   text-align: center;
 }
-
+.svg_addIcon, .svg_removeIcon{
+  font-size: 2rem;
+  color:black;
+}
 /* Para los textareas */
 .fullWidth {
   width: 95%;
