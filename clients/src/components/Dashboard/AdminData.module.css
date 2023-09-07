@@ -5,7 +5,7 @@
 }
 .buys_wrapper{
     width: 100%;
-    height: 56vh;
+    height: 50vh;
     min-height: 200px;
     max-height: 400px;
     box-shadow: 0 0 10px 0;
@@ -68,15 +68,17 @@
     padding: 25%;
 }
 .sells_wrapper{
-    background-color: #fff;
     width: 100%;
-    margin: 5%;
-    height: 56vh; 
+    height: 50vh;
     min-height: 200px;
     max-height: 400px;
     box-shadow: 0 0 10px 0;
     border-radius: 1rem;
-    overflow: scroll;
+    overflow:scroll;
+    margin: 5%;
+    display: flex;
+    flex-flow: column;
+    background-color: #ffffffff;
 }
 .sells_wrapper h2{
     position: absolute;
@@ -96,10 +98,7 @@
 
 }
 
-.sells_wrapper p{
-    position: absolute;
-    margin: 5% 10%;
-}
+
 .no_sells{
     display: flex;
     flex-flow: column;
