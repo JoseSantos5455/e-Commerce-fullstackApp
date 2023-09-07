@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Styles from './UserBuys.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getOrders } from '../../Redux/actions/actions'
@@ -8,7 +8,7 @@ export default function UserBuys() {
   let dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getOrders())
-  },[])
+  },[dispatch])
   let sells = null;
   let ordersRedux = useSelector(state => state.ordersRedux);
   return (
@@ -60,7 +60,7 @@ export default function UserBuys() {
             <h2>Sells</h2>
             {sells ? (null):(
               <div className={Styles.no_sells}>
-              <p>You haven't made any sales yet. Why not start selling your products in D'Lujo now?</p>
+              <p>You haven&apos;t made any sales yet. Why not start selling your products in D&apos; Lujo now?</p>
               </div>
             )}
           </div>
