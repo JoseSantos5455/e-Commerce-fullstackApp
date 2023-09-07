@@ -57,7 +57,7 @@ const Profile = () => {
                           
                           </NavLink>
                       {
-                        !userRedux.adress_st && (
+                        !userRedux.address_st && (
                             <NavLink to='/login' className={Styles.link_complete_profile}  >
                               <p>
                               complete profile
