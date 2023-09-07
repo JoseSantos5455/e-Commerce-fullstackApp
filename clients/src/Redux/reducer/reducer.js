@@ -15,6 +15,7 @@ import {
   CLEAR_CART,
   SET_QUANTITY,
   GET_ORD,
+  SELL,
   VALIDATE_SUCCESS_ORDER,
   CREATE_ORDER_SUCCESS
 } from '../actions/actionTypes'
@@ -87,10 +88,19 @@ const rootReducer = (state = initialState, action) => {
       }
     }
     case POST_USER:
-      return {
-        ...state,
-        user: action.payload
-      }
+  let profile = 'User'; // Definir el perfil por defecto como 'User'
+
+  if (action.payload.email === 'juanlluviasb@gmail.com') {
+    profile = 'Admin'; // Cambiar el perfil a 'Admin' si el email coincide
+  }
+
+  return {
+    ...state,
+    user: {
+      ...action.payload,
+      profile: profile, // Agregar la propiedad 'profile' al objeto 'user'
+    },
+  };
     case UPD_USER:
       return {
         ...state,
@@ -127,6 +137,13 @@ const rootReducer = (state = initialState, action) => {
           ...state,
           ordersRedux: action.payload
         }
+
+      case SELL: 
+      return{
+        ...state,
+        ordersRedux: action.payload
+
+      }
       case VALIDATE_SUCCESS_ORDER:
         return {
           ...state,

@@ -5,6 +5,7 @@ import Nav from '../../components/navBar/Nav';
 import Footer from '../../components/Footer/Footer';
 import Styles from './Dashboard.module.css'
 
+
 export default function Dashboard() {
     const { isAuthenticated} = useAuth0()
   return (

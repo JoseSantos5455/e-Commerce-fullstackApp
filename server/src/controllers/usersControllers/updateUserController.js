@@ -2,8 +2,8 @@ const {User} = require('../../db.js');
 
 const updateUserController = async(id,
     country,
-    adress_st,
-    adress_num,
+    address_st,
+    address_num,
      department,
       zip)=>{
     const userToUpdate = await User.findByPk(id);
@@ -12,8 +12,8 @@ const updateUserController = async(id,
         const dataToUpdate = {
             country: country || userToUpdate.country,
             department: department || userToUpdate.department,
-            adress_st: adress_st || userToUpdate,
-            adress_num: adress_num || userToUpdate,
+            address_st: address_st || userToUpdate,
+            address_num: address_num || userToUpdate,
             zip: zip || userToUpdate.department,
         };
     const [rowsUpdated,[userUpdated]] = await User.update(
