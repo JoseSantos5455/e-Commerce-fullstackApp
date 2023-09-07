@@ -30,31 +30,18 @@
   font-size: 0.7rem;
   margin: 0;
 }
+
 .div_image {
   border-radius: 1rem;
-
-  width: 100%;
-  max-width: 1024px;
-  padding: 0 1em;
-  margin: 3em auto;
-}
-
-.container {
-  width: 100%;
-  max-width: 1024px;
-  padding: 0 1em;
-  margin: 3em auto;
-}
-
-.img_container {
-  width: 100%;
-  display: block;
-  overflow: hidden;
+  height: 180px;
+  width: 250px;
+  margin: 20px 25px;
 }
 
 .img_product {
   width: 100%;
-  display: block;
+  height: 100%;
+  
 }
 
 .description_card {
@@ -63,49 +50,71 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: flex-start;
 }
-.price {
-  text-align: center;
-}
-.name_card{
-  margin-left: 7px;
-}
+
 .description_card .price {
-  width: 90%;
+  width: 60%;
+  height: 135px;
   display: flex;
   flex-flow: column;
   align-content: center;
   align-items: center;
+  margin-left: 10px;
 }
+.name_card{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/*valor */
 .price_number {
   color: gray;
 }
+
 .description_card .add {
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  height: 100%;
+  margin-right: 5px;
 }
 .div_input {
   display: flex;
-  justify-content: center;
   align-items: center;
+  width: 100%;
 }
-.description_card .add input {
-  width: 35%;
-  font-size: 0.5rem;
+.svg_add, .svg_delete{
+  font-size: 2rem;
+  cursor: pointer;
+
 }
-.description_card .add button {
-  width: 90%;
-  background-color: black;
-  color: aliceblue;
+.svg_add:hover, .svg_delete:hover{
+  color: orange;
+}
+.input_number{
+  width: 50%;
   border: none;
-  border-radius: 1rem;
-  font-size: 0.6rem;
+  font-weight: 500;
+  display: flex;
+  text-align: center;
 }
-.description_card .add button:hover {
-  transform: scale(1.1);
-  background-color: rgb(238, 187, 35);
-  color: black;
-  box-shadow: 0 0 5px 0;
+.btn_cart{
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  margin-right: 20px;
+}
+.btn_cart:hover{
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  
 }

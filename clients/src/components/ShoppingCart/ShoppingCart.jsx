@@ -1,16 +1,30 @@
 import styles from "./ShoppingCart.module.css";
 import { useDispatch } from "react-redux";
-import { createOrder, removeFromCart } from "../../Redux/actions/actions";
+import { createOrder, removeFromCart } from "../../Redux/actions/actions"; 
 import { useSelector } from "react-redux";
 import { FaDeleteLeft } from "react-icons/fa6";
+import { useAuth0 } from '@auth0/auth0-react';
+import LogInButton from "../Login/LogInButton";
 
 export default function ShoppingCar() {
   const dispatch = useDispatch();
 
   const shoppingCart = useSelector((state) => state.cart);
-  const user = useSelector((state) => state.user);
+  console.log(shoppingCart);
+  
+  const { isAuthenticated } = useAuth0(); 
 
-  // Agrupa los productos por id y suma las cantidades
+  if (!isAuthenticated) {
+    return (
+      <div className={styles.container_shoppingCart}>
+        <p className={styles.empty_cart_messageAuth}>
+          Por favor, inicia sesión para ver tu carrito.
+        </p>
+        <LogInButton />
+      </div>
+    );
+  }
+
   const groupedCart = shoppingCart.reduce((acc, item) => {
     if (!acc[item.id]) {
       acc[item.id] = { ...item, quantity: 0 };
@@ -27,18 +41,15 @@ export default function ShoppingCar() {
   }));
 
   const handleBuy = async () => {
-    if (user.id && shoppingCart2.length > 0) {
-      dispatch(createOrder(shoppingCart2));
-    }else{
-      alert('You must be logged in to make a purchase')
-    }
-    // dispatch(createOrder(shoppingCart2));
+    dispatch(createOrder(shoppingCart2));
     // dispatch(createOrder(shoppingCart));
   };
 
-  const removeItem = (event) => {
-    dispatch(removeFromCart(event.target.name));
-  }
+  const handleRemoveFromCart = (productId) => {
+  dispatch(removeFromCart(productId));
+  };
+
+  const isCartEmpty = Object.values(groupedCart).length === 0;
 
   return (
     <div className={styles.container_shoppingCart}>
@@ -53,22 +64,30 @@ export default function ShoppingCar() {
           <h6>
             <b> Price: </b> {item.price}
           </h6>
-          <div className={styles.container_quantity}>
+          <div className={styles.container_quantity}> 
 
-          <h6>
-            <b>Quantity: </b>
-            {item.quantity}
-          </h6>
-          <button onClick={removeItem} name={item.id}className={styles.btn_delete}>
-            <FaDeleteLeft className={styles.btn}/>
-          </button>
+            <h6>
+              <b>Quantity: </b>
+              {item.quantity}
+            </h6>
+            <button
+              className={styles.btn_delete}
+              onClick={() => handleRemoveFromCart(item.id)}
+                          >
+              <FaDeleteLeft className={styles.btn}/>
+            </button>
           </div>
         </div>
       ))}
 
-      <div className={styles.buy_container}>
-        <button onClick={handleBuy} className={styles.buy_btn}>Buy</button>
-      </div>
+      {}
+      {isCartEmpty ? (
+        <p className={styles.empty_cart_message}>El carrito está vacío</p>
+      ) : (
+        <div className={styles.buy_container}>
+          <button onClick={handleBuy} className={styles.buy_btn}>Buy</button>
+        </div>
+      )}
     </div>
   );
 }

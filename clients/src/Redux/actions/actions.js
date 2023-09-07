@@ -288,6 +288,7 @@ export const createOrderSuccess = (payload) => {
             const response = await axios.post(`http://localhost:3001/orders/${payload.userId}`, payload.productsIds)
             return dispatch({
                 type: CREATE_ORDER_SUCCESS,
+                response
             })
         } catch (error) {
             console.log(error);

@@ -1,7 +1,7 @@
 .separador{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: start;
+    justify-content: flex-start;
 }
 .buys_wrapper{
     width: 100%;
