@@ -1,15 +1,25 @@
 import React, { useEffect } from 'react'
 import Styles from './AdminData.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { getOrders } from '../../Redux/actions/actions'
+import { getOrders, sellOrder } from '../../Redux/actions/actions'
 import { NavLink } from 'react-router-dom'
 
 export default function AdminData() {
   let dispatch = useDispatch()
   let ordersRedux = useSelector(state => state.ordersRedux);
   const userRedux = useSelector(state => state.user)
-  const sells = ordersRedux.filter((pdt) => pdt.status === 'delivered');
   
+  const  sellsOne = useSelector(state => state.ordersRedux)
+  const sells = sellsOne ? sellsOne.filter((pdt) => pdt.status === 'delivered') : [];
+
+
+  
+  let sellProduct = (id)=>{
+
+    dispatch(sellOrder(id))
+    window.location.reload()
+    }
+
   useEffect(()=>{
     if(userRedux.profile === 'Admin'){
       dispatch(getOrders())
@@ -40,7 +50,12 @@ export default function AdminData() {
           {pdt.deliveredDate && <p>{`Arrives ${pdt.deliveredDate}`}</p>}
           <p>{`Status: ${pdt.status}`}</p>
         </div>
-          <button className={Styles.btn_sell}>Confirm & Sell</button>
+          <button 
+          className={Styles.btn_sell}
+          onClick={()=>sellProduct(pdt.id)}
+          >
+            Confirm & Sell
+          </button>
       </div>
     ))
 ):(

@@ -14,6 +14,7 @@ import {
     CLEAR_CART,
     SET_QUANTITY,
     GET_ORD,
+    SELL,
     VALIDATE_SUCCESS_ORDER,
     CREATE_ORDER_SUCCESS
 } from './actionTypes'
@@ -262,6 +263,27 @@ export const getOrders = (userId)=>{
                     });   }
         }
 }
+
+export const sellOrder = (orderId)=>{
+    return async (dispatch) =>{
+        try {
+            const response = axios.put(`http://localhost:3001/orders/${orderId}`) 
+            const data = response.data;
+            dispatch({
+                type: SELL,
+                payload: data
+            })
+            
+        } catch (error) {
+            dispatch({
+                type: 'SELL_ORDER_FAILURE',
+                payload: error.message
+            })     }
+        
+    }
+}
+
+
 
 export const addToCart = (payload) => {
     return {
