@@ -14,6 +14,7 @@ import {
   REMOVE_FROM_CART,
   CLEAR_CART,
   SET_QUANTITY,
+  GET_ORD,
   VALIDATE_SUCCESS_ORDER,
   CREATE_ORDER_SUCCESS
 } from '../actions/actionTypes'
@@ -29,6 +30,7 @@ const initialState = {
   filters: [],
   user: [],
   cart: [],
+  ordersRedux:[],
   validate_order: null
 }
 
@@ -120,7 +122,11 @@ const rootReducer = (state = initialState, action) => {
           cart: state.cart
         };
       }
-
+      case GET_ORD:
+        return{
+          ...state,
+          ordersRedux: action.payload
+        }
       case VALIDATE_SUCCESS_ORDER:
         return {
           ...state,

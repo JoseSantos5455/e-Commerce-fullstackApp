@@ -6,8 +6,14 @@
     width: 20%;
     border-radius: 10rem;
 }
+.img_profile_drop{
+    width: 30%;
+    border-radius: 10rem;
+    margin-bottom: 10%;
+    padding: 1%;
+}
 .p_user_name {
-   
+    
     color: rgb(0, 0, 0);
 }
 .drop_user{
@@ -16,12 +22,10 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    border-bottom: 1px solid black;
-    
-    padding: 2%;
+    padding: 5%;
     margin-top: 100%;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 30%;
+    padding-bottom: 30%;
 
 }
 .drop_user p{
@@ -32,11 +36,23 @@
       padding-top: 10%;
       color: black;
     }
-.drop_user p:hover{
-    color: rgb(0, 0, 0);
+    .drop_user p:hover{
+        color: rgb(0, 0, 0);
+        transform: scale(1.1);
+    }
+    .profile_p{
+        
+        text-decoration: none;
+  }
+  .p_user_name{
+    font-size: .8rem;
+    z-index: 2;
   }
     .link_complete_profile{
       text-decoration: none;
       color: black;
+      margin: -20% 0 -10% 0;
+      padding-top: 15% ;
+      font-size: .5rem;
 
   }
