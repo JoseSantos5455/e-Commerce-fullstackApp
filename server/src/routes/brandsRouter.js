@@ -3,6 +3,6 @@ const getAllBrandsHandler = require('../handlers/brandsHandlers/getAllBrandsHand
 
 const brandsRouter = Router();
 
-brandsRouter.get('/',getAllBrandsHandler);
+brandsRouter.post('/',getAllBrandsHandler);
 
 module.exports = brandsRouter;

@@ -2,9 +2,9 @@ require('dotenv').config();
 const {Category} = require('../../db.js');
 
 const fakeCategories = [
-                        {name:'Computadoras PC'},
-                        {name:'Laptops'},
-                        {name:'Peripherals'},
+                    //{name:'Computadoras PC'},
+                    {name:'Laptops'},
+                    {name:'Peripherals'},
                     {name:'Graphics Card'},
                     {name:'Others'},
                     {name:'Mouse'},
@@ -19,7 +19,7 @@ const fakeCategories = [
                     {name:'Power Supply'},                  
                     {name:'Motherboard'},
                     {name:'RAM'},
-                {name: 'Audio'}];
+                    {name: 'Audio'}];
 
 const addCategories = async()=>{
     const categories = await Category.bulkCreate(fakeCategories);
