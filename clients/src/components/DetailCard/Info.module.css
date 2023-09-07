@@ -35,7 +35,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-left: 20%; */
-  margin-left: 26%;
-  width: 50%;
+  justify-content: center;
 }

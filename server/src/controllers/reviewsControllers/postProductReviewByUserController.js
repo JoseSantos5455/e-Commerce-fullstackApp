@@ -13,6 +13,7 @@ const postProductReviewByUserController = async (orderId,productId,userId,descri
     const product = await Product.findByPk(productId);
     const newValoration = Math.round((product.valoration * reviews + valoration) / (reviews +1));
     const newReview = await Review.create({description});
+    console.log(userId)
     newReview.setUser(userId);
     newReview.setProduct(productId);
     Product.update({valoration:newValoration},{where:{id:productId}});

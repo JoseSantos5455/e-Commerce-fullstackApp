@@ -71,16 +71,14 @@ export default function Info({id,name, description,stock,price,valoration}) {
 
   return (
     <div className={Styles.wrapper}>
-      <h3 className={Styles.pdt_name}>{name} </h3>
       <p className={Styles.pdt_description}>{description}</p>
       <div><Rating valoration={valoration}></Rating></div>
       <p className={Styles.pdt_stock}>Stock: {stock}</p>
       <p className={Styles.pdt_price}>${price}</p>
-      {/* <button className={Styles.btn_buy}>Buy now</button> */}
       <div className={Styles.div_input}>
-        <AiFillPlusCircle onClick={handleMoreQ} />
-        <input type="number" value={buyQ} readOnly />
         <AiOutlineMinusCircle onClick={handleLessQ} />
+        <input type="number" value={buyQ} readOnly />
+        <AiFillPlusCircle onClick={handleMoreQ} />
       </div>
       {
         !isCart ?
