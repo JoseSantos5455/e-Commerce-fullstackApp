@@ -11,7 +11,7 @@ export default function LogOut() {
 
     
 
-  const handleLogout = (event) =>{
+  const handleLogout = () =>{
     // event.preventDefault();
     dispatch(logoutUser())
     
