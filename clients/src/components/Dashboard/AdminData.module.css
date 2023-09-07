@@ -98,7 +98,19 @@
 
 }
 
-
+.btn_sell{
+    background-color: black;
+  color: aliceblue;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+    margin: 1%;
+    align-self:center;
+}
+.btn_sell:hover{
+    transform: scale(1.2);
+    color: rgb(45, 94, 217);
+}
 .no_sells{
     display: flex;
     flex-flow: column;

@@ -40,6 +40,7 @@ export default function AdminData() {
           {pdt.deliveredDate && <p>{`Arrives ${pdt.deliveredDate}`}</p>}
           <p>{`Status: ${pdt.status}`}</p>
         </div>
+          <button className={Styles.btn_sell}>Confirm & Sell</button>
       </div>
     ))
 ):(
@@ -59,17 +60,12 @@ export default function AdminData() {
                 sells.map((pdt, idx) => (
                   <div className={Styles.order} key={idx}>
                     <div className={Styles.datos}>
-                      {pdt.orderDetails[0] ? (
-                        <div className="">
-                        <p>{pdt.orderDetails[0].product}</p>
+                      { pdt.orderDetails[0] ? (
+                        <p>{pdt.orderDetails[0].product}</p>) : ( `id: ${pdt.id}`)}
+
                         <p>{`Ordered: ${pdt.orderDate}`}</p>
                         {pdt.deliveredDate && <p>{`Arrives ${pdt.deliveredDate}`}</p>}
                         <p>{`Status: ${pdt.status}`}</p>
-                        </div>
-                      ) : (
-                        `id: ${pdt.id}`
-                      )}
-                     
                     </div>
                   </div>
                 ))
