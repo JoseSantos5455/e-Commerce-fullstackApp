@@ -47,7 +47,7 @@ export default function LoginForm() {
         )
 
       );
-      history.push('/products');
+     window.location = ('/admin');
     
     alert('Your profile has been updated :)');
       
