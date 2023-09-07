@@ -1,9 +1,9 @@
 const {Product} = require('../../db.js');
-
-const getAllBrands = async(products)=>{
-    // const products = await Product.findAll({
-    //   attributes: ['brand'],
-    // });
+//products
+const getAllBrands = async()=>{
+     const products = await Product.findAll({
+       attributes: ['brand'],
+     });
 
 
     const brands = [...new Set(products.map(product => product.brand))];

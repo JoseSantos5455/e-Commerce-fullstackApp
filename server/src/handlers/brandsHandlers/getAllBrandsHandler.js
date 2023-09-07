@@ -1,9 +1,9 @@
 const getAllBrandsController = require('../../controllers/brandsControllers/getAllBrandsController.js');
 
 const getAllBrandsHandler = async(req,res)=>{
-    const {products} = req.body;
+    //const {products} = req.body;products
     try {
-        const result = await getAllBrandsController(products);
+        const result = await getAllBrandsController();
         res.status(200).json(result);    
     } 
     catch (error) {
