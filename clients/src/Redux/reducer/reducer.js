@@ -87,10 +87,19 @@ const rootReducer = (state = initialState, action) => {
       }
     }
     case POST_USER:
-      return {
-        ...state,
-        user: action.payload
-      }
+  let profile = 'User'; // Definir el perfil por defecto como 'User'
+
+  if (action.payload.email === 'juanlluviasb@gmail.com') {
+    profile = 'Admin'; // Cambiar el perfil a 'Admin' si el email coincide
+  }
+
+  return {
+    ...state,
+    user: {
+      ...action.payload,
+      profile: profile, // Agregar la propiedad 'profile' al objeto 'user'
+    },
+  };
     case UPD_USER:
       return {
         ...state,

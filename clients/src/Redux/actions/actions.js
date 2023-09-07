@@ -167,8 +167,8 @@ export function filterByGenres(filters) {
 export const createUser = (name, email, adress_st, adress_num, department, zip) => {
     return async (dispatch) => {
         try {
-            const requestData = { name, email, adress_st, adress_num, department, zip };
-
+            
+            const requestData = { name, email,  adress_st, adress_num, department, zip };
             const response = await axios.post('http://localhost:3001/users', requestData);
 
 
@@ -192,7 +192,7 @@ export const updateUser = (id, country, adress_st,  adress_num, department, zip)
       const parsedApartment = Number(department);
       const parsedAdressNum = Number(adress_num);
       const parsedZip= Number(zip);
-
+        
       const requestData = { id, country, adress_st,  adress_num: parsedAdressNum, department: parsedApartment, zip: parsedZip };
 
 

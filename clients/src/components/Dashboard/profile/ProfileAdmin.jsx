@@ -11,6 +11,7 @@ export default function ProfileAdmin() {
     <div className={Styles.wrapper}>
         <img src={user.picture} alt="" />
         <p>{userRedux.name}</p>
+        <p>{`${userRedux.email}`}</p>
         {
           userRedux.adress_st ? (<div className={Styles.div_adress}>
             <p> Your adress:</p>
