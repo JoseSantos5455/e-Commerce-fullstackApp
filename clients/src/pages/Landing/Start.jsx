@@ -37,7 +37,7 @@ export default function Start() {
       dispatch(validateSuccessOrder(paymentIdValue))
       dispatch(clearCart())
     }
-  }, [dispatch])
+  }, [dispatch, cart, paymentIdValue,statusValue,userId,validate])
 
   return (
     <div className={Styles.container}>

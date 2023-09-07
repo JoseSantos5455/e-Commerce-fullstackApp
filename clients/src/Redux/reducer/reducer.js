@@ -99,20 +99,24 @@ const rootReducer = (state = initialState, action) => {
       }
     }
     case POST_USER:
-  let profile = 'User'; // Definir el perfil por defecto como 'User'
+          /* eslint-disable no-case-declarations */
 
-  if (action.payload.email === 'admin@gmail.com') {
-    profile = 'Admin'; // Cambiar el perfil a 'Admin' si el email coincide
-  }
-
-  return {
-    ...state,
-    user: {
-      ...action.payload,
-      profile: profile, // Agregar la propiedad 'profile' al objeto 'user'
-    },
-    validate_user: action.payload
-  };
+      let profile = 'User'; // Definir el perfil por defecto como 'User'
+    
+      if (action.payload && action.payload.email === 'admin@gmail.com') {
+        profile = 'Admin'; // Cambiar el perfil a 'Admin' si el email coincide
+      }
+    
+      return {
+        ...state,
+        user: {
+          ...state.user, // Mantener las propiedades existentes en 'user'
+          ...action.payload, // Agregar las propiedades de 'action.payload' a 'user'
+          profile: profile, // Agregar la propiedad 'profile' al objeto 'user'
+        },
+        validate_user: action.payload, // Esto puede estar bien dependiendo de tu lógica
+      };
+    
     case UPD_USER:
       return {
         ...state,

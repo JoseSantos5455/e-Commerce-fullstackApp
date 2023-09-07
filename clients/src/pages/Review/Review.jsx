@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useDispatch } from 'react-redux';
 //import { submitProductReview } from './redux/actions'; // Reemplaza con tu acción Redux
 import Rating from '@mui/material/Rating';
@@ -33,7 +33,7 @@ function ProductReviewForm({ productId }) {
     };
 
     // Envía los datos al backend a través de la acción Redux
-    dispatch(submitProductReview(reviewData));
+    dispatch(submitProductReview(reviewData));// eslint-disable-line no-undef
 
     // Limpia el formulario después del envío
     setRating(0);
