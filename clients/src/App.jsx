@@ -27,7 +27,7 @@ export default function App() {
           <Route exact path="/about" Component={Abt}/>
           <Route exact path="/howedoit" Component={Info}/>
           <Route exact path="/admin" Component={Dashboard}/>
-          <Route exact path="/product-review/:id" Component={Review}/>
+          <Route exact path="/admin/product-review/:id" Component={Review}/>
           <Route exact path="/login" Component={LoginView}/>
           <Route exact path="/help" Component={HelpView}/>
           <Route exact path="/about" Component={Abt}/>

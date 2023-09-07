@@ -93,19 +93,14 @@ export default function Info({id,name, description,stock,price,valoration}) {
 
   return (
     <div className={Styles.wrapper}>
-      <h3 className={Styles.pdt_name}>{name} </h3>
       <p className={Styles.pdt_description}>{description}</p>
       <div><Rating valoration={valoration}></Rating></div>
       <p className={Styles.pdt_stock}>Stock: {stock}</p>
       <p className={Styles.pdt_price}>${price}</p>
-      {/* <button className={Styles.btn_buy}>Buy now</button> */}
       <div className={Styles.div_input}>
-        <div className={Styles.counter}>
-
-        <RiAddBoxFill onClick={handleMoreQ} className={Styles.svg_addIcon}/>
-        <input type="number" value={buyQ} readOnly className={Styles.number_detail}/>
-        <RiCheckboxIndeterminateFill onClick={handleLessQ} className={Styles.svg_removeIcon}/>
-        </div>
+        <AiOutlineMinusCircle onClick={handleLessQ} />
+        <input type="number" value={buyQ} readOnly />
+        <AiFillPlusCircle onClick={handleMoreQ} />
       </div>
       {
         !isCart ?
