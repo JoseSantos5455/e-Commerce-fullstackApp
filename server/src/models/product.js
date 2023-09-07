@@ -57,11 +57,11 @@ module.exports = (sequelize)=>{
             allowNull:false,
             validate: {
                 isUrl: true,
-                isImageFormat(value) {
-                  if (!/\.(png|jpg|jpeg)$/.test(value)) {
-                    throw new Error('La URL debe ser una imagen PNG o JPG.');
-                  }
-                }
+                // isImageFormat(value) {
+                //   if (!/\.(png|jpg|jpeg)$/.test(value)) {
+                //     throw new Error('La URL debe ser una imagen PNG o JPG.');
+                //   }
+                // }
             }
         },
         isActive:{
