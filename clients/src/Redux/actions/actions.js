@@ -165,11 +165,11 @@ export function filterByGenres(filters) {
     }
 }
 
-export const createUser = (name, email, adress_st, adress_num, department, zip) => {
+export const createUser = (name, email, address_st, address_num, department, zip) => {
     return async (dispatch) => {
         try {
             
-            const requestData = { name, email,  adress_st, adress_num, department, zip };
+            const requestData = { name, email,  address_st, address_num, department, zip };
             const response = await axios.post('http://localhost:3001/users', requestData);
 
 
@@ -185,16 +185,16 @@ export const createUser = (name, email, adress_st, adress_num, department, zip) 
         }
     };
 };
-export const updateUser = (id, country, adress_st,  adress_num, department, zip) => {
+export const updateUser = (id, country, address_st,  address_num, department, zip) => {
   return async (dispatch) => {
     try {
       console.log('action update user')
 
       const parsedApartment = Number(department);
-      const parsedAdressNum = Number(adress_num);
+      const parsedAddressNum = Number(address_num);
       const parsedZip= Number(zip);
         
-      const requestData = { id, country, adress_st,  adress_num: parsedAdressNum, department: parsedApartment, zip: parsedZip };
+      const requestData = { id, country, address_st,  address_num: parsedAddressNum, department: parsedApartment, zip: parsedZip };
 
 
             const response = await axios.put('http://localhost:3001/users', requestData);

@@ -9,17 +9,17 @@ export default function validate (input){
         errors.country = 'Enter a valid country';
       }
 
-    if(input.adress_st === null ){
-        errors.adress_st = 'Invalid street name'
+    if(input.address_st === null ){
+        errors.address_st = 'Invalid street name'
       }
-      else if(typeof input.adress_st !== 'string' ){
-        errors.adress_st = 'Can not contain special characters'
+      else if(typeof input.address_st !== 'string' ){
+        errors.address_st = 'Can not contain special characters'
       }
-    if(!input.adress_num){
-        errors.adress_num = 'Add a valid adress number'
+    if(!input.address_num){
+        errors.address_num = 'Add a valid address number'
       }
-      if(typeof input.adress_num != 'string'){
-          errors.adress_num = 'Must be a number'
+      if(typeof input.address_num != 'string'){
+          errors.address_num = 'Must be a number'
         }
     if(!input.department){
         errors.department = 'Add a valid apartment number or 0'

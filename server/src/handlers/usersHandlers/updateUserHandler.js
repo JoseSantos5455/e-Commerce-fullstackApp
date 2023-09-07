@@ -4,15 +4,15 @@ const updateUserHandler = async (req,res)=>{
     const {
         id,
         country,
-         adress_st,
-          adress_num,
+         address_st,
+          address_num,
            department,
             zip}= req.body;
     try {
         const result = await updateUserController(id,
             country,
-             adress_st,
-              adress_num,
+             address_st,
+              address_num,
                department,
                 zip);
         res.status(200).json(result);    
