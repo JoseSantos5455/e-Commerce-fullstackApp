@@ -6,6 +6,7 @@ import {
   GET_DET,
   GET_CATEGORIES,
   GET_BRANDS,
+  GET_REVIEWS,
   FILTER_BY_CATEGORY,
   GET_PAGINATE,
   POST_PAGO,
@@ -27,6 +28,7 @@ const initialState = {
   allProducts: [],
   categories: [],
   brands: [],
+  reviews: [],
   detail: [],
   product_name: [],
   filters: [],
@@ -63,6 +65,13 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         categories: action.payload,
       }
+
+    case GET_REVIEWS:{
+      return {
+        ...state,
+        reviews: action.payload,
+      }
+    }
 
     case GET_BRANDS: {
       return {
