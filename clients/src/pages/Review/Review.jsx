@@ -1,35 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { useParams, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+//import { submitProductReview } from './redux/actions'; // Reemplaza con tu acción Redux
+import Rating from '@mui/material/Rating';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
-// Componente para calificar y comentar un producto
-function Review() {
-  const { productId } = useParams(); // ID del producto desde la URL
-  const user = useSelector(state => state.user); // Información del usuario autenticado
-  const [purchaseCompleted, setPurchaseCompleted] = useState(false);
+function ProductReviewForm({ productId }) {
+  const dispatch = useDispatch();
+  const [rating, setRating] = useState(0); // Estado para la calificación
+  const [comment, setComment] = useState(''); // Estado para el comentario
 
-  // Simulación: verifica si el usuario ha completado una compra válida
-  useEffect(() => {
-    // Aquí debes realizar la verificación en tu base de datos o sistema de compras
-    // Puedes utilizar la información de user y productId para verificar la compra.
-    // Si la compra está completa, establece setPurchaseCompleted(true);
-  }, [user, productId]);
+  const handleRatingChange = (event) => {
+    setRating(event.target.value);
+  };
 
-  // Si el usuario no está autenticado o la compra no está completa, redirige
-  if (!user || !purchaseCompleted) {
-    return <NavLink to={`*`}></NavLink>; // Redirige a una página de error o "no tienes acceso"
-    
-  }
+  const handleCommentChange = (event) => {
+    setComment(event.target.value);
+  };
 
-  // Aquí puedes mostrar el formulario para calificar y comentar el producto
+  const handleSubmit = () => {
+    // Valida que se haya seleccionado una calificación antes de enviar
+    if (rating === 0) {
+      alert('Por favor, selecciona una calificación.');
+      return;
+    }
+
+    // Construye el objeto de revisión
+    const reviewData = {
+      productId: productId,
+      rating: rating,
+      comment: comment,
+    };
+
+    // Envía los datos al backend a través de la acción Redux
+    dispatch(submitProductReview(reviewData));
+
+    // Limpia el formulario después del envío
+    setRating(0);
+    setComment('');
+  };
+
   return (
     <div>
-      <h1>Califica y comenta el producto</h1>
-      <p>Nombre del producto: {productId}</p>
-      {/* Tu formulario para calificar y comentar el producto */}
-      {/* Asegúrate de manejar el envío del formulario y registrar la calificación y el comentario en tu base de datos */}
+      <h2>Deja tu reseña</h2>
+      <Rating
+        name="rating"
+        value={rating}
+        onChange={handleRatingChange}
+      />
+      <TextField
+        label="Comentario"
+        multiline
+        rows={4}
+        value={comment}
+        onChange={handleCommentChange}
+      />
+      <Button variant="contained" color="primary" onClick={handleSubmit}>
+        Enviar reseña
+      </Button>
     </div>
   );
 }
 
-export default Review;
+export default ProductReviewForm;
