@@ -7,6 +7,7 @@ import {
     GET_PAGINATE,
     GET_DET,
     GET_BRANDS,
+    GET_REVIEWS,
     FILTER_BY_CATEGORY,
     POST_USER,
     ADD_TO_CART,
@@ -131,6 +132,25 @@ export function getBrands() {
             })
         } catch (error) {
             console.log(error)
+        }
+    }
+}
+
+export function getReviews(id){
+    return async (dispatch) => {
+        let endpoint = `http://localhost:3001/reviews/${id}`;
+
+        try {
+            const response = await axios(endpoint)
+            let data = response.data
+            dispatch({
+                type: GET_REVIEWS,
+                payload: data
+            })
+            return data;
+        } catch (error) {
+            console.log(error);
+            throw error;
         }
     }
 }
