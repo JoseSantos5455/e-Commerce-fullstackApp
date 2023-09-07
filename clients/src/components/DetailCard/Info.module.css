@@ -35,5 +35,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding-left: 20%; */
+}
+.div_input input {
+  width: 20%;
+  text-align: center;
+}
+/* Para centrar el h2 */
+.centerText {
+  margin-top: 15%;
+  text-align: center;
+}
+.svg_addIcon, .svg_removeIcon{
+  font-size: 2rem;
+  color:black;
+  cursor: pointer;
+}
+/* Para los textareas */
+.fullWidth {
+  width: 95%;
+  align-items: center;
+  box-sizing: border-box;
+  resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+  margin: 0 auto; /* Centra horizontalmente */
+}
+.number_detail{
+  border: transparent;
+  display: flex;
+  text-align: center;
+  width: 50%;
+  font-size: 1rem;
+}
+.counter{
+  display: flex;
   justify-content: center;
+  align-items: center;
 }

@@ -4,21 +4,27 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { addToCart, removeFromCart,setQuantity } from '../../Redux/actions/actions'
-import {
-  AiFillPlusCircle,
-  AiOutlineMinusCircle,
-} from 'react-icons/ai'
+import { addToCart, getReviews, removeFromCart, setQuantity } from '../../Redux/actions/actions'
+import {RiAddBoxFill,RiCheckboxIndeterminateFill } from "react-icons/ri";
 
-// eslint-disable-next-line react/prop-types
+
+const initialReview = {
+  id: 0,
+  description: "",
+  productId: "",
+  userId: "",
+  isActive: false,
+  userFullName: ""
+}
 
 export default function Info({id,name, description,stock,price,valoration}) {
-
   const dispatch = useDispatch()
 
   const cart = useSelector((state) => state.cart)
   const [buyQ, setBuyQ] = useState(1)
   const [isCart, setIsCart] = useState(false);
+  const [ setReview] = useState(initialReview);
+  const [reviews, setReviews] = useState([]) // Use an array to store multiple reviews
   // funcion que detecte si el producto ya esta en el carrito
   let productInCart = cart.find((item) => item.id === id)
 
@@ -33,6 +39,22 @@ export default function Info({id,name, description,stock,price,valoration}) {
     }
   }, [dispatch, id, cart]);
 
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const data = await dispatch(getReviews(id));
+        setReviews(data.slice(0, 3));
+        if (data.length > 0) {
+          setReview(data[0]) // Set the first review as the default review
+        }
+      } catch (error) {
+        // Manejar errores aquí
+        console.error("Error fetching reviews", error);
+      }
+    };
+  
+    fetchReviews();
+  }, [dispatch, id]);
 
   const handleMoreQ = () => {
     if (stock > buyQ){
@@ -89,6 +111,19 @@ export default function Info({id,name, description,stock,price,valoration}) {
             <button className={Styles.btn_buy} onClick={handleAddToCart}>Remove from cart</button>
           )
       }
+      <div>
+      {reviews.length > 0 && (
+      <div >
+        <h2 className={Styles.centerText}>Reviews</h2> {/* Cambia la clase a la de tu componente */}
+          {/* Map through the first three reviews and display them */}
+          {reviews.map((r) => (
+            <div key={r.id}>
+              <textarea className={Styles.fullWidth} value={r.description} readOnly></textarea> {/* Cambia la clase a la de tu componente */}
+            </div>
+        ))}
+      </div>
+      )}
+      </div>
     </div>
   )
 }

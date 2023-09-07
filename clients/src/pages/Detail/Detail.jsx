@@ -19,8 +19,6 @@ export default function Detail() {
     dispatch(getDetail(id))
   }, [dispatch, id])
 
-
-
   return (
     <div className={Styles.wrapper}>
       <Nav />
@@ -33,11 +31,11 @@ export default function Detail() {
           img_main={product.image}
         />
         <Info
-          id={product.id}
+          id={id}
           name={product.name}
           description={product.description}
           price={product.price}
-          valoration={product.valoration}
+          valoration={product.valoration || 3}
           stock={product.stock}
         />
       </div>

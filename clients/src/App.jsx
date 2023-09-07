@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Review from "./pages/Review/Review";
 import { ShoppingView } from "./pages/Shopping/ShoppingView";
 import LoginView from "./pages/Login/LoginView";
+import { HelpView } from "./pages/Help/HelpView";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route exact path="/admin" Component={Dashboard}/>
           <Route exact path="/admin/product-review/:id" Component={Review}/>
           <Route exact path="/login" Component={LoginView}/>
+          <Route exact path="/help" Component={HelpView}/>
           <Route exact path="/about" Component={Abt}/>
           <Route exact path="/ShoppingCar" Component={ShoppingView}/>
           <Route path="*" Component={NotFound}/>

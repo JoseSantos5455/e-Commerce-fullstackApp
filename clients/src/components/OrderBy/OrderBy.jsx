@@ -7,7 +7,7 @@ export default function OrderBy({ handlerFilters }) {
 
       <div className={s.divRating}>
         <button
-          onClick={(e) => {
+          onClick={() => {
             handlerFilters("valoration", "valoration")
           }}
           className={s.btn}

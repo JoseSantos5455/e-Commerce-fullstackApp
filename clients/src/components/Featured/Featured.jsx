@@ -1,14 +1,10 @@
 import { Link } from 'react-router-dom'
 import styles from './Featured.module.css'
-import { useDispatch } from 'react-redux'
-import { getProducts } from '../../Redux/actions/actions'
+
 
 const Featured = () => {
-  let dispatch = useDispatch()
 
-  let dispatchStart = ()=>{
-    dispatch(getProducts)
-  }
+
 
   return (
 <div className={`${styles.featured_container}`}>

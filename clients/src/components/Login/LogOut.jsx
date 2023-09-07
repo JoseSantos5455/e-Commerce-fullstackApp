@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useAuth0 } from "@auth0/auth0-react";
 import Styles from './LogOut.module.css'
 import { logoutUser } from '../../Redux/actions/actions'
@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 
 
 export default function LogOut() {
-    const { logout,isAuthenticated } = useAuth0();
+    const { logout } = useAuth0();
     const dispatch = useDispatch()
 
     
