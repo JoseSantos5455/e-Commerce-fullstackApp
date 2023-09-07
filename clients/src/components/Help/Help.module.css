@@ -1,0 +1,35 @@
+.developer{
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  height: 300px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.image{
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid black;
+  height: 100px;
+}
+.info{
+  margin-top: 20px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import Styles from './AdminData.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getOrders, sellOrder } from '../../Redux/actions/actions'
@@ -87,7 +87,7 @@ export default function AdminData() {
               )
             ):(
               <div className={Styles.no_sells}>
-              <p>You haven't made any sales yet. Why not start selling your products in D'Lujo now?</p>
+              <p>You haven&apos;t made any sales yet. Why not start selling your products in D&apos;Lujo now?</p>
               </div>
             )}
           </div>
