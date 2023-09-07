@@ -12,10 +12,10 @@ export default function ProfileAdmin() {
         <p>{userRedux.name}</p>
         <p>{`${userRedux.email}`}</p>
         {
-          userRedux.adress_st ? (<div className={Styles.div_adress}>
-            <p> Your adress:</p>
-                    <p>{`${userRedux.adress_st}`}</p>
-                    <p>{`, N° ${userRedux.adress_num} - `}</p>
+          userRedux.address_st ? (<div className={Styles.div_adress}>
+            <p> Your address:</p>
+                    <p>{`${userRedux.address_st}`}</p>
+                    <p>{`, N° ${userRedux.address_num} - `}</p>
                     <p>{` Apt. ${userRedux.department}`}</p>
           </div>
             
