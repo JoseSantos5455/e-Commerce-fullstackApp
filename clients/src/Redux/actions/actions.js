@@ -15,8 +15,11 @@ import {
     CLEAR_CART,
     SET_QUANTITY,
     GET_ORD,
+    SELL,
     VALIDATE_SUCCESS_ORDER,
-    CREATE_ORDER_SUCCESS
+    CREATE_ORDER_SUCCESS,
+    LOGOUT,
+    GET_USER
 } from './actionTypes'
 import axios from "axios"
 
@@ -184,11 +187,11 @@ export function filterByGenres(filters) {
     }
 }
 
-export const createUser = (name, email, adress_st, adress_num, department, zip) => {
+export const createUser = (name, email, address_st, address_num, department, zip) => {
     return async (dispatch) => {
         try {
-            const requestData = { name, email, adress_st, adress_num, department, zip };
-
+            
+            const requestData = { name, email,  address_st, address_num, department, zip };
             const response = await axios.post('http://localhost:3001/users', requestData);
 
 
@@ -204,16 +207,16 @@ export const createUser = (name, email, adress_st, adress_num, department, zip) 
         }
     };
 };
-export const updateUser = (id, country, adress_st,  adress_num, department, zip) => {
+export const updateUser = (id, country, address_st,  address_num, department, zip) => {
   return async (dispatch) => {
     try {
       console.log('action update user')
 
       const parsedApartment = Number(department);
-      const parsedAdressNum = Number(adress_num);
+      const parsedAddressNum = Number(address_num);
       const parsedZip= Number(zip);
-
-      const requestData = { id, country, adress_st,  adress_num: parsedAdressNum, department: parsedApartment, zip: parsedZip };
+        
+      const requestData = { id, country, address_st,  address_num: parsedAddressNum, department: parsedApartment, zip: parsedZip };
 
 
             const response = await axios.put('http://localhost:3001/users', requestData);
@@ -250,22 +253,59 @@ export const createOrder = (payload) => {
     }
 }
 
-export const getOrders = ()=>{
+export const getOrders = (userId)=>{
         return async (dispatch)=>{
                 try {
-                    const response = await axios('http://localhost:3001/orders')
-                    const data = response.data
-                    return dispatch({
-                        type: GET_ORD,
-                        payload: data
-                    })
+                    if(userId){
+                        const response = await axios(`http://localhost:3001/orders?userId=${userId}`)
+    
+                        const data = response.data
+                        return dispatch({
+                            type: GET_ORD,
+                            payload: data
+                        })
+                    }
+                    else{
+                        const response = await axios(`http://localhost:3001/orders`)
+                        
+                        const data = response.data
+
+                        return dispatch({
+                            type: GET_ORD,
+                            payload: data
+                        })
+                    }
+                    
+                    
                 } catch (error) {
+                    console.log(error.message)
                     dispatch({
                         type: 'GET_ORDER_FAILURE',
                         payload: error.message
                     });   }
         }
 }
+
+export const sellOrder = (orderId)=>{
+    return async (dispatch) =>{
+        try {
+            const response = axios.put(`http://localhost:3001/orders/${orderId}`) 
+            const data = response.data;
+            dispatch({
+                type: SELL,
+                payload: data
+            })
+            
+        } catch (error) {
+            dispatch({
+                type: 'SELL_ORDER_FAILURE',
+                payload: error.message
+            })     }
+        
+    }
+}
+
+
 
 export const addToCart = (payload) => {
     return {
@@ -305,12 +345,23 @@ export const createOrderSuccess = (payload) => {
     return async (dispatch) => {
         
         try {
+            // console.log(payload);
             const response = await axios.post(`http://localhost:3001/orders/${payload.userId}`, payload.productsIds)
             return dispatch({
                 type: CREATE_ORDER_SUCCESS,
+                response
             })
         } catch (error) {
             console.log(error);
         }
     }
 }
+
+
+export const logoutUser = () => {
+    return {
+        type: LOGOUT
+    }
+}
+
+// export const getUser = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import Styles from './Profile.module.css'
 import { Link } from "react-router-dom";
@@ -8,14 +8,14 @@ import { useSelector } from "react-redux";
 const Profile = () => {
 
   let userRedux = useSelector(state => state.user)
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isLoading } = useAuth0();
+  const [showMenu, setShowMenu] = useState(false);
 
   if (isLoading) {
     return <div>Loading ...</div>;
   }
 
  //dropdown para logout profile
-    const [showMenu, setShowMenu] = useState(false);
  
 
     const handleMouseEnter = () => {
@@ -57,7 +57,7 @@ const Profile = () => {
                           
                           </NavLink>
                       {
-                        !userRedux.adress_st && (
+                        !userRedux.address_st && (
                             <NavLink to='/login' className={Styles.link_complete_profile}  >
                               <p>
                               complete profile

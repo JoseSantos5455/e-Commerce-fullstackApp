@@ -17,5 +17,8 @@ export const SET_QUANTITY = "SET_QUANTITY"
 export const VALIDATE_SUCCESS_ORDER = "VALIDATE_SUCCESS_ORDER"
 export const CREATE_ORDER_SUCCESS = "CREATE_ORDER_SUCCESS"
 export const GET_ORD = "GET_ORDER_SUCCESS"
+export const LOGOUT = "LOGOUT"
+export const GET_USER = "GET_USER"
+export const SELL = "SELL_ORDER_SUCCES"
 
 

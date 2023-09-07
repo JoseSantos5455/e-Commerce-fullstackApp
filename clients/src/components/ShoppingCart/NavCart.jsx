@@ -10,9 +10,9 @@ export const NavCart = () => {
       <Link to="/products">
           <IoArrowBackOutline className={styles.backIcon}/>
         </Link>        
-        <h1>Your order</h1>
+        <h1 className={styles.title}>Your order</h1>
         </div>
-        <div>
+        <div className={styles.logo}>
           <img src={logo} alt="logo" className={`${styles.logo}`} />
         </div>
     </div>

@@ -14,14 +14,17 @@ const sendConfirmationByMail = async (email, name, orderId) => {
 
 const createOrderController = async (userId, productIds) => {
     const user = await User.findByPk(userId);
+    console.log(productIds);
+    console.log(user);
     if (!user) throw new Error('User not found');
-
     const newOrder = await Order.create({
         userId,
         orderDate: new Date().toISOString().split('T')[0]
     });
+
     for (const product of productIds) {
         const detail = await Product.findByPk(product.id);
+        console.log(detail);
         if (detail.stock < product.buyQ) throw new Error('Stock is less than your requirement');
 
         await newOrder.addProduct(detail, {
