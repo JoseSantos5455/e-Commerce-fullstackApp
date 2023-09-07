@@ -1,35 +1,82 @@
-.developer{
-  margin-top: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.body {
+  background-color: #f5f5f5;
+  height: 100%;
 }
-.container{
-  display:flex;
-  flex-wrap: wrap;
+/* Estilos para la sección de desarrolladores */
+.developer {
   margin-top: 10vh;
-  justify-content: center;
-  align-items: center;
-}
-.card{
-  height: 300px;
-  width: 200px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  color: #333;
+  padding: 50px; /* Color de texto más oscuro */
 }
-.image{
+
+/* Estilos para el contenedor principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre tarjetas */
+  margin-top: 3vh;
+  justify-content: center;
+  align-items: center; /* Alineación vertical centrada */
+}
+
+/* Estilos para cada tarjeta */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s;
+  padding: 20px; /* Espaciado interior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevación al pasar el mouse */
+}
+
+/* Estilos para la imagen del desarrollador */
+.image {
   width: 100px;
-  border-radius: 50%;
-  border: 3px solid black;
   height: 100px;
+  border-radius: 50%;
+  border: px solid #333; /* Color de borde más oscuro */
+  object-fit: cover; /* Ajustar la imagen dentro del círculo */
 }
-.info{
+
+/* Estilos para la información del desarrollador */
+.info {
   margin-top: 20px;
-  width: 200px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para los enlaces */
+.linkedin {
+  text-decoration: none;
+  color: #007bff; /* Color azul para los enlaces */
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.linkedin:hover {
+  color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+
+.github {
+  text-decoration: none;
+  color: #000000; /* Color azul para los enlaces */
+  margin-top: 10px;
+  margin-right: 40px;
+  font-size: 2rem;
+}
+
+.github:hover {
+  color: #4a4a4a; /* Cambio de color al pasar el mouse */
 }
