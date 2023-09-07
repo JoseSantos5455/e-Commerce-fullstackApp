@@ -16,7 +16,8 @@ import {
   SET_QUANTITY,
   GET_ORD,
   VALIDATE_SUCCESS_ORDER,
-  CREATE_ORDER_SUCCESS
+  CREATE_ORDER_SUCCESS,
+  LOGOUT
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -31,7 +32,8 @@ const initialState = {
   user: [],
   cart: [],
   ordersRedux:[],
-  validate_order: null
+  validate_order: null,
+  validate_user: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -89,12 +91,14 @@ const rootReducer = (state = initialState, action) => {
     case POST_USER:
       return {
         ...state,
-        user: action.payload
+        user: action.payload,
+        validate_user: action.payload
       }
     case UPD_USER:
       return {
         ...state,
-        user: action.payload
+        user: action.payload,
+        validate_user: action.payload
       }
 
     case ADD_TO_CART:
@@ -136,6 +140,12 @@ const rootReducer = (state = initialState, action) => {
       case CREATE_ORDER_SUCCESS:
         return {
           ...state
+        }
+
+      case LOGOUT:
+        return {
+          ...state,
+          validate_user: []
         }
 
     default:
