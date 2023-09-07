@@ -10,7 +10,7 @@
   width: 100%;
   height: 10vh;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 9;
+  z-index: 1;
 }
 
 .logo {
@@ -21,6 +21,18 @@
 .cart {
   font-size: 2rem;
   color:black;
+}
+
+.cartCount {
+  background-color: #ff5722; 
+  color: white; 
+  border-radius: 60%; /* Reducir el radio del borde para hacer el círculo más pequeño */
+  padding: 2px 6px; /* Ajustar el relleno para hacerlo más pequeño */
+  font-size: 0.8rem;
+}
+
+span{
+  text-decoration: none;
 }
 
 .col_5 {
@@ -48,51 +60,6 @@
   height: 50%;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdownToggle {
-  padding: 0;
-  border: none;
-  background: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.dropdownMenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 8rem;
-  border-radius: 7px;
-  background-color: white;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-}
-
-.dropdown:hover .dropdownMenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdownHeader {
-  font-weight: bold;
-}
-
-.dropdownItem {
-  display: block;
-  padding: 5px 0;
-  color: black;
-  text-decoration: none;
-}
 .btn_help{
   text-decoration: none;
   color: black;
@@ -164,6 +131,9 @@
 .col_search {
   width: 50%;
   display: flex;
+}
+.link_cart{
+  text-decoration: none;
 }
 @media (max-width: 800px) {
   .font{

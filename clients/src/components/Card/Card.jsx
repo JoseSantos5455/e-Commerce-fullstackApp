@@ -5,14 +5,14 @@ import Styles from './Card.module.css'
 import { NavLink } from 'react-router-dom'
 import {
   AiOutlineHeart,
-  AiFillPlusCircle,
-  AiOutlineMinusCircle,
 } from 'react-icons/ai'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { addToCart, removeFromCart, setQuantity } from '../../Redux/actions/actions'
+import {RiAddBoxFill,RiCheckboxIndeterminateFill } from "react-icons/ri";
 
+//RiAddBoxFill RiCheckboxIndeterminateFill
 Card.propTypes = {
   aviability: PropTypes.bool.isRequired,
   valoration: PropTypes.number.isRequired,
@@ -103,17 +103,17 @@ export default function Card({ aviability, valoration, img, name, price, id,stoc
         </div>
         <div className={Styles.add}>
           <div className={Styles.div_input}>
-            <AiFillPlusCircle onClick={handleMoreQ} />
-            <input type="number" value={buyQ} readOnly />
-            <AiOutlineMinusCircle onClick={handleLessQ} />
+            <RiAddBoxFill   onClick={handleMoreQ} className={Styles.svg_add}/>
+            <input type="number" value={buyQ} readOnly className={Styles.input_number}/>
+            <RiCheckboxIndeterminateFill onClick={handleLessQ} className={Styles.svg_delete}/>
           </div>
           {
             !isCart ?
               (
-                <button onClick={handleAddToCart}>Add to cart</button>
+                <button onClick={handleAddToCart} className={Styles.btn_cart}>Add to cart</button>
               ) :
               (
-                <button onClick={handleAddToCart}>Remove from cart</button>
+                <button onClick={handleAddToCart} className={Styles.btn_cart}>Remove from cart</button>
               )
           }
           {/* <button>Add to cart</button> */}

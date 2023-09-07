@@ -4,7 +4,6 @@ import OrderBy from '../../components/OrderBy/OrderBy'
 import Filters from '../../components/Filters/Filters'
 import ListCard from '../../components/Card/ListCard'
 import Nav from '../../components/navBar/Nav'
-import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from 'react-redux'
 import {
   getProducts,

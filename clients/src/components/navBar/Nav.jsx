@@ -36,8 +36,14 @@ export default function Nav() {
   },[user,dispatch, isAuthenticated, userLog])
 
 
-//buscar por nombre redux
-    let [inputSearch, setInputSearch] = useState('')
+// Estado del carrito
+const cart = useSelector((state) => state.cart);
+
+// Calcula la cantidad total de productos en el carrito
+const totalQuantity = cart.reduce((acc, item) => acc + item.buyQ, 0);
+
+let [inputSearch, setInputSearch] = useState('');
+
 //para buscar con enter 
 let handleSearch = (e) => {
   let { value } = e.target;
@@ -51,7 +57,6 @@ let handleSearch = (e) => {
       
     }
     
-//para buscar con enter 
 
 
   return (
@@ -117,8 +122,9 @@ let handleSearch = (e) => {
         </div>
       </div>
       <div className={Styles.col_4}>
-        <NavLink to="/ShoppingCar">
+        <NavLink to="/ShoppingCar" className={Styles.link_cart}>
           <BsCart3 className={`${Styles.cart}`} />
+          <span className={Styles.cartCount}>{totalQuantity}</span>
         </NavLink>
       </div>
       <div className={` ${Styles.col_2}`}>

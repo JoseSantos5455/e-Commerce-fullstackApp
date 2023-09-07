@@ -1,4 +1,3 @@
-import React from 'react'
 import DashPro from '../../components/Dashboard/DashPro'
 import { useAuth0 } from '@auth0/auth0-react'; 
 import NotFound from '../NotFound/NotFound'
@@ -7,7 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import Styles from './Dashboard.module.css'
 
 export default function Dashboard() {
-    const { isAuthenticated, user } = useAuth0()
+    const { isAuthenticated} = useAuth0()
   return (
     <div>
       <Nav/>

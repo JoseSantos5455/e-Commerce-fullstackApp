@@ -40,11 +40,11 @@ module.exports = (sequelize)=>{
             allowNull:true,
             defaultValue:'User',
         },  
-        adress_st:{
+        address_st:{
             type:DataTypes.STRING,
             allowNull:true,
         },
-        adress_num:{
+        address_num:{
             type:DataTypes.INTEGER,
             allowNull:true,
         },

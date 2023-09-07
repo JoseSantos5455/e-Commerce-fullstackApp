@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Styles from "./Form.module.css"
 import Validation from "./Validation"
 import { useState } from 'react'
@@ -28,7 +28,7 @@ const Form = () => {
   )
 
 
-const [error, setError] = useState({
+const [ setError] = useState({
   name: "",
   description: "",
   price: "",

@@ -7,7 +7,7 @@ const getProductReviewsController = async (productId,userId)=>{
         {where:whereConditions,
         include:[
             {model:User,
-             attributes:[[User.sequelize.literal(`"User"."name" || ' ' || "User"."lastName"`), 'userFullName']]}
+             attributes:[[User.sequelize.literal(`"User"."name"`), 'userFullName']]}
         ]});
     const productReviews = reviews.rows.map(review=>{
                             return({...review.toJSON(),

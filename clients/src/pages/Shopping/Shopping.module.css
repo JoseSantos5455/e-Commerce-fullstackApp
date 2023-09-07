@@ -1,8 +1,7 @@
 .container_shopping{
     display: flex;
-    height: 80vh;
+    height: 100%;
 }
 .container_view{
     background-color: #f3f3f3;    
-
 }
