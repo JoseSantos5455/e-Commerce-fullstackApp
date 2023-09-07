@@ -17,7 +17,10 @@ export default function DashPro() {
 
 
             <AdminData/>
-            <div className={Styles.form_wrapper}>
+            {
+              userRedux.profile === 'Admin' && (
+
+                <div className={Styles.form_wrapper}>
               <div className={Styles.form_left}>
                 <h3>Sell your products in our platform <h4>D'Lujo</h4></h3>
               <img src="https://cdn-icons-png.flaticon.com/512/4072/4072860.png" alt="" />
@@ -26,6 +29,8 @@ export default function DashPro() {
               
               <Form/>
             </div>
+              )
+            }
 
         </div>
       
