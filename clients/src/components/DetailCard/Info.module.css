@@ -35,17 +35,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-left: 20%; */
-  margin-left: 26%;
-  width: 50%;
 }
-
+.number_detail{
+  border: transparent;
+  display: flex;
+  text-align: center;
+  width: 50%;
+  font-size: 1rem;
+}
+.counter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Para centrar el h2 */
 .centerText {
   margin-top: 15%;
   text-align: center;
 }
-
+.svg_addIcon, .svg_removeIcon{
+  font-size: 2rem;
+  color:black;
+}
 /* Para los textareas */
 .fullWidth {
   width: 95%;

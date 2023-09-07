@@ -5,10 +5,8 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { addToCart, getReviews, removeFromCart, setQuantity } from '../../Redux/actions/actions'
-import {
-  AiFillPlusCircle,
-  AiOutlineMinusCircle,
-} from 'react-icons/ai'
+import {RiAddBoxFill,RiCheckboxIndeterminateFill } from "react-icons/ri";
+
 
 const initialReview = {
   id: 0,
@@ -103,9 +101,12 @@ export default function Info({id,name, description,stock,price,valoration}) {
       <p className={Styles.pdt_price}>${price}</p>
       {/* <button className={Styles.btn_buy}>Buy now</button> */}
       <div className={Styles.div_input}>
-        <AiFillPlusCircle onClick={handleMoreQ} />
-        <input type="number" value={buyQ} readOnly />
-        <AiOutlineMinusCircle onClick={handleLessQ} />
+        <div className={Styles.counter}>
+
+        <RiAddBoxFill onClick={handleMoreQ} className={Styles.svg_addIcon}/>
+        <input type="number" value={buyQ} readOnly className={Styles.number_detail}/>
+        <RiCheckboxIndeterminateFill onClick={handleLessQ} className={Styles.svg_removeIcon}/>
+        </div>
       </div>
       {
         !isCart ?
