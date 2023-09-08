@@ -1,4 +1,3 @@
-import React from 'react'
 import Styles from './Abt.module.css'
 import Nav from '../../components/navBar/Nav'
 

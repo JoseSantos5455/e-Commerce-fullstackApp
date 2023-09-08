@@ -5,10 +5,8 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { addToCart, getReviews, removeFromCart, setQuantity } from '../../Redux/actions/actions'
-import {
-  AiFillPlusCircle,
-  AiOutlineMinusCircle,
-} from 'react-icons/ai'
+import {RiAddBoxFill,RiCheckboxIndeterminateFill } from "react-icons/ri";
+
 
 const initialReview = {
   id: 0,
@@ -20,13 +18,12 @@ const initialReview = {
 }
 
 export default function Info({id,name, description,stock,price,valoration}) {
-
   const dispatch = useDispatch()
 
   const cart = useSelector((state) => state.cart)
   const [buyQ, setBuyQ] = useState(1)
   const [isCart, setIsCart] = useState(false);
-  const [review, setReview] = useState(initialReview);
+  const [ setReview] = useState(initialReview);
   const [reviews, setReviews] = useState([]) // Use an array to store multiple reviews
   // funcion que detecte si el producto ya esta en el carrito
   let productInCart = cart.find((item) => item.id === id)
@@ -96,16 +93,14 @@ export default function Info({id,name, description,stock,price,valoration}) {
 
   return (
     <div className={Styles.wrapper}>
-      <h3 className={Styles.pdt_name}>{name} </h3>
       <p className={Styles.pdt_description}>{description}</p>
       <div><Rating valoration={valoration}></Rating></div>
       <p className={Styles.pdt_stock}>Stock: {stock}</p>
       <p className={Styles.pdt_price}>${price}</p>
-      {/* <button className={Styles.btn_buy}>Buy now</button> */}
       <div className={Styles.div_input}>
-        <AiFillPlusCircle onClick={handleMoreQ} />
-        <input type="number" value={buyQ} readOnly />
         <AiOutlineMinusCircle onClick={handleLessQ} />
+        <input type="number" value={buyQ} readOnly />
+        <AiFillPlusCircle onClick={handleMoreQ} />
       </div>
       {
         !isCart ?
@@ -116,6 +111,8 @@ export default function Info({id,name, description,stock,price,valoration}) {
             <button className={Styles.btn_buy} onClick={handleAddToCart}>Remove from cart</button>
           )
       }
+      <div>
+      {reviews.length > 0 && (
       <div >
         <h2 className={Styles.centerText}>Reviews</h2> {/* Cambia la clase a la de tu componente */}
           {/* Map through the first three reviews and display them */}
@@ -124,6 +121,8 @@ export default function Info({id,name, description,stock,price,valoration}) {
               <textarea className={Styles.fullWidth} value={r.description} readOnly></textarea> {/* Cambia la clase a la de tu componente */}
             </div>
         ))}
+      </div>
+      )}
       </div>
     </div>
   )
