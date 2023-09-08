@@ -6,6 +6,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { getDetail, postReview } from '../../Redux/actions/actions';
 import { getOrders, sellOrder } from '../../Redux/actions/actions';
+import Styles from './Review.module.css'
+
 
 
 function ProductReviewForm({userId, orderId, productId}) {
@@ -36,21 +38,24 @@ function ProductReviewForm({userId, orderId, productId}) {
     )
   }
   return (
-    <div>
+    <div className={Styles.wrapper}>
       <h4>Review</h4>
+      <div className={Styles.campos}>
+
+      <TextField
+        label="Let them know.."
+        multiline
+        rows={4}
+        value={comment}
+        onChange={handleCommentChange}
+        />
       <Rating
         name="rating"
         value={rating}
         onChange={handleRatingChange}
         max={5}
-      />
-      <TextField
-        label="Comentario"
-        multiline
-        rows={4}
-        value={comment}
-        onChange={handleCommentChange}
-      />
+        />
+        </div>
       <Button variant="contained" color="primary" 
       onClick={()=>handleSubmit()}>
         Send

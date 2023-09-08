@@ -66,6 +66,12 @@
     margin: 0 3%;
 }
 
+.form_review{
+    width: 60%;
+    margin-bottom: 10%;
+}
+
+
 .no_buys{
     display: flex;
     flex-flow: column;

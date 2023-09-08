@@ -66,12 +66,14 @@ export default function AdminData() {
                 pdt.status === 'delivered' &&  (
 
                   form ? (
+                      <div className={Styles.form_review}>
 
                     <Review
                     userId={userRedux.id}
                     orderId={pdt.id}
                     productId={pdt.orderDetails[0] && pdt.orderDetails[0].productId ? pdt.orderDetails[0].productId : 'no existe'}
                     />
+                    </div>
                   ):(
                     
                       <button key={idx} className={Styles.btn_sell}
