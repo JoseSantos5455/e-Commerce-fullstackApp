@@ -172,7 +172,6 @@ export const postReview = (userId, orderId, productId, description, valoration) 
                     type: POST_REV,
                     payload: data
                 })
-            console.log(data)
 
         } catch (error) {
             console.log(error.message)

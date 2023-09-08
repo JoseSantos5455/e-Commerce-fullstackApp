@@ -30,6 +30,7 @@ const initialState = {
   categories: [],
   brands: [],
   reviews: [],
+  reviewed: [],
   detail: [],
   product_name: [],
   filters: [],
@@ -76,6 +77,9 @@ const rootReducer = (state = initialState, action) => {
     case POST_REV:
       return{
         ...state,
+        review: action.payload,
+        reviewed:true,
+
       }
 
     case GET_BRANDS: {

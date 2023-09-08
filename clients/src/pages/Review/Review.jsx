@@ -13,6 +13,7 @@ function ProductReviewForm({userId, orderId, productId}) {
 
   const [rating, setRating] = useState(1); // Estado para la calificación
   const [comment, setComment] = useState(''); // Estado para el comentario
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleRatingChange = (event) => {
     setRating(  Number(event.target.value));
@@ -24,11 +25,19 @@ function ProductReviewForm({userId, orderId, productId}) {
   
   const handleSubmit = () => {
    dispatch(postReview(userId, orderId, productId, comment, rating))
+   setIsSubmitted(true);
   };
 
+  if(isSubmitted){
+    return (
+      <div>
+        <p>¡Gracias por tu reseña!</p>
+      </div>
+    )
+  }
   return (
     <div>
-      <h4>Deja tu reseña</h4>
+      <h4>Review</h4>
       <Rating
         name="rating"
         value={rating}

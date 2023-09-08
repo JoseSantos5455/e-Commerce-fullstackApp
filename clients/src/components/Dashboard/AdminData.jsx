@@ -9,6 +9,7 @@ export default function AdminData() {
   const dispatch = useDispatch();
   const ordersRedux = useSelector((state) => state.ordersRedux);
   const userRedux = useSelector((state) => state.user);
+  const reviewed = useSelector((state) => state.reviewed);
 
   const sellsOne = useSelector((state) => state.ordersRedux);
   const sells = sellsOne ? sellsOne.filter((pdt) => pdt.status === 'delivered') : [];
@@ -30,6 +31,7 @@ export default function AdminData() {
     if (userRedux.profile === 'Admin') {
       dispatch(getOrders());
     } else {
+      console.log(reviewed)
       dispatch(getOrders(userRedux.id));
     }
   }, []);
@@ -43,15 +45,11 @@ export default function AdminData() {
           ordersRedux.map((pdt, idx) => (
             <div className={Styles.order} key={idx}>
               <div className={Styles.datos}>
-               <p>
-                 order: {pdt.id}
-                </p>
+               
                 {pdt.orderDetails[0] ? (
-                  <p> pid: {pdt.orderDetails[0].productId}</p>
-                  // <div className="">
-                    
-                  // <p>{pdt.orderDetails[0].product}</p>
-                  // </div>
+                  <div className="">
+                  <p>{pdt.orderDetails[0].product}</p>
+                  </div>
                 ) : (
                   `id: ${pdt.id}`
                 )}
@@ -65,7 +63,7 @@ export default function AdminData() {
                   Confirm & Sell
                 </button>
               ) : (
-                pdt.status === 'delivered' && (
+                pdt.status === 'delivered' &&  (
 
                   form ? (
 
@@ -74,12 +72,15 @@ export default function AdminData() {
                     orderId={pdt.id}
                     productId={pdt.orderDetails[0] && pdt.orderDetails[0].productId ? pdt.orderDetails[0].productId : 'no existe'}
                     />
-                  ):(<button key={idx} className={Styles.btn_sell}
-                  onClick={()=>{ formulario()}}
-                  >
-                      <span>Review</span>
+                  ):(
                     
-                  </button>)
+                      <button key={idx} className={Styles.btn_sell}
+                      onClick={()=>{ formulario()}}
+                      >
+                          <span>Review</span>
+                        
+                      </button>
+                  )
 
 
                 )
