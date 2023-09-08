@@ -46,7 +46,7 @@ module.exports = (sequelize)=>{
             allowNull: false,
             validate: {
               min: 0,
-              max: 5,
+              max: 6,
               isInt: {
                 msg: 'Rating must be an integer value between 0 and 5',
               },

@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Styles from './AdminData.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getOrders, sellOrder } from '../../Redux/actions/actions';
 import { NavLink } from 'react-router-dom';
+import Review from '../../pages/Review/Review';
 
 export default function AdminData() {
   const dispatch = useDispatch();
@@ -16,7 +17,11 @@ export default function AdminData() {
     dispatch(sellOrder(id));
     window.location.reload();
   };
+  let [form, setForm] = useState(false)
 
+  let formulario = ()=>{
+    setForm(true)
+  }
   let setReview = (userId, orderId, productId) =>{
     console.log(userId)
   }
@@ -38,8 +43,15 @@ export default function AdminData() {
           ordersRedux.map((pdt, idx) => (
             <div className={Styles.order} key={idx}>
               <div className={Styles.datos}>
+               <p>
+                 order: {pdt.id}
+                </p>
                 {pdt.orderDetails[0] ? (
-                  <p>{pdt.orderDetails[0].product}</p>
+                  <p> pid: {pdt.orderDetails[0].productId}</p>
+                  // <div className="">
+                    
+                  // <p>{pdt.orderDetails[0].product}</p>
+                  // </div>
                 ) : (
                   `id: ${pdt.id}`
                 )}
@@ -54,17 +66,27 @@ export default function AdminData() {
                 </button>
               ) : (
                 pdt.status === 'delivered' && (
-                  <button key={idx} className={Styles.btn_sell}
-                  
+
+                  form ? (
+
+                    <Review
+                    userId={userRedux.id}
+                    orderId={pdt.id}
+                    productId={pdt.orderDetails[0] && pdt.orderDetails[0].productId ? pdt.orderDetails[0].productId : 'no existe'}
+                    />
+                  ):(<button key={idx} className={Styles.btn_sell}
+                  onClick={()=>{ formulario()}}
                   >
-                    <NavLink to={`product-review/${ pdt.id}`}>
                       <span>Review</span>
-                      
-                    </NavLink>
                     
-                  </button>
+                  </button>)
+
+
                 )
-              )}
+              
+              )
+              
+              }
             </div>
           ))
                   ) : (

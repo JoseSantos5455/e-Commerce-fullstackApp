@@ -2,10 +2,10 @@ const postProductReviewByUserController = require ('../../controllers/reviewsCon
 
 const postProductReviewByUserHandler = async (req,res)=>{
     const {orderId} = req.params;
-    const {userId,productId} = req.query;
+    const {userId, productId} = req.query;
     const {description,valoration} = req.body;
     try {
-        const result = await postProductReviewByUserController(orderId,productId,userId,description,valoration);
+        const result = await postProductReviewByUserController(orderId,userId,productId,description,valoration);
         res.status(200).json(result);    
     } 
     catch (error) {

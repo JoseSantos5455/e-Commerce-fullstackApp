@@ -8,6 +8,7 @@ import {
     GET_DET,
     GET_BRANDS,
     GET_REVIEWS,
+    POST_REV,
     FILTER_BY_CATEGORY,
     POST_USER,
     ADD_TO_CART,
@@ -154,6 +155,27 @@ export function getReviews(id){
         } catch (error) {
             console.log(error);
             throw error;
+        }
+    }
+}
+export const postReview = (userId, orderId, productId, description, valoration) =>{
+    return async (dispatch)=>{
+        let endpoint = `http://localhost:3001/reviews/${orderId}?userId=${userId}&productId=${productId}`;
+        let postData = {
+            valoration, description
+        }
+        try {
+            console.log(postData)
+            let response = await axios.post(endpoint, postData)
+            let data = response.data.newValoration;
+            dispatch({
+                    type: POST_REV,
+                    payload: data
+                })
+            console.log(data)
+
+        } catch (error) {
+            console.log(error.message)
         }
     }
 }

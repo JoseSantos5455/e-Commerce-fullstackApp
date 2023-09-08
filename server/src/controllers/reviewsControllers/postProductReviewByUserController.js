@@ -2,7 +2,7 @@ const {Review,Product} = require('../../db.js');
 const getOrderByIdController = require('../ordersControllers/getOrderByIdController.js');
 const getProductReviewsController = require('../reviewsControllers/getProductReviewsController.js');
 
-const postProductReviewByUserController = async (orderId,productId,userId,description,valoration) =>{
+const postProductReviewByUserController = async (orderId, userId, productId,description,valoration) =>{
     const order = await getOrderByIdController(orderId);
     if (!order) throw new Error('Order not found');
     if (order.status!=='delivered') throw new Error("Can't make a review of the products have not been delivered");
@@ -11,7 +11,7 @@ const postProductReviewByUserController = async (orderId,productId,userId,descri
     let reviews = await getProductReviewsController(productId,undefined).length;
     if (!reviews) reviews =1;
     const product = await Product.findByPk(productId);
-    const newValoration = Math.round((product.valoration * reviews + valoration) / (reviews +1));
+    const newValoration = Math.min(5, Math.max(0, Math.round((product.valoration * reviews + valoration) / (reviews + 1))));
     const newReview = await Review.create({description});
     console.log(userId)
     newReview.setUser(userId);
