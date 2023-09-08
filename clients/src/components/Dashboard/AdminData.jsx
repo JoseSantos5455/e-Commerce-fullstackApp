@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Styles from './AdminData.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getOrders, sellOrder } from '../../Redux/actions/actions';
 import { NavLink } from 'react-router-dom';
+import Review from '../../pages/Review/Review';
 
 export default function AdminData() {
   const dispatch = useDispatch();
   const ordersRedux = useSelector((state) => state.ordersRedux);
   const userRedux = useSelector((state) => state.user);
+  const reviewed = useSelector((state) => state.reviewed);
 
   const sellsOne = useSelector((state) => state.ordersRedux);
   const sells = sellsOne ? sellsOne.filter((pdt) => pdt.status === 'delivered') : [];
@@ -16,7 +18,11 @@ export default function AdminData() {
     dispatch(sellOrder(id));
     window.location.reload();
   };
+  let [form, setForm] = useState(false)
 
+  let formulario = ()=>{
+    setForm(true)
+  }
   let setReview = (userId, orderId, productId) =>{
     console.log(userId)
   }
@@ -25,6 +31,7 @@ export default function AdminData() {
     if (userRedux.profile === 'Admin') {
       dispatch(getOrders());
     } else {
+      console.log(reviewed)
       dispatch(getOrders(userRedux.id));
     }
   }, []);
@@ -38,8 +45,11 @@ export default function AdminData() {
           ordersRedux.map((pdt, idx) => (
             <div className={Styles.order} key={idx}>
               <div className={Styles.datos}>
+               
                 {pdt.orderDetails[0] ? (
+                  <div className="">
                   <p>{pdt.orderDetails[0].product}</p>
+                  </div>
                 ) : (
                   `id: ${pdt.id}`
                 )}
@@ -53,18 +63,33 @@ export default function AdminData() {
                   Confirm & Sell
                 </button>
               ) : (
-                pdt.status === 'delivered' && (
-                  <button key={idx} className={Styles.btn_sell}
-                  
-                  >
-                    <NavLink to={`product-review/${ pdt.id}`}>
-                      <span>Review</span>
-                      
-                    </NavLink>
+                pdt.status === 'delivered' &&  (
+
+                  form ? (
+                      <div className={Styles.form_review}>
+
+                    <Review
+                    userId={userRedux.id}
+                    orderId={pdt.id}
+                    productId={pdt.orderDetails[0] && pdt.orderDetails[0].productId ? pdt.orderDetails[0].productId : 'no existe'}
+                    />
+                    </div>
+                  ):(
                     
-                  </button>
+                      <button key={idx} className={Styles.btn_sell}
+                      onClick={()=>{ formulario()}}
+                      >
+                          <span>Review</span>
+                        
+                      </button>
+                  )
+
+
                 )
-              )}
+              
+              )
+              
+              }
             </div>
           ))
                   ) : (
