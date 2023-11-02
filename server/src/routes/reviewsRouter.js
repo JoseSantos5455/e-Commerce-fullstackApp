@@ -8,6 +8,6 @@ const reviewRouter = Router();
 reviewRouter.get('/:productId',getProductReviewsHandler);
 reviewRouter.post('/:orderId',postProductReviewByUserHandler);
 reviewRouter.put('/:reviewId',updateProductReviewByUserHandler);
-reviewRouter.delete('/:reviewId',deleteProductReviewByUserHandler);
+// reviewRouter.delete('/:reviewId',deleteProductReviewByUserHandler);
 
 module.exports = reviewRouter;
