@@ -13,7 +13,7 @@ const router = Router();
 router.use('/products', productsRouter);
 router.use('/categories', categoriesRouter);
 router.use('/users', usersRouter);
-router.use('/reviews', reviewsRouter);
+// router.use('/reviews', reviewsRouter);
 router.use('/mercadopago', mercadoPagoRouter)
 
 router.use('/brands', brandsRouter);
