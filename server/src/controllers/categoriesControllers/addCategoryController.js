@@ -2,7 +2,7 @@ require('dotenv').config();
 const {Category} = require('../../db.js');
 
 const fakeCategories = [
-                    {name:'Computadoras PC'},
+                    // {name:'Computadoras PC'},
                     {name:'Laptops'},
                     {name:'Peripherals'},
                     {name:'Graphics Card'},
