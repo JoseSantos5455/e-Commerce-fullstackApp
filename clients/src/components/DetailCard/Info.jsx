@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { addToCart, getReviews, removeFromCart, setQuantity } from '../../Redux/actions/actions'
 import {RiAddBoxFill,RiCheckboxIndeterminateFill } from "react-icons/ri";
+import {AiFillPlusCircle, AiOutlineMinusCircle  } from "react-icons/ai";
 
 
 const initialReview = {
