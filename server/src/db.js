@@ -6,8 +6,8 @@ const reviewModel = require('../src/models/review');
 const userModel = require('../src/models/user');
 const orderModel= require('../src/models/order');
 const orderDetailModel = require('../src/models/orderDetail');
-const {DB_DIALECT, DB_USER,DB_PASSWORD,DB_HOST,DB_NAME } =  process.env
-const sequelize = new Sequelize(`${{DATABASE_PRIVATE_URL}}`,
+const {DB_DIALECT, DB_USER,DB_PASSWORD,DB_HOST,DB_NAME,DATABASE_PRIVATE_URL } =  process.env
+const sequelize = new Sequelize(`${DATABASE_PRIVATE_URL}`,
 {
     logging: false,
     native:false,
