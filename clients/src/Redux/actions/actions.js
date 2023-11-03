@@ -23,10 +23,10 @@ import {
     GET_USER
 } from './actionTypes'
 import axios from "axios"
-let URL = 'https://e-commerce-fullstackapp-production.up.railway.app/'
+let URL = `https://e-commerce-fullstackapp-production.up.railway.app`
 // eslint-disable-next-line
 export const getProducts = (page, size) => {
-    let endpoint = `${URL}${products}`
+    let endpoint = `${URL}/${products}`
     return async (dispatch) => {
         try {
             const response = await axios(endpoint)
@@ -44,7 +44,7 @@ export const getProducts = (page, size) => {
 
 export const getNameProducts = (name) => {
     return async (dispatch) => {
-        let endpoint = `${URL}products/?name=${name}`
+        let endpoint = `${URL}/products/?name=${name}`
         try {
             const response = await axios.get(endpoint)
             let data = response.data
@@ -64,7 +64,7 @@ export const getNameProducts = (name) => {
 export const getPaginatedProducts = (page, size) => {
     return async (dispatch) => {
         try {
-            const paginate = await axios.get(`${URL}products?page=${page}&size=${size}`)
+            const paginate = await axios.get(`${URL}/products?page=${page}&size=${size}`)
             const result = paginate.data
             dispatch({
                 type: GET_PAGINATE,
@@ -80,7 +80,7 @@ export const createProducts = (payload) => {
 
     return async () => {
         try {
-            const response = await axios.post(`${URL}products`, payload)
+            const response = await axios.post(`${URL}/products`, payload)
             return {
                 type: POST_PDT,
                 response
@@ -94,7 +94,7 @@ export const createProducts = (payload) => {
 export const getCategories = () => {
     return async (dispatch) => {
         try {
-            const ctgri = await axios.get(`${URL}Categories`)
+            const ctgri = await axios.get(`${URL}/Categories`)
             const catgoData = ctgri.data
             dispatch({
                 type: GET_CATEGORIES,
@@ -109,7 +109,7 @@ export const getCategories = () => {
 
 export const getDetail = (id) => {
     return async (dispatch) => {
-        const endpoint = `${URL}products/${id}`
+        const endpoint = `${URL}/products/${id}`
         try {
             let response = await axios(endpoint)
             let data = response.data
@@ -126,7 +126,7 @@ export const getDetail = (id) => {
 
 export function getBrands() {
     return async (dispatch) => {
-        let endpoint = `${URL}brands`
+        let endpoint = `${URL}/brands`
         try {
             const response = await axios(endpoint)
             let data = response.data
@@ -142,7 +142,7 @@ export function getBrands() {
 
 export function getReviews(id){
     return async (dispatch) => {
-        let endpoint = `${URL}reviews/${id}`;
+        let endpoint = `${URL}/reviews/${id}`;
 
         try {
             const response = await axios(endpoint)
@@ -160,7 +160,7 @@ export function getReviews(id){
 }
 export const postReview = (userId, orderId, productId, description, valoration) =>{
     return async (dispatch)=>{
-        let endpoint = `${URL}reviews/${orderId}?userId=${userId}&productId=${productId}`;
+        let endpoint = `${URL}/reviews/${orderId}?userId=${userId}&productId=${productId}`;
         let postData = {
             valoration, description
         }
@@ -181,7 +181,7 @@ export const postReview = (userId, orderId, productId, description, valoration) 
 
 export function filterByGenres(filters) {
     return async (dispatch) => {
-        let endpoint = `${URL}products?`;
+        let endpoint = `${URL}/products?`;
 
         if (filters.category > 0) endpoint += `categoryFilter=${filters.category}&`;
 
@@ -213,7 +213,7 @@ export const createUser = (name, email, address_st, address_num, department, zip
         try {
             
             const requestData = { name, email,  address_st, address_num, department, zip };
-            const response = await axios.post(`${URL}users`, requestData);
+            const response = await axios.post(`${URL}/users`, requestData);
 
 
             dispatch({
@@ -240,7 +240,7 @@ export const updateUser = (id, country, address_st,  address_num, department, zi
       const requestData = { id, country, address_st,  address_num: parsedAddressNum, department: parsedApartment, zip: parsedZip };
 
 
-            const response = await axios.put(`${URL}users`, requestData);
+            const response = await axios.put(`${URL}/users`, requestData);
 
 
             dispatch({
@@ -261,7 +261,7 @@ export const updateUser = (id, country, address_st,  address_num, department, zi
 export const createOrder = (payload) => {
     return async (dispatch) => {
         try {
-            const response = await axios.post(`${URL}mercadopago/create-order`, payload)
+            const response = await axios.post(`${URL}/mercadopago/create-order`, payload)
             // window.open(response.data);
             window.location.href = response.data;
             return dispatch({
@@ -278,7 +278,7 @@ export const getOrders = (userId)=>{
         return async (dispatch)=>{
                 try {
                     if(userId){
-                        const response = await axios(`${URL}orders?userId=${userId}`)
+                        const response = await axios(`${URL}/orders?userId=${userId}`)
     
                         const data = response.data
                         return dispatch({
@@ -287,7 +287,7 @@ export const getOrders = (userId)=>{
                         })
                     }
                     else{
-                        const response = await axios(`${URL}orders`)
+                        const response = await axios(`${URL}/orders`)
                         
                         const data = response.data
 
@@ -310,7 +310,7 @@ export const getOrders = (userId)=>{
 export const sellOrder = (orderId)=>{
     return async (dispatch) =>{
         try {
-            const response = axios.put(`${URL}orders/${orderId}`) 
+            const response = axios.put(`${URL}/orders/${orderId}`) 
             const data = response.data;
             dispatch({
                 type: SELL,
@@ -367,7 +367,7 @@ export const createOrderSuccess = (payload) => {
         
         try {
             // console.log(payload);
-            const response = await axios.post(`${URL}orders/${payload.userId}`, payload.productsIds)
+            const response = await axios.post(`${URL}/orders/${payload.userId}`, payload.productsIds)
             return dispatch({
                 type: CREATE_ORDER_SUCCESS,
                 response
