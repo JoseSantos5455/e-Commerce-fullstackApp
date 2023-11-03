@@ -26,7 +26,7 @@ import axios from "axios"
 let URL = `https://e-commerce-fullstackapp-production.up.railway.app`
 // eslint-disable-next-line
 export const getProducts = (page, size) => {
-    let endpoint = `${URL}/${products}`
+    let endpoint = `${URL}/products`
     return async (dispatch) => {
         try {
             const response = await axios(endpoint)
