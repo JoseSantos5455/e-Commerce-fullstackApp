@@ -11,7 +11,7 @@ const PORT = process.env.PORT
 conn.sync({ force: false }).then(() => {
   addCategories()
   getAllProductsApi()
-  server.listen(PORT, () => {
+  server.listen(PORT,  "0.0.0.0", () => {
     console.log(`%s listening at ${PORT}`) // eslint-disable-line no-console
   })
 })
