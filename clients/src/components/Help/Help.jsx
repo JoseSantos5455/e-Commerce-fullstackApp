@@ -11,7 +11,7 @@ const peopleData = [
   {
     name: 'Juan',
     github: 'https://github.com/JuanSBdev',
-    linkedin: 'https://www.linkedin.com/in/juan',
+    linkedin: 'https://www.linkedin.com/in/jlsb',
     image: JuanImage,
   },
   {
