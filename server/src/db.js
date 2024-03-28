@@ -7,7 +7,7 @@ const userModel = require('../src/models/user');
 const orderModel= require('../src/models/order');
 const orderDetailModel = require('../src/models/orderDetail');
 const {DB_DIALECT, DB_USER,DB_PASSWORD,DB_HOST,DB_NAME,DATABASE_URL } =  process.env
-const sequelize = new Sequelize(`${DATABASE_URL}`,
+const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
 {
     logging: false,
     native:false,

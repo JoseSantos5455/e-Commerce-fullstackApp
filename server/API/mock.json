@@ -239,7 +239,7 @@
                 "stock": 70,
                 "valoration":2,
                 "category": "Audio",
-                "categoryid": 18,
+                "categoryid": 16,
               "marca": "Razer",
                 "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/22_Wireless%20Gaming%20Headset%20H-800.jpg?alt=media&token=764770b2-a0e8-49ac-bc36-8c3a569960da"
             },
@@ -723,7 +723,7 @@
                 "stock": 100,
                 "valoration": 2,
                 "category": "Audio",
-                "categoryid": 18,
+                "categoryid": 17,
               "marca": "Turtle Beach",
                 "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-final-project.appspot.com/o/66_USB-C%20Gaming%20Headset%20H-700.webp?alt=media&token=6f4ba352-f153-4f74-9f21-02765f8116c8"
             },

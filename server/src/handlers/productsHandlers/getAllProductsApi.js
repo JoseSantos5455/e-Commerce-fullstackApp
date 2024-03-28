@@ -9,24 +9,26 @@ const getAllProductsApi = async (req, res) =>{
         const data = response.data;
         const product = data.map(product=>{
             return({
-                        name: product.name,
-                        description: product.description,
-                        price: Number(product.price),
-                        stock:product.stock,
-                        valoration: product.valoration,
-                        image: product.image,
-                        brand:product.marca,
-                        categoryId:product.categoryid
-            });
+                name: product.name,
+                description: product.description,
+                price: parseFloat(product.price),
+                stock:product.stock,
+                valoration: product.valoration,
+                image: product.image,
+                brand:product.marca,
+                categoryId:product.categoryid,
+        
+            } );
+
         })
-        // console.log(product[0]);
+
         let products = await Product.bulkCreate(product)
         // Product.create(product[0]);
 
         res.status(200).json(products)
 
     } catch (error) {
-        //  console.log(error.message);
+         console.log(error.message);
     }
 }
 
