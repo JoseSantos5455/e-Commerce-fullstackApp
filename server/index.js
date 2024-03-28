@@ -6,7 +6,7 @@ const {
   addCategories,
 } = require('./src/controllers/categoriesControllers/addCategoryController.js')
 
-const PORT = process.env.PORT || 3005
+const PORT = process.env.PORT 
 
 conn.sync({ force: true }).then(() => {
   
