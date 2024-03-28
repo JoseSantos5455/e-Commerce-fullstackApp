@@ -12,7 +12,7 @@ server.use(express.urlencoded({ extended: false }))
 server.use(morgan('dev'))
 server.use((req, res, next) => {
   const allowedOrigins = [
-    'https://venerable-choux-eccf3d.netlify.app/',
+    'https://venerable-choux-eccf3d.netlify.app',
     'https://venerable-choux-eccf3d.netlify.app/products',
     'https://venerable-choux-eccf3d.netlify.app/products/?',
     'https://venerable-choux-eccf3d.netlify.app/brands',
