@@ -16,7 +16,7 @@ server.use((req, res, next) => {
     'https://venerable-choux-eccf3d.netlify.app/products',
     'https://venerable-choux-eccf3d.netlify.app/products/?',
     'https://venerable-choux-eccf3d.netlify.app/brands',
-    'https://venerable-choux-eccf3d.netlify.app/categories'
+    'https://venerable-choux-eccf3d.netlify.app/Categories'
   ];
   const origin = req.headers.origin;
 
