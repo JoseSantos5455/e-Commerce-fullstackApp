@@ -11,15 +11,19 @@ server.use(cors())
 server.use(express.urlencoded({ extended: false }))
 server.use(morgan('dev'))
 server.use((req, res, next) => {
-  // const allowedOrigins = [
-  //   'https://venerable-choux-eccf3d.netlify.app/',
-  //   'https://venerable-choux-eccf3d.netlify.app/products',
-  //   'https://venerable-choux-eccf3d.netlify.app/products/?',
-  //   'https://venerable-choux-eccf3d.netlify.app/brands'
-  // ];
+  const allowedOrigins = [
+    'https://venerable-choux-eccf3d.netlify.app/',
+    'https://venerable-choux-eccf3d.netlify.app/products',
+    'https://venerable-choux-eccf3d.netlify.app/products/?',
+    'https://venerable-choux-eccf3d.netlify.app/brands',
+    'https://venerable-choux-eccf3d.netlify.app/categories'
+  ];
+  const origin = req.headers.origin;
 
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
 
-  res.header('Access-Control-Allow-Origin',  '*');
   
   res.header('Access-Control-Allow-Credentials', 'true')
   res.header(
