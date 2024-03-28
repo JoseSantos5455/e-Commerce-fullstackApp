@@ -6,7 +6,7 @@ const addCategoryHandler = async(req,res)=>{
         res.status(200).json(await addCategory(name));
     } 
     catch (error) {
-        res.status(400).json({error:error.message});
+        res.status(400).json({error:error.message + 'addCategory'});
     }
 };
 

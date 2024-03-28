@@ -28,7 +28,7 @@ const getAllProductsApi = async (req, res) =>{
         res.status(200).json(products)
 
     } catch (error) {
-         console.log(error.message);
+         console.log(error.message + ' getApi');
     }
 }
 
