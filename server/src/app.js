@@ -20,8 +20,8 @@ server.use((req, res, next) => {
 
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
   }
+  res.header('Access-Control-Allow-Origin',  'https://venerable-choux-eccf3d.netlify.app/*');
   
   res.header('Access-Control-Allow-Credentials', 'true')
   res.header(
