@@ -23,7 +23,7 @@ import {
     GET_USER
 } from './actionTypes'
 import axios from "axios"
-let URL = `https://e-commerce-fullstackapp-production.up.railway.app`
+let URL = `http://localhost:3005`
 // eslint-disable-next-line
 export const getProducts = (page, size) => {
     let endpoint = `${URL}/products`
