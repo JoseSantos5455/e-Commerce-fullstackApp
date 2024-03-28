@@ -19,7 +19,7 @@ server.use((req, res, next) => {
   // ];
 
 
-  res.header('Access-Control-Allow-Origin',  'https://venerable-choux-eccf3d.netlify.app/*');
+  res.header('Access-Control-Allow-Origin',  '*');
   
   res.header('Access-Control-Allow-Credentials', 'true')
   res.header(
