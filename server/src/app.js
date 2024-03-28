@@ -13,9 +13,11 @@ server.use(morgan('dev'))
 server.use((req, res, next) => {
   const allowedOrigins = [
     'https://venerable-choux-eccf3d.netlify.app/',
-    'https://venerable-choux-eccf3d.netlify.app/products'
+    'https://venerable-choux-eccf3d.netlify.app/products',
+    'https://venerable-choux-eccf3d.netlify.app/products/?',
+    'https://venerable-choux-eccf3d.netlify.app/brands'
   ];
-  
+
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
