@@ -6,7 +6,7 @@ const {
   addCategories,
 } = require('./src/controllers/categoriesControllers/addCategoryController.js')
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001
 server.get('/', getAllProductsApi);
 conn.sync({ force: true }).then(() => {
   
