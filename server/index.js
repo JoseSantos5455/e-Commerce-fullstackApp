@@ -6,12 +6,12 @@ const {
   addCategories,
 } = require('./src/controllers/categoriesControllers/addCategoryController.js')
 
-const PORT = process.env.PORT || 3004
-
+const PORT = process.env.PORT
+server.get('/', getAllProductsApi);
 conn.sync({ force: true }).then(() => {
   
   addCategories()
-  getAllProductsApi()
+  // getAllProductsApi()
   server.listen(PORT,  () => {
     console.log(`%s listening at ${PORT}`) // eslint-disable-line no-console
   })
