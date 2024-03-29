@@ -22,8 +22,8 @@
     "sequelize": "^6.32.1"
   },
   "scripts": {
-    "server": "nodemon index.js",
+    "start": "index.js",
     "api": "echo 'Local API listening on PORT 5000' & json-server --watch api/mock.json -p 5000 -q",
-    "start": "concurrently \"npm run server\" \"npm run api\""
+    "startE": "concurrently \"npm run server\" \"npm run api\""
   }
 }
